@@ -23,7 +23,8 @@
         "color_scheme": "scheme-2",
         "subheading": "Contacto",
         "title": "Estaremos encantados de ayudarte",
-        "content": "<p>Ponte en contacto con nosotros y te atenderemos lo antes posible.</p>"
+        "content": "<p>Ponte en contacto con nosotros y te atenderemos lo antes posible.</p>",
+        "show_social_media": false
       },
       "blocks": {}
     }
