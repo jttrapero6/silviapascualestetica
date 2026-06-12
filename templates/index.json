@@ -35,7 +35,7 @@
                 "indent": "none",
                 "highlight_effect": "default",
                 "highlight_accent_color": "",
-                "highlight_text_color": ""
+                "highlight_text_color": "#FFFFFF"
               },
               "blocks": {}
             },
@@ -113,7 +113,7 @@
                 "indent": "none",
                 "highlight_effect": "default",
                 "highlight_accent_color": "",
-                "highlight_text_color": "rgba(0,0,0,0)"
+                "highlight_text_color": "#FFFFFF"
               },
               "blocks": {}
             },
