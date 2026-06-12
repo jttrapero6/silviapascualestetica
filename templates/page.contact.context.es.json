@@ -12,5 +12,20 @@
     "market": "es"
   },
   "parent": "page.contact.json",
-  "sections": {}
+  "sections": {
+    "main": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "contact-form": {
+      "settings": {
+        "color_scheme": "scheme-2",
+        "subheading": "Contacto",
+        "title": "Estaremos encantados de ayudarte",
+        "content": "<p>Ponte en contacto con nosotros y te atenderemos lo antes posible.</p>"
+      },
+      "blocks": {}
+    }
+  }
 }
