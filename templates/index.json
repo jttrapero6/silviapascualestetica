@@ -228,6 +228,7 @@
     },
     "reading-text": {
       "type": "reading-text",
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "subheading": "Luxianne",
@@ -241,6 +242,157 @@
         "reading_speed": "0.8",
         "separate_button": false,
         "text_opacity": 10,
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "dynamic-grid": {
+      "type": "dynamic-grid",
+      "blocks": {
+        "dynamic-grid-item-1": {
+          "type": "_dynamic-grid-item",
+          "settings": {
+            "visibility": "both",
+            "text_alignment": "center",
+            "desktop_row_start": 1,
+            "desktop_column_start": 1,
+            "desktop_column_end": 16,
+            "desktop_horizontal_adjustment": 0,
+            "desktop_vertical_adjustment": 0,
+            "mobile_row_start": 1,
+            "mobile_column_start": 1,
+            "mobile_column_end": 8,
+            "mobile_horizontal_adjustment": 0,
+            "mobile_vertical_adjustment": 0,
+            "parallax_speed": 0,
+            "parallax_direction": "vertical"
+          },
+          "blocks": {
+            "dynamic-grid-heading-1": {
+              "type": "_dynamic-grid-heading",
+              "settings": {
+                "text": "Método <em>Luxianne</em>",
+                "show_text_vertically": false,
+                "font_size_desktop": 4,
+                "font_size_mobile": 9,
+                "font_size_line_height": 0.9,
+                "html_tag": "p",
+                "indent": "none",
+                "highlight_effect": "underline_pencil",
+                "highlight_accent_color": "",
+                "highlight_text_color": ""
+              },
+              "blocks": {}
+            },
+            "rich-text-1": {
+              "type": "rich-text",
+              "settings": {
+                "text": "<p>El método Luxianne nace de años de experiencia, formación continua y una forma muy personal de entender la estética. Se basa en cinco pilares fundamentales que definen nuestra manera de trabajar y acompañar la piel en cada tratamiento.</p>",
+                "content_width": "lg"
+              },
+              "blocks": {}
+            },
+            "button-1": {
+              "type": "button",
+              "settings": {
+                "text": "Leer más",
+                "url": "shopify://collections/all",
+                "open_in_new_tab": false,
+                "style": "solid",
+                "background": "",
+                "text_color": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "dynamic-grid-heading-1",
+            "rich-text-1",
+            "button-1"
+          ]
+        },
+        "dynamic-grid-item-3": {
+          "type": "_dynamic-grid-item",
+          "disabled": true,
+          "settings": {
+            "visibility": "both",
+            "text_alignment": "left",
+            "desktop_row_start": 2,
+            "desktop_column_start": 8,
+            "desktop_column_end": 11,
+            "desktop_horizontal_adjustment": 0,
+            "desktop_vertical_adjustment": 0,
+            "mobile_row_start": 10,
+            "mobile_column_start": 1,
+            "mobile_column_end": 3,
+            "mobile_horizontal_adjustment": 0,
+            "mobile_vertical_adjustment": 0,
+            "parallax_speed": -4,
+            "parallax_direction": "vertical"
+          },
+          "blocks": {
+            "image-with-caption-1": {
+              "type": "image-with-caption",
+              "settings": {
+                "caption": "",
+                "max_width": 100,
+                "mobile_max_width": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image-with-caption-1"
+          ]
+        },
+        "dynamic-grid-item-4": {
+          "type": "_dynamic-grid-item",
+          "disabled": true,
+          "settings": {
+            "visibility": "both",
+            "text_alignment": "left",
+            "desktop_row_start": 5,
+            "desktop_column_start": 13,
+            "desktop_column_end": 16,
+            "desktop_horizontal_adjustment": 0,
+            "desktop_vertical_adjustment": 0,
+            "mobile_row_start": 8,
+            "mobile_column_start": 5,
+            "mobile_column_end": 8,
+            "mobile_horizontal_adjustment": 0,
+            "mobile_vertical_adjustment": 0,
+            "parallax_speed": -2,
+            "parallax_direction": "vertical"
+          },
+          "blocks": {
+            "image-with-caption-1": {
+              "type": "image-with-caption",
+              "settings": {
+                "caption": "",
+                "max_width": 100,
+                "mobile_max_width": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image-with-caption-1"
+          ]
+        }
+      },
+      "block_order": [
+        "dynamic-grid-item-1",
+        "dynamic-grid-item-3",
+        "dynamic-grid-item-4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "allow_transparent_header": true,
+        "show_background_image_parallax": false,
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": true,
+        "gap": 16,
+        "mobile_gap": 10,
         "overlay_color": "#000000",
         "overlay_opacity": 0
       }
@@ -392,157 +544,6 @@
         "tabs_icon": "circle",
         "show_view_all_button": false,
         "show_scrolling_bar": true
-      }
-    },
-    "dynamic-grid": {
-      "type": "dynamic-grid",
-      "blocks": {
-        "dynamic-grid-item-1": {
-          "type": "_dynamic-grid-item",
-          "settings": {
-            "visibility": "both",
-            "text_alignment": "center",
-            "desktop_row_start": 1,
-            "desktop_column_start": 1,
-            "desktop_column_end": 16,
-            "desktop_horizontal_adjustment": 0,
-            "desktop_vertical_adjustment": 0,
-            "mobile_row_start": 1,
-            "mobile_column_start": 1,
-            "mobile_column_end": 8,
-            "mobile_horizontal_adjustment": 0,
-            "mobile_vertical_adjustment": 0,
-            "parallax_speed": 0,
-            "parallax_direction": "vertical"
-          },
-          "blocks": {
-            "dynamic-grid-heading-1": {
-              "type": "_dynamic-grid-heading",
-              "settings": {
-                "text": "Método <em>Luxianne</em>",
-                "show_text_vertically": false,
-                "font_size_desktop": 4,
-                "font_size_mobile": 9,
-                "font_size_line_height": 0.9,
-                "html_tag": "p",
-                "indent": "none",
-                "highlight_effect": "underline_pencil",
-                "highlight_accent_color": "",
-                "highlight_text_color": ""
-              },
-              "blocks": {}
-            },
-            "rich-text-1": {
-              "type": "rich-text",
-              "settings": {
-                "text": "<p>Ingredient sourcing is a crucial step, reflecting our commitment to quality and ethics. We carefully select precious, natural active ingredients from the best organic crops and wild harvesting. Our raw ingredients are chosen for their exceptional properties on the skin.</p>",
-                "content_width": "lg"
-              },
-              "blocks": {}
-            },
-            "button-1": {
-              "type": "button",
-              "settings": {
-                "text": "All ingredients",
-                "url": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style": "outline",
-                "background": "",
-                "text_color": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "dynamic-grid-heading-1",
-            "rich-text-1",
-            "button-1"
-          ]
-        },
-        "dynamic-grid-item-3": {
-          "type": "_dynamic-grid-item",
-          "disabled": true,
-          "settings": {
-            "visibility": "both",
-            "text_alignment": "left",
-            "desktop_row_start": 2,
-            "desktop_column_start": 8,
-            "desktop_column_end": 11,
-            "desktop_horizontal_adjustment": 0,
-            "desktop_vertical_adjustment": 0,
-            "mobile_row_start": 10,
-            "mobile_column_start": 1,
-            "mobile_column_end": 3,
-            "mobile_horizontal_adjustment": 0,
-            "mobile_vertical_adjustment": 0,
-            "parallax_speed": -4,
-            "parallax_direction": "vertical"
-          },
-          "blocks": {
-            "image-with-caption-1": {
-              "type": "image-with-caption",
-              "settings": {
-                "caption": "",
-                "max_width": 100,
-                "mobile_max_width": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image-with-caption-1"
-          ]
-        },
-        "dynamic-grid-item-4": {
-          "type": "_dynamic-grid-item",
-          "disabled": true,
-          "settings": {
-            "visibility": "both",
-            "text_alignment": "left",
-            "desktop_row_start": 5,
-            "desktop_column_start": 13,
-            "desktop_column_end": 16,
-            "desktop_horizontal_adjustment": 0,
-            "desktop_vertical_adjustment": 0,
-            "mobile_row_start": 8,
-            "mobile_column_start": 5,
-            "mobile_column_end": 8,
-            "mobile_horizontal_adjustment": 0,
-            "mobile_vertical_adjustment": 0,
-            "parallax_speed": -2,
-            "parallax_direction": "vertical"
-          },
-          "blocks": {
-            "image-with-caption-1": {
-              "type": "image-with-caption",
-              "settings": {
-                "caption": "",
-                "max_width": 100,
-                "mobile_max_width": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image-with-caption-1"
-          ]
-        }
-      },
-      "block_order": [
-        "dynamic-grid-item-1",
-        "dynamic-grid-item-3",
-        "dynamic-grid-item-4"
-      ],
-      "settings": {
-        "color_scheme": "scheme-2",
-        "allow_transparent_header": true,
-        "show_background_image_parallax": false,
-        "add_vertical_spacing": true,
-        "add_horizontal_spacing": true,
-        "gap": 16,
-        "mobile_gap": 10,
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
       }
     },
     "text-with-media": {
@@ -1241,9 +1242,9 @@
   "order": [
     "slideshow",
     "reading-text",
+    "dynamic-grid",
     "media-blocks",
     "featured-collections",
-    "dynamic-grid",
     "text-with-media",
     "before-after",
     "dynamic-grid-2",
