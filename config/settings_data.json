@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "section_spacing": "normal",
     "button_border_radius": 0,
     "input_border_radius": 0,
     "dialog_backdrop_blur": 12,
@@ -52,7 +53,7 @@
     "product_card_show_discount": true,
     "product_card_discount_mode": "saving",
     "product_card_show_product_size_selector": false,
-    "product_listing_spacing": "small",
+    "product_listing_spacing": "none",
     "cart_type": "drawer",
     "cart_icon": "tote_bag",
     "cart_show_free_shipping_bar": false,
