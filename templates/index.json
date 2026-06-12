@@ -130,6 +130,18 @@
               "name": "t:blocks.button_group.name",
               "settings": {},
               "blocks": {
+                "button_3DymKX": {
+                  "type": "button",
+                  "settings": {
+                    "text": "Tratamientos",
+                    "url": "#",
+                    "open_in_new_tab": false,
+                    "style": "solid",
+                    "background": "",
+                    "text_color": ""
+                  },
+                  "blocks": {}
+                },
                 "button_DLiNFD": {
                   "type": "button",
                   "name": "t:blocks.button.name",
@@ -142,23 +154,11 @@
                     "text_color": ""
                   },
                   "blocks": {}
-                },
-                "button_3DymKX": {
-                  "type": "button",
-                  "settings": {
-                    "text": "Tratamientos",
-                    "url": "#",
-                    "open_in_new_tab": false,
-                    "style": "solid",
-                    "background": "",
-                    "text_color": ""
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
-                "button_DLiNFD",
-                "button_3DymKX"
+                "button_3DymKX",
+                "button_DLiNFD"
               ]
             }
           },
