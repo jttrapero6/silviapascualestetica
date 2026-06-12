@@ -59,6 +59,16 @@
     "cart_type": "drawer",
     "cart_icon": "tote_bag",
     "cart_show_free_shipping_bar": false,
+    "sections": {
+      "main-gift-card": {
+        "type": "main-gift-card",
+        "settings": {
+          "image_color_scheme": "scheme-2",
+          "content_color_scheme": "scheme-2",
+          "show_qr_code": true
+        }
+      }
+    },
     "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
