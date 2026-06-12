@@ -20,7 +20,7 @@
             "video": "shopify://files/videos/1104951_1080p_Care_1920x1080.mp4",
             "slide_link": "",
             "content_max_width": 1000,
-            "mobile_content_position": "place-self-center",
+            "mobile_content_position": "place-self-end-start",
             "desktop_content_position": "sm:place-self-end-start",
             "overlay_color": "#000000",
             "overlay_opacity": 20
@@ -30,7 +30,7 @@
               "type": "heading",
               "settings": {
                 "text": "Centro de Estética Avanzada Silvia Pascual",
-                "heading_size": "h1",
+                "heading_size": "h2",
                 "html_tag": "h1",
                 "indent": "none",
                 "highlight_effect": "default",
@@ -38,10 +38,57 @@
                 "highlight_text_color": ""
               },
               "blocks": {}
+            },
+            "rich_text_r6P4WN": {
+              "type": "rich-text",
+              "name": "t:blocks.rich_text.name",
+              "settings": {
+                "text": "<p>Tratamientos faciales y corporales personalizados, diagnóstico experto y una selección de cosmética profesional para cuidar tu piel en cabina y en casa.</p>",
+                "content_width": "md"
+              },
+              "blocks": {}
+            },
+            "button_group_Rc7P8t": {
+              "type": "button-group",
+              "name": "t:blocks.button_group.name",
+              "settings": {},
+              "blocks": {
+                "button_cFGkiM": {
+                  "type": "button",
+                  "settings": {
+                    "text": "Tratamientos",
+                    "url": "#",
+                    "open_in_new_tab": false,
+                    "style": "solid",
+                    "background": "#000000",
+                    "text_color": "#ffffff"
+                  },
+                  "blocks": {}
+                },
+                "button_WXM9Gd": {
+                  "type": "button",
+                  "name": "t:blocks.button.name",
+                  "settings": {
+                    "text": "Button",
+                    "url": "",
+                    "open_in_new_tab": false,
+                    "style": "solid",
+                    "background": "",
+                    "text_color": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_cFGkiM",
+                "button_WXM9Gd"
+              ]
             }
           },
           "block_order": [
-            "heading_PN7VGW"
+            "heading_PN7VGW",
+            "rich_text_r6P4WN",
+            "button_group_Rc7P8t"
           ]
         },
         "slideshow-image-slide-1": {
