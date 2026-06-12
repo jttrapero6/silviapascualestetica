@@ -53,35 +53,35 @@
               "name": "t:blocks.button_group.name",
               "settings": {},
               "blocks": {
-                "button_cFGkiM": {
-                  "type": "button",
-                  "settings": {
-                    "text": "Tratamientos",
-                    "url": "#",
-                    "open_in_new_tab": false,
-                    "style": "solid",
-                    "background": "#000000",
-                    "text_color": "#ffffff"
-                  },
-                  "blocks": {}
-                },
                 "button_WXM9Gd": {
                   "type": "button",
                   "name": "t:blocks.button.name",
                   "settings": {
-                    "text": "Button",
-                    "url": "",
+                    "text": "Tratamientos",
+                    "url": "#",
                     "open_in_new_tab": false,
                     "style": "solid",
                     "background": "",
                     "text_color": ""
                   },
                   "blocks": {}
+                },
+                "button_cFGkiM": {
+                  "type": "button",
+                  "settings": {
+                    "text": "Comprar",
+                    "url": "#",
+                    "open_in_new_tab": false,
+                    "style": "solid",
+                    "background": "rgba(0,0,0,0)",
+                    "text_color": "rgba(0,0,0,0)"
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
-                "button_cFGkiM",
-                "button_WXM9Gd"
+                "button_WXM9Gd",
+                "button_cFGkiM"
               ]
             }
           },
