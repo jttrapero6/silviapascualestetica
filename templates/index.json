@@ -352,7 +352,7 @@
         "dynamic-grid-item-4"
       ],
       "custom_css": [
-        ".container{padding-block-start: calc((var(--section-disable-padding-collapsing) * var(--section-vertical-spacing-block-start, var(--section-vertical-spacing))) * 2.5); padding-block-end: calc((var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 2.5);}"
+        ".container {padding-block-start: calc( ( var(--section-disable-padding-collapsing) * var( --section-vertical-spacing-block-start, var(--section-vertical-spacing) ) ) * 2.5 ); padding-block-end: calc( (var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 2.5 );}"
       ],
       "settings": {
         "color_scheme": "scheme-2",
@@ -1195,17 +1195,17 @@
         "color_scheme": "",
         "mobile_layout": "carousel",
         "desktop_layout": "carousel",
-        "title": "Latest news",
+        "title": "Últimas noticias",
         "heading_tag": "h3",
         "scrolling_title_separator": "circle",
         "scrolling_title": false,
         "button_link": "",
-        "button_text": "Read journal",
-        "button_style": "outline",
+        "button_text": "",
+        "button_style": "solid",
         "blog_post_card_heading_size": "h4",
-        "separator_style": "none",
-        "show_category": true,
-        "show_date": false,
+        "separator_style": "space",
+        "show_category": false,
+        "show_date": true,
         "show_excerpt": true
       }
     },
