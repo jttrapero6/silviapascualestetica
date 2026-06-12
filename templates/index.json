@@ -332,7 +332,7 @@
         "dynamic-grid-item-4"
       ],
       "custom_css": [
-        ".container {padding-block-start: calc( ( var(--section-disable-padding-collapsing) * var( --section-vertical-spacing-block-start, var(--section-vertical-spacing) ) ) * 2.5 ); padding-block-end: calc( (var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 2.5 );}"
+        ".container {padding-block-start: calc( ( var(--section-disable-padding-collapsing) * var( --section-vertical-spacing-block-start, var(--section-vertical-spacing) ) ) * 1.5 ); padding-block-end: calc( (var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 1.5 );}"
       ],
       "settings": {
         "color_scheme": "scheme-2",
@@ -483,7 +483,7 @@
         "collection_hUNh9U"
       ],
       "custom_css": [
-        ".container {padding-block-start: calc((var(--section-disable-padding-collapsing) * var(--section-vertical-spacing-block-start, var(--section-vertical-spacing))) * 2.5); padding-block-end: calc((var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 2.5);}"
+        ".container {padding-block-start: calc( ( var(--section-disable-padding-collapsing) * var( --section-vertical-spacing-block-start, var(--section-vertical-spacing) ) ) * 1.5 ); padding-block-end: calc( (var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 1.5 );}"
       ],
       "name": "t:sections.featured_collections.name",
       "settings": {
