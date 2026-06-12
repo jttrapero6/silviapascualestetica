@@ -11,5 +11,31 @@
   "context": {
     "market": "es"
   },
-  "current": {}
+  "current": {
+    "social_facebook": "https://www.facebook.com/silviapascualcentroestetica/",
+    "social_instagram": "https://www.instagram.com/silviapascualcentrodeestetica/",
+    "color_schemes": {
+      "scheme-1": {
+        "settings": {}
+      },
+      "scheme-2": {
+        "settings": {}
+      },
+      "scheme-3": {
+        "settings": {}
+      },
+      "scheme-4": {
+        "settings": {}
+      },
+      "scheme-5": {
+        "settings": {}
+      },
+      "scheme-6": {
+        "settings": {}
+      },
+      "scheme-7": {
+        "settings": {}
+      }
+    }
+  }
 }
