@@ -998,16 +998,24 @@
           "type": "item",
           "settings": {
             "logo_width": 120,
-            "author": "Marie-Claire",
-            "content": "A clean beauty essential: this velvety serum blends rare plant extracts to smooth fine lines and awaken tired skin by morning. Pure radiance in a bottle."
+            "author": "Paula S.",
+            "content": "Silvia y todo su equipo son profesionales de los pies a la cabeza. Te asesoran con total honestidad sobre lo que tu piel realmente necesita y los resultados de los tratamientos son espectaculares. El centro en Logroño es un oasis de paz."
           }
         },
         "item-3": {
           "type": "item",
           "settings": {
             "logo_width": 120,
-            "author": "Elle",
-            "content": "Elegant and effective, this floral-infused formula boosts elasticity and hydration, revealing a luminous, even-toned complexion with every use."
+            "author": "Cristina G.",
+            "content": "Me encanta este centro. Tienen una aparatología avanzada buenísima y las chicas están súper formadas. Te explican cada paso del tratamiento minuciosamente. Además, el espacio está limpísimo y es súper acogedor."
+          }
+        },
+        "item_htkY6f": {
+          "type": "item",
+          "settings": {
+            "logo_width": 80,
+            "author": "Estíbaliz Z.",
+            "content": "El mejor centro de estética de la zona sin duda. No solo voy por los resultados de sus tratamientos faciales, sino por el mimo con el que te tratan desde que entras por la puerta. Es mi momento favorito de desconexión y autocuidado."
           }
         }
       },
@@ -1015,7 +1023,8 @@
         "item_WDxzUf",
         "item-1",
         "item-2",
-        "item-3"
+        "item-3",
+        "item_htkY6f"
       ],
       "settings": {
         "color_scheme": "scheme-2",
@@ -1048,7 +1057,7 @@
         "testimonial-2": {
           "type": "testimonial",
           "settings": {
-            "show_rating": true,
+            "show_rating": false,
             "rating": 5,
             "author": "Elodie M.",
             "title": "I noticed a visible glow after just a few days. It feels like self-care in a bottle.",
@@ -1088,7 +1097,6 @@
         "testimonial-3",
         "testimonial-4"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "text_alignment": "center",
