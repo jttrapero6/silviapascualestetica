@@ -109,11 +109,12 @@
             "text_alignment": "left",
             "heading_size": "h3",
             "title_icon": "none",
-            "show_scrolling_title": true
+            "show_scrolling_title": false
           },
           "blocks": {}
         }
       },
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-2",
         "stack_products": true,
