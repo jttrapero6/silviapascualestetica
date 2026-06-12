@@ -109,7 +109,7 @@
             "text_alignment": "left",
             "heading_size": "h3",
             "title_icon": "none",
-            "show_scrolling_title": false
+            "show_scrolling_title": true
           },
           "blocks": {}
         }
