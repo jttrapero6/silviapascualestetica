@@ -80,16 +80,16 @@
           "text_color": "#000000",
           "background": "#ffffff",
           "background_gradient": "",
-          "secondary_background": "#faf4f0",
-          "primary_button_background": "#321e1e",
+          "secondary_background": "#464646",
+          "primary_button_background": "#000000",
           "primary_button_text_color": "#ffffff",
           "subheading_background": "",
           "subheading_border_color": "",
-          "subheading_text_color": "#321e1e",
-          "heading_highlight_accent_color": "#321e1e",
+          "subheading_text_color": "#000000",
+          "heading_highlight_accent_color": "#000000",
           "heading_highlight_text_color": "#ffffff",
           "input_background": "#ffffff",
-          "input_text_color": "#321e1e"
+          "input_text_color": "#000000"
         }
       },
       "scheme-3": {
