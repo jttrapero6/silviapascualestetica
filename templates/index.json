@@ -273,6 +273,7 @@
         "collection-1",
         "collection-2"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "stack_products_mobile": false,
@@ -1272,8 +1273,8 @@
   "order": [
     "slideshow",
     "reading-text",
-    "featured-collections",
     "media-blocks",
+    "featured-collections",
     "dynamic-grid",
     "text-with-media",
     "before-after",
