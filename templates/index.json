@@ -1097,6 +1097,7 @@
         "testimonial-3",
         "testimonial-4"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "text_alignment": "center",
