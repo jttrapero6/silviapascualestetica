@@ -978,12 +978,20 @@
     "press": {
       "type": "press",
       "blocks": {
+        "item_WDxzUf": {
+          "type": "item",
+          "settings": {
+            "logo_width": 80,
+            "author": "Nerea M.",
+            "content": "¡Trato increíble! Las chicas son súper majas. Llevo ya casi dos años yendo al centro y no lo cambio por nada del mundo. Siempre salgo encantada."
+          }
+        },
         "item-1": {
           "type": "item",
           "settings": {
             "logo_width": 112,
-            "author": "Le monde",
-            "content": "Experience the power of nature with this botanical elixir. A rich, organic oil designed to restore skin overnight, leaving it visibly firmer and deeply nourished."
+            "author": "María J.",
+            "content": "Un equipo increíble y un servicio impecable. Amables y cercanas, hacen su trabajo con total diligencia y profesionalidad. Recomendadísimas al 100%."
           }
         },
         "item-2": {
@@ -1004,13 +1012,14 @@
         }
       },
       "block_order": [
+        "item_WDxzUf",
         "item-1",
         "item-2",
         "item-3"
       ],
       "settings": {
         "color_scheme": "scheme-2",
-        "title": "In the press",
+        "title": "",
         "use_arrows_navigation": false,
         "show_quotation_mark": true,
         "quotation_tag": "h4",
