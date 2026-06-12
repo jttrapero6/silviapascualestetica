@@ -39,15 +39,15 @@
     "newsletter-popup": {
       "type": "newsletter-popup",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "apparition_delay": 5,
         "show_only_on_index": true,
         "hide_for_account_holders": true,
         "show_only_once": true,
-        "title": "Signup for our newsletter",
-        "button_text": "Subscribe",
-        "content": "Describe what your customers will receive when subscribing to your newsletter.",
-        "conditions": "By entering your address, you confirm that you have read our privacy policy."
+        "title": "Suscríbete a nuestra Newsletter",
+        "button_text": "Suscríbirse",
+        "content": "",
+        "conditions": "Al registrarte, aceptas recibir correos electrónicos de marketing. Consulta nuestra Política de privacidad para obtener más información. Puedes ejercer tus derechos y obtener más información desde nuestra política de privacidad."
       }
     }
   },
