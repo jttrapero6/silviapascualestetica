@@ -412,7 +412,7 @@
             "mobile_column_end": 8,
             "mobile_horizontal_adjustment": 0,
             "mobile_vertical_adjustment": 0,
-            "parallax_speed": 2,
+            "parallax_speed": 0,
             "parallax_direction": "vertical"
           },
           "blocks": {
@@ -436,7 +436,7 @@
               "type": "rich-text",
               "settings": {
                 "text": "<p>Ingredient sourcing is a crucial step, reflecting our commitment to quality and ethics. We carefully select precious, natural active ingredients from the best organic crops and wild harvesting. Our raw ingredients are chosen for their exceptional properties on the skin.</p>",
-                "content_width": "xs"
+                "content_width": "lg"
               },
               "blocks": {}
             },
