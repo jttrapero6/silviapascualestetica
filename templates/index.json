@@ -70,7 +70,7 @@
                   "type": "button",
                   "settings": {
                     "text": "Comprar",
-                    "url": "#",
+                    "url": "shopify://collections/all",
                     "open_in_new_tab": false,
                     "style": "solid",
                     "background": "rgba(0,0,0,0)",
@@ -91,8 +91,86 @@
             "button_group_hPHUmr"
           ]
         },
+        "slideshow-image-slide-3": {
+          "type": "_slideshow-image-slide",
+          "settings": {
+            "color_scheme": "scheme-3",
+            "image": "shopify://shop_images/16748.jpg",
+            "slide_link": "",
+            "content_max_width": 1000,
+            "mobile_content_position": "place-self-end-start",
+            "desktop_content_position": "sm:place-self-end-start",
+            "overlay_color": "#000000",
+            "overlay_opacity": 20
+          },
+          "blocks": {
+            "heading-1": {
+              "type": "heading",
+              "settings": {
+                "text": "Centro de Estética Avanzada Silvia Pascual",
+                "heading_size": "h2",
+                "html_tag": "h1",
+                "indent": "none",
+                "highlight_effect": "default",
+                "highlight_accent_color": "",
+                "highlight_text_color": "rgba(0,0,0,0)"
+              },
+              "blocks": {}
+            },
+            "rich-text-1": {
+              "type": "rich-text",
+              "settings": {
+                "text": "<p>Tratamientos faciales y corporales personalizados, diagnóstico experto y una selección de cosmética profesional para cuidar tu piel en cabina y en casa.</p>",
+                "content_width": "md"
+              },
+              "blocks": {}
+            },
+            "button_group_XXqALH": {
+              "type": "button-group",
+              "name": "t:blocks.button_group.name",
+              "settings": {},
+              "blocks": {
+                "button_DLiNFD": {
+                  "type": "button",
+                  "name": "t:blocks.button.name",
+                  "settings": {
+                    "text": "Comprar",
+                    "url": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style": "solid",
+                    "background": "",
+                    "text_color": ""
+                  },
+                  "blocks": {}
+                },
+                "button_3DymKX": {
+                  "type": "button",
+                  "settings": {
+                    "text": "Tratamientos",
+                    "url": "#",
+                    "open_in_new_tab": false,
+                    "style": "solid",
+                    "background": "",
+                    "text_color": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_DLiNFD",
+                "button_3DymKX"
+              ]
+            }
+          },
+          "block_order": [
+            "heading-1",
+            "rich-text-1",
+            "button_group_XXqALH"
+          ]
+        },
         "slideshow-image-slide-1": {
           "type": "_slideshow-image-slide",
+          "disabled": true,
           "settings": {
             "color_scheme": "scheme-3",
             "image": "shopify://shop_images/16748.jpg",
@@ -156,58 +234,6 @@
             "button_group_Qy7REw"
           ]
         },
-        "slideshow-image-slide-3": {
-          "type": "_slideshow-image-slide",
-          "settings": {
-            "color_scheme": "scheme-3",
-            "slide_link": "",
-            "content_max_width": 720,
-            "mobile_content_position": "place-self-center-start",
-            "desktop_content_position": "sm:place-self-center-start",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          },
-          "blocks": {
-            "heading-1": {
-              "type": "heading",
-              "settings": {
-                "text": "Transform your skin",
-                "heading_size": "display-m",
-                "html_tag": "p",
-                "indent": "none",
-                "highlight_effect": "default",
-                "highlight_accent_color": "",
-                "highlight_text_color": "rgba(0,0,0,0)"
-              },
-              "blocks": {}
-            },
-            "rich-text-1": {
-              "type": "rich-text",
-              "settings": {
-                "text": "<p>Tone your skin and reduce cellulite with our body selection.</p>",
-                "content_width": "xs"
-              },
-              "blocks": {}
-            },
-            "button-1": {
-              "type": "button",
-              "settings": {
-                "text": "Shop Beauty tools",
-                "url": "",
-                "open_in_new_tab": false,
-                "style": "solid",
-                "background": "",
-                "text_color": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading-1",
-            "rich-text-1",
-            "button-1"
-          ]
-        },
         "slideshow-controls": {
           "type": "_slideshow-controls",
           "static": true,
@@ -220,8 +246,8 @@
       },
       "block_order": [
         "slideshow_video_slide_pqarhn",
-        "slideshow-image-slide-1",
-        "slideshow-image-slide-3"
+        "slideshow-image-slide-3",
+        "slideshow-image-slide-1"
       ],
       "settings": {
         "allow_transparent_header": true,
