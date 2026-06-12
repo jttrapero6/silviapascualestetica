@@ -944,6 +944,47 @@
         "caption_text_color": ""
       }
     },
+    "featured_collections_UPHgtK": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_9P67KN": {
+          "type": "collection",
+          "settings": {
+            "collection": "cleansing",
+            "products_count": 8,
+            "title": "{{ block.settings.collection.title }}",
+            "content": "{{ block.settings.collection.description }}",
+            "link": "{{ block.settings.collection.url }}"
+          }
+        },
+        "collection_hUNh9U": {
+          "type": "collection",
+          "settings": {
+            "collection": "skinovage",
+            "products_count": 8,
+            "title": "{{ block.settings.collection.title }}",
+            "content": "{{ block.settings.collection.description }}",
+            "link": "{{ block.settings.collection.url }}"
+          }
+        }
+      },
+      "block_order": [
+        "collection_9P67KN",
+        "collection_hUNh9U"
+      ],
+      "name": "t:sections.featured_collections.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "stack_products_mobile": false,
+        "stack_products_desktop": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "tabs_alignment": "start",
+        "tabs_icon": "none",
+        "show_view_all_button": false,
+        "show_scrolling_bar": true
+      }
+    },
     "press": {
       "type": "press",
       "blocks": {
@@ -996,7 +1037,8 @@
         "item_htkY6f"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
+        "background_image": "shopify://shop_images/598799660_1452286870237172_7131438926075839746_n.jpg",
         "title": "¿Qué dicen de Silvia Pascual Centro de Estética?",
         "use_arrows_navigation": false,
         "show_quotation_mark": true,
@@ -1005,7 +1047,7 @@
         "autoplay": true,
         "cycle_speed": 6,
         "overlay_color": "#000000",
-        "overlay_opacity": 20
+        "overlay_opacity": 50
       }
     },
     "testimonials": {
@@ -1238,6 +1280,7 @@
     "dynamic-grid-2",
     "dynamic-grid-3",
     "countdown",
+    "featured_collections_UPHgtK",
     "press",
     "testimonials",
     "text-with-fixed-background",
