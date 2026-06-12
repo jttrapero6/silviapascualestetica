@@ -1192,12 +1192,12 @@
         "blog-1"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "mobile_layout": "carousel",
         "desktop_layout": "carousel",
         "title": "Últimas noticias",
         "heading_tag": "h3",
-        "scrolling_title_separator": "circle",
+        "scrolling_title_separator": "none",
         "scrolling_title": false,
         "button_link": "",
         "button_text": "",
