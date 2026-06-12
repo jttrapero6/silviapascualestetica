@@ -584,6 +584,7 @@
         "richtext-1",
         "button-1"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "content_position": "start",
@@ -625,6 +626,7 @@
         "before-1",
         "after-1"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "layout": "stacked",
@@ -735,6 +737,7 @@
         "dynamic-grid-item-1",
         "dynamic-grid-item-2"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-4",
         "allow_transparent_header": true,
@@ -934,6 +937,7 @@
         "dynamic-grid-item-4",
         "dynamic-grid-item-5"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-5",
         "allow_transparent_header": true,
@@ -948,6 +952,7 @@
     },
     "countdown": {
       "type": "countdown",
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-4",
         "image_position": "split",
@@ -968,6 +973,52 @@
         "caption_text": "Let's celebrate friendship",
         "caption_scrolling": true,
         "caption_text_color": ""
+      }
+    },
+    "press": {
+      "type": "press",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "logo_width": 112,
+            "author": "Le monde",
+            "content": "Experience the power of nature with this botanical elixir. A rich, organic oil designed to restore skin overnight, leaving it visibly firmer and deeply nourished."
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "logo_width": 120,
+            "author": "Marie-Claire",
+            "content": "A clean beauty essential: this velvety serum blends rare plant extracts to smooth fine lines and awaken tired skin by morning. Pure radiance in a bottle."
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "logo_width": 120,
+            "author": "Elle",
+            "content": "Elegant and effective, this floral-infused formula boosts elasticity and hydration, revealing a luminous, even-toned complexion with every use."
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "title": "In the press",
+        "use_arrows_navigation": false,
+        "show_quotation_mark": true,
+        "quotation_tag": "h4",
+        "item_style": "avatar",
+        "autoplay": true,
+        "cycle_speed": 6,
+        "overlay_color": "#000000",
+        "overlay_opacity": 20
       }
     },
     "testimonials": {
@@ -1028,9 +1079,10 @@
         "testimonial-3",
         "testimonial-4"
       ],
+      "disabled": true,
       "settings": {
-        "color_scheme": "scheme-1",
-        "text_alignment": "left",
+        "color_scheme": "scheme-2",
+        "text_alignment": "center",
         "image_position": "end",
         "autoplay": true,
         "cycle_speed": 6
@@ -1066,56 +1118,11 @@
         "title-1",
         "content-1"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-3",
         "overlay_color": "#000000",
         "overlay_opacity": 0
-      }
-    },
-    "press": {
-      "type": "press",
-      "blocks": {
-        "item-1": {
-          "type": "item",
-          "settings": {
-            "logo_width": 112,
-            "author": "Le monde",
-            "content": "Experience the power of nature with this botanical elixir. A rich, organic oil designed to restore skin overnight, leaving it visibly firmer and deeply nourished."
-          }
-        },
-        "item-2": {
-          "type": "item",
-          "settings": {
-            "logo_width": 120,
-            "author": "Marie-Claire",
-            "content": "A clean beauty essential: this velvety serum blends rare plant extracts to smooth fine lines and awaken tired skin by morning. Pure radiance in a bottle."
-          }
-        },
-        "item-3": {
-          "type": "item",
-          "settings": {
-            "logo_width": 120,
-            "author": "Elle",
-            "content": "Elegant and effective, this floral-infused formula boosts elasticity and hydration, revealing a luminous, even-toned complexion with every use."
-          }
-        }
-      },
-      "block_order": [
-        "item-1",
-        "item-2",
-        "item-3"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "title": "In the press",
-        "use_arrows_navigation": false,
-        "show_quotation_mark": true,
-        "quotation_tag": "h4",
-        "item_style": "avatar",
-        "autoplay": true,
-        "cycle_speed": 6,
-        "overlay_color": "#000000",
-        "overlay_opacity": 20
       }
     },
     "text-with-media-2": {
@@ -1167,6 +1174,7 @@
         "richtext-1",
         "button-1"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-6",
         "content_position": "end",
@@ -1216,6 +1224,7 @@
     },
     "newsletter": {
       "type": "newsletter",
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-4",
         "image_position": "split",
@@ -1242,9 +1251,9 @@
     "dynamic-grid-2",
     "dynamic-grid-3",
     "countdown",
+    "press",
     "testimonials",
     "text-with-fixed-background",
-    "press",
     "text-with-media-2",
     "blog-posts",
     "newsletter"
