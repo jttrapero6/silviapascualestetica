@@ -108,7 +108,7 @@ mobile, and for desktop on "drawer" mode.
               </div>
             {%- endif -%}
 
-            {%- if shop.customer_accounts_enabled -%}
+            {% comment %} {%- if shop.customer_accounts_enabled -%}
               <shopify-account menu="{{ section.settings.customer_account_menu }}">
                 <div slot="signed-out-avatar">
                   <div class="h-stack gap-2 5">
@@ -117,7 +117,7 @@ mobile, and for desktop on "drawer" mode.
                   </div>
                 </div>
               </shopify-account>
-            {%- endif -%}
+            {%- endif -%} {% endcomment %}
           </div>
         </div>
       {%- endif -%}
