@@ -24,11 +24,11 @@
         "color_scheme": "scheme-2",
         "layout": "stacked",
         "add_image_spacing": false,
-        "subheading": "Contact Us",
-        "title": "We'd love to hear from you",
+        "subheading": "Contacto",
+        "title": "Estaremos encantados de ayudarte",
         "heading_size": "h2",
-        "content": "<p>If you have any questions, please fill in this contact form, and our team will reach you back as soon as possible.</p>",
-        "show_social_media": true
+        "content": "<p>Ponte en contacto con nosotros y te atenderemos lo antes posible.</p>",
+        "show_social_media": false
       }
     }
   },
