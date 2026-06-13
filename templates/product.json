@@ -75,6 +75,26 @@
             "icon": "none",
             "page": ""
           }
+        },
+        "accordion_HRyqNK": {
+          "type": "accordion",
+          "settings": {
+            "title": "Cómo funciona",
+            "content": "{{ product.metafields.custom.como_funciona | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_tjigXG": {
+          "type": "accordion",
+          "settings": {
+            "title": "Cómo debo utilizarlo",
+            "content": "{{ product.metafields.custom.como_debo_utilizarlo | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -85,7 +105,9 @@
         "description",
         "variant_picker",
         "buy_buttons",
-        "accordion_yJUXdB"
+        "accordion_yJUXdB",
+        "accordion_HRyqNK",
+        "accordion_tjigXG"
       ],
       "settings": {
         "color_scheme": "scheme-2",
