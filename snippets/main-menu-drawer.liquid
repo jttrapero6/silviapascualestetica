@@ -90,7 +90,7 @@ mobile, and for desktop on "drawer" mode.
         </div>
       {%- endif -%}
 
-      {%- if show_country_selector or show_locale_selector or shop.customer_accounts_enabled -%}
+      {% comment %} {%- if show_country_selector or show_locale_selector or shop.customer_accounts_enabled -%}
         {%- comment -%}On desktop we show language, country and account link in the header directly, so we remove it from the drawer{%- endcomment -%}
         <div class="menu-drawer__footer-item lg:hidden">
           <div class="h-stack justify-between">
@@ -108,7 +108,7 @@ mobile, and for desktop on "drawer" mode.
               </div>
             {%- endif -%}
 
-            {% comment %} {%- if shop.customer_accounts_enabled -%}
+            {%- if shop.customer_accounts_enabled -%}
               <shopify-account menu="{{ section.settings.customer_account_menu }}">
                 <div slot="signed-out-avatar">
                   <div class="h-stack gap-2 5">
@@ -117,10 +117,10 @@ mobile, and for desktop on "drawer" mode.
                   </div>
                 </div>
               </shopify-account>
-            {%- endif -%} {% endcomment %}
+            {%- endif -%}
           </div>
         </div>
-      {%- endif -%}
+      {%- endif -%} {% endcomment %}
     {%- endcapture -%}
 
     {%- if main_panel_footer != blank -%}
