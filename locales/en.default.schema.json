@@ -768,6 +768,7 @@
       "show_terms_of_service_checkbox_info": "Customers must check the box before proceeding to checkout. Configure your terms of service in your [legal settings](/admin/settings/legal).",
       "show_view_cart_button": "Show view cart button",
       "show_checkout_button": "Show checkout button",
+      "show_continue_shopping_button": "Show \"Continue shopping\" button",
       "cross_sell_category": "Cross-sell",
       "cross_sell_category_info": "Cross-sell uses [product recommendations](https://help.shopify.com/en/manual/online-store/search-and-discovery/product-recommendations), and exclude products already in your cart.",
       "enable_cross_sell": "Enable cross-sell",

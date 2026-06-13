@@ -334,9 +334,9 @@
 
               <!-- BUTTONS -->
               <div class="v-stack gap-3">
-                <div class="button-group button-group--same-width w-full">
-                  {%- liquid
-                    if section.settings.show_view_cart_button
+                <div class="v-stack gap-3 w-full">
+                  {%- if section.settings.show_view_cart_button -%}
+                    {%- liquid
                       assign button_content = 'cart.general.view_cart' | t
                       assign button_style = 'solid'
 
@@ -345,13 +345,20 @@
                       endif
 
                       render 'button', content: button_content, style: button_style, href: routes.cart_url, type: 'button'
-                    endif
+                    -%}
+                  {%- endif -%}
 
-                    if section.settings.show_checkout_button
-                      assign button_content = 'cart.general.checkout' | t
-                      render 'button', content: button_content, type: 'submit', name: 'checkout'
-                    endif
-                  -%}
+                  {%- if section.settings.show_checkout_button -%}
+                    {%- if section.settings.show_continue_shopping_button -%}
+                      <dialog-close-button>
+                        {%- assign button_content = 'cart.general.continue_shopping' | t -%}
+                        {%- render 'button', content: button_content, type: 'button', stretch: true -%}
+                      </dialog-close-button>
+                    {%- endif -%}
+
+                    {%- assign button_content = 'cart.general.checkout' | t -%}
+                    {%- render 'button', content: button_content, type: 'submit', name: 'checkout', stretch: true -%}
+                  {%- endif -%}
                 </div>
 
                 {%- if section.settings.show_shipping_text -%}
@@ -439,6 +446,12 @@
       "type": "checkbox",
       "id": "show_checkout_button",
       "label": "t:sections.cart_drawer.show_checkout_button",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_continue_shopping_button",
+      "label": "t:sections.cart_drawer.show_continue_shopping_button",
       "default": true
     },
     {
