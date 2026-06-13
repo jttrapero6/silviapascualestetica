@@ -31,7 +31,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "popular_searches_title": "Popular searches",
-        "popular_searches_menu": "",
+        "popular_searches_menu": "footer",
         "featured_products_title": "Featured products",
         "featured_products": []
       }
