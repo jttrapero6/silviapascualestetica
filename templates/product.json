@@ -65,12 +65,6 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
-        },
-        "liquid_yLwHFd": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<button title=\"Add to wishlist\" aria-label=\"Add to wishlist\" class=\"st-wishlist-button\" type=\"button\" data-type=\"details\" data-handle=\"{{product.handle}}\" aria-label=\"Add product to wishlist\"></button>"
-          }
         }
       },
       "block_order": [
@@ -80,8 +74,7 @@
         "separator",
         "description",
         "variant_picker",
-        "buy_buttons",
-        "liquid_yLwHFd"
+        "buy_buttons"
       ],
       "settings": {
         "color_scheme": "scheme-2",
