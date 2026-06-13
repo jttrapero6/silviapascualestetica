@@ -367,7 +367,7 @@
             "heading_position": "top_left",
             "scrolling_title": false,
             "scrolling_title_separator": "none",
-            "show_text_vertically": false,
+            "show_text_vertically": true,
             "text": "",
             "text_position": "middle_left",
             "button_style": "solid",
