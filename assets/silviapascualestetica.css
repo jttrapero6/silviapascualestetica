@@ -1,0 +1,5 @@
+#predictive-search .link-reversed {
+    font: var(--subheading-font-style) var(--subheading-font-weight) var(--subheading-font-size) / normal var(--subheading-font-family);
+    letter-spacing: var(--subheading-letter-spacing);
+    text-transform: var(--subheading-text-transform);
+}

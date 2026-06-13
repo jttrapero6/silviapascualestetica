@@ -6799,6 +6799,14 @@ shopify-account::part(signed-out-avatar) {
   overflow-y: auto;
 }
 
+.menu-drawer__panel-body button,
+.menu-drawer__panel-body a {
+  font-family: var(--subheading-font-family);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .menu-drawer__separator {
   margin-block: 2rem;
 }
