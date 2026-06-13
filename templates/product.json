@@ -65,6 +65,16 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
+        },
+        "accordion_yJUXdB": {
+          "type": "accordion",
+          "settings": {
+            "title": "Qué hace",
+            "content": "{{ product.metafields.custom.que_hace | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -74,7 +84,8 @@
         "separator",
         "description",
         "variant_picker",
-        "buy_buttons"
+        "buy_buttons",
+        "accordion_yJUXdB"
       ],
       "settings": {
         "color_scheme": "scheme-2",
