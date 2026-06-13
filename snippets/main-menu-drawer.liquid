@@ -29,7 +29,7 @@ mobile, and for desktop on "drawer" mode.
   <header-menu-drawer-panel id="menu-drawer-panel-main" data-main-panel class="menu-drawer__panel">
     <div class="menu-drawer__panel-body">
       {%- if primary_menu.links.size > 0 -%}
-        <ul class="v-stack gap-3 faded-linklist unstyled-list">
+        <ul class="v-stack gap-2.5 faded-linklist unstyled-list">
           {%- for link in primary_menu.links -%}
             {%- liquid
               assign link_title_downcase = link.title | strip | downcase
