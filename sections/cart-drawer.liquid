@@ -3,7 +3,7 @@
     {%- comment -%}HEADER PART{%- endcomment -%}
     <div class="text-with-icon" slot="header">
       {%- render 'icon' with 'cart' -%}
-      <h2 class="h7">{{ 'cart.general.title' | t }} {% unless cart.empty? %}({{ cart.item_count }}){% endunless %}</h2>
+      <span class="h7">{{ 'cart.general.title' | t }} {% unless cart.empty? %}({{ cart.item_count }}){% endunless %}</span>
     </div>
 
     {%- comment -%}
