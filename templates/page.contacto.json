@@ -16,9 +16,24 @@
         "show_title": true,
         "content_width": "md"
       }
+    },
+    "contact_Y3Nn9J": {
+      "type": "contact",
+      "name": "t:sections.contact.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "stacked",
+        "add_image_spacing": false,
+        "subheading": "Contact Us",
+        "title": "We'd love to hear from you",
+        "heading_size": "h2",
+        "content": "<p>If you have any questions, please fill in this contact form, and our team will reach you back as soon as possible.</p>",
+        "show_social_media": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "contact_Y3Nn9J"
   ]
 }
