@@ -58,31 +58,47 @@
         "text_alignment": "center"
       }
     },
-    "reading_text_m8mPt7": {
-      "type": "reading-text",
-      "name": "t:sections.reading_text.name",
+    "text_with_fixed_background_fJ9yXX": {
+      "type": "text-with-fixed-background",
+      "blocks": {
+        "title_PGNV79": {
+          "type": "title",
+          "settings": {
+            "content_position": "md:place-self-start",
+            "subheading": "<strong>1</strong>",
+            "title": "Diagnóstico profesional y personalizado",
+            "heading_tag": "h2",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "content_ViJiHG": {
+          "type": "content",
+          "settings": {
+            "color_scheme": "",
+            "content_position": "md:place-self-end",
+            "title": "",
+            "content": "<p>Cada tratamiento comienza con un diagnóstico profundo y detallado. Observamos, escuchamos y analizamos la piel y las necesidades de cada persona para comprender qué requiere realmente en cada momento.</p><p>No trabajamos con protocolos estándar: cada piel es única y necesita un enfoque específico, basado en la experiencia, el conocimiento y una valoración rigurosa.</p>",
+            "indent_heading": false
+          }
+        }
+      },
+      "block_order": [
+        "title_PGNV79",
+        "content_ViJiHG"
+      ],
+      "name": "t:sections.text_with_fixed_background.name",
       "settings": {
-        "color_scheme": "scheme-2",
-        "subheading": "Método Luxianne",
-        "content": "El método Luxianne nace de años de experiencia, formación continua y una forma muy personal de entender la estética. Se basa en cinco pilares fundamentales que definen nuestra manera de trabajar y acompañar la piel en cada tratamiento.",
-        "button_text": "",
-        "button_link": "",
-        "heading_tag": "h3",
-        "mobile_text_position": "place-self-center",
-        "desktop_text_position": "sm:place-self-center",
-        "content_width": "lg",
-        "reading_speed": "0.8",
-        "separate_button": false,
-        "text_opacity": 20,
+        "color_scheme": "scheme-3",
         "overlay_color": "#000000",
-        "overlay_opacity": 20,
-        "section_min_height": 800
+        "overlay_opacity": 20
       }
     }
   },
   "order": [
     "main",
     "rich_text_LPAtbk",
-    "reading_text_m8mPt7"
+    "text_with_fixed_background_fJ9yXX"
   ]
 }
