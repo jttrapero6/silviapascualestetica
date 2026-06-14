@@ -70,7 +70,7 @@
         "heading_tag": "h3",
         "mobile_text_position": "place-self-center",
         "desktop_text_position": "sm:place-self-center",
-        "content_width": "full",
+        "content_width": "lg",
         "reading_speed": "0.8",
         "separate_button": false,
         "text_opacity": 20,
