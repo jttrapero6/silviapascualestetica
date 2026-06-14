@@ -68,7 +68,7 @@
             "subheading": "<strong>1</strong>",
             "title": "Diagnóstico profesional y personalizado",
             "heading_tag": "h2",
-            "highlight_effect": "default",
+            "highlight_effect": "marker",
             "highlight_accent_color": "",
             "highlight_text_color": ""
           }
