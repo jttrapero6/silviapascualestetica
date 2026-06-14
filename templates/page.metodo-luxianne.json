@@ -75,7 +75,8 @@
         "separate_button": false,
         "text_opacity": 20,
         "overlay_color": "#000000",
-        "overlay_opacity": 20
+        "overlay_opacity": 20,
+        "section_min_height": 800
       }
     }
   },
