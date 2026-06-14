@@ -88,6 +88,9 @@
         "title_PGNV79",
         "content_ViJiHG"
       ],
+      "custom_css": [
+        ".min-h-fill {min-height: inherit;}"
+      ],
       "name": "t:sections.text_with_fixed_background.name",
       "settings": {
         "color_scheme": "scheme-3",
