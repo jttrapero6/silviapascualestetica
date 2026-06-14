@@ -94,8 +94,9 @@
       "name": "t:sections.text_with_fixed_background.name",
       "settings": {
         "color_scheme": "scheme-3",
+        "image": "shopify://shop_images/pexels-kerimeveyik-15866041.jpg",
         "overlay_color": "#000000",
-        "overlay_opacity": 20
+        "overlay_opacity": 40
       }
     }
   },
