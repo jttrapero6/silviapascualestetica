@@ -569,8 +569,8 @@
         "blog-1": {
           "type": "blog",
           "settings": {
-            "blog": "journal",
-            "posts_count": 4
+            "blog": "noticias",
+            "posts_count": 10
           }
         }
       },
@@ -588,7 +588,7 @@
         "button_link": "",
         "button_text": "",
         "button_style": "solid",
-        "blog_post_card_heading_size": "h4",
+        "blog_post_card_heading_size": "h5",
         "separator_style": "space",
         "show_category": false,
         "show_date": true,
