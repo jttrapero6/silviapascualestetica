@@ -103,7 +103,7 @@
       ],
       "settings": {
         "color_scheme": "",
-        "show_social_media": true,
+        "show_social_media": false,
         "show_payment_icons": true,
         "show_powered_by_shopify": false,
         "show_country_selector": false,
