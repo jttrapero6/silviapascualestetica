@@ -592,7 +592,7 @@
         "separator_style": "space",
         "show_category": false,
         "show_date": true,
-        "show_excerpt": true
+        "show_excerpt": false
       }
     }
   },
