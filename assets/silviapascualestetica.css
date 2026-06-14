@@ -15,3 +15,7 @@
     letter-spacing: var(--subheading-letter-spacing);
     text-transform: var(--subheading-text-transform);
 }
+
+.blog-post-card__image-container img {
+    height: 100%;
+}
