@@ -33,6 +33,17 @@
         "show_share_buttons": true
       }
     },
+    "custom_liquid_AKABnt": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "liquid": "<hr>",
+        "text_alignment": "left",
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": false
+      }
+    },
     "blog-post-prev-next": {
       "type": "blog-post-prev-next",
       "settings": {
@@ -48,6 +59,7 @@
   "order": [
     "blog-post-banner",
     "main",
+    "custom_liquid_AKABnt",
     "blog-post-prev-next"
   ]
 }
