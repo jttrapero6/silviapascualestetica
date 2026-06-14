@@ -23,7 +23,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "show_tags": true,
-        "posts_per_page": 9,
+        "posts_per_page": 15,
         "highlight_blog_post_position": 5,
         "blog_post_card_heading_size": "h5",
         "show_category": true,
