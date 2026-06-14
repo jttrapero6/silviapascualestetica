@@ -87,6 +87,15 @@
             "menu_title": ""
           }
         },
+        "links_HnAYVr": {
+          "type": "links",
+          "settings": {
+            "menu": "footer-tienda",
+            "collapse_on_mobile": true,
+            "show_menu_title": true,
+            "menu_title": ""
+          }
+        },
         "text": {
           "type": "text",
           "settings": {
@@ -99,6 +108,7 @@
       "block_order": [
         "newsletter",
         "links",
+        "links_HnAYVr",
         "text"
       ],
       "settings": {
