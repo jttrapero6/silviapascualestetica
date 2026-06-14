@@ -17,7 +17,7 @@
         "transparent_header_use_primary_colors": false,
         "image_layout": "split",
         "add_image_spacing": false,
-        "heading_size": "h3",
+        "heading_size": "h2",
         "show_category": true,
         "show_date": true,
         "show_reading_time": true,
