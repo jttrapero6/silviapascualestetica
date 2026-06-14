@@ -3,6 +3,9 @@
     --reading-text-initial-opacity: {{ section.settings.text_opacity | divided_by: 100.0 }};
     --reading-text-overlay: {% if section.settings.overlay_color != 'rgba(0,0,0,0)' %}{{ section.settings.overlay_color.rgb }} / {{ section.settings.overlay_opacity | divided_by: 100.0 }}{% else %}0 0 0 / 0{% endif %};
   }
+  #shopify-section-{{ section.id }} {
+    min-height: {{ section.settings.section_min_height }}px;
+  }
 </style>
 
 <div class="color-scheme color-scheme--{{ section.settings.color_scheme }} {% if section.settings.image != blank %}clip-inset{% endif %}">
@@ -308,6 +311,16 @@
       "step": 5,
       "unit": "%",
       "default": 20
+    },
+    {
+      "type": "range",
+      "id": "section_min_height",
+      "label": "Altura mínima de la sección (px)",
+      "min": 0,
+      "max": 800,
+      "step": 10,
+      "default": 0,
+      "unit": "px"
     }
   ],
   "presets": [
