@@ -36,12 +36,12 @@
     "blog-post-prev-next": {
       "type": "blog-post-prev-next",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "heading_size": "h3",
-        "show_category": true,
+        "show_category": false,
         "show_date": true,
-        "show_reading_time": true,
-        "show_excerpt": true
+        "show_reading_time": false,
+        "show_excerpt": false
       }
     }
   },
