@@ -76,7 +76,7 @@
         "content_ViJiHG": {
           "type": "content",
           "settings": {
-            "color_scheme": "",
+            "color_scheme": "scheme-2",
             "content_position": "md:place-self-end",
             "title": "",
             "content": "<p>Cada tratamiento comienza con un diagnóstico profundo y detallado. Observamos, escuchamos y analizamos la piel y las necesidades de cada persona para comprender qué requiere realmente en cada momento.</p><p>No trabajamos con protocolos estándar: cada piel es única y necesita un enfoque específico, basado en la experiencia, el conocimiento y una valoración rigurosa.</p>",
@@ -98,11 +98,95 @@
         "overlay_color": "#000000",
         "overlay_opacity": 40
       }
+    },
+    "text_with_fixed_background_LiCUia": {
+      "type": "text-with-fixed-background",
+      "blocks": {
+        "title_3EmbBH": {
+          "type": "title",
+          "settings": {
+            "content_position": "md:place-self-start",
+            "subheading": "<strong>2</strong>",
+            "title": "Criterio profesional, honestidad y responsabilidad",
+            "heading_tag": "h2",
+            "highlight_effect": "marker",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "content_GrLt63": {
+          "type": "content",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "content_position": "md:place-self-end",
+            "title": "",
+            "content": "<p>Nuestra manera de entender la estética se basa en el criterio profesional, la honestidad y la responsabilidad en cada decisión. Valoramos cada caso con coherencia, priorizando siempre el cuidado real de la piel y su evolución a largo plazo.</p><p>Antes de cada sesión, el equipo estudia y comparte el tratamiento de forma conjunta, trabajando con una visión alineada, precisa y cuidada en cada detalle.</p>",
+            "indent_heading": false
+          }
+        }
+      },
+      "block_order": [
+        "title_3EmbBH",
+        "content_GrLt63"
+      ],
+      "custom_css": [
+        ".min-h-fill {min-height: inherit;}"
+      ],
+      "name": "t:sections.text_with_fixed_background.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "image": "shopify://shop_images/pexels-koolshooters-6628655_1.jpg",
+        "overlay_color": "#000000",
+        "overlay_opacity": 40
+      }
+    },
+    "text_with_fixed_background_BEcNKm": {
+      "type": "text-with-fixed-background",
+      "blocks": {
+        "title_tbXQ88": {
+          "type": "title",
+          "settings": {
+            "content_position": "md:place-self-start",
+            "subheading": "<strong>3</strong>",
+            "title": "Tecnología de última generación aplicada con criterio",
+            "heading_tag": "h2",
+            "highlight_effect": "marker",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "content_FCpXN3": {
+          "type": "content",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "content_position": "md:place-self-end",
+            "title": "",
+            "content": "<p>La tecnología forma parte de nuestra evolución constante. Incorporamos equipos de última generación que nos permiten trabajar con precisión, seguridad y eficacia, siempre seleccionados por su calidad y resultados contrastados.</p><p>La entendemos como una herramienta que suma y potencia, integrada dentro de un enfoque global donde cada técnica tiene su sentido y su momento.</p>",
+            "indent_heading": false
+          }
+        }
+      },
+      "block_order": [
+        "title_tbXQ88",
+        "content_FCpXN3"
+      ],
+      "custom_css": [
+        ".min-h-fill {min-height: inherit;}"
+      ],
+      "name": "t:sections.text_with_fixed_background.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "image": "shopify://shop_images/pexels-elly-fairytale-3865799.jpg",
+        "overlay_color": "#000000",
+        "overlay_opacity": 40
+      }
     }
   },
   "order": [
     "main",
     "rich_text_LPAtbk",
-    "text_with_fixed_background_fJ9yXX"
+    "text_with_fixed_background_fJ9yXX",
+    "text_with_fixed_background_LiCUia",
+    "text_with_fixed_background_BEcNKm"
   ]
 }
