@@ -11,14 +11,56 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "show_title": true,
         "content_width": "md"
       }
+    },
+    "rich_text_LPAtbk": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_RQN4NU": {
+          "type": "subheading",
+          "settings": {
+            "text": "El Método"
+          }
+        },
+        "heading_pCrpiF": {
+          "type": "heading",
+          "settings": {
+            "text": "Luxianne",
+            "heading_tag": "h2",
+            "html_tag": "h1",
+            "indent": "none",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "richtext_wYjAUw": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>El método Luxianne nace de años de experiencia, formación continua y una forma muy personal de entender la estética. Se basa en cinco pilares fundamentales que definen nuestra manera de trabajar y acompañar la piel en cada tratamiento.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_RQN4NU",
+        "heading_pCrpiF",
+        "richtext_wYjAUw"
+      ],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_width": "md",
+        "text_alignment": "center"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_LPAtbk"
   ]
 }
