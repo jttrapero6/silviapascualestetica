@@ -29,7 +29,7 @@
       "type": "main-article",
       "settings": {
         "color_scheme": "scheme-2",
-        "content_width": "md",
+        "content_width": "lg",
         "show_share_buttons": true
       }
     },
