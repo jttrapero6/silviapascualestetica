@@ -89,7 +89,8 @@
         "content_ViJiHG"
       ],
       "custom_css": [
-        ".min-h-fill {min-height: inherit;}"
+        ".min-h-fill {min-height: inherit;}",
+        "span.subheading.subheading-badge {font-size: clamp(20px, 7vw, 30px);}"
       ],
       "name": "t:sections.text_with_fixed_background.name",
       "settings": {
@@ -130,7 +131,8 @@
         "content_GrLt63"
       ],
       "custom_css": [
-        ".min-h-fill {min-height: inherit;}"
+        ".min-h-fill {min-height: inherit;}",
+        "span.subheading.subheading-badge {font-size: clamp(20px, 7vw, 30px);}"
       ],
       "name": "t:sections.text_with_fixed_background.name",
       "settings": {
@@ -171,12 +173,97 @@
         "content_FCpXN3"
       ],
       "custom_css": [
-        ".min-h-fill {min-height: inherit;}"
+        ".min-h-fill {min-height: inherit;}",
+        "span.subheading.subheading-badge {font-size: clamp(20px, 7vw, 30px);}"
       ],
       "name": "t:sections.text_with_fixed_background.name",
       "settings": {
         "color_scheme": "scheme-3",
         "image": "shopify://shop_images/pexels-elly-fairytale-3865799.jpg",
+        "overlay_color": "#000000",
+        "overlay_opacity": 40
+      }
+    },
+    "text_with_fixed_background_rkUncU": {
+      "type": "text-with-fixed-background",
+      "blocks": {
+        "title_FrK6hQ": {
+          "type": "title",
+          "settings": {
+            "content_position": "md:place-self-start",
+            "subheading": "<strong>4</strong>",
+            "title": "Trabajo manual y masaje especializado",
+            "heading_tag": "h2",
+            "highlight_effect": "marker",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "content_gNGKFY": {
+          "type": "content",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "content_position": "md:place-self-end",
+            "title": "",
+            "content": "<p>El trabajo manual es una parte esencial del método Luxianne. Cada tratamiento incorpora un masaje estudiado, diseñado para estimular el tejido, activar la circulación y potenciar los resultados.</p><p>Contamos con formación en técnicas de masaje de autor, como el método creado por Silvia Oliete en Barcelona, un masaje desarrollado por Consuelo Silveira en Vitoria para la marca María D'uol, así como en drenaje linfático y masaje fisioactivo.</p><p>Fruto de toda esta trayectoria, nace Luxianne, un masaje exclusivo que combina técnica, sensibilidad y experiencia para ofrecer resultados visibles y una experiencia profundamente cuidada.</p>",
+            "indent_heading": false
+          }
+        }
+      },
+      "block_order": [
+        "title_FrK6hQ",
+        "content_gNGKFY"
+      ],
+      "custom_css": [
+        ".min-h-fill {min-height: inherit;}",
+        "span.subheading.subheading-badge {font-size: clamp(20px, 7vw, 30px);}"
+      ],
+      "name": "t:sections.text_with_fixed_background.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "image": "shopify://shop_images/pexels-kerimeveyik-15866041.jpg",
+        "overlay_color": "#000000",
+        "overlay_opacity": 40
+      }
+    },
+    "text_with_fixed_background_Jkq4yA": {
+      "type": "text-with-fixed-background",
+      "blocks": {
+        "title_3B9x9R": {
+          "type": "title",
+          "settings": {
+            "content_position": "md:place-self-start",
+            "subheading": "<strong>5</strong>",
+            "title": "Cosmética de alta calidad y excelencia en el cuidado",
+            "heading_tag": "h2",
+            "highlight_effect": "marker",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "content_9HVNEm": {
+          "type": "content",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "content_position": "md:place-self-end",
+            "title": "",
+            "content": "<p>La cosmética es una base importante sobre la que se construyen nuestros tratamientos. Trabajamos con fórmulas de alta calidad, seleccionadas por la eficacia de sus activos y su respeto por la piel.</p><p>Cada producto forma parte de una estrategia pensada para cuidar, tratar y acompañar la piel de forma coherente, asegurando continuidad y resultados visibles.</p>",
+            "indent_heading": false
+          }
+        }
+      },
+      "block_order": [
+        "title_3B9x9R",
+        "content_9HVNEm"
+      ],
+      "custom_css": [
+        ".min-h-fill {min-height: inherit;}",
+        "span.subheading.subheading-badge {font-size: clamp(20px, 7vw, 30px);}"
+      ],
+      "name": "t:sections.text_with_fixed_background.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "image": "shopify://shop_images/pexels-kerimeveyik-15866041.jpg",
         "overlay_color": "#000000",
         "overlay_opacity": 40
       }
@@ -187,6 +274,8 @@
     "rich_text_LPAtbk",
     "text_with_fixed_background_fJ9yXX",
     "text_with_fixed_background_LiCUia",
-    "text_with_fixed_background_BEcNKm"
+    "text_with_fixed_background_BEcNKm",
+    "text_with_fixed_background_rkUncU",
+    "text_with_fixed_background_Jkq4yA"
   ]
 }
