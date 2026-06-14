@@ -9,3 +9,9 @@
     letter-spacing: var(--subheading-letter-spacing);
     text-transform: var(--subheading-text-transform);
 }
+
+.shopify-section--main-product sale-price {
+    font: var(--subheading-font-style) var(--subheading-font-weight) 16px / normal var(--subheading-font-family);
+    letter-spacing: var(--subheading-letter-spacing);
+    text-transform: var(--subheading-text-transform);
+}
