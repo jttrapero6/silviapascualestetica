@@ -6566,7 +6566,7 @@ product-rerender {
 }
 
 shopify-account {
-  --shopify-account-font-heading: var(--heading-font-family);
+  --shopify-account-font-heading: var(--text-font-family);
   --shopify-account-font-heading-weight: var(--heading-font-weight);
   --shopify-account-font-body: var(--text-font-family);
   --shopify-account-font-body-weight: var(--text-font-weight);
