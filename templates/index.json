@@ -462,8 +462,8 @@
           "settings": {
             "collection": "babor",
             "products_count": 8,
-            "title": "Babor",
-            "content": "<p>{{ block.settings.collection.description }}</p>",
+            "title": "{{ block.settings.collection.title }}",
+            "content": "{{ block.settings.collection.description }}",
             "link": "{{ block.settings.collection.url }}"
           }
         },
@@ -472,7 +472,7 @@
           "settings": {
             "collection": "doctor-babor",
             "products_count": 8,
-            "title": "Doctor Babor",
+            "title": "{{ block.settings.collection.title }}",
             "content": "{{ block.settings.collection.description }}",
             "link": "{{ block.settings.collection.url }}"
           }
@@ -490,10 +490,10 @@
         "collection_9mmUGd": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "tarjeta-regalo",
             "products_count": 8,
             "title": "{{ block.settings.collection.title }}",
-            "content": "<p>{{ block.settings.collection.description }}</p>",
+            "content": "{{ block.settings.collection.description }}",
             "link": "{{ block.settings.collection.url }}"
           }
         }
