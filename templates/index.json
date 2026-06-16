@@ -457,12 +457,22 @@
     "featured_collections_UPHgtK": {
       "type": "featured-collections",
       "blocks": {
+        "collection_zXLTqr": {
+          "type": "collection",
+          "settings": {
+            "collection": "babor",
+            "products_count": 8,
+            "title": "Babor",
+            "content": "<p>{{ block.settings.collection.description }}</p>",
+            "link": "{{ block.settings.collection.url }}"
+          }
+        },
         "collection_9P67KN": {
           "type": "collection",
           "settings": {
-            "collection": "cleansing",
+            "collection": "doctor-babor",
             "products_count": 8,
-            "title": "{{ block.settings.collection.title }}",
+            "title": "Doctor Babor",
             "content": "{{ block.settings.collection.description }}",
             "link": "{{ block.settings.collection.url }}"
           }
@@ -470,17 +480,29 @@
         "collection_hUNh9U": {
           "type": "collection",
           "settings": {
-            "collection": "skinovage",
+            "collection": "biologique-recherche",
             "products_count": 8,
             "title": "{{ block.settings.collection.title }}",
             "content": "{{ block.settings.collection.description }}",
             "link": "{{ block.settings.collection.url }}"
           }
+        },
+        "collection_9mmUGd": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "products_count": 8,
+            "title": "{{ block.settings.collection.title }}",
+            "content": "<p>{{ block.settings.collection.description }}</p>",
+            "link": "{{ block.settings.collection.url }}"
+          }
         }
       },
       "block_order": [
+        "collection_zXLTqr",
         "collection_9P67KN",
-        "collection_hUNh9U"
+        "collection_hUNh9U",
+        "collection_9mmUGd"
       ],
       "custom_css": [
         ".container {padding-block-start: calc( ( var(--section-disable-padding-collapsing) * var( --section-vertical-spacing-block-start, var(--section-vertical-spacing) ) ) * 1.5 ); padding-block-end: calc( (var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 1.5 );}"
