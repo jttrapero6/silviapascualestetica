@@ -99,8 +99,8 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "About",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
+            "title": "Silvia Pascual",
+            "content": "<p>Silvia Pascual Estética es un centro de belleza que se encuentra en el centro de Logroño. Ven y visítanos.</p>",
             "enable_follow_on_shop": true
           }
         }
