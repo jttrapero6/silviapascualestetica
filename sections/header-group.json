@@ -48,7 +48,7 @@
             "menu_item": "Tienda",
             "mega_menu_justify_content": "justify-center",
             "stretch_promo_blocks": false,
-            "promo_column_gap": "0px",
+            "promo_column_gap": "4px",
             "promo_text_alignment": "left",
             "promo_heading_tag": "subheading",
             "promo_text_color": "#ffffff",
