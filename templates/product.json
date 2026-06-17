@@ -12,6 +12,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "badges_YJTzK3": {
+          "type": "badges",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -98,6 +102,7 @@
         }
       },
       "block_order": [
+        "badges_YJTzK3",
         "title",
         "price",
         "payment_terms",
