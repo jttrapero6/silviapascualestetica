@@ -24,3 +24,7 @@
 .shopify-section--blog-post-banner .section-split__column--image {
     aspect-ratio: 2 / 1;
 }
+
+html .badge {
+    font-family: var(--subheading-font-family);
+}

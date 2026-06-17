@@ -931,6 +931,16 @@
         }
       }
     },
+    "featured_products_manual": {
+      "name": "Featured products (manual)",
+      "blocks": {
+        "tab": {
+          "name": "Tab",
+          "products": "Products",
+          "title_default": "Featured products"
+        }
+      }
+    },
     "featured_product_list": {
       "name": "Featured product list",
       "product_list": "Products",

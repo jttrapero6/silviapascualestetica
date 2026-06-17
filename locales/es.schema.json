@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "featured_products_manual": {
+      "name": "Productos destacados (manual)",
+      "blocks": {
+        "tab": {
+          "name": "Pestaña",
+          "products": "Productos",
+          "title_default": "Productos destacados"
+        }
+      }
+    }
+  }
+}
