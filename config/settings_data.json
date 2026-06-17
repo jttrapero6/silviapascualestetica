@@ -59,7 +59,10 @@
     "product_listing_spacing": "x-small",
     "cart_type": "drawer",
     "cart_icon": "tote_bag",
+    "cart_empty_cart_link": "/",
     "cart_show_free_shipping_bar": false,
+    "social_facebook": "https://www.facebook.com/silviapascualcentroestetica/",
+    "social_instagram": "https://www.instagram.com/silviapascualcentrodeestetica/",
     "sections": {
       "main-gift-card": {
         "type": "main-gift-card",
