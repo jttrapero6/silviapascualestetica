@@ -566,7 +566,9 @@
           "type": "tab",
           "settings": {
             "title": "Silvia Pascual",
-            "products": [],
+            "products": [
+              "tarjeta-regalo"
+            ],
             "content": "",
             "link": ""
           }
