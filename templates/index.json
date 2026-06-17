@@ -504,10 +504,84 @@
         "collection_hUNh9U",
         "collection_9mmUGd"
       ],
+      "disabled": true,
       "custom_css": [
         ".container {padding-block-start: calc( ( var(--section-disable-padding-collapsing) * var( --section-vertical-spacing-block-start, var(--section-vertical-spacing) ) ) * 1.5 ); padding-block-end: calc( (var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 1.5 );}"
       ],
       "name": "t:sections.featured_collections.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "stack_products_mobile": false,
+        "stack_products_desktop": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "tabs_alignment": "start",
+        "tabs_icon": "none",
+        "show_view_all_button": false,
+        "show_scrolling_bar": true
+      }
+    },
+    "featured_products_manual_m9P6XA": {
+      "type": "featured-products-manual",
+      "blocks": {
+        "tab_CRFQXm": {
+          "type": "tab",
+          "settings": {
+            "title": "Doctor Babor",
+            "products": [
+              "clarifying-peeling-cream",
+              "milky-ceramide-toner"
+            ],
+            "content": "",
+            "link": ""
+          }
+        },
+        "tab_EjiJ8n": {
+          "type": "tab",
+          "settings": {
+            "title": "Babor",
+            "products": [
+              "clarifying-peeling-cream",
+              "hyaluronic-cleansing-balm"
+            ],
+            "content": "",
+            "link": ""
+          }
+        },
+        "tab_n4TCBB": {
+          "type": "tab",
+          "settings": {
+            "title": "Biologique Recherche",
+            "products": [
+              "clarifying-peeling-cream",
+              "hyaluronic-cleansing-balm",
+              "milky-ceramide-toner",
+              "moisturizing-cream"
+            ],
+            "content": "",
+            "link": ""
+          }
+        },
+        "tab_eGAYPz": {
+          "type": "tab",
+          "settings": {
+            "title": "Silvia Pascual",
+            "products": [],
+            "content": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_CRFQXm",
+        "tab_EjiJ8n",
+        "tab_n4TCBB",
+        "tab_eGAYPz"
+      ],
+      "custom_css": [
+        ".container {padding-block-start: calc( ( var(--section-disable-padding-collapsing) * var( --section-vertical-spacing-block-start, var(--section-vertical-spacing) ) ) * 1.5 ); padding-block-end: calc( (var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 1.5 );}"
+      ],
+      "name": "t:sections.featured_products_manual.name",
       "settings": {
         "color_scheme": "scheme-2",
         "stack_products_mobile": false,
@@ -623,6 +697,7 @@
     "dynamic-grid",
     "media-blocks",
     "featured_collections_UPHgtK",
+    "featured_products_manual_m9P6XA",
     "press",
     "blog-posts"
   ]
