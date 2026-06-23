@@ -368,8 +368,8 @@
         "color_scheme": "scheme-2",
         "liquid": "<hr>",
         "text_alignment": "left",
-        "add_vertical_spacing": true,
-        "add_horizontal_spacing": true
+        "add_vertical_spacing": false,
+        "add_horizontal_spacing": false
       }
     },
     "contact_FYWpUT": {
@@ -379,11 +379,11 @@
         "color_scheme": "scheme-2",
         "layout": "stacked",
         "add_image_spacing": false,
-        "subheading": "Contact Us",
-        "title": "We'd love to hear from you",
+        "subheading": "",
+        "title": "¿Empezamos por <em>tu diagnóstico</em>?",
         "heading_size": "h2",
-        "content": "<p>If you have any questions, please fill in this contact form, and our team will reach you back as soon as possible.</p>",
-        "show_social_media": true
+        "content": "",
+        "show_social_media": false
       }
     }
   },
