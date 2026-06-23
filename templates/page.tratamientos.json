@@ -179,6 +179,9 @@
         "richtext_ciAeV3",
         "button_hYqaEd"
       ],
+      "custom_css": [
+        ".max-w-sm {max-width: inherit;}"
+      ],
       "name": "t:sections.text_with_media.name",
       "settings": {
         "color_scheme": "scheme-2",
@@ -233,6 +236,9 @@
         "heading_UUE3Km",
         "richtext_dJnrnB",
         "button_Uf7dmG"
+      ],
+      "custom_css": [
+        ".max-w-sm {max-width: inherit;}"
       ],
       "name": "t:sections.text_with_media.name",
       "settings": {
