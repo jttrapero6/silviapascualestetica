@@ -183,14 +183,14 @@
       "settings": {
         "color_scheme": "scheme-2",
         "content_position": "start",
-        "content_percentage_width": 50,
+        "content_percentage_width": 60,
         "overlay_color": "#000000",
         "overlay_opacity": 20,
         "add_media_spacing": true,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/Gemini_Generated_Image_qkrthyqkrthyqkrt.jpg",
-        "secondary_media_width": 60,
-        "secondary_media_mobile_width": 60,
+        "secondary_media_width": 80,
+        "secondary_media_mobile_width": 80,
         "show_secondary_media_on_mobile": true,
         "secondary_media_alignment": "place-self-center",
         "secondary_media_shape": "none"
