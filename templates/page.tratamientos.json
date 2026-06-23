@@ -372,18 +372,14 @@
         "add_horizontal_spacing": false
       }
     },
-    "contact_FYWpUT": {
-      "type": "contact",
-      "name": "t:sections.contact.name",
+    "formulario_personalizado_nerVRr": {
+      "type": "formulario-personalizado",
+      "name": "Formulario Tratamientos",
       "settings": {
         "color_scheme": "scheme-2",
-        "layout": "stacked",
-        "add_image_spacing": false,
-        "subheading": "",
         "title": "¿Empezamos por <em>tu diagnóstico</em>?",
         "heading_size": "h2",
-        "content": "",
-        "show_social_media": false
+        "content": ""
       }
     }
   },
@@ -396,6 +392,6 @@
     "text_with_media_3CzNUT",
     "text_with_media_4bA7ga",
     "custom_liquid_JwDNUG",
-    "contact_FYWpUT"
+    "formulario_personalizado_nerVRr"
   ]
 }
