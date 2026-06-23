@@ -95,10 +95,56 @@
         "cycle_speed": 6,
         "background": "#000000"
       }
+    },
+    "trust_icons_r9wc7t": {
+      "type": "trust-icons",
+      "blocks": {
+        "item_aEx3Rg": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20,
+            "title": "+20 Años",
+            "content": ""
+          }
+        },
+        "item_VgP4MF": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20,
+            "title": "4 Líneas de tratamientos",
+            "content": ""
+          }
+        },
+        "item_dVdCYW": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20,
+            "title": "100% Personalizado",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_aEx3Rg",
+        "item_VgP4MF",
+        "item_dVdCYW"
+      ],
+      "name": "t:sections.trust_icons.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "item_heading_style": "subheading"
+      }
     }
   },
   "order": [
     "main",
-    "slideshow_mPDKHL"
+    "slideshow_mPDKHL",
+    "trust_icons_r9wc7t"
   ]
 }
