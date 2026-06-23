@@ -360,6 +360,31 @@
         "secondary_media_alignment": "place-self-center",
         "secondary_media_shape": "none"
       }
+    },
+    "custom_liquid_JwDNUG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "liquid": "<hr>",
+        "text_alignment": "left",
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": true
+      }
+    },
+    "contact_FYWpUT": {
+      "type": "contact",
+      "name": "t:sections.contact.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "layout": "stacked",
+        "add_image_spacing": false,
+        "subheading": "Contact Us",
+        "title": "We'd love to hear from you",
+        "heading_size": "h2",
+        "content": "<p>If you have any questions, please fill in this contact form, and our team will reach you back as soon as possible.</p>",
+        "show_social_media": true
+      }
     }
   },
   "order": [
@@ -369,6 +394,8 @@
     "text_with_media_DryftK",
     "text_with_media_FczW3a",
     "text_with_media_3CzNUT",
-    "text_with_media_4bA7ga"
+    "text_with_media_4bA7ga",
+    "custom_liquid_JwDNUG",
+    "contact_FYWpUT"
   ]
 }
