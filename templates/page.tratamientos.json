@@ -188,6 +188,61 @@
         "overlay_opacity": 20,
         "add_media_spacing": true,
         "autoplay_video": true,
+        "primary_image": "shopify://shop_images/Gemini_Generated_Image_qkrthyqkrthyqkrt.jpg",
+        "secondary_media_width": 60,
+        "secondary_media_mobile_width": 60,
+        "show_secondary_media_on_mobile": true,
+        "secondary_media_alignment": "place-self-center",
+        "secondary_media_shape": "none"
+      }
+    },
+    "text_with_media_FczW3a": {
+      "type": "text-with-media",
+      "blocks": {
+        "heading_UUE3Km": {
+          "type": "heading",
+          "settings": {
+            "text": "Cuidado facial",
+            "heading_tag": "h3",
+            "position": "middle_left",
+            "highlight_effect": "none",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "richtext_dJnrnB": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Nuestra pasión es la piel y queremos ayudarte a cuidarla. Conseguir que se vea luminosa y bonita es fácil si sabes cómo hacerlo.<br/><br/>En nuestro centro te asesoramos sobre los cuidados que necesita tu piel, tanto en el día a día como en los tratamientos que podemos realizarte aquí para conseguir que te sientas en la piel que quieres.<br/><br/>Tenemos el respaldo de marcas de alta calidad, tecnología de última generación y veinte años de experiencia en el sector; la coctelera perfecta para conseguir unos resultados increíbles.</p>",
+            "position": "middle_left"
+          }
+        },
+        "button_Uf7dmG": {
+          "type": "button",
+          "settings": {
+            "text": "Ver tratamientos faciales",
+            "url": "shopify://pages/tratamientos-faciales",
+            "position": "middle_left",
+            "style": "solid",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_UUE3Km",
+        "richtext_dJnrnB",
+        "button_Uf7dmG"
+      ],
+      "name": "t:sections.text_with_media.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_position": "start",
+        "content_percentage_width": 60,
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "add_media_spacing": true,
+        "autoplay_video": true,
         "primary_image": "shopify://shop_images/Gemini_Generated_Image_f8o9j1f8o9j1f8o9.jpg",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
@@ -201,6 +256,7 @@
     "main",
     "slideshow_mPDKHL",
     "trust_icons_r9wc7t",
-    "text_with_media_DryftK"
+    "text_with_media_DryftK",
+    "text_with_media_FczW3a"
   ]
 }
