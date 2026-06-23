@@ -186,7 +186,7 @@
         "content_percentage_width": 60,
         "overlay_color": "#000000",
         "overlay_opacity": 20,
-        "add_media_spacing": false,
+        "add_media_spacing": true,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/Gemini_Generated_Image_f8o9j1f8o9j1f8o9.jpg",
         "secondary_media_width": 60,
