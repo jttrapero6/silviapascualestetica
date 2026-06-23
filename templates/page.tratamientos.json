@@ -144,30 +144,30 @@
     "text_with_media_DryftK": {
       "type": "text-with-media",
       "blocks": {
-        "richtext_ciAeV3": {
-          "type": "richtext",
-          "settings": {
-            "text": "<p>En nuestro centro tratamos piernas cansadas, celulitis, grasa localizada, flacidez, etc.<br/><br/>Creamos tratamientos personalizados con objetivos claros y resultados reales.<br/><br/>Para ello realizamos un estudio a nuestro cliente y analizamos su diagnóstico para posteriormente elegir las técnicas necesarias a realizar.<br/><br/>Nuestras sesiones incluyen siempre la tecnología más avanzada, junto con la técnica manual elegida y una cosmética de alta calidad; consiguiendo así un resultado premium en nuestros tratamientos.</p>",
-            "position": "bottom_left"
-          }
-        },
         "heading_paz9gX": {
           "type": "heading",
           "settings": {
             "text": "Cuidado corporal",
             "heading_tag": "h3",
-            "position": "top_left",
+            "position": "middle_left",
             "highlight_effect": "none",
             "highlight_accent_color": "",
             "highlight_text_color": ""
           }
         },
+        "richtext_ciAeV3": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>En nuestro centro tratamos piernas cansadas, celulitis, grasa localizada, flacidez, etc.<br/><br/>Creamos tratamientos personalizados con objetivos claros y resultados reales.<br/><br/>Para ello realizamos un estudio a nuestro cliente y analizamos su diagnóstico para posteriormente elegir las técnicas necesarias a realizar.<br/><br/>Nuestras sesiones incluyen siempre la tecnología más avanzada, junto con la técnica manual elegida y una cosmética de alta calidad; consiguiendo así un resultado premium en nuestros tratamientos.</p>",
+            "position": "middle_left"
+          }
+        },
         "button_hYqaEd": {
           "type": "button",
           "settings": {
-            "text": "Button text",
+            "text": "Ver tratamientos corporales",
             "url": "",
-            "position": "bottom_left",
+            "position": "middle_left",
             "style": "solid",
             "background": "",
             "text_color": ""
@@ -175,8 +175,8 @@
         }
       },
       "block_order": [
-        "richtext_ciAeV3",
         "heading_paz9gX",
+        "richtext_ciAeV3",
         "button_hYqaEd"
       ],
       "name": "t:sections.text_with_media.name",
