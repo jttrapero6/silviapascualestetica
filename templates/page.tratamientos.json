@@ -221,7 +221,7 @@
           "type": "button",
           "settings": {
             "text": "Ver tratamientos faciales",
-            "url": "shopify://pages/tratamientos-faciales",
+            "url": "shopify://pages/tratamientos-corporales",
             "position": "middle_left",
             "style": "solid",
             "background": "",
