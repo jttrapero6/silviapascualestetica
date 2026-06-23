@@ -377,7 +377,7 @@
       "name": "Formulario Tratamientos",
       "settings": {
         "color_scheme": "scheme-2",
-        "title": "¿Empezamos por <em>tu diagnóstico</em>?",
+        "title": "Empezamos por <em>tu diagnóstico</em>",
         "heading_size": "h2",
         "content": ""
       }
