@@ -144,11 +144,18 @@
     "text_with_media_DryftK": {
       "type": "text-with-media",
       "blocks": {
+        "richtext_ciAeV3": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>En nuestro centro tratamos piernas cansadas, celulitis, grasa localizada, flacidez, etc.<br/><br/>Creamos tratamientos personalizados con objetivos claros y resultados reales.<br/><br/>Para ello realizamos un estudio a nuestro cliente y analizamos su diagnóstico para posteriormente elegir las técnicas necesarias a realizar.<br/><br/>Nuestras sesiones incluyen siempre la tecnología más avanzada, junto con la técnica manual elegida y una cosmética de alta calidad; consiguiendo así un resultado premium en nuestros tratamientos.</p>",
+            "position": "bottom_left"
+          }
+        },
         "heading_paz9gX": {
           "type": "heading",
           "settings": {
             "text": "Cuidado corporal",
-            "heading_tag": "h1",
+            "heading_tag": "h3",
             "position": "top_left",
             "highlight_effect": "none",
             "highlight_accent_color": "",
@@ -168,6 +175,7 @@
         }
       },
       "block_order": [
+        "richtext_ciAeV3",
         "heading_paz9gX",
         "button_hYqaEd"
       ],
@@ -180,7 +188,7 @@
         "overlay_opacity": 20,
         "add_media_spacing": false,
         "autoplay_video": true,
-        "primary_image": "shopify://shop_images/pexels-kerimeveyik-15866041.jpg",
+        "primary_image": "shopify://shop_images/Gemini_Generated_Image_f8o9j1f8o9j1f8o9.jpg",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
         "show_secondary_media_on_mobile": true,
