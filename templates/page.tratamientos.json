@@ -256,6 +256,64 @@
         "secondary_media_alignment": "place-self-center",
         "secondary_media_shape": "none"
       }
+    },
+    "text_with_media_3CzNUT": {
+      "type": "text-with-media",
+      "blocks": {
+        "heading_m6P9E4": {
+          "type": "heading",
+          "settings": {
+            "text": "Masajes",
+            "heading_tag": "h3",
+            "position": "middle_left",
+            "highlight_effect": "none",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "richtext_wecEfr": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>En Silvia Pascual entendemos el masaje como una herramienta terapéutica de primer orden: un ritual que va más allá del bienestar inmediato para cuidar el cuerpo desde adentro, restablecer el equilibrio y devolver a la piel y al tejido su vitalidad natural.<br/><br/>Cada sesión comienza con una valoración personalizada para seleccionar la técnica más adecuada según el estado físico y las necesidades de cada persona. Trabajamos con cosmética de alta calidad y técnicas precisas para garantizar resultados visibles y una experiencia verdaderamente transformadora.</p>",
+            "position": "middle_left"
+          }
+        },
+        "button_MJy6tV": {
+          "type": "button",
+          "settings": {
+            "text": "Ver masajes",
+            "url": "shopify://pages/tratamientos-corporales",
+            "position": "middle_left",
+            "style": "solid",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_m6P9E4",
+        "richtext_wecEfr",
+        "button_MJy6tV"
+      ],
+      "custom_css": [
+        ".max-w-sm {max-width: inherit;}"
+      ],
+      "name": "t:sections.text_with_media.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_position": "start",
+        "content_percentage_width": 60,
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "add_media_spacing": true,
+        "autoplay_video": true,
+        "primary_image": "shopify://shop_images/Gemini_Generated_Image_f8o9j1f8o9j1f8o9.jpg",
+        "secondary_media_width": 60,
+        "secondary_media_mobile_width": 60,
+        "show_secondary_media_on_mobile": true,
+        "secondary_media_alignment": "place-self-center",
+        "secondary_media_shape": "none"
+      }
     }
   },
   "order": [
@@ -263,6 +321,7 @@
     "slideshow_mPDKHL",
     "trust_icons_r9wc7t",
     "text_with_media_DryftK",
-    "text_with_media_FczW3a"
+    "text_with_media_FczW3a",
+    "text_with_media_3CzNUT"
   ]
 }
