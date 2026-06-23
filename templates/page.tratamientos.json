@@ -166,7 +166,7 @@
           "type": "button",
           "settings": {
             "text": "Ver tratamientos corporales",
-            "url": "",
+            "url": "shopify://pages/tratamientos-corporales",
             "position": "middle_left",
             "style": "solid",
             "background": "",
