@@ -307,7 +307,53 @@
         "overlay_opacity": 20,
         "add_media_spacing": true,
         "autoplay_video": true,
-        "primary_image": "shopify://shop_images/Gemini_Generated_Image_f8o9j1f8o9j1f8o9.jpg",
+        "primary_image": "shopify://shop_images/Gemini_Generated_Image_ui10fbui10fbui10.jpg",
+        "secondary_media_width": 60,
+        "secondary_media_mobile_width": 60,
+        "show_secondary_media_on_mobile": true,
+        "secondary_media_alignment": "place-self-center",
+        "secondary_media_shape": "none"
+      }
+    },
+    "text_with_media_4bA7ga": {
+      "type": "text-with-media",
+      "blocks": {
+        "heading_NdNiVz": {
+          "type": "heading",
+          "settings": {
+            "text": "Masajes",
+            "heading_tag": "h3",
+            "position": "middle_left",
+            "highlight_effect": "none",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "richtext_jCJyW9": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>A lo largo de los años han sido cientos de novias e invitadas las que han confiado en Silvia Pascual para que las maquillara. Sin lugar a duda es una de sus pasiones. Ella sabe perfectamente con una breve conversación captar lo que su clienta necesita.<br/><br/>Destaca por su profesionalidad, por su naturalidad, por su asesoramiento, por su capacidad de adaptación.<br/><br/>Hoy en día cuenta en su equipo con más especialistas en maquillaje, con lo cual puede dar mayor servicio en otros lugares.</p>",
+            "position": "middle_left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NdNiVz",
+        "richtext_jCJyW9"
+      ],
+      "custom_css": [
+        ".max-w-sm {max-width: inherit;}"
+      ],
+      "name": "t:sections.text_with_media.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_position": "start",
+        "content_percentage_width": 60,
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "add_media_spacing": true,
+        "autoplay_video": true,
+        "primary_image": "shopify://shop_images/Gemini_Generated_Image_pseo87pseo87pseo.jpg",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
         "show_secondary_media_on_mobile": true,
@@ -322,6 +368,7 @@
     "trust_icons_r9wc7t",
     "text_with_media_DryftK",
     "text_with_media_FczW3a",
-    "text_with_media_3CzNUT"
+    "text_with_media_3CzNUT",
+    "text_with_media_4bA7ga"
   ]
 }
