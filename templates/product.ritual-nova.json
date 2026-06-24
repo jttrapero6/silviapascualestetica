@@ -114,6 +114,7 @@
         "accordion_HRyqNK",
         "accordion_tjigXG"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "allow_transparent_header": false,
@@ -131,42 +132,253 @@
         "max_image_zoom_level": 3
       }
     },
-    "related-products": {
-      "type": "related-products",
+    "image_with_text_overlay_yexDeB": {
+      "type": "image-with-text-overlay",
       "blocks": {
-        "section-header": {
-          "type": "_section-header",
-          "static": true,
+        "subheading_pmgH74": {
+          "type": "subheading",
           "settings": {
-            "subheading": "",
-            "title": "También te puede interesar",
-            "content": "",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "outline",
-            "text_alignment": "left",
+            "text": "Subheading"
+          },
+          "blocks": {}
+        },
+        "heading_87DHRL": {
+          "type": "heading",
+          "settings": {
+            "text": "Image with text overlay",
             "heading_size": "h3",
-            "title_icon": "none",
-            "show_scrolling_title": false
+            "html_tag": "p",
+            "indent": "none",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          },
+          "blocks": {}
+        },
+        "rich_text_7ztVAM": {
+          "type": "rich-text",
+          "settings": {
+            "text": "<p>Write some text about your products or your brand.</p>",
+            "content_width": "sm"
           },
           "blocks": {}
         }
       },
-      "disabled": true,
-      "custom_css": [],
+      "block_order": [
+        "subheading_pmgH74",
+        "heading_87DHRL",
+        "rich_text_7ztVAM"
+      ],
+      "name": "t:sections.image_with_text_overlay.name",
       "settings": {
-        "color_scheme": "scheme-2",
-        "stack_products": false,
-        "recommendations_count": 10,
-        "products_per_row_mobile": "1",
-        "products_per_row_desktop": 5,
-        "show_view_all_button": false,
-        "show_scrolling_bar": true
+        "color_scheme": "",
+        "allow_transparent_header": true,
+        "image_size": "auto",
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "enable_sticky_content": false,
+        "content_width": "md",
+        "desktop_text_position": "sm:place-self-center",
+        "mobile_text_position": "place-self-center"
+      }
+    },
+    "image_with_text_overlay_yRViYy": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_wkpeNN": {
+          "type": "subheading",
+          "settings": {
+            "text": "Subheading"
+          },
+          "blocks": {}
+        },
+        "heading_RrxaPT": {
+          "type": "heading",
+          "settings": {
+            "text": "Image with text overlay",
+            "heading_size": "h3",
+            "html_tag": "p",
+            "indent": "none",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          },
+          "blocks": {}
+        },
+        "rich_text_XdyBEX": {
+          "type": "rich-text",
+          "settings": {
+            "text": "<p>Write some text about your products or your brand.</p>",
+            "content_width": "sm"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "subheading_wkpeNN",
+        "heading_RrxaPT",
+        "rich_text_XdyBEX"
+      ],
+      "name": "t:sections.image_with_text_overlay.name",
+      "settings": {
+        "color_scheme": "",
+        "allow_transparent_header": true,
+        "image_size": "auto",
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "enable_sticky_content": false,
+        "content_width": "md",
+        "desktop_text_position": "sm:place-self-center",
+        "mobile_text_position": "place-self-center"
+      }
+    },
+    "image_with_text_overlay_qJAbUm": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_Ad8ELC": {
+          "type": "subheading",
+          "settings": {
+            "text": "Subheading"
+          },
+          "blocks": {}
+        },
+        "heading_AgkpQW": {
+          "type": "heading",
+          "settings": {
+            "text": "Image with text overlay",
+            "heading_size": "h3",
+            "html_tag": "p",
+            "indent": "none",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          },
+          "blocks": {}
+        },
+        "rich_text_GbVFAJ": {
+          "type": "rich-text",
+          "settings": {
+            "text": "<p>Write some text about your products or your brand.</p>",
+            "content_width": "sm"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "subheading_Ad8ELC",
+        "heading_AgkpQW",
+        "rich_text_GbVFAJ"
+      ],
+      "name": "t:sections.image_with_text_overlay.name",
+      "settings": {
+        "color_scheme": "",
+        "allow_transparent_header": true,
+        "image_size": "auto",
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "enable_sticky_content": false,
+        "content_width": "md",
+        "desktop_text_position": "sm:place-self-center",
+        "mobile_text_position": "place-self-center"
+      }
+    },
+    "image_with_text_overlay_dKKzXK": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_mR48Jn": {
+          "type": "subheading",
+          "settings": {
+            "text": "Subheading"
+          },
+          "blocks": {}
+        },
+        "heading_wHfYGx": {
+          "type": "heading",
+          "settings": {
+            "text": "Image with text overlay",
+            "heading_size": "h3",
+            "html_tag": "p",
+            "indent": "none",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          },
+          "blocks": {}
+        },
+        "rich_text_kJ4niF": {
+          "type": "rich-text",
+          "settings": {
+            "text": "<p>Write some text about your products or your brand.</p>",
+            "content_width": "sm"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "subheading_mR48Jn",
+        "heading_wHfYGx",
+        "rich_text_kJ4niF"
+      ],
+      "name": "t:sections.image_with_text_overlay.name",
+      "settings": {
+        "color_scheme": "",
+        "allow_transparent_header": true,
+        "image_size": "auto",
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "enable_sticky_content": false,
+        "content_width": "md",
+        "desktop_text_position": "sm:place-self-center",
+        "mobile_text_position": "place-self-center"
+      }
+    },
+    "1782313084a4866761": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_d514b31_PyxyLL": {
+          "type": "ai_gen_block_d514b31",
+          "settings": {
+            "button_text": "Añadir al carrito",
+            "show_button_text": true,
+            "button_text_transform": "none",
+            "button_font_size": 14,
+            "button_font_size_mobile": 13,
+            "button_padding": 16,
+            "button_padding_mobile": 12,
+            "button_min_width": 60,
+            "button_min_width_mobile": 60,
+            "button_border_radius": 30,
+            "icon_size": 20,
+            "icon_size_mobile": 18,
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_background": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "bottom_offset": 30,
+            "right_offset": 30,
+            "bottom_offset_mobile": 20,
+            "right_offset_mobile": 20,
+            "scroll_threshold": 300
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_d514b31_PyxyLL"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": true
       }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "image_with_text_overlay_yexDeB",
+    "image_with_text_overlay_yRViYy",
+    "image_with_text_overlay_qJAbUm",
+    "image_with_text_overlay_dKKzXK",
+    "1782313084a4866761"
   ]
 }
