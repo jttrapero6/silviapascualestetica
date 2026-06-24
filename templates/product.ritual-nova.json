@@ -152,6 +152,7 @@
           "blocks": {}
         }
       },
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "color_scheme": "scheme-2",
