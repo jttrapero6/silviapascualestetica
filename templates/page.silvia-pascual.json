@@ -33,33 +33,24 @@
           "settings": {
             "text": "Centro de Estética Avanzada",
             "heading_size": "h2",
-            "html_tag": "p",
+            "html_tag": "h1",
             "indent": "none",
             "highlight_effect": "default",
             "highlight_accent_color": "",
             "highlight_text_color": ""
           },
           "blocks": {}
-        },
-        "rich_text_TE7ria": {
-          "type": "rich-text",
-          "settings": {
-            "text": "<p>Write some text about your products or your brand.</p>",
-            "content_width": "sm"
-          },
-          "blocks": {}
         }
       },
       "block_order": [
         "subheading_jdA6ip",
-        "heading_9eHJiY",
-        "rich_text_TE7ria"
+        "heading_9eHJiY"
       ],
       "name": "t:sections.image_with_text_overlay.name",
       "settings": {
         "color_scheme": "",
         "allow_transparent_header": true,
-        "image_size": "lg",
+        "image_size": "md",
         "image": "shopify://shop_images/598799660_1452286870237172_7131438926075839746_n.jpg",
         "overlay_color": "#000000",
         "overlay_opacity": 20,
