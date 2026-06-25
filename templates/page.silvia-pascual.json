@@ -60,71 +60,57 @@
         "mobile_text_position": "place-self-center"
       }
     },
-    "text_with_media_8YKfaj": {
-      "type": "text-with-media",
+    "rich_text_fbmyKX": {
+      "type": "rich-text",
       "blocks": {
-        "subheading_jJVGNw": {
-          "type": "subheading",
+        "image_UGmaqK": {
+          "type": "image",
           "settings": {
-            "text": "Biografía",
-            "position": "top_left"
+            "image": "shopify://shop_images/silvia-pascual-profile.jpg",
+            "width_mode": "custom",
+            "max_width": 150,
+            "mobile_max_width": 130
           }
         },
-        "heading_CECLe9": {
-          "type": "heading",
-          "disabled": true,
+        "subheading_8dRJgw": {
+          "type": "subheading",
           "settings": {
-            "text": "Heading",
+            "text": "Biografía"
+          }
+        },
+        "heading_8dem4Y": {
+          "type": "heading",
+          "settings": {
+            "text": "",
             "heading_tag": "h1",
-            "position": "top_left",
+            "html_tag": "p",
+            "indent": "none",
             "highlight_effect": "default",
             "highlight_accent_color": "",
             "highlight_text_color": ""
           }
         },
-        "richtext_ekB3TX": {
+        "richtext_YkR33n": {
           "type": "richtext",
           "settings": {
-            "text": "<p>Desde muy joven crecí rodeada de personas trabajadoras, cercanas y con grandes valores humanos. En mi entorno familiar aprendí, casi sin darme cuenta, <strong>la importancia del respeto, del esfuerzo diario y del trato sincero con los demás</strong>. Ese aprendizaje temprano me enseñó que atender bien no es solo hacer las cosas correctamente, sino hacerlo desde la honestidad, la dedicación y el compromiso, valores que hoy siguen guiando mi forma de trabajar.</p><p>Mi trayectoria profesional comenzó en 1998, cuando la estética básica era el eje principal de los centros de estética. Durante esos primeros años, trabajé con constancia y dedicación, <strong>invirtiendo de forma progresiva en la tecnología disponible en aquel momento</strong>. Nunca tuve prisa por terminar la jornada: entendía el trabajo como una responsabilidad con cada clienta, dedicando el tiempo necesario a cada tratamiento.</p><p>Con la llegada de mis hijas, mis prioridades cambiaron de forma natural. Ellas pasaron a ocupar el primer lugar, y esa etapa estuvo marcada por una dedicación especial a su crianza. Me siento profundamente agradecida a la vida por haber podido hacerlo, <strong>una experiencia que me aportó equilibrio, madurez y una visión más consciente de mi profesión y de la vida.</strong></p><p>A lo largo de todos estos años, la formación continua y la evolución profesional han sido una constante en mi trayectoria. <strong>He seguido invirtiendo en aprendizaje, en nuevas técnicas y en tecnología a medida que la estética avanzaba, incorporando siempre aquello que realmente aportaba valor.</strong></p><p>En 2011 dimos un paso importante con el cambio de ubicación a un centro más amplio y exclusivo, cuidadosamente <strong>diseñado para transmitir calma, elegancia y bienestar.</strong></p><p><strong>Hoy, 27 años después, somos un equipo de cuatro personas altamente preparadas, unidas por la misma visión: trabajar con rigor, honestidad y sensibilidad, ofreciendo tratamientos personalizados, resultados visibles y un trato cercano y humano.</strong></p>",
-            "position": "bottom_left"
-          }
-        },
-        "button_UXEKYq": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "text": "Button text",
-            "url": "",
-            "position": "bottom_left",
-            "style": "solid",
-            "background": "",
-            "text_color": ""
+            "text": "<p>Desde muy joven crecí rodeada de personas trabajadoras, cercanas y con grandes valores humanos. En mi entorno familiar aprendí, casi sin darme cuenta, <strong>la importancia del respeto, del esfuerzo diario y del trato sincero con los demás</strong>. Ese aprendizaje temprano me enseñó que atender bien no es solo hacer las cosas correctamente, sino hacerlo desde la honestidad, la dedicación y el compromiso, valores que hoy siguen guiando mi forma de trabajar.</p><p>Mi trayectoria profesional comenzó en 1998, cuando la estética básica era el eje principal de los centros de estética. Durante esos primeros años, trabajé con constancia y dedicación, <strong>invirtiendo de forma progresiva en la tecnología disponible en aquel momento</strong>. Nunca tuve prisa por terminar la jornada: entendía el trabajo como una responsabilidad con cada clienta, dedicando el tiempo necesario a cada tratamiento.</p><p>Con la llegada de mis hijas, mis prioridades cambiaron de forma natural. Ellas pasaron a ocupar el primer lugar, y esa etapa estuvo marcada por una dedicación especial a su crianza. Me siento profundamente agradecida a la vida por haber podido hacerlo, <strong>una experiencia que me aportó equilibrio, madurez y una visión más consciente de mi profesión y de la vida.</strong></p><p>A lo largo de todos estos años, la formación continua y la evolución profesional han sido una constante en mi trayectoria. <strong>He seguido invirtiendo en aprendizaje, en nuevas técnicas y en tecnología a medida que la estética avanzaba, incorporando siempre aquello que realmente aportaba valor.</strong></p><p>En 2011 dimos un paso importante con el cambio de ubicación a un centro más amplio y exclusivo, cuidadosamente <strong>diseñado para transmitir calma, elegancia y bienestar.</strong></p><p><strong>Hoy, 27 años después, somos un equipo de cuatro personas altamente preparadas, unidas por la misma visión: trabajar con rigor, honestidad y sensibilidad, ofreciendo tratamientos personalizados, resultados visibles y un trato cercano y humano.</strong></p>"
           }
         }
       },
       "block_order": [
-        "subheading_jJVGNw",
-        "heading_CECLe9",
-        "richtext_ekB3TX",
-        "button_UXEKYq"
+        "image_UGmaqK",
+        "subheading_8dRJgw",
+        "heading_8dem4Y",
+        "richtext_YkR33n"
       ],
       "custom_css": [
-        ".max-w-sm {max-width: inherit;}"
+        "img {border-radius: 500px;}"
       ],
-      "name": "t:sections.text_with_media.name",
+      "name": "t:sections.rich_text.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "content_position": "start",
-        "content_percentage_width": 60,
-        "overlay_color": "#000000",
-        "overlay_opacity": 20,
-        "add_media_spacing": false,
-        "autoplay_video": true,
-        "secondary_media_width": 60,
-        "secondary_media_mobile_width": 60,
-        "show_secondary_media_on_mobile": true,
-        "secondary_media_alignment": "place-self-center",
-        "secondary_media_shape": "none"
+        "content_width": "full",
+        "text_alignment": "center"
       }
     },
     "reading_text_YGcLFJ": {
@@ -133,7 +119,7 @@
       "settings": {
         "color_scheme": "scheme-7",
         "subheading": "Nuestra misión",
-        "content": "Nuestra misión es ofrecer una estética avanzada responsable, eficaz y humana. Queremos que cada cliente encuentre en nuestro centro un lugar seguro, profesional y cercano donde confiar su piel y su bienestar.Trabajamos para fusionar ciencia, tecnología y sensibilidad, creando tratamientos que no solo embellecen, sino que acompañan procesos, elevan la autoestima y mejoran la calidad de vida.",
+        "content": "Nuestra misión es ofrecer una estética avanzada responsable, eficaz y humana. Queremos que cada cliente encuentre en nuestro centro un lugar seguro, profesional y cercano donde confiar su piel y su bienestar. Trabajamos para fusionar ciencia, tecnología y sensibilidad, creando tratamientos que no solo embellecen, sino que acompañan procesos, elevan la autoestima y mejoran la calidad de vida.",
         "button_text": "",
         "button_link": "",
         "heading_tag": "h2",
@@ -152,7 +138,7 @@
   "order": [
     "main",
     "image_with_text_overlay_it9LhF",
-    "text_with_media_8YKfaj",
+    "rich_text_fbmyKX",
     "reading_text_YGcLFJ"
   ]
 }
