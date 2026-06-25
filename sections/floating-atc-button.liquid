@@ -1,0 +1,133 @@
+{%- liquid
+  assign form_id = section.id | append: '-floating-atc-form'
+
+  if product.selected_or_first_available_variant == nil
+    assign button_label = 'product.general.unavailable_button' | t
+    assign disabled = true
+  elsif product.selected_or_first_available_variant.available == false
+    assign button_label = 'product.general.sold_out_button' | t
+    assign disabled = true
+  else
+    assign button_label = 'product.general.add_to_cart_button' | t
+    assign disabled = false
+  endif
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    position: fixed;
+    inset-block-end: 1.75rem;
+    inset-inline-end: 1.75rem;
+    z-index: 10;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.18));
+  }
+
+  #shopify-section-{{ section.id }} floating-atc-button.color-scheme {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  @media screen and (max-width: 699px) {
+    #shopify-section-{{ section.id }} {
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
+      filter: none;
+    }
+
+    #shopify-section-{{ section.id }} floating-atc-button.color-scheme {
+      padding: 0.75rem 1rem;
+      background-color: rgb(var(--background));
+      border-top: 1px solid rgb(var(--border-color));
+    }
+
+    #shopify-section-{{ section.id }} .button {
+      width: 100%;
+    }
+  }
+</style>
+
+<floating-atc-button class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
+  <product-form>
+    {%- form 'product', product, id: form_id -%}
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      <buy-buttons class="buy-buttons" form="{{ form_id }}">
+        {%- render 'button', type: 'submit', form: form_id, content: button_label, disabled: disabled, icon: 'cart', icon_position: 'before_text' -%}
+      </buy-buttons>
+    {%- endform -%}
+  </product-form>
+</floating-atc-button>
+
+<script>
+  (() => {
+    if (customElements.get('floating-atc-button')) return;
+
+    const addLabel = {{ 'product.general.add_to_cart_button' | t | json }};
+    const soldOutLabel = {{ 'product.general.sold_out_button' | t | json }};
+    const unavailableLabel = {{ 'product.general.unavailable_button' | t | json }};
+
+    customElements.define('floating-atc-button', class extends HTMLElement {
+      connectedCallback() {
+        this._onVariantChange = this._syncVariant.bind(this);
+        document.addEventListener('variant:change', this._onVariantChange);
+      }
+
+      disconnectedCallback() {
+        document.removeEventListener('variant:change', this._onVariantChange);
+      }
+
+      _syncVariant(event) {
+        const variant = event.detail.variant;
+        const idInput = this.querySelector('input[name="id"]');
+        const button = this.querySelector('button[type="submit"]');
+        const buttonContent = button?.querySelector('button-content');
+
+        if (!idInput || !button) return;
+
+        let label, isDisabled;
+
+        if (!variant) {
+          label = unavailableLabel;
+          isDisabled = true;
+          idInput.value = '';
+        } else if (!variant.available) {
+          label = soldOutLabel;
+          isDisabled = true;
+          idInput.value = variant.id;
+        } else {
+          label = addLabel;
+          isDisabled = false;
+          idInput.value = variant.id;
+        }
+
+        button.disabled = isDisabled;
+
+        if (buttonContent) {
+          buttonContent.textContent = label;
+          if (buttonContent.hasAttribute('rotated-text')) buttonContent.setAttribute('rotated-text', label);
+          if (buttonContent.hasAttribute('up-text')) buttonContent.setAttribute('up-text', label);
+        }
+      }
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Botón flotante",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Botón flotante añadir al carrito"
+    }
+  ]
+}
+{% endschema %}
