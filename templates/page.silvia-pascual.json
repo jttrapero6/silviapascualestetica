@@ -133,12 +133,73 @@
         "overlay_opacity": 20,
         "section_min_height": 0
       }
+    },
+    "timeline_9hLD9G": {
+      "type": "timeline",
+      "blocks": {
+        "item_fggz4T": {
+          "type": "item",
+          "settings": {
+            "label": "1",
+            "subheading": "",
+            "icon": "none",
+            "icon_width": 32,
+            "mobile_icon_width": 24,
+            "title": "Transparencia y sinceridad",
+            "heading_tag": "h3",
+            "highlight_effect": "default",
+            "content": "<p>Trabajamos desde la claridad absoluta, explicando cada recomendación y cada tratamiento para que nuestras clientas comprendan qué necesita su piel y qué resultados esperar. La sinceridad es la base de la confianza que construimos.</p>"
+          }
+        },
+        "item_jztyfY": {
+          "type": "item",
+          "settings": {
+            "label": "2010",
+            "subheading": "Subheading",
+            "icon": "none",
+            "icon_width": 32,
+            "mobile_icon_width": 24,
+            "title": "Our development",
+            "heading_tag": "h3",
+            "highlight_effect": "default",
+            "content": "<p>Pair text with an image to focus on your brand. Add details about your story, your making process or your values.</p>"
+          }
+        },
+        "item_TmmgJt": {
+          "type": "item",
+          "settings": {
+            "label": "2020",
+            "subheading": "Subheading",
+            "icon": "none",
+            "icon_width": 32,
+            "mobile_icon_width": 24,
+            "title": "Our success",
+            "heading_tag": "h3",
+            "highlight_effect": "default",
+            "content": "<p>Pair text with an image to focus on your brand. Add details about your story, your making process or your values.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_fggz4T",
+        "item_jztyfY",
+        "item_TmmgJt"
+      ],
+      "name": "t:sections.timeline.name",
+      "settings": {
+        "color_scheme": "",
+        "timeline_position": "top",
+        "image_position": "right",
+        "text_alignment": "center",
+        "add_image_spacing": true
+      }
     }
   },
   "order": [
     "main",
     "image_with_text_overlay_it9LhF",
     "rich_text_fbmyKX",
-    "reading_text_YGcLFJ"
+    "reading_text_YGcLFJ",
+    "timeline_9hLD9G"
   ]
 }
