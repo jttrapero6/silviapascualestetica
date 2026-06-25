@@ -56,7 +56,7 @@
     "product_card_show_discount": true,
     "product_card_discount_mode": "saving",
     "product_card_show_product_size_selector": true,
-    "product_listing_spacing": "none",
+    "product_listing_spacing": "x-small",
     "cart_type": "drawer",
     "cart_icon": "tote_bag",
     "cart_empty_cart_link": "/",
