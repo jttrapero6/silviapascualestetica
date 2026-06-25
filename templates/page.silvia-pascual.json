@@ -1,0 +1,158 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-2",
+        "show_title": true,
+        "content_width": "md"
+      }
+    },
+    "image_with_text_overlay_it9LhF": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_jdA6ip": {
+          "type": "subheading",
+          "settings": {
+            "text": "Silvia pascual"
+          },
+          "blocks": {}
+        },
+        "heading_9eHJiY": {
+          "type": "heading",
+          "settings": {
+            "text": "Centro de Estética Avanzada",
+            "heading_size": "h2",
+            "html_tag": "h1",
+            "indent": "none",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "subheading_jdA6ip",
+        "heading_9eHJiY"
+      ],
+      "name": "t:sections.image_with_text_overlay.name",
+      "settings": {
+        "color_scheme": "",
+        "allow_transparent_header": true,
+        "image_size": "md",
+        "image": "shopify://shop_images/598799660_1452286870237172_7131438926075839746_n.jpg",
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "enable_sticky_content": false,
+        "content_width": "md",
+        "desktop_text_position": "sm:place-self-center",
+        "mobile_text_position": "place-self-center"
+      }
+    },
+    "text_with_media_8YKfaj": {
+      "type": "text-with-media",
+      "blocks": {
+        "subheading_jJVGNw": {
+          "type": "subheading",
+          "settings": {
+            "text": "Biografía",
+            "position": "top_left"
+          }
+        },
+        "heading_CECLe9": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Heading",
+            "heading_tag": "h1",
+            "position": "top_left",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "richtext_ekB3TX": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Desde muy joven crecí rodeada de personas trabajadoras, cercanas y con grandes valores humanos. En mi entorno familiar aprendí, casi sin darme cuenta, <strong>la importancia del respeto, del esfuerzo diario y del trato sincero con los demás</strong>. Ese aprendizaje temprano me enseñó que atender bien no es solo hacer las cosas correctamente, sino hacerlo desde la honestidad, la dedicación y el compromiso, valores que hoy siguen guiando mi forma de trabajar.</p><p>Mi trayectoria profesional comenzó en 1998, cuando la estética básica era el eje principal de los centros de estética. Durante esos primeros años, trabajé con constancia y dedicación, <strong>invirtiendo de forma progresiva en la tecnología disponible en aquel momento</strong>. Nunca tuve prisa por terminar la jornada: entendía el trabajo como una responsabilidad con cada clienta, dedicando el tiempo necesario a cada tratamiento.</p><p>Con la llegada de mis hijas, mis prioridades cambiaron de forma natural. Ellas pasaron a ocupar el primer lugar, y esa etapa estuvo marcada por una dedicación especial a su crianza. Me siento profundamente agradecida a la vida por haber podido hacerlo, <strong>una experiencia que me aportó equilibrio, madurez y una visión más consciente de mi profesión y de la vida.</strong></p><p>A lo largo de todos estos años, la formación continua y la evolución profesional han sido una constante en mi trayectoria. <strong>He seguido invirtiendo en aprendizaje, en nuevas técnicas y en tecnología a medida que la estética avanzaba, incorporando siempre aquello que realmente aportaba valor.</strong></p><p>En 2011 dimos un paso importante con el cambio de ubicación a un centro más amplio y exclusivo, cuidadosamente <strong>diseñado para transmitir calma, elegancia y bienestar.</strong></p><p><strong>Hoy, 27 años después, somos un equipo de cuatro personas altamente preparadas, unidas por la misma visión: trabajar con rigor, honestidad y sensibilidad, ofreciendo tratamientos personalizados, resultados visibles y un trato cercano y humano.</strong></p>",
+            "position": "bottom_left"
+          }
+        },
+        "button_UXEKYq": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "text": "Button text",
+            "url": "",
+            "position": "bottom_left",
+            "style": "solid",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_jJVGNw",
+        "heading_CECLe9",
+        "richtext_ekB3TX",
+        "button_UXEKYq"
+      ],
+      "custom_css": [
+        ".max-w-sm {max-width: inherit;}"
+      ],
+      "name": "t:sections.text_with_media.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_position": "start",
+        "content_percentage_width": 60,
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "add_media_spacing": false,
+        "autoplay_video": true,
+        "secondary_media_width": 60,
+        "secondary_media_mobile_width": 60,
+        "show_secondary_media_on_mobile": true,
+        "secondary_media_alignment": "place-self-center",
+        "secondary_media_shape": "none"
+      }
+    },
+    "reading_text_YGcLFJ": {
+      "type": "reading-text",
+      "name": "t:sections.reading_text.name",
+      "settings": {
+        "color_scheme": "scheme-7",
+        "subheading": "Nuestra misión",
+        "content": "Nuestra misión es ofrecer una estética avanzada responsable, eficaz y humana. Queremos que cada cliente encuentre en nuestro centro un lugar seguro, profesional y cercano donde confiar su piel y su bienestar.Trabajamos para fusionar ciencia, tecnología y sensibilidad, creando tratamientos que no solo embellecen, sino que acompañan procesos, elevan la autoestima y mejoran la calidad de vida.",
+        "button_text": "",
+        "button_link": "",
+        "heading_tag": "h2",
+        "mobile_text_position": "place-self-center",
+        "desktop_text_position": "sm:place-self-center",
+        "content_width": "full",
+        "reading_speed": "1.5",
+        "separate_button": false,
+        "text_opacity": 20,
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "section_min_height": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_it9LhF",
+    "text_with_media_8YKfaj",
+    "reading_text_YGcLFJ"
+  ]
+}
