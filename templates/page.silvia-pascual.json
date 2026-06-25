@@ -193,6 +193,62 @@
         "text_alignment": "center",
         "add_image_spacing": true
       }
+    },
+    "trust_icons_Via9mA": {
+      "type": "trust-icons",
+      "blocks": {
+        "item_NjgktW": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20,
+            "title": "Trust title",
+            "content": "Short content about your store"
+          }
+        },
+        "item_UMkF8R": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20,
+            "title": "Trust title",
+            "content": "Short content about your store"
+          }
+        },
+        "item_Jnwmb6": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20,
+            "title": "Free shipping",
+            "content": "Free worldwide shipping and returns - customs and duties taxes included"
+          }
+        },
+        "item_MWMeF7": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20,
+            "title": "Secure payment",
+            "content": "Your payment information is processed securely."
+          }
+        }
+      },
+      "block_order": [
+        "item_NjgktW",
+        "item_UMkF8R",
+        "item_Jnwmb6",
+        "item_MWMeF7"
+      ],
+      "name": "t:sections.trust_icons.name",
+      "settings": {
+        "color_scheme": "",
+        "item_heading_style": "subheading"
+      }
     }
   },
   "order": [
@@ -200,6 +256,7 @@
     "image_with_text_overlay_it9LhF",
     "rich_text_fbmyKX",
     "reading_text_YGcLFJ",
-    "timeline_9hLD9G"
+    "timeline_9hLD9G",
+    "trust_icons_Via9mA"
   ]
 }
