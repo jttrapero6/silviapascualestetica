@@ -36,7 +36,7 @@
     --header-non-transparent-text-color: {{ section.settings.color_scheme.settings.text_color.rgb }};
   }
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1200px) {
     #shopify-section-{{ section.id }} {
       {%- case section.settings.desktop_layout -%}
         {%- when 'logo_left_navigation_inline' -%}
@@ -48,6 +48,21 @@
         {%- else -%}
           --header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
       {%- endcase -%}
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1199px) {
+    #shopify-section-{{ section.id }} .md\:hidden {
+      display: revert;
+    }
+
+    #shopify-section-{{ section.id }} .md-max\:hidden {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .hidden.md\:flex,
+    #shopify-section-{{ section.id }} .hidden.md\:contents {
+      display: none;
     }
   }
 
