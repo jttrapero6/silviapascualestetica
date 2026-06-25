@@ -126,11 +126,72 @@
         "secondary_media_alignment": "place-self-center",
         "secondary_media_shape": "none"
       }
+    },
+    "timeline_QyV43T": {
+      "type": "timeline",
+      "blocks": {
+        "item_fRTA7g": {
+          "type": "item",
+          "settings": {
+            "label": "2000",
+            "subheading": "Subheading",
+            "icon": "none",
+            "icon_width": 32,
+            "mobile_icon_width": 24,
+            "title": "The beginning",
+            "heading_tag": "h3",
+            "highlight_effect": "default",
+            "content": "<p>Pair text with an image to focus on your brand. Add details about your story, your making process or your values.</p>"
+          }
+        },
+        "item_a3fNf7": {
+          "type": "item",
+          "settings": {
+            "label": "2010",
+            "subheading": "Subheading",
+            "icon": "none",
+            "icon_width": 32,
+            "mobile_icon_width": 24,
+            "title": "Our development",
+            "heading_tag": "h3",
+            "highlight_effect": "default",
+            "content": "<p>Pair text with an image to focus on your brand. Add details about your story, your making process or your values.</p>"
+          }
+        },
+        "item_HUnPDM": {
+          "type": "item",
+          "settings": {
+            "label": "2020",
+            "subheading": "Subheading",
+            "icon": "none",
+            "icon_width": 32,
+            "mobile_icon_width": 24,
+            "title": "Our success",
+            "heading_tag": "h3",
+            "highlight_effect": "default",
+            "content": "<p>Pair text with an image to focus on your brand. Add details about your story, your making process or your values.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_fRTA7g",
+        "item_a3fNf7",
+        "item_HUnPDM"
+      ],
+      "name": "t:sections.timeline.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "timeline_position": "left",
+        "image_position": "right",
+        "text_alignment": "left",
+        "add_image_spacing": false
+      }
     }
   },
   "order": [
     "main",
     "image_with_text_overlay_it9LhF",
-    "text_with_media_8YKfaj"
+    "text_with_media_8YKfaj",
+    "timeline_QyV43T"
   ]
 }
