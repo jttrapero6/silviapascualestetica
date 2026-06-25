@@ -108,6 +108,9 @@
         "richtext_ekB3TX",
         "button_UXEKYq"
       ],
+      "custom_css": [
+        ".max-w-sm {max-width: inherit;}"
+      ],
       "name": "t:sections.text_with_media.name",
       "settings": {
         "color_scheme": "scheme-2",
