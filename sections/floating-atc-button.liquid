@@ -54,7 +54,7 @@
     {%- form 'product', product, id: form_id -%}
       <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
       <buy-buttons class="buy-buttons" form="{{ form_id }}">
-        {%- render 'button', type: 'submit', form: form_id, content: button_label, disabled: disabled, icon: 'cart', icon_position: 'before_text' -%}
+        {%- render 'button', type: 'submit', form: form_id, content: button_label, disabled: disabled -%}
       </buy-buttons>
     {%- endform -%}
   </product-form>
