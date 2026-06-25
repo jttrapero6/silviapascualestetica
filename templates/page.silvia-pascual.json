@@ -126,7 +126,7 @@
         "mobile_text_position": "place-self-center",
         "desktop_text_position": "sm:place-self-center",
         "content_width": "full",
-        "reading_speed": "1.5",
+        "reading_speed": "0.8",
         "separate_button": false,
         "text_opacity": 20,
         "overlay_color": "#000000",
