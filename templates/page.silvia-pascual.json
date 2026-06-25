@@ -11,14 +11,67 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "show_title": true,
         "content_width": "md"
       }
+    },
+    "image_with_text_overlay_it9LhF": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_jdA6ip": {
+          "type": "subheading",
+          "settings": {
+            "text": "Silvia pascual"
+          },
+          "blocks": {}
+        },
+        "heading_9eHJiY": {
+          "type": "heading",
+          "settings": {
+            "text": "Centro de Estética Avanzada",
+            "heading_size": "h2",
+            "html_tag": "p",
+            "indent": "none",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          },
+          "blocks": {}
+        },
+        "rich_text_TE7ria": {
+          "type": "rich-text",
+          "settings": {
+            "text": "<p>Write some text about your products or your brand.</p>",
+            "content_width": "sm"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "subheading_jdA6ip",
+        "heading_9eHJiY",
+        "rich_text_TE7ria"
+      ],
+      "name": "t:sections.image_with_text_overlay.name",
+      "settings": {
+        "color_scheme": "",
+        "allow_transparent_header": true,
+        "image_size": "lg",
+        "image": "shopify://shop_images/598799660_1452286870237172_7131438926075839746_n.jpg",
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "enable_sticky_content": false,
+        "content_width": "md",
+        "desktop_text_position": "sm:place-self-center",
+        "mobile_text_position": "place-self-center"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_with_text_overlay_it9LhF"
   ]
 }
