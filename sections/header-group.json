@@ -90,7 +90,7 @@
         "enable_sticky": true,
         "hide_on_scroll": false,
         "mobile_layout": "logo_center_navigation_split",
-        "desktop_layout": "logo_left_navigation_center",
+        "desktop_layout": "logo_center_navigation_inline",
         "logo": "{{shop.brand.logo}}",
         "logo_max_width": 95,
         "logo_mobile_max_width": 70,
