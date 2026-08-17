@@ -504,7 +504,6 @@
         "collection_hUNh9U",
         "collection_9mmUGd"
       ],
-      "disabled": true,
       "custom_css": [
         ".container {padding-block-start: calc( ( var(--section-disable-padding-collapsing) * var( --section-vertical-spacing-block-start, var(--section-vertical-spacing) ) ) * 1.5 ); padding-block-end: calc( (var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 1.5 );}"
       ],
@@ -528,10 +527,7 @@
           "type": "tab",
           "settings": {
             "title": "Doctor Babor",
-            "products": [
-              "clarifying-peeling-cream",
-              "milky-ceramide-toner"
-            ],
+            "products": [],
             "content": "",
             "link": ""
           }
@@ -540,10 +536,7 @@
           "type": "tab",
           "settings": {
             "title": "Babor",
-            "products": [
-              "clarifying-peeling-cream",
-              "hyaluronic-cleansing-balm"
-            ],
+            "products": [],
             "content": "",
             "link": ""
           }
@@ -552,12 +545,7 @@
           "type": "tab",
           "settings": {
             "title": "Biologique Recherche",
-            "products": [
-              "clarifying-peeling-cream",
-              "hyaluronic-cleansing-balm",
-              "milky-ceramide-toner",
-              "moisturizing-cream"
-            ],
+            "products": [],
             "content": "",
             "link": ""
           }
@@ -566,9 +554,7 @@
           "type": "tab",
           "settings": {
             "title": "Silvia Pascual",
-            "products": [
-              "tarjeta-regalo"
-            ],
+            "products": [],
             "content": "",
             "link": ""
           }
@@ -580,6 +566,7 @@
         "tab_n4TCBB",
         "tab_eGAYPz"
       ],
+      "disabled": true,
       "custom_css": [
         ".container {padding-block-start: calc( ( var(--section-disable-padding-collapsing) * var( --section-vertical-spacing-block-start, var(--section-vertical-spacing) ) ) * 1.5 ); padding-block-end: calc( (var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 1.5 );}"
       ],
