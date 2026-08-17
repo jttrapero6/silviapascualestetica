@@ -32,7 +32,7 @@
         "products_per_row_desktop": 5,
         "show_product_card_size_selector": true,
         "quick_links_menu": "",
-        "filter_layout": "sidebar",
+        "filter_layout": "drawer",
         "show_sort_by": true,
         "show_filters": true,
         "show_filter_group_name": false,
