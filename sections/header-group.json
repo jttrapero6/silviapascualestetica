@@ -14,12 +14,6 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "message-1": {
-          "type": "message",
-          "settings": {
-            "text": "Envío gratuito a partir de 75€"
-          }
-        },
         "message-2": {
           "type": "message",
           "settings": {
@@ -28,7 +22,6 @@
         }
       },
       "block_order": [
-        "message-1",
         "message-2"
       ],
       "settings": {
