@@ -41,6 +41,7 @@
     "stagger_blog_posts": true,
     "product_card_color_scheme": "scheme-2",
     "product_card_style": "body_text",
+    "product_card_image_aspect_ratio": "portrait",
     "product_card_show_vendor": false,
     "product_card_info_position": "outside",
     "product_card_info_vertical_alignment": "end",
