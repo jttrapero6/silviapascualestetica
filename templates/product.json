@@ -99,6 +99,46 @@
             "icon": "none",
             "page": ""
           }
+        },
+        "accordion_jwfJhy": {
+          "type": "accordion",
+          "settings": {
+            "title": "Modo de uso",
+            "content": "{{ product.metafields.custom.modo_de_uso | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_zNCTaP": {
+          "type": "accordion",
+          "settings": {
+            "title": "Recomendaciones",
+            "content": "{{ product.metafields.custom.recomendaciones | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_wFnM7U": {
+          "type": "accordion",
+          "settings": {
+            "title": "Sugerencias de uso",
+            "content": "{{ product.metafields.custom.sugerencias_de_uso | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_peRmUh": {
+          "type": "accordion",
+          "settings": {
+            "title": "Precauciones",
+            "content": "{{ product.metafields.custom.precauciones | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -112,7 +152,11 @@
         "buy_buttons",
         "accordion_yJUXdB",
         "accordion_HRyqNK",
-        "accordion_tjigXG"
+        "accordion_tjigXG",
+        "accordion_jwfJhy",
+        "accordion_zNCTaP",
+        "accordion_wFnM7U",
+        "accordion_peRmUh"
       ],
       "settings": {
         "color_scheme": "scheme-2",
