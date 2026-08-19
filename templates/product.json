@@ -36,6 +36,20 @@
           "type": "separator",
           "settings": {}
         },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": true,
+            "show_quantity_selector": true,
+            "add_quantity_selector_spacing": true,
+            "atc_button_style": "solid",
+            "atc_button_background": "#180a0a",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -54,20 +68,6 @@
             "block_selector_style": "outline",
             "variant_image_options": "",
             "size_chart_page": ""
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": false,
-            "show_gift_card_recipient": true,
-            "show_quantity_selector": true,
-            "add_quantity_selector_spacing": true,
-            "atc_button_style": "solid",
-            "atc_button_background": "#180a0a",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
           }
         },
         "accordion_yJUXdB": {
@@ -147,9 +147,9 @@
         "price",
         "payment_terms",
         "separator",
+        "buy_buttons",
         "description",
         "variant_picker",
-        "buy_buttons",
         "accordion_yJUXdB",
         "accordion_HRyqNK",
         "accordion_tjigXG",
