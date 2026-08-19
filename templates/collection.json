@@ -14,10 +14,10 @@
       "settings": {
         "color_scheme": "scheme-2",
         "allow_transparent_header": true,
-        "layout": "split",
+        "layout": "background",
         "show_description": true,
         "collection_title_size": "h2",
-        "content_position": "place-self-center-start",
+        "content_position": "place-self-center",
         "background_color_scheme": "scheme-3",
         "image_size": "auto",
         "quick_navigation_menu": ""
