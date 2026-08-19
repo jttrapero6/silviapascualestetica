@@ -201,7 +201,7 @@
         "color_scheme": "scheme-2",
         "stack_products": false,
         "recommendations_count": 10,
-        "products_per_row_mobile": "1",
+        "products_per_row_mobile": "2",
         "products_per_row_desktop": 5,
         "show_view_all_button": false,
         "show_scrolling_bar": true
