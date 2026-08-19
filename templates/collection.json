@@ -14,7 +14,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "allow_transparent_header": true,
-        "layout": "plain",
+        "layout": "background",
         "show_description": true,
         "collection_title_size": "h2",
         "content_position": "place-self-center",
