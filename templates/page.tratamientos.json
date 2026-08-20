@@ -224,7 +224,7 @@
           "type": "button",
           "settings": {
             "text": "Ver tratamientos faciales",
-            "url": "shopify://pages/tratamientos-corporales",
+            "url": "shopify://pages/tratamientos-faciales",
             "position": "middle_left",
             "style": "solid",
             "background": "",
@@ -282,7 +282,7 @@
           "type": "button",
           "settings": {
             "text": "Ver masajes",
-            "url": "shopify://pages/tratamientos-corporales",
+            "url": "shopify://pages/masajes",
             "position": "middle_left",
             "style": "solid",
             "background": "",
