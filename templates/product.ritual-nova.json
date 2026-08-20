@@ -332,23 +332,12 @@
         "products_per_row_desktop": 4,
         "intro_color_scheme": "",
         "intro_image_overlay": "#00000020",
-        "intro_title": "The essentials",
-        "intro_title_tag": "h5",
-        "intro_content": "<p>Share details of your store's product selection, or share a story that speaks to your customers.</p>",
+        "intro_title": "Lo esencial",
+        "intro_title_tag": "h3",
+        "intro_content": "<p>Gracias a nuestra línea de productos, puedes continuar con el tratamiento desde casa</p>",
         "intro_button_text": "",
         "intro_button_link": "",
         "intro_button_style": "outline"
-      }
-    },
-    "custom_liquid_LmP3Ar": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom_liquid.name",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "liquid": "<hr>",
-        "text_alignment": "left",
-        "add_vertical_spacing": true,
-        "add_horizontal_spacing": true
       }
     },
     "faq_BzxK8R": {
@@ -425,7 +414,6 @@
     "custom_liquid_bc4MNi",
     "before_after_qTCtcr",
     "featured_product_list_WEnHGr",
-    "custom_liquid_LmP3Ar",
     "faq_BzxK8R"
   ]
 }
