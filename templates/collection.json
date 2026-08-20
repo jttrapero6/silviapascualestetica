@@ -13,14 +13,14 @@
       "type": "collection-banner",
       "settings": {
         "color_scheme": "scheme-2",
-        "allow_transparent_header": false,
-        "layout": "split",
-        "show_description": false,
+        "allow_transparent_header": true,
+        "layout": "background",
+        "show_description": true,
         "collection_title_size": "h2",
         "content_position": "place-self-center",
-        "background_color_scheme": "scheme-2",
+        "background_color_scheme": "scheme-3",
         "image": "{{ collection.metafields.custom.imagen_cabecera.value }}",
-        "image_size": "xs",
+        "image_size": "sm",
         "quick_navigation_menu": ""
       }
     },
