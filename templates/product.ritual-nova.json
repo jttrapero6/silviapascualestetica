@@ -222,12 +222,58 @@
         "content_width": "md",
         "text_alignment": "center"
       }
+    },
+    "trust_icons_64rHEV": {
+      "type": "trust-icons",
+      "blocks": {
+        "item_CCt8tp": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20,
+            "title": "Free shipping",
+            "content": "Free worldwide shipping and returns - customs and duties taxes included"
+          }
+        },
+        "item_PqFzzF": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20,
+            "title": "Customer service",
+            "content": "We are available from monday to friday to answer your questions."
+          }
+        },
+        "item_NnDFNA": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20,
+            "title": "Secure payment",
+            "content": "Your payment information is processed securely."
+          }
+        }
+      },
+      "block_order": [
+        "item_CCt8tp",
+        "item_PqFzzF",
+        "item_NnDFNA"
+      ],
+      "name": "t:sections.trust_icons.name",
+      "settings": {
+        "color_scheme": "",
+        "item_heading_style": "subheading"
+      }
     }
   },
   "order": [
     "main",
     "image_with_text_overlay_yexDeB",
     "floating_atc_button_L3bDtJ",
-    "rich_text_d93KFX"
+    "rich_text_d93KFX",
+    "trust_icons_64rHEV"
   ]
 }
