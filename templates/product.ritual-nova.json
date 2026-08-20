@@ -289,7 +289,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "layout": "stacked",
-        "add_comparison_spacing": true,
+        "add_comparison_spacing": false,
         "subheading": "",
         "title": "",
         "title_tag": "h3",
@@ -302,6 +302,17 @@
         "cursor_background": "#ffffff",
         "cursor_arrows_color": "#000000"
       }
+    },
+    "custom_liquid_bc4MNi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "liquid": "<p></p>",
+        "text_alignment": "left",
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": true
+      }
     }
   },
   "order": [
@@ -309,6 +320,7 @@
     "image_with_text_overlay_yexDeB",
     "floating_atc_button_L3bDtJ",
     "text_with_icons_rMJqmB",
+    "custom_liquid_bc4MNi",
     "before_after_qTCtcr"
   ]
 }
