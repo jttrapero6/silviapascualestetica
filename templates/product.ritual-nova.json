@@ -238,7 +238,7 @@
       ],
       "custom_css": [
         ".text-subdued {color: #000;}",
-        "@media screen and (min-width: 999px) {.section-stack {row-gap: 4rem;}}"
+        "@media screen and (min-width: 999px) {.section-stack {row-gap: 4rem; }}"
       ],
       "name": "t:sections.text_with_icons.name",
       "settings": {
