@@ -189,11 +189,45 @@
       "settings": {
         "color_scheme": "scheme-2"
       }
+    },
+    "rich_text_d93KFX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kFEf4p": {
+          "type": "heading",
+          "settings": {
+            "text": "¿Qué es Ritual Nova?",
+            "heading_tag": "h2",
+            "html_tag": "p",
+            "indent": "none",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "richtext_Np3GtD": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Un tratamiento facial purificante diseñado específicamente para pieles jóvenes con exceso de grasa. Su objetivo es limpiar y equilibrar la piel en profundidad, respetando su fisiología natural mientras ayuda a prevenir alteraciones futuras.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kFEf4p",
+        "richtext_Np3GtD"
+      ],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_width": "md",
+        "text_alignment": "center"
+      }
     }
   },
   "order": [
     "main",
     "image_with_text_overlay_yexDeB",
-    "floating_atc_button_L3bDtJ"
+    "floating_atc_button_L3bDtJ",
+    "rich_text_d93KFX"
   ]
 }
