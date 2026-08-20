@@ -289,7 +289,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "layout": "stacked",
-        "add_comparison_spacing": false,
+        "add_comparison_spacing": true,
         "subheading": "",
         "title": "",
         "title_tag": "h3",
