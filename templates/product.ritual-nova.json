@@ -200,7 +200,7 @@
             "heading_tag": "h3",
             "html_tag": "p",
             "indent": "none",
-            "highlight_effect": "default",
+            "highlight_effect": "marker",
             "highlight_accent_color": "",
             "highlight_text_color": ""
           }
