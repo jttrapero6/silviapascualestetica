@@ -190,37 +190,67 @@
         "color_scheme": "scheme-2"
       }
     },
-    "rich_text_d93KFX": {
-      "type": "rich-text",
+    "text_with_icons_rMJqmB": {
+      "type": "text-with-icons",
       "blocks": {
-        "heading_kFEf4p": {
-          "type": "heading",
+        "item_f8MaLx": {
+          "type": "item",
           "settings": {
-            "text": "¿Qué es <em>Ritual Nova</em>?",
-            "heading_tag": "h3",
-            "html_tag": "p",
-            "indent": "none",
-            "highlight_effect": "marker",
-            "highlight_accent_color": "",
-            "highlight_text_color": ""
+            "icon": "none",
+            "title": "Limpieza Profunda",
+            "heading_tag": "h5",
+            "content": "<p>Elimina impurezas, comedones y puntos negros</p>"
           }
         },
-        "richtext_Np3GtD": {
-          "type": "richtext",
+        "item_DgPg4H": {
+          "type": "item",
           "settings": {
-            "text": "<p>Un tratamiento facial purificante diseñado específicamente para pieles jóvenes con exceso de grasa. Su objetivo es limpiar y equilibrar la piel en profundidad, respetando su fisiología natural mientras ayuda a prevenir alteraciones futuras.</p>"
+            "icon": "none",
+            "title": "Oxigenación Intensa",
+            "heading_tag": "h5",
+            "content": "<p>Favorece una piel más sana y oxigenada</p>"
+          }
+        },
+        "item_bE8j3a": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "title": "Equilibrio Sebáceo",
+            "heading_tag": "h5",
+            "content": "<p>Regula la producción de sebo naturalmente</p>"
+          }
+        },
+        "item_PGDUqi": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "title": "Prevención",
+            "heading_tag": "h5",
+            "content": "<p>Reduce riesgo de infecciones por obstrucción</p>"
           }
         }
       },
       "block_order": [
-        "heading_kFEf4p",
-        "richtext_Np3GtD"
+        "item_f8MaLx",
+        "item_DgPg4H",
+        "item_bE8j3a",
+        "item_PGDUqi"
       ],
-      "name": "t:sections.rich_text.name",
+      "name": "t:sections.text_with_icons.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "content_width": "md",
-        "text_alignment": "center"
+        "subheading": "",
+        "title": "¿Qué es <em>Ritual Nova</em>?",
+        "content": "<p>Un tratamiento facial purificante diseñado específicamente para pieles jóvenes con exceso de grasa. Su objetivo es limpiar y equilibrar la piel en profundidad, respetando su fisiología natural mientras ayuda a prevenir alteraciones futuras.</p>",
+        "heading_tag": "h3",
+        "text_alignment": "center",
+        "items_per_row_desktop": 4,
+        "stack_on_mobile": false,
+        "separator_style": "vertical",
+        "icon_position": "stacked",
+        "icon_width": 36,
+        "mobile_icon_width": 32,
+        "item_text_alignment": "center"
       }
     }
   },
@@ -228,6 +258,6 @@
     "main",
     "image_with_text_overlay_yexDeB",
     "floating_atc_button_L3bDtJ",
-    "rich_text_d93KFX"
+    "text_with_icons_rMJqmB"
   ]
 }

@@ -35,7 +35,7 @@
     "button_text_transform": "none",
     "button_letter_spacing": 4,
     "input_uppercase": false,
-    "heading_default_highlight_effect": "underline_pencil",
+    "heading_default_highlight_effect": "marker",
     "button_animation": "up",
     "image_hover_animation": "zoom",
     "stagger_blog_posts": true,
