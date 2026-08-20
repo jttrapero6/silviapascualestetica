@@ -236,6 +236,9 @@
         "item_bE8j3a",
         "item_PGDUqi"
       ],
+      "custom_css": [
+        ".section-stack {row-gap: 4rem;}"
+      ],
       "name": "t:sections.text_with_icons.name",
       "settings": {
         "color_scheme": "scheme-2",
