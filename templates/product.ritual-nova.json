@@ -256,12 +256,59 @@
         "mobile_icon_width": 32,
         "item_text_alignment": "center"
       }
+    },
+    "before_after_qTCtcr": {
+      "type": "before-after",
+      "blocks": {
+        "before_fefz8j": {
+          "type": "before",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/home-before-desktop-02.webp",
+            "text": "Antes",
+            "text_size": "h4",
+            "text_position": "start"
+          }
+        },
+        "after_arHAQL": {
+          "type": "after",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/home-after-desktop-02.webp",
+            "text": "Después",
+            "text_size": "h4",
+            "text_position": "start"
+          }
+        }
+      },
+      "block_order": [
+        "before_fefz8j",
+        "after_arHAQL"
+      ],
+      "name": "t:sections.before_after.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "layout": "stacked",
+        "add_comparison_spacing": false,
+        "subheading": "",
+        "title": "",
+        "title_tag": "h3",
+        "content": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "solid",
+        "cursor_direction": "horizontal",
+        "cursor_initial_position": 50,
+        "cursor_background": "#ffffff",
+        "cursor_arrows_color": "#000000"
+      }
     }
   },
   "order": [
     "main",
     "image_with_text_overlay_yexDeB",
     "floating_atc_button_L3bDtJ",
-    "text_with_icons_rMJqmB"
+    "text_with_icons_rMJqmB",
+    "before_after_qTCtcr"
   ]
 }
