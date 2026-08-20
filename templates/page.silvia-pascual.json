@@ -185,6 +185,7 @@
         "item_jztyfY",
         "item_TmmgJt"
       ],
+      "disabled": true,
       "name": "t:sections.timeline.name",
       "settings": {
         "color_scheme": "",
@@ -244,6 +245,7 @@
         "item_Jnwmb6",
         "item_MWMeF7"
       ],
+      "disabled": true,
       "name": "t:sections.trust_icons.name",
       "settings": {
         "color_scheme": "",
