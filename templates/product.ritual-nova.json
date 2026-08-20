@@ -237,7 +237,8 @@
         "item_PGDUqi"
       ],
       "custom_css": [
-        ".section-stack {row-gap: 4rem;}"
+        ".section-stack {row-gap: 4rem;}",
+        ".text-subdued {color: #000}"
       ],
       "name": "t:sections.text_with_icons.name",
       "settings": {
