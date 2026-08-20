@@ -256,80 +256,10 @@
             "rich-text-1",
             "button-1"
           ]
-        },
-        "dynamic-grid-item-3": {
-          "type": "_dynamic-grid-item",
-          "disabled": true,
-          "settings": {
-            "visibility": "both",
-            "text_alignment": "left",
-            "desktop_row_start": 2,
-            "desktop_column_start": 8,
-            "desktop_column_end": 11,
-            "desktop_horizontal_adjustment": 0,
-            "desktop_vertical_adjustment": 0,
-            "mobile_row_start": 10,
-            "mobile_column_start": 1,
-            "mobile_column_end": 3,
-            "mobile_horizontal_adjustment": 0,
-            "mobile_vertical_adjustment": 0,
-            "parallax_speed": -4,
-            "parallax_direction": "vertical"
-          },
-          "blocks": {
-            "image-with-caption-1": {
-              "type": "image-with-caption",
-              "settings": {
-                "caption": "",
-                "max_width": 100,
-                "mobile_max_width": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image-with-caption-1"
-          ]
-        },
-        "dynamic-grid-item-4": {
-          "type": "_dynamic-grid-item",
-          "disabled": true,
-          "settings": {
-            "visibility": "both",
-            "text_alignment": "left",
-            "desktop_row_start": 5,
-            "desktop_column_start": 13,
-            "desktop_column_end": 16,
-            "desktop_horizontal_adjustment": 0,
-            "desktop_vertical_adjustment": 0,
-            "mobile_row_start": 8,
-            "mobile_column_start": 5,
-            "mobile_column_end": 8,
-            "mobile_horizontal_adjustment": 0,
-            "mobile_vertical_adjustment": 0,
-            "parallax_speed": -2,
-            "parallax_direction": "vertical"
-          },
-          "blocks": {
-            "image-with-caption-1": {
-              "type": "image-with-caption",
-              "settings": {
-                "caption": "",
-                "max_width": 100,
-                "mobile_max_width": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image-with-caption-1"
-          ]
         }
       },
       "block_order": [
-        "dynamic-grid-item-1",
-        "dynamic-grid-item-3",
-        "dynamic-grid-item-4"
+        "dynamic-grid-item-1"
       ],
       "custom_css": [
         ".container {padding-block-start: calc( ( var(--section-disable-padding-collapsing) * var( --section-vertical-spacing-block-start, var(--section-vertical-spacing) ) ) * 1.5 ); padding-block-end: calc( (var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 1.5 );}"

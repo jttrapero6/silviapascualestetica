@@ -196,8 +196,8 @@
         "heading_kFEf4p": {
           "type": "heading",
           "settings": {
-            "text": "¿Qué es Ritual Nova?",
-            "heading_tag": "h2",
+            "text": "¿Qué es <em>Ritual Nova</em>?",
+            "heading_tag": "h3",
             "html_tag": "p",
             "indent": "none",
             "highlight_effect": "default",
