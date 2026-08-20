@@ -158,7 +158,7 @@
         "rich_text_7ztVAM": {
           "type": "rich-text",
           "settings": {
-            "text": "<p>Write some text about your products or your brand.</p>",
+            "text": "{{ closest.product.description }}",
             "content_width": "sm"
           },
           "blocks": {}
