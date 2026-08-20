@@ -245,7 +245,7 @@
         "heading_tag": "h3",
         "text_alignment": "center",
         "items_per_row_desktop": 4,
-        "stack_on_mobile": false,
+        "stack_on_mobile": true,
         "separator_style": "vertical",
         "icon_position": "stacked",
         "icon_width": 36,
