@@ -61,25 +61,24 @@
         "mobile_text_position": "place-self-center"
       }
     },
-    "featured_products_manual_JETGpf": {
-      "type": "featured-products-manual",
+    "featured_collections_fx8gVL": {
+      "type": "featured-collections",
       "blocks": {
-        "tab_tf7zAq": {
-          "type": "tab",
+        "collection_qwUk34": {
+          "type": "collection",
           "settings": {
+            "collection": "tratamientos-faciales",
+            "products_count": 8,
             "title": "Nuestros tratamientos",
-            "products": [
-              "ritual-nova"
-            ],
             "content": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "tab_tf7zAq"
+        "collection_qwUk34"
       ],
-      "name": "t:sections.featured_products_manual.name",
+      "name": "t:sections.featured_collections.name",
       "settings": {
         "color_scheme": "scheme-2",
         "stack_products_mobile": true,
@@ -96,6 +95,6 @@
   "order": [
     "main",
     "image_with_text_overlay_e4GMcc",
-    "featured_products_manual_JETGpf"
+    "featured_collections_fx8gVL"
   ]
 }
