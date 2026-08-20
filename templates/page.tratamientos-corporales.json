@@ -1,0 +1,69 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-2",
+        "show_title": true,
+        "content_width": "md"
+      }
+    },
+    "image_with_text_overlay_e4GMcc": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_VnPgjn": {
+          "type": "heading",
+          "settings": {
+            "text": "Tratamientos faciales",
+            "heading_size": "h2",
+            "html_tag": "h1",
+            "indent": "none",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          },
+          "blocks": {}
+        },
+        "rich_text_KNGVbE": {
+          "type": "rich-text",
+          "settings": {
+            "text": "<p>Protocolos personalizados diseñados para cada etapa de tu piel, combinando tecnología de última generación con ingredientes activos premium.</p>",
+            "content_width": "lg"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_VnPgjn",
+        "rich_text_KNGVbE"
+      ],
+      "name": "t:sections.image_with_text_overlay.name",
+      "settings": {
+        "color_scheme": "",
+        "allow_transparent_header": true,
+        "image_size": "sm",
+        "image": "shopify://shop_images/u_19g0ihl6c7-facial-8224799_1280.jpg",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30,
+        "enable_sticky_content": false,
+        "content_width": "md",
+        "desktop_text_position": "sm:place-self-center",
+        "mobile_text_position": "place-self-center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_e4GMcc"
+  ]
+}
