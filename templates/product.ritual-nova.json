@@ -257,6 +257,17 @@
         "item_text_alignment": "center"
       }
     },
+    "custom_liquid_bc4MNi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "liquid": "<p></p>",
+        "text_alignment": "left",
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": true
+      }
+    },
     "before_after_qTCtcr": {
       "type": "before-after",
       "blocks": {
@@ -303,15 +314,106 @@
         "cursor_arrows_color": "#000000"
       }
     },
-    "custom_liquid_bc4MNi": {
+    "featured_product_list_WEnHGr": {
+      "type": "featured-product-list",
+      "name": "t:sections.featured_product_list.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "product_list": [
+          "biokiss",
+          "cible-pigm-400",
+          "cocktail-d-actifs-regenerants",
+          "creme-contour-yeux-et-levres-biofixine",
+          "creme-dermo-rl-corps"
+        ],
+        "stack_products_mobile": false,
+        "stack_products_desktop": false,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 4,
+        "intro_color_scheme": "",
+        "intro_image_overlay": "#00000020",
+        "intro_title": "The essentials",
+        "intro_title_tag": "h5",
+        "intro_content": "<p>Share details of your store's product selection, or share a story that speaks to your customers.</p>",
+        "intro_button_text": "",
+        "intro_button_link": "",
+        "intro_button_style": "outline"
+      }
+    },
+    "custom_liquid_LmP3Ar": {
       "type": "custom-liquid",
       "name": "t:sections.custom_liquid.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "liquid": "<p></p>",
+        "liquid": "<hr>",
         "text_alignment": "left",
         "add_vertical_spacing": true,
         "add_horizontal_spacing": true
+      }
+    },
+    "faq_BzxK8R": {
+      "type": "faq",
+      "blocks": {
+        "question_7pCiFY": {
+          "type": "question",
+          "settings": {
+            "question": "¿A partir de qué edad puedo hacer Ritual Nova?",
+            "answer": "<p>Ritual Nova está recomendado hasta los 25 años, período en el que la piel joven es más propensa a exceso de grasa, comedones y puntos negros.</p><p>Sin embargo, la edad no es el único factor. Si tienes más de 25 años pero presentas pieles grasas y problemas similares (exceso de sebo, poros dilatados, imperfecciones), podemos valorar tu caso en una consulta personalizada.</p><p>Lo importante es realizar un diagnóstico previo profesional para determinar si tu piel se beneficiará de este protocolo específico. Nuestra especialista analizará tu tipo de piel y te recomendará el tratamiento más adecuado.</p>",
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20
+          }
+        },
+        "question_cVR879": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cuánto dura una sesión de Ritual Nova y con qué frecuencia debo hacerlo?",
+            "answer": "<p>Una sesión de Ritual Nova dura entre 60 y 75 minutos, dependiendo de tu piel específica y las técnicas que se apliquen.</p><p>Frecuencia recomendada:</p><ul><li>Fase inicial: Cada 3 semanas durante 6 sesiones aproximadamente (unos 4-5 meses). Este período es crucial para equilibrar el sebo y establecer resultados duraderos.</li><li>Mantenimiento: Una sesión trimestral (cada 3 meses) para conservar y potenciar los resultados obtenidos.</li></ul>",
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20
+          }
+        },
+        "question_Hffkgp": {
+          "type": "question",
+          "settings": {
+            "question": "¿Tendré enrojecimiento o efectos secundarios después del tratamiento?",
+            "answer": "<p>Ritual Nova es un tratamiento no invasivo y respetuoso con la piel, por lo que los efectos secundarios son mínimos.</p><p>Lo que puedes esperar:</p><ul><li>Enrojecimiento leve: Es normal una ligera rojez inmediatamente después (30-60 minutos). Esto indica que la piel está siendo estimulada y es completamente normal.</li><li>Sensación de tirantez suave: Tu piel puede sentirse un poco más tensa durante las primeras horas mientras se regula el sebo.</li><li>Ausencia de descamación: A diferencia de otros tratamientos, Ritual Nova no genera descamación posterior.</li></ul>",
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20
+          }
+        },
+        "question_9jLicq": {
+          "type": "question",
+          "settings": {
+            "question": "¿Puedo hacer Ritual Nova si tengo acné activo?",
+            "answer": "<p>Sí, pero con consideraciones importantes. Ritual Nova es particularmente beneficioso para pieles con acné porque limpia profundamente los poros y regula el sebo, dos factores clave en la aparición del acné.</p><p>Situaciones específicas:</p><ul><li>Acné leve o moderado: Ritual Nova puede ser muy efectivo. De hecho, muchas personas ven mejoría significativa en sus imperfecciones.</li><li>Acné severo o lesiones inflamadas activas: Recomendamos esperar a que se estabilice o consultar con tu dermatólogo antes de comenzar.</li><li>Periodo de menstruación: Tu piel puede estar más sensible. Podemos postergar la sesión o ajustar la intensidad del tratamiento.</li></ul>",
+            "icon": "none",
+            "icon_width": 24,
+            "mobile_icon_width": 20
+          }
+        }
+      },
+      "block_order": [
+        "question_7pCiFY",
+        "question_cVR879",
+        "question_Hffkgp",
+        "question_9jLicq"
+      ],
+      "name": "t:sections.faq.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "layout": "stacked",
+        "accordion_style": "border",
+        "question_style": "text",
+        "subheading": "",
+        "title": "Preguntas frecuentes",
+        "title_tag": "h3",
+        "content": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "solid"
       }
     }
   },
@@ -321,6 +423,9 @@
     "floating_atc_button_L3bDtJ",
     "text_with_icons_rMJqmB",
     "custom_liquid_bc4MNi",
-    "before_after_qTCtcr"
+    "before_after_qTCtcr",
+    "featured_product_list_WEnHGr",
+    "custom_liquid_LmP3Ar",
+    "faq_BzxK8R"
   ]
 }
