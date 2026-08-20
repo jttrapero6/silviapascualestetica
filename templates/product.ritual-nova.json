@@ -383,6 +383,9 @@
         "question_Hffkgp",
         "question_9jLicq"
       ],
+      "custom_css": [
+        ".section-stack {margin-top: 4rem; margin-bottom: 4rem;}"
+      ],
       "name": "t:sections.faq.name",
       "settings": {
         "color_scheme": "scheme-2",
