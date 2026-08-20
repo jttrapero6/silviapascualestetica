@@ -132,13 +132,6 @@
         "max_image_zoom_level": 3
       }
     },
-    "floating_atc_button_L3bDtJ": {
-      "type": "floating-atc-button",
-      "name": "Botón flotante añadir al carrito",
-      "settings": {
-        "color_scheme": "scheme-2"
-      }
-    },
     "image_with_text_overlay_yexDeB": {
       "type": "image-with-text-overlay",
       "blocks": {
@@ -152,7 +145,7 @@
         "heading_87DHRL": {
           "type": "heading",
           "settings": {
-            "text": "Image with text overlay",
+            "text": "{{ closest.product.title }}",
             "heading_size": "h3",
             "html_tag": "p",
             "indent": "none",
@@ -180,7 +173,8 @@
       "settings": {
         "color_scheme": "",
         "allow_transparent_header": true,
-        "image_size": "auto",
+        "image_size": "sm",
+        "image": "shopify://shop_images/pexels-kerimeveyik-37033485.jpg",
         "overlay_color": "#000000",
         "overlay_opacity": 20,
         "enable_sticky_content": false,
@@ -189,163 +183,17 @@
         "mobile_text_position": "place-self-center"
       }
     },
-    "image_with_text_overlay_yRViYy": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "subheading_wkpeNN": {
-          "type": "subheading",
-          "settings": {
-            "text": "Subheading"
-          },
-          "blocks": {}
-        },
-        "heading_RrxaPT": {
-          "type": "heading",
-          "settings": {
-            "text": "Image with text overlay",
-            "heading_size": "h3",
-            "html_tag": "p",
-            "indent": "none",
-            "highlight_effect": "default",
-            "highlight_accent_color": "",
-            "highlight_text_color": ""
-          },
-          "blocks": {}
-        },
-        "rich_text_XdyBEX": {
-          "type": "rich-text",
-          "settings": {
-            "text": "<p>Write some text about your products or your brand.</p>",
-            "content_width": "sm"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "subheading_wkpeNN",
-        "heading_RrxaPT",
-        "rich_text_XdyBEX"
-      ],
-      "name": "t:sections.image_with_text_overlay.name",
+    "floating_atc_button_L3bDtJ": {
+      "type": "floating-atc-button",
+      "name": "Botón flotante añadir al carrito",
       "settings": {
-        "color_scheme": "",
-        "allow_transparent_header": true,
-        "image_size": "auto",
-        "overlay_color": "#000000",
-        "overlay_opacity": 20,
-        "enable_sticky_content": false,
-        "content_width": "md",
-        "desktop_text_position": "sm:place-self-center",
-        "mobile_text_position": "place-self-center"
-      }
-    },
-    "image_with_text_overlay_qJAbUm": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "subheading_Ad8ELC": {
-          "type": "subheading",
-          "settings": {
-            "text": "Subheading"
-          },
-          "blocks": {}
-        },
-        "heading_AgkpQW": {
-          "type": "heading",
-          "settings": {
-            "text": "Image with text overlay",
-            "heading_size": "h3",
-            "html_tag": "p",
-            "indent": "none",
-            "highlight_effect": "default",
-            "highlight_accent_color": "",
-            "highlight_text_color": ""
-          },
-          "blocks": {}
-        },
-        "rich_text_GbVFAJ": {
-          "type": "rich-text",
-          "settings": {
-            "text": "<p>Write some text about your products or your brand.</p>",
-            "content_width": "sm"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "subheading_Ad8ELC",
-        "heading_AgkpQW",
-        "rich_text_GbVFAJ"
-      ],
-      "name": "t:sections.image_with_text_overlay.name",
-      "settings": {
-        "color_scheme": "",
-        "allow_transparent_header": true,
-        "image_size": "auto",
-        "overlay_color": "#000000",
-        "overlay_opacity": 20,
-        "enable_sticky_content": false,
-        "content_width": "md",
-        "desktop_text_position": "sm:place-self-center",
-        "mobile_text_position": "place-self-center"
-      }
-    },
-    "image_with_text_overlay_dKKzXK": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "subheading_mR48Jn": {
-          "type": "subheading",
-          "settings": {
-            "text": "Subheading"
-          },
-          "blocks": {}
-        },
-        "heading_wHfYGx": {
-          "type": "heading",
-          "settings": {
-            "text": "Image with text overlay",
-            "heading_size": "h3",
-            "html_tag": "p",
-            "indent": "none",
-            "highlight_effect": "default",
-            "highlight_accent_color": "",
-            "highlight_text_color": ""
-          },
-          "blocks": {}
-        },
-        "rich_text_kJ4niF": {
-          "type": "rich-text",
-          "settings": {
-            "text": "<p>Write some text about your products or your brand.</p>",
-            "content_width": "sm"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "subheading_mR48Jn",
-        "heading_wHfYGx",
-        "rich_text_kJ4niF"
-      ],
-      "name": "t:sections.image_with_text_overlay.name",
-      "settings": {
-        "color_scheme": "",
-        "allow_transparent_header": true,
-        "image_size": "auto",
-        "overlay_color": "#000000",
-        "overlay_opacity": 20,
-        "enable_sticky_content": false,
-        "content_width": "md",
-        "desktop_text_position": "sm:place-self-center",
-        "mobile_text_position": "place-self-center"
+        "color_scheme": "scheme-2"
       }
     }
   },
   "order": [
     "main",
-    "floating_atc_button_L3bDtJ",
     "image_with_text_overlay_yexDeB",
-    "image_with_text_overlay_yRViYy",
-    "image_with_text_overlay_qJAbUm",
-    "image_with_text_overlay_dKKzXK"
+    "floating_atc_button_L3bDtJ"
   ]
 }
