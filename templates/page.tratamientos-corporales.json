@@ -24,7 +24,7 @@
         "heading_VnPgjn": {
           "type": "heading",
           "settings": {
-            "text": "Tratamientos faciales",
+            "text": "Tratamientos corporales",
             "heading_size": "h2",
             "html_tag": "h1",
             "indent": "none",
@@ -37,7 +37,7 @@
         "rich_text_KNGVbE": {
           "type": "rich-text",
           "settings": {
-            "text": "<p>Protocolos personalizados diseñados para cada etapa de tu piel, combinando tecnología de última generación con ingredientes activos premium.</p>",
+            "text": "<p>Cuidamos de tu cuerpo, es el único lugar donde tienes que vivir.</p><p>Nuestros tratamientos corporales se basan en el método Luxianne y en mismos pilares que aplicamos en el cuidado facial: diagnóstico, criterio profesional, tecnología, trabajo manual y cosmética de alta calidad.</p>",
             "content_width": "lg"
           },
           "blocks": {}
@@ -52,7 +52,7 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
-        "image": "shopify://shop_images/u_19g0ihl6c7-facial-8224799_1280.jpg",
+        "image": "shopify://shop_images/mariolh-woman-567021_1280.jpg",
         "overlay_color": "#000000",
         "overlay_opacity": 30,
         "enable_sticky_content": false,
