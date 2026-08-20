@@ -183,13 +183,6 @@
         "mobile_text_position": "place-self-center"
       }
     },
-    "floating_atc_button_L3bDtJ": {
-      "type": "floating-atc-button",
-      "name": "Botón flotante añadir al carrito",
-      "settings": {
-        "color_scheme": "scheme-2"
-      }
-    },
     "text_with_icons_rMJqmB": {
       "type": "text-with-icons",
       "blocks": {
@@ -404,16 +397,23 @@
         "button_url": "",
         "button_style": "solid"
       }
+    },
+    "floating_atc_button_L3bDtJ": {
+      "type": "floating-atc-button",
+      "name": "Botón flotante añadir al carrito",
+      "settings": {
+        "color_scheme": "scheme-2"
+      }
     }
   },
   "order": [
     "main",
     "image_with_text_overlay_yexDeB",
-    "floating_atc_button_L3bDtJ",
     "text_with_icons_rMJqmB",
     "custom_liquid_bc4MNi",
     "before_after_qTCtcr",
     "featured_product_list_WEnHGr",
-    "faq_BzxK8R"
+    "faq_BzxK8R",
+    "floating_atc_button_L3bDtJ"
   ]
 }
