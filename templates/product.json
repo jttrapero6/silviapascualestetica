@@ -80,6 +80,26 @@
             "page": ""
           }
         },
+        "accordion_yCBqDL": {
+          "type": "accordion",
+          "settings": {
+            "title": "Beneficios",
+            "content": "{{ product.metafields.custom.beneficios | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_DhqVUX": {
+          "type": "accordion",
+          "settings": {
+            "title": "Clean beautify",
+            "content": "{{ product.metafields.custom.clean_beauty | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
         "accordion_zGLBDF": {
           "type": "accordion",
           "settings": {
@@ -115,36 +135,6 @@
           "settings": {
             "title": "Cómo debo utilizarlo",
             "content": "{{ product.metafields.custom.como_debo_utilizarlo | metafield_tag }}",
-            "uppercase_title": true,
-            "icon": "none",
-            "page": ""
-          }
-        },
-        "accordion_DhqVUX": {
-          "type": "accordion",
-          "settings": {
-            "title": "Clean beautify",
-            "content": "{{ product.metafields.custom.clean_beauty | metafield_tag }}",
-            "uppercase_title": true,
-            "icon": "none",
-            "page": ""
-          }
-        },
-        "accordion_yCBqDL": {
-          "type": "accordion",
-          "settings": {
-            "title": "Beneficios",
-            "content": "{{ product.metafields.custom.beneficios | metafield_tag }}",
-            "uppercase_title": true,
-            "icon": "none",
-            "page": ""
-          }
-        },
-        "accordion_arxw9m": {
-          "type": "accordion",
-          "settings": {
-            "title": "Advertencias",
-            "content": "{{ product.metafields.custom.advertencias | metafield_tag }}",
             "uppercase_title": true,
             "icon": "none",
             "page": ""
@@ -189,6 +179,16 @@
             "icon": "none",
             "page": ""
           }
+        },
+        "accordion_arxw9m": {
+          "type": "accordion",
+          "settings": {
+            "title": "Advertencias",
+            "content": "{{ product.metafields.custom.advertencias | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -201,17 +201,17 @@
         "buy_buttons",
         "description",
         "accordion_yJUXdB",
+        "accordion_yCBqDL",
+        "accordion_DhqVUX",
         "accordion_zGLBDF",
         "accordion_wBzDqc",
         "accordion_HRyqNK",
         "accordion_tjigXG",
-        "accordion_DhqVUX",
-        "accordion_yCBqDL",
-        "accordion_arxw9m",
         "accordion_jwfJhy",
         "accordion_zNCTaP",
         "accordion_wFnM7U",
-        "accordion_peRmUh"
+        "accordion_peRmUh",
+        "accordion_arxw9m"
       ],
       "settings": {
         "color_scheme": "scheme-2",
