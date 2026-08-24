@@ -64,6 +64,7 @@
     "cart_show_free_shipping_bar": false,
     "social_facebook": "https://www.facebook.com/silviapascualcentroestetica/",
     "social_instagram": "https://www.instagram.com/silviapascualcentrodeestetica/",
+    "favicon": "shopify://shop_images/favicon.png",
     "sections": {
       "main-gift-card": {
         "type": "main-gift-card",
