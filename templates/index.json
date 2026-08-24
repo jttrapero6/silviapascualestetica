@@ -393,7 +393,7 @@
             "collection": "babor",
             "products_count": 8,
             "title": "{{ block.settings.collection.title }}",
-            "content": "{{ block.settings.collection.description }}",
+            "content": "",
             "link": "{{ block.settings.collection.url }}"
           }
         },
@@ -403,7 +403,7 @@
             "collection": "doctor-babor",
             "products_count": 8,
             "title": "{{ block.settings.collection.title }}",
-            "content": "{{ block.settings.collection.description }}",
+            "content": "",
             "link": "{{ block.settings.collection.url }}"
           }
         },
@@ -413,7 +413,7 @@
             "collection": "biologique-recherche",
             "products_count": 8,
             "title": "{{ block.settings.collection.title }}",
-            "content": "{{ block.settings.collection.description }}",
+            "content": "",
             "link": "{{ block.settings.collection.url }}"
           }
         },
@@ -423,7 +423,7 @@
             "collection": "tarjeta-regalo",
             "products_count": 8,
             "title": "{{ block.settings.collection.title }}",
-            "content": "{{ block.settings.collection.description }}",
+            "content": "",
             "link": "{{ block.settings.collection.url }}"
           }
         }
