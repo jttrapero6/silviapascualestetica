@@ -82,7 +82,7 @@
   "product": {
     "general": {
       "description": "Descripción",
-      "add_to_cart_button": "Añadir a la cesta",
+      "add_to_cart_button": "Añadir al carrito",
       "pre_order_button": "Pedido previo",
       "sold_out_button": "Agotado",
       "unavailable_button": "No disponible",
@@ -339,8 +339,8 @@
   },
   "cart": {
     "general": {
-      "title": "Cesta",
-      "empty": "La cesta está vacía",
+      "title": "Carrito",
+      "empty": "El carrito está vacío",
       "remove_item": "Eliminar artículo {{ title }}",
       "item_count": {
         "one": "{{ count }} artículo",
