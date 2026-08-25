@@ -229,6 +229,8 @@
       "show_group_name": "Show group name",
       "show_group_name_info": "Group name will be shown inside selected filters.",
       "show_filter_values_count": "Show filter values count",
+      "hidden_filter_values": "Hide filter values",
+      "hidden_filter_values_info": "One value per line, written exactly as it appears (for example a vendor or product type). Matching values won't be shown in any filter.",
       "open_filters_by_default": "Open filters by default",
       "swatch_selector_size": "Swatch selector size",
       "swatch_selector_size_options": {

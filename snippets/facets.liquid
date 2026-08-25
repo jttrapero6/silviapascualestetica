@@ -15,6 +15,16 @@ Display the facets for a given resource.
 {%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
 {%- capture id_prefix -%}facets-{{ form_id }}{%- endcapture -%}
 
+{%- comment -%}
+Normalize the "hidden filter values" setting (one value per line) into a lowercase, trimmed array so it can be
+matched against filter value labels regardless of case or stray whitespace.
+{%- endcomment -%}
+{%- assign hidden_filter_values_raw = section.settings.hidden_filter_values | newline_to_br | split: '<br />' -%}
+{%- capture hidden_filter_values_joined -%}
+  {%- for hidden_value in hidden_filter_values_raw -%}{{ hidden_value | strip | downcase }}||{%- endfor -%}
+{%- endcapture -%}
+{%- assign hidden_filter_values = hidden_filter_values_joined | split: '||' -%}
+
 <facets-form {% if update_on_change %}update-on-change{% endif %} section-id="{{ section.id }}">
   <form id="{{ form_id }}" method="GET" action="{{ request.path }}" class="facets" {% if hash %}scroll-to="{{ hash }}"{% endif %}>
     {%- render 'active-facets', source: collection, hash: hash -%}
@@ -61,6 +71,19 @@ Display the facets for a given resource.
     {%- endif -%}
 
     {%- for filter in source.filters -%}
+      {%- comment -%}
+      Count how many of this filter's values remain once the ones hidden through section.settings.hidden_filter_values
+      are excluded, so we can skip the whole filter when a single (or no) value would remain.
+      {%- endcomment -%}
+      {%- assign visible_values_count = 0 -%}
+      {%- for filter_value in filter.values -%}
+        {%- assign normalized_filter_value_label = filter_value.label | strip | downcase -%}
+
+        {%- unless hidden_filter_values contains normalized_filter_value_label -%}
+          {%- assign visible_values_count = visible_values_count | plus: 1 -%}
+        {%- endunless -%}
+      {%- endfor -%}
+
       {%- if filter.param_name == 'filter.v.availability' -%}
         {%- comment -%}
         IMPLEMENTATION NOTE: we are doing an exception for the availability filter, where we display it differently
@@ -70,22 +93,32 @@ Display the facets for a given resource.
           <label for="{{ id_prefix }}-{{ filter.param_name }}" class="subheading">{{- 'collection.faceting.in_stock_only' | t -}}</label>
           <input id="{{ id_prefix }}-{{ filter.param_name }}" type="checkbox" class="switch" role="switch" name="{{ filter.param_name }}" value="1" {% if filter.active_values.size > 0 %}checked{% endif %}>
         </div>
+      {%- elsif filter.type != 'price_range' and visible_values_count <= 1 -%}
+        {%- comment -%}
+        A filter with at most one visible value (once hidden values are excluded) can't narrow the results, so we
+        skip rendering it. Any already-applied value still shows in the active facets chips and can be removed
+        from there.
+        {%- endcomment -%}
       {%- else -%}
         {%- capture filter_content -%}
           {%- if filter.type == 'boolean' -%}
             <div class="v-stack gap-2.5">
               {%- for filter_value in filter.values -%}
-                {%- liquid
-                  assign value_id_prefix = id_prefix | append: '-' | append: forloop.index
+                {%- assign normalized_filter_value_label = filter_value.label | strip | downcase -%}
 
-                  if section.settings.show_filter_values_count
-                    assign label = filter_value.label | append: ' (' | append: filter_value.count | append: ')'
-                  else
-                    assign label = filter_value.label
-                  endif
-                -%}
+                {%- unless hidden_filter_values contains normalized_filter_value_label -%}
+                  {%- liquid
+                    assign value_id_prefix = id_prefix | append: '-' | append: forloop.index
 
-                {%- render 'checkbox', label: label, name: filter_value.param_name, value: filter_value.value, checked: filter_value.active, disabled: disabled, id_prefix: value_id_prefix -%}
+                    if section.settings.show_filter_values_count
+                      assign label = filter_value.label | append: ' (' | append: filter_value.count | append: ')'
+                    else
+                      assign label = filter_value.label
+                    endif
+                  -%}
+
+                  {%- render 'checkbox', label: label, name: filter_value.param_name, value: filter_value.value, checked: filter_value.active, disabled: disabled, id_prefix: value_id_prefix -%}
+                {%- endunless -%}
               {%- endfor -%}
             </div>
           {%- else -%}
@@ -120,21 +153,25 @@ Display the facets for a given resource.
                 <div class="{{ wrapper_class_list }}">
                   {% liquid
                     for filter_value in filter.values
-                      assign value_id_prefix = id_prefix | append: '-' | append: forloop.index
+                      assign hidden_label = filter_value.label | strip | downcase
 
-                      if filter.presentation == 'image'
-                        render 'option-value', type: 'image_filter', filter_value: filter_value, id_prefix: value_id_prefix
-                      elsif filter.presentation == 'swatch' or color_label_list contains downcase_label
-                        render 'option-value', type: 'swatch', filter_value: filter_value, show_tooltip: true, size: swatch_selector_size, id_prefix: value_id_prefix
-                      else
-                        if section.settings.show_filter_values_count
-                          assign label = filter_value.label | append: ' (' | append: filter_value.count | append: ')'
+                      unless hidden_filter_values contains hidden_label
+                        assign value_id_prefix = id_prefix | append: '-' | append: forloop.index
+
+                        if filter.presentation == 'image'
+                          render 'option-value', type: 'image_filter', filter_value: filter_value, id_prefix: value_id_prefix
+                        elsif filter.presentation == 'swatch' or color_label_list contains downcase_label
+                          render 'option-value', type: 'swatch', filter_value: filter_value, show_tooltip: true, size: swatch_selector_size, id_prefix: value_id_prefix
                         else
-                          assign label = filter_value.label
-                        endif
+                          if section.settings.show_filter_values_count
+                            assign label = filter_value.label | append: ' (' | append: filter_value.count | append: ')'
+                          else
+                            assign label = filter_value.label
+                          endif
 
-                        render 'checkbox', label: label, name: filter_value.param_name, value: filter_value.value, checked: filter_value.active, disabled: disabled, id_prefix: value_id_prefix
-                      endif
+                          render 'checkbox', label: label, name: filter_value.param_name, value: filter_value.value, checked: filter_value.active, disabled: disabled, id_prefix: value_id_prefix
+                        endif
+                      endunless
                     endfor
                   %}
                 </div>
