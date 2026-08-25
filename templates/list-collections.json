@@ -31,13 +31,18 @@
       },
       "settings": {
         "color_scheme": "scheme-2",
-        "collections": [],
-        "items_per_row": 3,
+        "collections": [
+          "babor",
+          "doctor-babor",
+          "biologique-recherche",
+          "endor"
+        ],
+        "items_per_row": 4,
         "stack_on_mobile": true,
         "add_horizontal_spacing": true,
         "content_position": "inside",
         "column_spacing": "md",
-        "image_size": "auto"
+        "image_size": "sm"
       }
     }
   },
