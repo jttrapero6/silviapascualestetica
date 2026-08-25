@@ -189,13 +189,6 @@
             "icon": "none",
             "page": ""
           }
-        },
-        "complementary_products_Xp3FpR": {
-          "type": "complementary_products",
-          "settings": {
-            "title": "Combinalo con:",
-            "products_count": 10
-          }
         }
       },
       "block_order": [
@@ -218,8 +211,7 @@
         "accordion_zNCTaP",
         "accordion_wFnM7U",
         "accordion_peRmUh",
-        "accordion_arxw9m",
-        "complementary_products_Xp3FpR"
+        "accordion_arxw9m"
       ],
       "settings": {
         "color_scheme": "scheme-2",
