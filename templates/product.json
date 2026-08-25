@@ -238,38 +238,6 @@
         "max_image_zoom_level": 3
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "blocks": {
-        "section-header": {
-          "type": "_section-header",
-          "static": true,
-          "settings": {
-            "subheading": "",
-            "title": "También te puede interesar",
-            "content": "",
-            "button_text": "",
-            "button_link": "",
-            "button_style": "outline",
-            "text_alignment": "left",
-            "heading_size": "h3",
-            "title_icon": "none",
-            "show_scrolling_title": false
-          },
-          "blocks": {}
-        }
-      },
-      "custom_css": [],
-      "settings": {
-        "color_scheme": "scheme-2",
-        "stack_products": false,
-        "recommendations_count": 10,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 5,
-        "show_view_all_button": false,
-        "show_scrolling_bar": true
-      }
-    },
     "featured_product_list_f7iCc4": {
       "type": "featured-product-list",
       "name": "t:sections.featured_product_list.name",
@@ -297,7 +265,6 @@
   },
   "order": [
     "main",
-    "related-products",
     "featured_product_list_f7iCc4"
   ]
 }
