@@ -238,6 +238,17 @@
         "max_image_zoom_level": 3
       }
     },
+    "custom_liquid_dYUh8H": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "liquid": "<hr>",
+        "text_alignment": "left",
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": true
+      }
+    },
     "featured_product_list_f7iCc4": {
       "type": "featured-product-list",
       "name": "t:sections.featured_product_list.name",
@@ -265,6 +276,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_dYUh8H",
     "featured_product_list_f7iCc4"
   ]
 }
