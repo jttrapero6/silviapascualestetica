@@ -269,10 +269,35 @@
         "show_view_all_button": false,
         "show_scrolling_bar": true
       }
+    },
+    "featured_product_list_f7iCc4": {
+      "type": "featured-product-list",
+      "name": "t:sections.featured_product_list.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "product_list": [
+          "tarjeta-regalo-120",
+          "tarjeta-regalo-85",
+          "tarjeta-regalo-50"
+        ],
+        "stack_products_mobile": false,
+        "stack_products_desktop": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "intro_color_scheme": "",
+        "intro_image_overlay": "rgba(0,0,0,0)",
+        "intro_title": "Regala belleza y bienestar",
+        "intro_title_tag": "h4",
+        "intro_content": "<p>Sorprende a quién más quieres con una <strong>tarjeta regalo de Silvia Pascual</strong>. Elige el importe que desees y deja que disfruten de nuestros tratamientos premium.</p>",
+        "intro_button_text": "",
+        "intro_button_link": "",
+        "intro_button_style": "outline"
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "featured_product_list_f7iCc4"
   ]
 }
