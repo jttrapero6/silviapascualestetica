@@ -1345,6 +1345,7 @@
       "content_color_scheme": "Content color scheme",
       "background_image_size_recommendation": "1600 x 2000px .jpg recommended",
       "image_rotating_text": "Image rotating text",
+      "show_powered_by": "Show \"This shop will be powered by Shopify\"",
       "blocks": {
         "logo": {
           "name": "Logo",
