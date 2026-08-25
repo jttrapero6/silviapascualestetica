@@ -50,7 +50,7 @@
       "settings": {
         "color_scheme": "",
         "allow_transparent_header": true,
-        "image_size": "md",
+        "image_size": "sm",
         "image": "shopify://shop_images/598799660_1452286870237172_7131438926075839746_n.jpg",
         "overlay_color": "#000000",
         "overlay_opacity": 20,
