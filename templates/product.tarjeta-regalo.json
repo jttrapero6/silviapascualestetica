@@ -1,0 +1,277 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "badges_YJTzK3": {
+          "type": "badges",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": true
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "separate_options": false,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "swatch_selector_size": "lg",
+            "block_selector_style": "outline",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": true,
+            "show_quantity_selector": true,
+            "add_quantity_selector_spacing": true,
+            "atc_button_style": "solid",
+            "atc_button_background": "#180a0a",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "uppercase_title": true
+          }
+        },
+        "accordion_yJUXdB": {
+          "type": "accordion",
+          "settings": {
+            "title": "Qué hace",
+            "content": "{{ product.metafields.custom.que_hace | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_yCBqDL": {
+          "type": "accordion",
+          "settings": {
+            "title": "Beneficios",
+            "content": "{{ product.metafields.custom.beneficios | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_DhqVUX": {
+          "type": "accordion",
+          "settings": {
+            "title": "Clean beautify",
+            "content": "{{ product.metafields.custom.clean_beauty | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_zGLBDF": {
+          "type": "accordion",
+          "settings": {
+            "title": "Principales ingredientes activos",
+            "content": "{{ product.metafields.custom.principales_ingredientes_activos | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_wBzDqc": {
+          "type": "accordion",
+          "settings": {
+            "title": "Ingredientes",
+            "content": "{{ product.metafields.custom.ingredientes | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_HRyqNK": {
+          "type": "accordion",
+          "settings": {
+            "title": "Cómo funciona",
+            "content": "{{ product.metafields.custom.como_funciona | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_tjigXG": {
+          "type": "accordion",
+          "settings": {
+            "title": "Cómo debo utilizarlo",
+            "content": "{{ product.metafields.custom.como_debo_utilizarlo | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_jwfJhy": {
+          "type": "accordion",
+          "settings": {
+            "title": "Modo de uso",
+            "content": "{{ product.metafields.custom.modo_de_uso | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_zNCTaP": {
+          "type": "accordion",
+          "settings": {
+            "title": "Recomendaciones",
+            "content": "{{ product.metafields.custom.recomendaciones | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_wFnM7U": {
+          "type": "accordion",
+          "settings": {
+            "title": "Sugerencias de uso",
+            "content": "{{ product.metafields.custom.sugerencias_de_uso | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_peRmUh": {
+          "type": "accordion",
+          "settings": {
+            "title": "Precauciones",
+            "content": "{{ product.metafields.custom.precauciones | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        },
+        "accordion_arxw9m": {
+          "type": "accordion",
+          "settings": {
+            "title": "Advertencias",
+            "content": "{{ product.metafields.custom.advertencias | metafield_tag }}",
+            "uppercase_title": true,
+            "icon": "none",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "badges_YJTzK3",
+        "title",
+        "price",
+        "payment_terms",
+        "separator",
+        "variant_picker",
+        "buy_buttons",
+        "description",
+        "accordion_yJUXdB",
+        "accordion_yCBqDL",
+        "accordion_DhqVUX",
+        "accordion_zGLBDF",
+        "accordion_wBzDqc",
+        "accordion_HRyqNK",
+        "accordion_tjigXG",
+        "accordion_jwfJhy",
+        "accordion_zNCTaP",
+        "accordion_wFnM7U",
+        "accordion_peRmUh",
+        "accordion_arxw9m"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "allow_transparent_header": false,
+        "transparent_header_use_primary_colors": false,
+        "add_top_spacing": true,
+        "show_sticky_add_to_cart": true,
+        "product_media_size": 40,
+        "content_alignment": "left",
+        "desktop_media_layout": "grid_half_highlight_first",
+        "desktop_carousel_controls": "lines",
+        "mobile_controls": "lines",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
+      }
+    },
+    "custom_liquid_dYUh8H": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "liquid": "<hr>",
+        "text_alignment": "left",
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": true
+      }
+    },
+    "featured_product_list_f7iCc4": {
+      "type": "featured-product-list",
+      "custom_css": [
+        ".prose.prose-justify-center {text-align: left;}"
+      ],
+      "name": "t:sections.featured_product_list.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "product_list": [
+          "tarjeta-regalo-120",
+          "tarjeta-regalo-85",
+          "tarjeta-regalo-50"
+        ],
+        "stack_products_mobile": false,
+        "stack_products_desktop": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "intro_color_scheme": "",
+        "intro_image_overlay": "rgba(0,0,0,0)",
+        "intro_title": "Regala belleza y bienestar",
+        "intro_title_tag": "h4",
+        "intro_content": "<p>Sorprende a quién más quieres con una <strong>tarjeta regalo de Silvia Pascual</strong>. Elige el importe que desees y deja que disfruten de nuestros tratamientos premium.</p>",
+        "intro_button_text": "",
+        "intro_button_link": "",
+        "intro_button_style": "outline"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_dYUh8H",
+    "featured_product_list_f7iCc4"
+  ]
+}
