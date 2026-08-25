@@ -417,6 +417,16 @@
             "link": "{{ block.settings.collection.url }}"
           }
         },
+        "collection_E9LFEV": {
+          "type": "collection",
+          "settings": {
+            "collection": "endor",
+            "products_count": 8,
+            "title": "{{ block.settings.collection.title }}",
+            "content": "",
+            "link": "{{ block.settings.collection.url }}"
+          }
+        },
         "collection_9mmUGd": {
           "type": "collection",
           "settings": {
@@ -432,6 +442,7 @@
         "collection_zXLTqr",
         "collection_9P67KN",
         "collection_hUNh9U",
+        "collection_E9LFEV",
         "collection_9mmUGd"
       ],
       "custom_css": [
