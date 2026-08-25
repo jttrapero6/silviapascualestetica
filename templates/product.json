@@ -70,13 +70,6 @@
             "uppercase_title": true
           }
         },
-        "complementary_products_Xp3FpR": {
-          "type": "complementary_products",
-          "settings": {
-            "title": "Pairs well with",
-            "products_count": 10
-          }
-        },
         "accordion_yJUXdB": {
           "type": "accordion",
           "settings": {
@@ -196,6 +189,13 @@
             "icon": "none",
             "page": ""
           }
+        },
+        "complementary_products_Xp3FpR": {
+          "type": "complementary_products",
+          "settings": {
+            "title": "Combinalo con:",
+            "products_count": 10
+          }
         }
       },
       "block_order": [
@@ -207,7 +207,6 @@
         "variant_picker",
         "buy_buttons",
         "description",
-        "complementary_products_Xp3FpR",
         "accordion_yJUXdB",
         "accordion_yCBqDL",
         "accordion_DhqVUX",
@@ -219,7 +218,8 @@
         "accordion_zNCTaP",
         "accordion_wFnM7U",
         "accordion_peRmUh",
-        "accordion_arxw9m"
+        "accordion_arxw9m",
+        "complementary_products_Xp3FpR"
       ],
       "settings": {
         "color_scheme": "scheme-2",
