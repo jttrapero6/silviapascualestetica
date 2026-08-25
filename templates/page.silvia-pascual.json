@@ -21,17 +21,10 @@
     "image_with_text_overlay_it9LhF": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "subheading_jdA6ip": {
-          "type": "subheading",
-          "settings": {
-            "text": "Silvia pascual"
-          },
-          "blocks": {}
-        },
         "heading_9eHJiY": {
           "type": "heading",
           "settings": {
-            "text": "Centro de Estética Avanzada",
+            "text": "Centro de Estética Avanzada Silvia Pascual",
             "heading_size": "h2",
             "html_tag": "h1",
             "indent": "none",
@@ -43,7 +36,6 @@
         }
       },
       "block_order": [
-        "subheading_jdA6ip",
         "heading_9eHJiY"
       ],
       "name": "t:sections.image_with_text_overlay.name",
