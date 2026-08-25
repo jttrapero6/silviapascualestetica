@@ -70,6 +70,13 @@
             "uppercase_title": true
           }
         },
+        "complementary_products_Xp3FpR": {
+          "type": "complementary_products",
+          "settings": {
+            "title": "Pairs well with",
+            "products_count": 10
+          }
+        },
         "accordion_yJUXdB": {
           "type": "accordion",
           "settings": {
@@ -200,6 +207,7 @@
         "variant_picker",
         "buy_buttons",
         "description",
+        "complementary_products_Xp3FpR",
         "accordion_yJUXdB",
         "accordion_yCBqDL",
         "accordion_DhqVUX",
