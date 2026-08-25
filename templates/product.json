@@ -251,6 +251,9 @@
     },
     "featured_product_list_f7iCc4": {
       "type": "featured-product-list",
+      "custom_css": [
+        ".prose.prose-justify-center {text-align: left;}"
+      ],
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "color_scheme": "scheme-2",
