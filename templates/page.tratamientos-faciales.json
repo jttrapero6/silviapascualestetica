@@ -94,7 +94,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "scrolling_speed": 0.1,
-        "scroll_direction": "start-to-end",
+        "scroll_direction": "end-to-start",
         "section_rotation": 0,
         "pause_on_hover": false,
         "text_font": "heading",
