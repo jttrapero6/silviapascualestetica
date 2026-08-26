@@ -98,12 +98,23 @@
         "section_rotation": 0,
         "pause_on_hover": false,
         "text_font": "heading",
-        "text_font_size_mobile": 6,
-        "text_font_size_desktop": 3,
+        "text_font_size_mobile": 5,
+        "text_font_size_desktop": 2,
         "section_vertical_spacing_mobile": 20,
         "section_vertical_spacing_desktop": 30,
         "item_horizontal_spacing_mobile": 40,
         "item_horizontal_spacing_desktop": 80
+      }
+    },
+    "custom_liquid_Wxw98P": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "liquid": "<hr>",
+        "text_alignment": "left",
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": true
       }
     },
     "featured_collections_fx8gVL": {
@@ -134,17 +145,6 @@
         "tabs_icon": "arrow",
         "show_view_all_button": false,
         "show_scrolling_bar": true
-      }
-    },
-    "custom_liquid_Wxw98P": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom_liquid.name",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "liquid": "<hr>",
-        "text_alignment": "left",
-        "add_vertical_spacing": true,
-        "add_horizontal_spacing": true
       }
     }
   },
