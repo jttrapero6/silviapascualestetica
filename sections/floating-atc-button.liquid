@@ -19,6 +19,7 @@
     inset-block-end: 1.75rem;
     inset-inline-end: 1.75rem;
     z-index: 10;
+    width: min(100%,40rem);
   }
 
   #shopify-section-{{ section.id }} floating-atc-button {
@@ -28,9 +29,14 @@
     justify-content: space-between;
     align-items: center;
     width: min(100%, 40rem);
+    padding: 1rem 2rem 1rem 1rem;
     display: grid;
     box-shadow: 0 2px 4px #0000000d;
-    border: 0px
+  }
+
+  #shopify-section-{{ section.id }} floating-atc-button product-form,
+  #shopify-section-{{ section.id }} floating-atc-button product-form form {
+    display: contents;
   }
 
   @media screen and (max-width: 699px) {
@@ -53,8 +59,28 @@
   <product-form>
     {%- form 'product', product, id: form_id -%}
       <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+      <div class="h-stack gap-6 sm-max:hidden">
+        {%- assign image = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
+
+        {%- if image != blank -%}
+          {{- image | image_url: width: image.width | image_tag: loading: 'lazy', widths: '70,140,210,280', class: 'constrained-image', style: '--image-max-width: 70px' -}}
+        {%- endif -%}
+
+        <div class="v-stack gap-0.5">
+          <span class="subheading">{{ product.title }}</span>
+
+          {%- unless product.has_only_default_variant -%}
+            <span class="subheading text-subdued">{{ product.selected_or_first_available_variant.title }}</span>
+          {%- endunless -%}
+
+          {%- render 'price-list', variant: product.selected_or_first_available_variant, context: 'line_item' -%}
+        </div>
+      </div>
+
       <buy-buttons class="buy-buttons" form="{{ form_id }}">
-        {%- render 'button', type: 'submit', form: form_id, content: button_label, disabled: disabled -%}
+        {%- render 'button', type: 'submit', form: form_id, content: button_label, disabled: disabled, style: 'outline', class: 'sm-max:hidden' -%}
+        {%- render 'button', type: 'submit', form: form_id, content: button_label, disabled: disabled, style: 'solid', class: 'sm:hidden' -%}
       </buy-buttons>
     {%- endform -%}
   </product-form>
@@ -81,10 +107,9 @@
       _syncVariant(event) {
         const variant = event.detail.variant;
         const idInput = this.querySelector('input[name="id"]');
-        const button = this.querySelector('button[type="submit"]');
-        const buttonContent = button?.querySelector('button-content');
+        const buttons = this.querySelectorAll('button[type="submit"]');
 
-        if (!idInput || !button) return;
+        if (!idInput || !buttons.length) return;
 
         let label, isDisabled;
 
@@ -102,13 +127,16 @@
           idInput.value = variant.id;
         }
 
-        button.disabled = isDisabled;
+        buttons.forEach((button) => {
+          button.disabled = isDisabled;
 
-        if (buttonContent) {
-          buttonContent.textContent = label;
-          if (buttonContent.hasAttribute('rotated-text')) buttonContent.setAttribute('rotated-text', label);
-          if (buttonContent.hasAttribute('up-text')) buttonContent.setAttribute('up-text', label);
-        }
+          const buttonContent = button.querySelector('button-content');
+          if (buttonContent) {
+            buttonContent.textContent = label;
+            if (buttonContent.hasAttribute('rotated-text')) buttonContent.setAttribute('rotated-text', label);
+            if (buttonContent.hasAttribute('up-text')) buttonContent.setAttribute('up-text', label);
+          }
+        });
       }
     });
   })();
