@@ -61,6 +61,51 @@
         "mobile_text_position": "place-self-center"
       }
     },
+    "scrolling_content_wiMcze": {
+      "type": "scrolling-content",
+      "blocks": {
+        "text_8Bcx3m": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Welcome to our shop",
+            "icon_position": "before_text",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "text_TCywxE": {
+          "type": "text",
+          "settings": {
+            "text": "Descubre nuestros tratamientos",
+            "icon_position": "before_text",
+            "highlight_effect": "none",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_8Bcx3m",
+        "text_TCywxE"
+      ],
+      "name": "t:sections.scrolling_content.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "scrolling_speed": 0.1,
+        "scroll_direction": "start-to-end",
+        "section_rotation": 0,
+        "pause_on_hover": false,
+        "text_font": "heading",
+        "text_font_size_mobile": 6,
+        "text_font_size_desktop": 3,
+        "section_vertical_spacing_mobile": 20,
+        "section_vertical_spacing_desktop": 30,
+        "item_horizontal_spacing_mobile": 40,
+        "item_horizontal_spacing_desktop": 80
+      }
+    },
     "featured_collections_fx8gVL": {
       "type": "featured-collections",
       "blocks": {
@@ -90,11 +135,24 @@
         "show_view_all_button": false,
         "show_scrolling_bar": true
       }
+    },
+    "custom_liquid_Wxw98P": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "liquid": "<hr>",
+        "text_alignment": "left",
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": true
+      }
     }
   },
   "order": [
     "main",
     "image_with_text_overlay_e4GMcc",
+    "scrolling_content_wiMcze",
+    "custom_liquid_Wxw98P",
     "featured_collections_fx8gVL"
   ]
 }
