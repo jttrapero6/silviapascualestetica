@@ -389,6 +389,7 @@
       "blocks": {
         "collection_zXLTqr": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "babor",
             "products_count": 8,
@@ -399,6 +400,7 @@
         },
         "collection_9P67KN": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "doctor-babor",
             "products_count": 8,
@@ -409,6 +411,7 @@
         },
         "collection_hUNh9U": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "biologique-recherche",
             "products_count": 8,
@@ -419,6 +422,7 @@
         },
         "collection_E9LFEV": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "endor",
             "products_count": 8,
@@ -432,7 +436,7 @@
           "settings": {
             "collection": "tarjeta-regalo",
             "products_count": 8,
-            "title": "{{ block.settings.collection.title }}",
+            "title": "Regala Silvia Pascual",
             "content": "",
             "link": "{{ block.settings.collection.url }}"
           }
@@ -454,70 +458,7 @@
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "2",
-        "products_per_row_desktop": 5,
-        "tabs_alignment": "start",
-        "tabs_icon": "none",
-        "show_view_all_button": false,
-        "show_scrolling_bar": true
-      }
-    },
-    "featured_products_manual_m9P6XA": {
-      "type": "featured-products-manual",
-      "blocks": {
-        "tab_CRFQXm": {
-          "type": "tab",
-          "settings": {
-            "title": "Doctor Babor",
-            "products": [],
-            "content": "",
-            "link": ""
-          }
-        },
-        "tab_EjiJ8n": {
-          "type": "tab",
-          "settings": {
-            "title": "Babor",
-            "products": [],
-            "content": "",
-            "link": ""
-          }
-        },
-        "tab_n4TCBB": {
-          "type": "tab",
-          "settings": {
-            "title": "Biologique Recherche",
-            "products": [],
-            "content": "",
-            "link": ""
-          }
-        },
-        "tab_eGAYPz": {
-          "type": "tab",
-          "settings": {
-            "title": "Silvia Pascual",
-            "products": [],
-            "content": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_CRFQXm",
-        "tab_EjiJ8n",
-        "tab_n4TCBB",
-        "tab_eGAYPz"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".container {padding-block-start: calc( ( var(--section-disable-padding-collapsing) * var( --section-vertical-spacing-block-start, var(--section-vertical-spacing) ) ) * 1.5 ); padding-block-end: calc( (var(--section-vertical-spacing-block-end, var(--section-vertical-spacing))) * 1.5 );}"
-      ],
-      "name": "t:sections.featured_products_manual.name",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "stack_products_mobile": false,
-        "stack_products_desktop": false,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 5,
+        "products_per_row_desktop": 3,
         "tabs_alignment": "start",
         "tabs_icon": "none",
         "show_view_all_button": false,
@@ -627,7 +568,6 @@
     "dynamic-grid",
     "media-blocks",
     "featured_collections_UPHgtK",
-    "featured_products_manual_m9P6XA",
     "press",
     "blog-posts"
   ]
