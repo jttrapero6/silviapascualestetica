@@ -267,11 +267,33 @@
         "intro_button_link": "",
         "intro_button_style": "outline"
       }
+    },
+    "vendor_products": {
+      "type": "vendor-products",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "title": "Más productos de este proveedor",
+            "content": ""
+          }
+        }
+      },
+      "settings": {
+        "color_scheme": "scheme-1",
+        "stack_products": true,
+        "products_count": 4,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 4,
+        "show_scrolling_bar": true
+      }
     }
   },
   "order": [
     "main",
     "custom_liquid_dYUh8H",
-    "featured_product_list_f7iCc4"
+    "featured_product_list_f7iCc4",
+    "vendor_products"
   ]
 }

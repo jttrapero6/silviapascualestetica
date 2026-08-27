@@ -1804,6 +1804,11 @@
       "info": "Dynamic recommendations change and improve with time. Create manual product recommendations using the Shopify Search & Discovery app. [Learn more](https://help.shopify.com/en/manual/online-store/search-and-discovery/product-recommendations).",
       "recommendations_count": "Dynamic recommendations count"
     },
+    "vendor_products": {
+      "name": "Vendor products",
+      "info": "Shows other products that share the same vendor as the current product. Assign products to a vendor from Product > Vendor in the product editor.",
+      "products_count": "Products count"
+    },
     "rich_text": {
       "name": "Rich text",
       "blocks": {

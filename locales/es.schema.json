@@ -18,6 +18,11 @@
           "title_default": "Productos destacados"
         }
       }
+    },
+    "vendor_products": {
+      "name": "Productos del proveedor",
+      "info": "Muestra otros productos que comparten el mismo proveedor que el producto actual. Asigna el proveedor de un producto desde Producto > Proveedor en el editor de productos.",
+      "products_count": "Número de productos"
     }
   }
 }
