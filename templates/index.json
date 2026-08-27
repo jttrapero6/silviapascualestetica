@@ -302,7 +302,7 @@
             "text_position": "middle_left",
             "button_style": "solid",
             "link_url": "shopify://pages/tratamientos-faciales",
-            "link_text": "Ver más",
+            "link_text": "Saber más",
             "link_position": "bottom_left"
           }
         },
@@ -329,7 +329,7 @@
             "text_position": "middle_left",
             "button_style": "solid",
             "link_url": "shopify://pages/tratamientos-corporales",
-            "link_text": "Ver más",
+            "link_text": "Saber más",
             "link_position": "bottom_left"
           }
         },
@@ -356,7 +356,7 @@
             "text_position": "middle_left",
             "button_style": "solid",
             "link_url": "shopify://pages/masajes",
-            "link_text": "Ver más",
+            "link_text": "Saber más",
             "link_position": "bottom_left"
           }
         },
@@ -382,8 +382,8 @@
             "text": "",
             "text_position": "middle_left",
             "button_style": "solid",
-            "link_url": "shopify://pages/masajes",
-            "link_text": "Ver más",
+            "link_url": "shopify://collections/all",
+            "link_text": "Comprar",
             "link_position": "bottom_left"
           }
         }
