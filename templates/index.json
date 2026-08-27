@@ -465,7 +465,7 @@
             "collection": "tarjeta-regalo",
             "products_count": 8,
             "title": "Regala Silvia Pascual",
-            "content": "",
+            "content": "<p>Regala bienestar. Una tarjeta regalo de Silvia Pascual es permitir que disfruten de tratamientos con productos premium y tecnología científica. Perfecta para cualquier ocasión.</p>",
             "link": "{{ block.settings.collection.url }}"
           }
         }
