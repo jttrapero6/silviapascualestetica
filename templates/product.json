@@ -268,6 +268,15 @@
         "intro_button_style": "outline"
       }
     },
+    "rich_text_QcDiPA": {
+      "type": "rich-text",
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "content_width": "md",
+        "text_alignment": "center"
+      }
+    },
     "vendor_products": {
       "type": "vendor-products",
       "blocks": {
@@ -303,6 +312,7 @@
     "main",
     "custom_liquid_dYUh8H",
     "featured_product_list_f7iCc4",
+    "rich_text_QcDiPA",
     "vendor_products"
   ]
 }
