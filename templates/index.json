@@ -359,12 +359,40 @@
             "link_text": "Ver más",
             "link_position": "bottom_left"
           }
+        },
+        "image_with_text_k84EKG": {
+          "type": "image_with_text",
+          "settings": {
+            "change_color_scheme_on_hover": false,
+            "color_scheme": "scheme-3",
+            "color_scheme_hover": "",
+            "image": "shopify://shop_images/pexels-elly-fairytale-3865799.jpg",
+            "icon": "none",
+            "icon_width": 32,
+            "mobile_icon_width": 24,
+            "icon_position": "middle_center",
+            "subheading": "",
+            "subheading_position": "middle_center",
+            "title": "Productos",
+            "heading_tag": "h2",
+            "heading_position": "top_left",
+            "scrolling_title": false,
+            "scrolling_title_separator": "none",
+            "show_text_vertically": true,
+            "text": "",
+            "text_position": "middle_left",
+            "button_style": "solid",
+            "link_url": "shopify://pages/masajes",
+            "link_text": "Ver más",
+            "link_position": "bottom_left"
+          }
         }
       },
       "block_order": [
         "image_with_text-1",
         "image_with_text-2",
-        "image_with_text-3"
+        "image_with_text-3",
+        "image_with_text_k84EKG"
       ],
       "settings": {
         "color_scheme": "scheme-2",
@@ -380,7 +408,7 @@
         "add_horizontal_spacing": false,
         "add_border": false,
         "column_spacing": "none",
-        "items_per_row": 3,
+        "items_per_row": 4,
         "block_size": "lg"
       }
     },
