@@ -1806,8 +1806,19 @@
     },
     "vendor_products": {
       "name": "Vendor products",
-      "info": "Shows other products that share the same vendor as the current product. Assign products to a vendor from Product > Vendor in the product editor.",
-      "products_count": "Products count"
+      "info": "Add a block for each vendor and manually pick 1 to 10 products for it. The section only appears on a product page when its vendor matches a block below.",
+      "blocks": {
+        "vendor_group": {
+          "name": "Vendor group",
+          "vendor": {
+            "label": "Vendor",
+            "info": "Must match the product's vendor exactly (Product > Vendor)."
+          },
+          "products": {
+            "label": "Products"
+          }
+        }
+      }
     },
     "rich_text": {
       "name": "Rich text",

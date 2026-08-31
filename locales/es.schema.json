@@ -21,8 +21,19 @@
     },
     "vendor_products": {
       "name": "Productos del proveedor",
-      "info": "Muestra otros productos que comparten el mismo proveedor que el producto actual. Asigna el proveedor de un producto desde Producto > Proveedor en el editor de productos.",
-      "products_count": "Número de productos"
+      "info": "Añade un bloque por cada proveedor y elige a mano de 1 a 10 productos. La sección solo aparece en una ficha de producto cuando su proveedor coincide con uno de los bloques.",
+      "blocks": {
+        "vendor_group": {
+          "name": "Grupo de proveedor",
+          "vendor": {
+            "label": "Proveedor",
+            "info": "Debe coincidir exactamente con el proveedor del producto (Producto > Proveedor)."
+          },
+          "products": {
+            "label": "Productos"
+          }
+        }
+      }
     }
   }
 }

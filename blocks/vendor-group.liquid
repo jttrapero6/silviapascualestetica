@@ -1,0 +1,53 @@
+{%- liquid
+  assign show_block = false
+
+  if product.vendor != blank and block.settings.vendor != blank and block.settings.products.size > 0
+    assign product_vendor_downcase = product.vendor | downcase
+    assign block_vendor_downcase = block.settings.vendor | downcase
+
+    if product_vendor_downcase == block_vendor_downcase
+      assign show_block = true
+    endif
+  endif
+-%}
+
+{%- if show_block -%}
+  {%- assign product_list_id = 'section-' | append: section.id | append: '-product-list' -%}
+
+  {%- capture sizes -%}
+    {%- if section.settings.stack_products -%}
+      (max-width: 699px) calc(100vw / {{ section.settings.products_per_row_mobile }} - 40px), (max-width: 999px) calc(50vw - 64px), calc((100vw - 96px) / {{ section.settings.products_per_row_desktop }})
+    {%- else -%}
+      (max-width: 699px) 74vw, (max-width: 999px) 50vw, calc((100vw - 96px) / {{ section.settings.products_per_row_desktop }})
+    {%- endif -%}
+  {%- endcapture -%}
+
+  <product-list id="{{ product_list_id }}" class="product-list product-list--padded full-bleed {% unless section.settings.stack_products %}product-list--carousel scroll-area{% endunless %}" {{ block.shopify_attributes }}>
+    {%- for vendor_product in block.settings.products -%}
+      {%- unless vendor_product.id == product.id -%}
+        {%- render 'product-card', product: vendor_product, reveal: true, sizes: sizes, position: forloop.index -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  </product-list>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.vendor_products.blocks.vendor_group.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "vendor",
+      "label": "t:sections.vendor_products.blocks.vendor_group.vendor.label",
+      "info": "t:sections.vendor_products.blocks.vendor_group.vendor.info"
+    },
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "t:sections.vendor_products.blocks.vendor_group.products.label",
+      "limit": 10
+    }
+  ]
+}
+{% endschema %}
