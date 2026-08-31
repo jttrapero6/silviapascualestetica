@@ -259,7 +259,7 @@
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
         "intro_color_scheme": "",
-        "intro_image_overlay": "#B9484800",
+        "intro_image_overlay": "rgba(0,0,0,0)",
         "intro_title": "Regala belleza y bienestar",
         "intro_title_tag": "h4",
         "intro_content": "<p>Sorprende a quién más quieres con una <strong>tarjeta regalo de Silvia Pascual</strong>. Elige el importe que desees y deja que disfruten de nuestros tratamientos premium.</p>",
