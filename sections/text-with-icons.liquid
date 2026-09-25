@@ -19,7 +19,14 @@
         --text-with-icons-column-gap: 3rem;
         --text-with-icons-item-width: calc((100% - (var(--text-with-icons-column-gap) * {{ section.settings.items_per_row_desktop | minus: 1 }})) / {{ section.settings.items_per_row_desktop }});
 
-        {% if section.settings.items_per_row_desktop == 2 %}
+        {% if section.blocks.size < section.settings.items_per_row_desktop %}
+          {% if section.settings.items_per_row_desktop == 2 %}
+            --text-with-icons-grid: auto / repeat({{ section.blocks.size }}, minmax(0, {% if section.settings.separator_style == 'vertical' %}calc(28rem + var(--text-with-icons-column-gap) * 2){% else %}28rem{% endif %}));
+          {% else %}
+            --text-with-icons-grid: auto / repeat({{ section.blocks.size }}, minmax(0, var(--text-with-icons-item-width)));
+          {% endif %}
+          justify-content: center;
+        {% elsif section.settings.items_per_row_desktop == 2 %}
           --text-with-icons-grid: auto / repeat(2, minmax(0, {% if section.settings.separator_style == 'vertical' %}calc(28rem + var(--text-with-icons-column-gap) * 2){% else %}28rem{% endif %}));
         {% elsif section.settings.items_per_row_desktop == 3 %}
           --text-with-icons-grid: auto / repeat(auto-fit, var(--text-with-icons-item-width));
