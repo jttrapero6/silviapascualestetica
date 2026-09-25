@@ -239,7 +239,7 @@
         "color_scheme": "scheme-2",
         "subheading": "",
         "title": "¿Qué es <em>{{ product.title }}</em>?",
-        "content": "<p>Un tratamiento facial purificante diseñado específicamente para pieles jóvenes con exceso de grasa. Su objetivo es limpiar y equilibrar la piel en profundidad, respetando su fisiología natural mientras ayuda a prevenir alteraciones futuras.</p>",
+        "content": "{{ product.description }}",
         "heading_tag": "h3",
         "text_alignment": "center",
         "items_per_row_desktop": 4,
