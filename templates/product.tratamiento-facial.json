@@ -198,7 +198,6 @@
         },
         "item_DgPg4H": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "title": "Oxigenación Intensa",
