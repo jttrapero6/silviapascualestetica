@@ -138,7 +138,7 @@
         "subheading_pmgH74": {
           "type": "subheading",
           "settings": {
-            "text": "Para pieles jóvenes"
+            "text": "{{ closest.product.metafields.custom.texto_anterior_al_titulo.value }}"
           },
           "blocks": {}
         },
@@ -324,7 +324,7 @@
         "products_per_row_mobile": "1",
         "products_per_row_desktop": 4,
         "intro_color_scheme": "",
-        "intro_image_overlay": "#00000020",
+        "intro_image_overlay": "#00000021",
         "intro_title": "Lo esencial",
         "intro_title_tag": "h3",
         "intro_content": "<p>Gracias a nuestra línea de productos, puedes continuar con el tratamiento desde casa.</p>",
