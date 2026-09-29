@@ -6641,7 +6641,7 @@ shopify-account::part(signed-out-avatar) {
   --mega-menu-padding-inline: 1.75rem;
   --mega-menu-padding-block-start: 1.75rem;
   --mega-menu-padding-block-end: 3.5rem;
-  --mega-menu-navigation-max-width: 800px;
+  --mega-menu-navigation-max-width: 1200px;
   max-height: calc(100vh - var(--sticky-area-height) - 48px);
   width: 100%;
   padding-inline: var(--mega-menu-padding-inline);
