@@ -9,6 +9,18 @@
  */
 {
   "sections": {
+    "breadcrumb_XVt3XX": {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "show_home": true,
+        "show_current_page": true,
+        "hide_collection": true,
+        "home_label": "Inicio",
+        "separator": "/"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -308,6 +320,7 @@
     }
   },
   "order": [
+    "breadcrumb_XVt3XX",
     "main",
     "custom_liquid_dYUh8H",
     "featured_product_list_f7iCc4",
