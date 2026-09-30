@@ -1,12 +1,13 @@
 {%- liquid
   assign separator = section.settings.separator | default: '/'
   assign home_label = section.settings.home_label | default: 'Inicio'
-  assign show_current_page = section.settings.show_current_page
-  assign hide_collection = section.settings.hide_collection
+  assign show_home = section.settings.show_home
+  assign show_product_name = section.settings.show_product_name
+  assign show_vendor = section.settings.show_vendor
 -%}
 
 {%- capture breadcrumb_items -%}
-  {%- if section.settings.show_home -%}
+  {%- if show_home -%}
     <li class="breadcrumb__item">
       <a href="{{ routes.root_url }}" class="breadcrumb__link">{{ home_label }}</a>
     </li>
@@ -15,22 +16,42 @@
 
   {%- case template.name -%}
     {%- when 'product' -%}
-      {%- unless hide_collection -%}
-        {%- if product.collections.size > 0 -%}
-          {%- assign collection = product.collections.first -%}
-          <li class="breadcrumb__item">
-            <a href="{{ collection.url }}" class="breadcrumb__link">{{ collection.title }}</a>
-          </li>
-          <li class="breadcrumb__separator" aria-hidden="true">{{ separator }}</li>
-        {%- endif -%}
-      {%- endunless -%}
+      {%- if show_vendor and product.vendor != blank -%}
+        {%- assign vendor_name = product.vendor | strip -%}
+        {%- assign vendor_handle = vendor_name | handle -%}
+        {%- assign vendor_collection = blank -%}
 
-      {%- if show_current_page -%}
+        {%- for collection in collections -%}
+          {%- assign collection_title_handle = collection.title | handle -%}
+
+          {%- if collection.title == vendor_name -%}
+            {%- assign vendor_collection = collection -%}
+            {%- break -%}
+          {%- elsif collection.handle == vendor_handle -%}
+            {%- assign vendor_collection = collection -%}
+            {%- break -%}
+          {%- elsif collection_title_handle == vendor_handle -%}
+            {%- assign vendor_collection = collection -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        <li class="breadcrumb__item">
+          {%- if vendor_collection != blank -%}
+            <a href="{{ vendor_collection.url }}" class="breadcrumb__link">{{ product.vendor }}</a>
+          {%- else -%}
+            <span class="breadcrumb__link breadcrumb__link--static">{{ product.vendor }}</span>
+          {%- endif -%}
+        </li>
+        <li class="breadcrumb__separator" aria-hidden="true">{{ separator }}</li>
+      {%- endif -%}
+
+      {%- if show_product_name -%}
         <li class="breadcrumb__item" aria-current="page">{{ product.title }}</li>
       {%- endif -%}
 
     {%- when 'collection' -%}
-      {%- if show_current_page -%}
+      {%- if show_product_name -%}
         <li class="breadcrumb__item" aria-current="page">{{ collection.title }}</li>
       {%- endif -%}
 
@@ -42,32 +63,32 @@
         <li class="breadcrumb__separator" aria-hidden="true">{{ separator }}</li>
       {%- endif -%}
 
-      {%- if show_current_page -%}
+      {%- if show_product_name -%}
         <li class="breadcrumb__item" aria-current="page">{{ article.title }}</li>
       {%- endif -%}
 
     {%- when 'blog' -%}
-      {%- if show_current_page -%}
+      {%- if show_product_name -%}
         <li class="breadcrumb__item" aria-current="page">{{ blog.title }}</li>
       {%- endif -%}
 
     {%- when 'page' -%}
-      {%- if show_current_page -%}
+      {%- if show_product_name -%}
         <li class="breadcrumb__item" aria-current="page">{{ page.title }}</li>
       {%- endif -%}
 
     {%- when 'search' -%}
-      {%- if show_current_page -%}
+      {%- if show_product_name -%}
         <li class="breadcrumb__item" aria-current="page">Resultados de búsqueda</li>
       {%- endif -%}
 
     {%- when 'cart' -%}
-      {%- if show_current_page -%}
+      {%- if show_product_name -%}
         <li class="breadcrumb__item" aria-current="page">Carrito</li>
       {%- endif -%}
 
     {%- else -%}
-      {%- if show_current_page -%}
+      {%- if show_product_name -%}
         <li class="breadcrumb__item" aria-current="page">{{ page_title | default: collection.title | default: product.title | default: blog.title | default: article.title | default: page.title }}</li>
       {%- endif -%}
   {%- endcase -%}
@@ -109,7 +130,8 @@
     min-height: 1.5rem;
   }
 
-  .breadcrumb__link {
+  .breadcrumb__link,
+  .breadcrumb__link--static {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -179,16 +201,16 @@
     },
     {
       "type": "checkbox",
-      "id": "show_current_page",
-      "label": "Mostrar página actual",
-      "default": true
+      "id": "show_vendor",
+      "label": "Mostrar proveedor",
+      "default": true,
+      "info": "Muestra el proveedor del producto en el breadcrumb."
     },
     {
       "type": "checkbox",
-      "id": "hide_collection",
-      "label": "Quitar colección",
-      "default": false,
-      "info": "Activa esta opción para mostrar solo Inicio / Nombre del producto."
+      "id": "show_product_name",
+      "label": "Mostrar nombre del producto",
+      "default": true
     },
     {
       "type": "text",
