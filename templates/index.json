@@ -453,7 +453,7 @@
           "type": "collection",
           "disabled": true,
           "settings": {
-            "collection": "endor",
+            "collection": "endor-technologies",
             "products_count": 8,
             "title": "{{ block.settings.collection.title }}",
             "content": "",
