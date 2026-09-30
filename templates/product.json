@@ -16,7 +16,7 @@
         "color_scheme": "scheme-2",
         "show_home": true,
         "show_current_page": true,
-        "hide_collection": true,
+        "hide_collection": false,
         "home_label": "Inicio",
         "separator": "/"
       }
