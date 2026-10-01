@@ -9,6 +9,18 @@
  */
 {
   "sections": {
+    "breadcrumb_4WB7LV": {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "show_home": true,
+        "show_vendor": false,
+        "show_product_name": true,
+        "home_label": "Inicio",
+        "separator": "/"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -232,6 +244,7 @@
     }
   },
   "order": [
+    "breadcrumb_4WB7LV",
     "main"
   ]
 }
