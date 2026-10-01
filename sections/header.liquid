@@ -36,7 +36,7 @@
     --header-non-transparent-text-color: {{ section.settings.color_scheme.settings.text_color.rgb }};
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1201px) {
     #shopify-section-{{ section.id }} {
       {%- case section.settings.desktop_layout -%}
         {%- when 'logo_left_navigation_inline' -%}
@@ -48,6 +48,27 @@
         {%- else -%}
           --header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
       {%- endcase -%}
+    }
+
+    #shopify-section-{{ section.id }} .header__menu-toggle--responsive,
+    #shopify-section-{{ section.id }} .header__mobile-search {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .header__desktop-localization {
+      display: contents;
+    }
+
+    #shopify-section-{{ section.id }} .header__primary-nav--desktop-center {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    #shopify-section-{{ section.id }} .header__desktop-menu,
+    #shopify-section-{{ section.id }} .header__menu-label,
+    #shopify-section-{{ section.id }} .header__secondary-search--split {
+      display: none;
     }
   }
 
@@ -127,12 +148,12 @@
 
         case section.settings.desktop_layout
           when 'logo_left_navigation_center'
-            assign primary_nav_extra_classes = primary_nav_extra_classes | append: ' md:justify-center'
+            assign primary_nav_extra_classes = primary_nav_extra_classes | append: ' header__primary-nav--desktop-center'
         endcase
       -%}
 
       <nav class="header__primary-nav {{ primary_nav_extra_classes }}" aria-label="{{ 'header.general.primary_navigation' | t | escape }}">
-        <button type="button" aria-controls="menu-drawer" class="tap-area {% unless section.settings.desktop_layout == 'drawer' %}md:hidden{% endunless %}">
+        <button type="button" aria-controls="menu-drawer" class="tap-area header__menu-toggle{% unless section.settings.desktop_layout == 'drawer' %} header__menu-toggle--responsive{% endunless %}">
           <span class="sr-only">{{ 'header.general.menu' | t }}</span>
 
           <div class="h-stack gap-3" aria-hidden="true">
@@ -141,19 +162,19 @@
               <span></span>
             </div>
 
-            <span class="subheading md-max:hidden">Menu</span>
+            <span class="subheading header__menu-label">Menu</span>
           </div>
         </button>
 
         {%- if section.settings.mobile_layout == 'logo_center_navigation_split' -%}
-          <a href="{{ routes.search_url }}" class="header__search-link tap-area md:hidden" aria-controls="search-drawer">
+          <a href="{{ routes.search_url }}" class="header__search-link header__mobile-search tap-area" aria-controls="search-drawer">
             <span class="sr-only">{{ 'header.general.search' | t }}</span>
             {%- render 'icon' with 'search', mobile_width: 16, width: section.settings.desktop_icon_size -%}
           </a>
         {%- endif -%}
 
         {%- if menu.links.size > 0 and section.settings.desktop_layout != 'drawer' -%}
-          <ul class="contents unstyled-list md-max:hidden">
+          <ul class="contents unstyled-list header__desktop-menu">
             {%- if open_dropdown_menu_in_sidebar -%}
               <li class="contents">
                 <button type="button" aria-controls="menu-dropdown-sidebar" class="tap-area">
@@ -248,7 +269,7 @@
     <nav class="header__secondary-nav" aria-label="{{ 'header.general.secondary_navigation' | t | escape }}">
       <ul class="contents unstyled-list">
         {%- if show_country_selector or show_locale_selector -%}
-          <li class="hidden md:contents">
+          <li class="hidden header__desktop-localization">
             <div class="h-stack justify-between">
               {%- if show_country_selector or show_locale_selector -%}
                 <div class="h-stack gap-5">
@@ -298,7 +319,7 @@
           </news-modal-button>
         </li>
 
-        <li class="header__search-link {% if section.settings.mobile_layout == 'logo_center_navigation_split' %}md-max:hidden{% endif %}">
+        <li class="header__search-link{% if section.settings.mobile_layout == 'logo_center_navigation_split' %} header__secondary-search--split{% endif %}">
           <a href="{{ routes.search_url }}" class="block tap-area" aria-controls="search-drawer">
             <span class="sr-only">{{ 'header.general.search' | t }}</span>
             {%- render 'icon' with 'search', mobile_width: 16, width: section.settings.desktop_icon_size -%}
