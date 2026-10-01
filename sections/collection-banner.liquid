@@ -1,6 +1,14 @@
 {%- liquid
   assign image = section.settings.image | default: collection.image
   assign color_scheme = section.settings.color_scheme
+  assign mobile_content_position = section.settings.mobile_content_position | default: section.settings.content_position
+
+  if mobile_content_position == 'inherit'
+    assign mobile_content_position = section.settings.content_position
+  endif
+
+  assign mobile_content_alignment = mobile_content_position | split: 'place-self-' | last | split: '-' | last
+  assign desktop_content_alignment = section.settings.content_position | split: 'place-self-' | last | split: '-' | last
 
   if image == blank
     assign layout = 'plain'
@@ -16,9 +24,7 @@
 <div {% if section.settings.allow_transparent_header and layout != 'plain' %}allow-transparent-header{% endif %} class="color-scheme color-scheme--{{ color_scheme.id }}">
   {%- capture quick_navigation -%}
     {%- if section.settings.quick_navigation_menu.links.size > 0 -%}
-      {% assign alignment = section.settings.content_position | split: 'place-self-' | last | split: '-' | last %}
-
-      <ul class="collection-quick-navigation {% if layout == 'plain' %}justify-{{ alignment }}{% else %}collection-quick-navigation--padded{% endif %} unstyled-list scroll-area bleed">
+      <ul class="collection-quick-navigation {% if layout == 'plain' %}justify-{{ mobile_content_alignment }} sm:justify-{{ desktop_content_alignment }}{% else %}collection-quick-navigation--padded{% endif %} unstyled-list scroll-area bleed">
         {%- for link in section.settings.quick_navigation_menu.links -%}
           <li>
             <a href="{{ link.url }}" class="collection-quick-navigation__item {% if link.active %}is-selected{% endif %} group">
@@ -51,9 +57,7 @@
       <div class="section-spacing section-spacing--tight">
         <div class="container">
           <div class="v-stack gap-8 sm:gap-12">
-            {% assign text_alignment = section.settings.content_position | split: 'place-self-' | last | split: '-' | last %}
-
-            <div class="prose prose-justify-{{ text_alignment }}">
+            <div class="prose prose-justify-{{ mobile_content_alignment }} sm:prose-justify-{{ desktop_content_alignment }}">
               <h1 class="{{ section.settings.collection_title_size }}">{{ collection.title }}</h1>
     
               {%- if collection.description != blank and section.settings.show_description -%}
@@ -74,8 +78,8 @@
           {{- image | image_url: width: image.width | image_tag: sizes: '100vw', widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
         </div>
   
-        <div class="{{ section.settings.content_position }}">
-          <div class="prose prose-justify-{{ section.settings.content_position | split: '-' | last }}">
+        <div class="{{ mobile_content_position }} sm:{{ section.settings.content_position }}">
+          <div class="prose prose-justify-{{ mobile_content_alignment }} sm:prose-justify-{{ desktop_content_alignment }}">
             <h1 class="{{ section.settings.collection_title_size }}">{{ collection.title }}</h1>
   
             {%- if collection.description != blank and section.settings.show_description -%}
@@ -99,8 +103,8 @@
   
         <div class="section-split__column align-self-stretch">
           <div class="content-box min-h-full">
-            <div class="span-full {{ section.settings.content_position }}">
-              <div class="prose prose-justify-{{ section.settings.content_position | split: '-' | last }} {{ section.settings.content_position }}">
+            <div class="span-full {{ mobile_content_position }} sm:{{ section.settings.content_position }}">
+              <div class="prose prose-justify-{{ mobile_content_alignment }} sm:prose-justify-{{ desktop_content_alignment }} {{ mobile_content_position }} sm:{{ section.settings.content_position }}">
                 <h1 class="{{ section.settings.collection_title_size }}">{{ collection.title }}</h1>
       
                 {%- if collection.description != blank and section.settings.show_description -%}
@@ -255,6 +259,54 @@
         }
       ],
       "default": "place-self-center"
+    },
+    {
+      "type": "select",
+      "id": "mobile_content_position",
+      "label": "t:global.position.mobile_alignment",
+      "options": [
+        {
+          "value": "inherit",
+          "label": "t:global.position.inherit_alignment_on_mobile"
+        },
+        {
+          "value": "place-self-start",
+          "label": "t:global.position.top_left"
+        },
+        {
+          "value": "place-self-start-center",
+          "label": "t:global.position.top_center"
+        },
+        {
+          "value": "place-self-start-end",
+          "label": "t:global.position.top_right"
+        },
+        {
+          "value": "place-self-center-start",
+          "label": "t:global.position.middle_left"
+        },
+        {
+          "value": "place-self-center",
+          "label": "t:global.position.middle_center"
+        },
+        {
+          "value": "place-self-center-end",
+          "label": "t:global.position.middle_right"
+        },
+        {
+          "value": "place-self-end-start",
+          "label": "t:global.position.bottom_left"
+        },
+        {
+          "value": "place-self-end-center",
+          "label": "t:global.position.bottom_center"
+        },
+        {
+          "value": "place-self-end",
+          "label": "t:global.position.bottom_right"
+        }
+      ],
+      "default": "inherit"
     },
     {
       "type": "header",
