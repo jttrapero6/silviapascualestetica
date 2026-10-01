@@ -35,9 +35,11 @@
           "babor",
           "doctor-babor",
           "biologique-recherche",
-          "endor-technologies"
+          "endor-technologies",
+          "schrammek",
+          "tarjeta-regalo"
         ],
-        "items_per_row": 4,
+        "items_per_row": 3,
         "stack_on_mobile": true,
         "add_horizontal_spacing": true,
         "content_position": "inside",
