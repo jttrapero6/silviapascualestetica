@@ -13,11 +13,12 @@
       "type": "collection-banner",
       "settings": {
         "color_scheme": "scheme-2",
-        "allow_transparent_header": false,
+        "allow_transparent_header": true,
         "layout": "background",
         "show_description": false,
         "collection_title_size": "h2",
         "content_position": "place-self-center-end",
+        "mobile_content_position": "place-self-center",
         "background_color_scheme": "scheme-3",
         "image": "{{ collection.image }}",
         "image_size": "sm",
