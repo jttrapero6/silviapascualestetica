@@ -1,0 +1,419 @@
+<div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
+  <div class="container section-spacing">
+    <div class="contact-map-section">
+      <div class="contact-map-section__map">
+        {%- if section.settings.map_iframe != blank -%}
+          <div class="contact-map-section__embed">
+            {{- section.settings.map_iframe -}}
+          </div>
+        {%- elsif section.settings.map_image != blank -%}
+          <div class="contact-map-section__image">
+            {{- section.settings.map_image | image_url: width: 1600 | image_tag: loading: 'lazy', sizes: '(min-width: 1000px) 50vw, 100vw', class: 'contact-map-section__image-media', alt: section.settings.map_image_alt | default: 'Mapa del centro' -}}
+          </div>
+        {%- else -%}
+          <div class="contact-map-section__placeholder">
+            <span>{{ section.settings.map_fallback_text | default: 'Mapa del centro' }}</span>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="contact-map-section__content">
+        {%- if section.settings.title != blank -%}
+          {%- render 'heading', content: section.settings.title, style: section.settings.heading_size, html_tag: 'h2' -%}
+        {%- endif -%}
+
+        {%- if section.settings.text != blank -%}
+          <div class="contact-map-section__intro prose">{{ section.settings.text }}</div>
+        {%- endif -%}
+
+        {%- if section.blocks.size > 0 -%}
+          <div class="contact-map-section__items">
+            {%- for block in section.blocks -%}
+              {%- assign item_type = block.settings.type -%}
+              {%- assign item_value = block.settings.value -%}
+              {%- assign item_label = block.settings.label | default: item_value -%}
+              {%- assign item_url = block.settings.url -%}
+
+              {%- case item_type -%}
+                {%- when 'phone' -%}
+                  {%- assign item_url = 'tel:' | append: item_value | replace: ' ', '' -%}
+                {%- when 'email' -%}
+                  {%- assign item_url = 'mailto:' | append: item_value -%}
+                {%- when 'whatsapp' -%}
+                  {%- assign whatsapp_value = item_value | replace: ' ', '' | replace: '+', '' -%}
+                  {%- assign item_url = 'https://wa.me/' | append: whatsapp_value -%}
+                {%- when 'custom' -%}
+                  {%- assign item_url = block.settings.url -%}
+              {%- endcase -%}
+
+              {%- if item_value == blank -%}{%- continue -%}{%- endif -%}
+
+              <div class="contact-map-section__item" {{ block.shopify_attributes }}>
+                <div class="contact-map-section__icon">
+                  {%- if block.settings.custom_icon != blank -%}
+                    {%- render 'icon', image: block.settings.custom_icon, width: 22, mobile_width: 20 -%}
+                  {%- elsif block.settings.icon != blank and block.settings.icon != 'none' -%}
+                    {%- render 'icon' with block.settings.icon, width: 22, mobile_width: 20 -%}
+                  {%- endif -%}
+                </div>
+
+                <div class="contact-map-section__details">
+                  {%- if item_label != blank and item_label != item_value -%}
+                    <span class="contact-map-section__label">{{ item_label }}</span>
+                  {%- endif -%}
+
+                  {%- if item_url != blank -%}
+                    <a href="{{ item_url }}" {% if block.settings.open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                      {{- item_value -}}
+                    </a>
+                  {%- else -%}
+                    <span>{{ item_value }}</span>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} .contact-map-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.3fr);
+    gap: 2rem;
+    align-items: stretch;
+    margin-left: 0;
+    margin-right: 0;
+    width: calc(100% + 0px);
+    padding: 0;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__map,
+  #shopify-section-{{ section.id }} .contact-map-section__content {
+    min-width: 0;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__map {
+    display: flex;
+    order: 1;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__content {
+    order: 2;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__embed,
+  #shopify-section-{{ section.id }} .contact-map-section__image,
+  #shopify-section-{{ section.id }} .contact-map-section__placeholder {
+    width: 100%;
+    min-height: 430px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(var(--color-foreground), 0.04), rgba(var(--color-foreground), 0.02));
+    border: 1px solid rgba(var(--color-foreground), 0.08);
+    box-shadow: 0 20px 45px rgba(var(--color-foreground), 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__embed iframe,
+  #shopify-section-{{ section.id }} .contact-map-section__image-media {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    display: block;
+    border: 0;
+    object-fit: cover;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__placeholder {
+    border: 1px solid rgba(var(--color-foreground), 0.12);
+    color: rgb(var(--color-foreground));
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    background: rgba(var(--color-foreground), 0.015);
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: clamp(1.25rem, 2vw, 2rem);
+    border: 1px solid rgba(var(--color-foreground), 0.08);
+    border-radius: 1.5rem;
+    background: linear-gradient(180deg, rgba(var(--color-foreground), 0.02), rgba(var(--color-foreground), 0.015));
+    box-shadow: 0 12px 30px rgba(var(--color-foreground), 0.04);
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__intro {
+    margin: 0;
+    color: rgba(var(--color-foreground), 0.8);
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__items {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.9rem 1rem;
+    border-radius: 1rem;
+    background: rgba(var(--color-background), 0.7);
+    border: 1px solid rgba(var(--color-foreground), 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(var(--color-foreground), 0.05);
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.9rem;
+    background: rgba(var(--color-foreground), 0.04);
+    color: rgb(var(--color-foreground));
+    flex-shrink: 0;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__label {
+    display: block;
+    color: rgba(var(--color-foreground), 0.7);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__details a,
+  #shopify-section-{{ section.id }} .contact-map-section__details span {
+    color: rgb(var(--color-foreground));
+    text-decoration: none;
+    word-break: break-word;
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 799px) {
+    #shopify-section-{{ section.id }} .contact-map-section {
+      grid-template-columns: 1fr;
+      gap: 0;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding: 0;
+      border-radius: 0;
+    }
+
+    #shopify-section-{{ section.id }} .contact-map-section__content {
+      order: 1;
+      padding: 1.1rem;
+      border-radius: 0;
+    }
+
+    #shopify-section-{{ section.id }} .contact-map-section__map {
+      order: 2;
+    }
+
+    #shopify-section-{{ section.id }} .contact-map-section__embed,
+    #shopify-section-{{ section.id }} .contact-map-section__image,
+    #shopify-section-{{ section.id }} .contact-map-section__placeholder {
+      min-height: 280px;
+      border-radius: 0;
+      border-left: 0;
+      border-right: 0;
+      border-top: 1px solid rgba(var(--color-foreground), 0.08);
+      border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+      box-shadow: none;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Ubicación centro",
+  "class": "shopify-section--contact-map",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Título",
+      "default": "Encuéntranos"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texto introductorio",
+      "default": "<p>Visítanos en nuestro centro y consulta cualquier duda sobre tratamientos o reservas.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "map_image",
+      "label": "Imagen del mapa"
+    },
+    {
+      "type": "text",
+      "id": "map_image_alt",
+      "label": "Texto alternativo de la imagen del mapa",
+      "default": "Mapa del centro"
+    },
+    {
+      "type": "textarea",
+      "id": "map_iframe",
+      "label": "Iframe o HTML del mapa",
+      "info": "Puedes pegar aquí un iframe de Google Maps o cualquier código HTML del mapa. Si lo rellenas, tiene prioridad sobre la imagen."
+    },
+    {
+      "type": "text",
+      "id": "map_fallback_text",
+      "label": "Texto alternativo si no hay mapa",
+      "default": "Mapa del centro"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "info_item",
+      "name": "Datos de contacto",
+      "settings": [
+        {
+          "type": "select",
+          "id": "type",
+          "label": "Tipo de dato",
+          "options": [
+            { "value": "phone", "label": "Teléfono" },
+            { "value": "email", "label": "Email" },
+            { "value": "whatsapp", "label": "WhatsApp" },
+            { "value": "address", "label": "Dirección" },
+            { "value": "custom", "label": "Personalizado" }
+          ],
+          "default": "phone"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Etiqueta",
+          "default": "Teléfono"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Texto o dato",
+          "default": "+34 600 123 456"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Enlace opcional"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_new_tab",
+          "label": "Abrir enlace en nueva pestaña",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icono",
+          "options": [
+            { "value": "none", "label": "Sin icono" },
+            { "value": "picto-phone", "label": "Teléfono" },
+            { "value": "picto-email", "label": "Email" },
+            { "value": "picto-mobile-phone", "label": "Móvil" },
+            { "value": "picto-location-pin", "label": "Ubicación" },
+            { "value": "picto-chat", "label": "Chat" },
+            { "value": "picto-customer-support", "label": "Soporte" },
+            { "value": "picto-date", "label": "Horario" },
+            { "value": "whatsapp", "label": "WhatsApp" }
+          ],
+          "default": "picto-phone"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Icono personalizado"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ubicación centro",
+      "blocks": [
+        {
+          "type": "info_item",
+          "settings": {
+            "type": "phone",
+            "label": "Teléfono",
+            "value": "+34 600 123 456",
+            "icon": "picto-phone"
+          }
+        },
+        {
+          "type": "info_item",
+          "settings": {
+            "type": "whatsapp",
+            "label": "WhatsApp",
+            "value": "+34 600 123 456",
+            "icon": "whatsapp"
+          }
+        },
+        {
+          "type": "info_item",
+          "settings": {
+            "type": "email",
+            "label": "Email",
+            "value": "hola@centroestetica.com",
+            "icon": "picto-email"
+          }
+        },
+        {
+          "type": "info_item",
+          "settings": {
+            "type": "address",
+            "label": "Dirección",
+            "value": "Calle Ejemplo 123, 28001 Madrid",
+            "icon": "picto-location-pin"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
