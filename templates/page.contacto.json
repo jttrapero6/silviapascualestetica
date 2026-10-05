@@ -95,6 +95,17 @@
         "map_fallback_text": "Mapa del centro"
       }
     },
+    "custom_liquid_ANkfYq": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "liquid": "",
+        "text_alignment": "left",
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": true
+      }
+    },
     "contact_Y3Nn9J": {
       "type": "contact",
       "name": "t:sections.contact.name",
@@ -113,6 +124,7 @@
   "order": [
     "main",
     "ubicacion_centro_QpjQm3",
+    "custom_liquid_ANkfYq",
     "contact_Y3Nn9J"
   ]
 }
