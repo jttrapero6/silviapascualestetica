@@ -18,6 +18,83 @@
         "content_width": "md"
       }
     },
+    "ubicacion_centro_QpjQm3": {
+      "type": "ubicacion-centro",
+      "blocks": {
+        "info_item_z9BmXD": {
+          "type": "info_item",
+          "settings": {
+            "type": "phone",
+            "label": "Teléfono",
+            "value": "941 258 437",
+            "url": "tel:34941258437",
+            "open_new_tab": false,
+            "icon": "picto-phone"
+          }
+        },
+        "info_item_YqPRpx": {
+          "type": "info_item",
+          "settings": {
+            "type": "phone",
+            "label": "Móvil",
+            "value": "626 478 717",
+            "url": "tel:34941258437",
+            "open_new_tab": false,
+            "icon": "picto-mobile-phone"
+          }
+        },
+        "info_item_UWzRV3": {
+          "type": "info_item",
+          "settings": {
+            "type": "whatsapp",
+            "label": "WhatsApp",
+            "value": "626 478 717",
+            "url": "https://wa.me/626478717",
+            "open_new_tab": false,
+            "icon": "whatsapp"
+          }
+        },
+        "info_item_AaLFrj": {
+          "type": "info_item",
+          "settings": {
+            "type": "email",
+            "label": "Email",
+            "value": "info@silviapascualestetica.com",
+            "url": "mailto:mailto.info@silviapascualestetica.com",
+            "open_new_tab": false,
+            "icon": "picto-email"
+          }
+        },
+        "info_item_PtRr47": {
+          "type": "info_item",
+          "settings": {
+            "type": "address",
+            "label": "Dirección",
+            "value": "Calle Bretón de los Herreros 52, <br>26001 Logroño, La Rioja",
+            "url": "https://maps.app.goo.gl/JBcbsbA97XatPV1u7",
+            "open_new_tab": true,
+            "icon": "picto-location-pin"
+          }
+        }
+      },
+      "block_order": [
+        "info_item_z9BmXD",
+        "info_item_YqPRpx",
+        "info_item_UWzRV3",
+        "info_item_AaLFrj",
+        "info_item_PtRr47"
+      ],
+      "name": "Ubicación centro",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "title": "Contacta con nosotros",
+        "heading_size": "h2",
+        "text": "",
+        "map_image_alt": "Mapa del centro",
+        "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.2264483506337!2d-2.4493758!3d42.465472299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5aab47f28f8c03%3A0xa5e1d23c8b11f30a!2sCentro%20de%20Est%C3%A9tica%20Avanzada%20Silvia%20Pascual!5e0!3m2!1ses!2ses!4v1791212279527!5m2!1ses!2ses\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>",
+        "map_fallback_text": "Mapa del centro"
+      }
+    },
     "contact_Y3Nn9J": {
       "type": "contact",
       "name": "t:sections.contact.name",
@@ -35,6 +112,7 @@
   },
   "order": [
     "main",
+    "ubicacion_centro_QpjQm3",
     "contact_Y3Nn9J"
   ]
 }
