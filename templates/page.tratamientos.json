@@ -376,7 +376,7 @@
       "type": "formulario-personalizado",
       "name": "Formulario custom",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "title": "Empezamos por&nbsp;<em>tu diagnóstico</em>",
         "heading_size": "h2",
         "content": "",
