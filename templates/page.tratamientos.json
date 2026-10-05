@@ -372,14 +372,16 @@
         "add_horizontal_spacing": false
       }
     },
-    "formulario_personalizado_nerVRr": {
+    "formulario_personalizado_jPpyWL": {
       "type": "formulario-personalizado",
-      "name": "Formulario Tratamientos",
+      "name": "Formulario custom",
       "settings": {
         "color_scheme": "scheme-2",
-        "title": "Empezamos por <em>tu diagnóstico</em>",
+        "title": "Empezamos por&nbsp;<em>tu diagnóstico</em>",
         "heading_size": "h2",
-        "content": ""
+        "content": "",
+        "show_email_field": false,
+        "select_options": "Tratamientos corporales\nTratamientos faciales\nMasajes\nMaquillaje"
       }
     }
   },
@@ -392,6 +394,6 @@
     "text_with_media_3CzNUT",
     "text_with_media_4bA7ga",
     "custom_liquid_JwDNUG",
-    "formulario_personalizado_nerVRr"
+    "formulario_personalizado_jPpyWL"
   ]
 }
