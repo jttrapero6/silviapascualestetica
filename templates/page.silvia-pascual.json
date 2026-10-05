@@ -133,7 +133,7 @@
         "item_fggz4T": {
           "type": "item",
           "settings": {
-            "label": "1",
+            "label": "Transparencia y sinceridad",
             "subheading": "",
             "icon": "none",
             "icon_width": 32,
@@ -178,13 +178,12 @@
         "item_jztyfY",
         "item_TmmgJt"
       ],
-      "disabled": true,
       "name": "t:sections.timeline.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "timeline_position": "top",
         "image_position": "right",
-        "text_alignment": "center",
+        "text_alignment": "left",
         "add_image_spacing": true
       }
     },
