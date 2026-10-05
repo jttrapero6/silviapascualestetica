@@ -133,13 +133,14 @@
         "item_fggz4T": {
           "type": "item",
           "settings": {
-            "label": "Transparencia y sinceridad",
+            "image": "shopify://shop_images/01-transparencia-y-sinceridad.png",
+            "label": "01",
             "subheading": "",
             "icon": "none",
             "icon_width": 32,
             "mobile_icon_width": 24,
             "title": "Transparencia y sinceridad",
-            "heading_tag": "h3",
+            "heading_tag": "h2",
             "highlight_effect": "default",
             "content": "<p>Trabajamos desde la claridad absoluta, explicando cada recomendación y cada tratamiento para que nuestras clientas comprendan qué necesita su piel y qué resultados esperar. La sinceridad es la base de la confianza que construimos.</p>"
           }
@@ -147,15 +148,15 @@
         "item_jztyfY": {
           "type": "item",
           "settings": {
-            "label": "2010",
-            "subheading": "Subheading",
+            "label": "02",
+            "subheading": "",
             "icon": "none",
             "icon_width": 32,
             "mobile_icon_width": 24,
-            "title": "Our development",
+            "title": "Profesionalidad",
             "heading_tag": "h3",
             "highlight_effect": "default",
-            "content": "<p>Pair text with an image to focus on your brand. Add details about your story, your making process or your values.</p>"
+            "content": "<p>La formación continua y la experiencia son esenciales. Nos actualizamos en técnicas avanzadas, aparatología y cosmética de alta calidad para ofrecer tratamientos eficaces, seguros y adaptados a cada piel.</p>"
           }
         },
         "item_TmmgJt": {
