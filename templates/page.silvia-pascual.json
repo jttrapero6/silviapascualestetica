@@ -148,6 +148,7 @@
         "item_jztyfY": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/02-profesionalidad.png",
             "label": "02",
             "subheading": "",
             "icon": "none",
@@ -162,22 +163,39 @@
         "item_TmmgJt": {
           "type": "item",
           "settings": {
-            "label": "2020",
-            "subheading": "Subheading",
+            "image": "shopify://shop_images/03-cercania-y-empatia.png",
+            "label": "03",
+            "subheading": "",
             "icon": "none",
             "icon_width": 32,
             "mobile_icon_width": 24,
-            "title": "Our success",
+            "title": "Cercanía y empatía",
             "heading_tag": "h3",
             "highlight_effect": "default",
-            "content": "<p>Pair text with an image to focus on your brand. Add details about your story, your making process or your values.</p>"
+            "content": "<p>Cada persona es única, y nuestro equipo se esfuerza por entenderla y acompañarla de forma cercana y cálida. Escuchamos activamente y adaptamos cada tratamiento para generar seguridad y bienestar.</p>"
+          }
+        },
+        "item_yaVcYn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/04-calidez-y-humanidad.png",
+            "label": "04",
+            "subheading": "",
+            "icon": "none",
+            "icon_width": 32,
+            "mobile_icon_width": 24,
+            "title": "Calidez y humanidad",
+            "heading_tag": "h3",
+            "highlight_effect": "default",
+            "content": "<p>Nuestro centro ofrece una experiencia completa: espacios elegantes y acogedores, música relajante, luz tenue y atención amable. Cada detalle y gesto transmite cuidado, haciendo que cada visita sea un momento de confort y relajación.</p>"
           }
         }
       },
       "block_order": [
         "item_fggz4T",
         "item_jztyfY",
-        "item_TmmgJt"
+        "item_TmmgJt",
+        "item_yaVcYn"
       ],
       "name": "t:sections.timeline.name",
       "settings": {
