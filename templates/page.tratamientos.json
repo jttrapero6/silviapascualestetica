@@ -381,7 +381,7 @@
         "heading_size": "h2",
         "content": "",
         "show_email_field": false,
-        "select_options": "Tratamientos corporales\nTratamientos faciales\nMasajes\nMaquillaje"
+        "select_options": "Tratamientos corporales\nTratamientos faciales\nMasajes\nMaquillaje\nOtros"
       }
     }
   },
