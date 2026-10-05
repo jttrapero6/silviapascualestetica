@@ -19,16 +19,23 @@
           {%- render 'banner', status: 'error', content: error_message, text_alignment: 'center' -%}
         {%- endif -%}
 
-        {%- render 'input', type: 'hidden', name: 'contact[email]', value: shop.email -%}
-
         <div class="fieldset">
           <div class="fieldset-row">
             {%- render 'input', type: 'text', name: 'contact[name]', label: 'Nombre', required: true, autocomplete: 'name' -%}
             {%- render 'input', type: 'tel', name: 'contact[phone]', label: 'Teléfono', required: true, autocomplete: 'tel', placeholder: 'Ej: 600 123 456' -%}
           </div>
 
-          {%- assign options = 'Tratamientos corporales,Tratamientos faciales,Masajes,Maquillaje' | split: ',' -%}
-          {%- render 'select', name: 'contact[motivo]', label: 'Selecciona una opción', option_values: options, show_empty_value: true, required: true -%}
+          {%- if section.settings.show_email_field -%}
+            {%- render 'input', type: 'email', name: 'contact[email]', label: 'Email', required: true, autocomplete: 'email' -%}
+          {%- else -%}
+            {%- render 'input', type: 'hidden', name: 'contact[email]', value: shop.email -%}
+          {%- endif -%}
+
+          {%- assign select_options = section.settings.select_options | default: 'Tratamientos corporales
+Tratamientos faciales
+Masajes
+Maquillaje' | newline_to_br | split: '<br />' -%}
+          {%- render 'select', name: 'contact[motivo]', label: 'Selecciona una opción', option_values: select_options, show_empty_value: true, required: true -%}
 
           {%- render 'input', name: 'contact[body]', label: 'Mensaje', multiline: 5, required: true -%}
         </div>
@@ -43,7 +50,7 @@
 
 {% schema %}
 {
-  "name": "Formulario Tratamientos",
+  "name": "Formulario custom",
   "class": "shopify-section--custom-contact",
   "settings": [
     {
@@ -80,11 +87,24 @@
       "id": "content",
       "label": "Contenido",
       "default": "<p>Por favor completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_email_field",
+      "label": "Mostrar campo de email",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "select_options",
+      "label": "Opciones del select",
+      "info": "Escribe una opción por línea. Cada línea se convertirá en una opción del selector.",
+      "default": "Tratamientos corporales\nTratamientos faciales\nMasajes\nMaquillaje"
     }
   ],
   "presets": [
     {
-      "name": "Formulario Tratamientos",
+      "name": "Formulario custom",
       "category": "Call to action",
       "settings": {}
     }
