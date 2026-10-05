@@ -96,7 +96,8 @@
         "richtext_YkR33n"
       ],
       "custom_css": [
-        "img {border-radius: 500px; margin: auto;}"
+        "img {border-radius: 500px; margin: auto;}",
+        ".subheading {margin-left: auto; margin-right: auto;}"
       ],
       "name": "t:sections.rich_text.name",
       "settings": {
