@@ -87,7 +87,7 @@
       "name": "Ubicación centro",
       "settings": {
         "color_scheme": "scheme-2",
-        "title": "Información",
+        "title": "Contacta con nosotros",
         "heading_size": "h2",
         "text": "",
         "map_image_alt": "Mapa del centro",
@@ -114,7 +114,7 @@
         "layout": "stacked",
         "add_image_spacing": false,
         "subheading": "Contacto",
-        "title": "Contacta con nosotros",
+        "title": "Mándanos un mensaje",
         "heading_size": "h2",
         "content": "<p>Envíanos un email y te responderemos a la mayor brevedad posible.</p>",
         "show_social_media": false
