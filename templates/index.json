@@ -565,7 +565,7 @@
         "blog-1": {
           "type": "blog",
           "settings": {
-            "blog": "noticias",
+            "blog": "blog-de-belleza",
             "posts_count": 10
           }
         }
