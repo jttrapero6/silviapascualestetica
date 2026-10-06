@@ -239,14 +239,16 @@
         "item_yaVcYn",
         "item_98pAMU"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media screen and (min-width: 1000px) {.timeline--with-spacing .timeline__content-with-nav, .timeline--with-spacing .timeline__image-list {max-height: 350px; }}"
+      ],
       "name": "t:sections.timeline.name",
       "settings": {
         "color_scheme": "scheme-2",
         "timeline_position": "top",
         "image_position": "right",
         "text_alignment": "left",
-        "add_image_spacing": false
+        "add_image_spacing": true
       }
     }
   },
