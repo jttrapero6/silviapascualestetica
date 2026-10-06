@@ -12,10 +12,13 @@ Renders a single blog post
 @param {boolean} [use_secondary_image] - if set to true, the theme will be an image specified in the metafield "custom.secondary_image"
 @param {string} [sizes] - the sizes attribute to show for loading the images
 @param {number} [position] - the position of the card in the list. If specified, the theme will eagerly load the first 3 cards images
+@param {string} [title_html_tag] - semantic HTML tag for the article title, defaults to span
 @param {string} [placeholder_image] - the name of an image used for the placeholder_svg_tag
 @param {object} [block] - an optional block from which theme editor attributes are rendered
 @param {object} [section] - an optional block from which theme editor attributes are rendered
 {%- enddoc -%}
+
+{%- assign title_html_tag = title_html_tag | default: 'span' -%}
 
 <a href="{{ article.url }}" class="blog-post-card {% if horizontal %}blog-post-card--horizontal{% endif %} group snap-start" {% if settings.stagger_blog_posts and reveal != false %}reveal-on-scroll="true"{% endif %} {{ block.shopify_attributes }}>
   {%- if article -%}
@@ -72,9 +75,9 @@ Renders a single blog post
       {%- endif -%}
       
       {%- if article -%}
-        <span class="{{ heading_size | default: 'h5' }}">{{ article.title }}</span>
+        <{{ title_html_tag }} class="{{ heading_size | default: 'h5' }}">{{ article.title }}</{{ title_html_tag }}>
       {%- else -%}
-        <span class="{{ heading_size | default: 'h5' }}">{{- 'general.on_boarding.blog_post_title' | t -}}</span>
+        <{{ title_html_tag }} class="{{ heading_size | default: 'h5' }}">{{- 'general.on_boarding.blog_post_title' | t -}}</{{ title_html_tag }}>
       {%- endif -%}
 
       {%- if show_excerpt -%}

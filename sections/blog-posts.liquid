@@ -1,5 +1,6 @@
 {%- if section.blocks.size > 0 -%}
   {%- liquid
+    assign title_html_tag = section.settings.title_html_tag | default: 'h2'
     assign blog_posts_to_render = 0
 
     for block in section.blocks
@@ -58,7 +59,7 @@
       <div class="section-stack">
         {%- if section.settings.title != blank or section.settings.button_text != blank -%}
           {%- if section.settings.scrolling_title -%}
-            <h2 class="{{ section.settings.heading_tag }}">
+            <{{ title_html_tag }} class="{{ section.settings.heading_tag }}">
               <marquee-text speed="0.3" direction="start-to-end" class="scrolling-content bleed">
                 <span class="scrolling-content__item" style="font-size: var(--text-{{ section.settings.heading_tag }})">
                   <span class="scrolling-content__text">
@@ -70,10 +71,10 @@
                   {%- endif -%}
                 </span>
               </marquee-text>
-            </h2>
+            </{{ title_html_tag }}>
           {%- else -%}
             <div class="section-header justify-between">
-              {%- render 'heading', content: section.settings.title, indent: section.settings.scrolling_title_separator, style: section.settings.heading_tag, html_tag: 'h2' -%}
+              {%- render 'heading', content: section.settings.title, indent: section.settings.scrolling_title_separator, style: section.settings.heading_tag, html_tag: title_html_tag -%}
   
               {%- if section.settings.button_text != blank -%}
                 {%- render 'button', content: section.settings.button_text, href: section.settings.button_link, style: section.settings.button_style, class: 'align-self-center sm-max:hidden' -%}
@@ -106,7 +107,7 @@
                       endif
                     endunless
 
-                    render 'blog-post-card', article: article, horizontal: show_horizontal_card, heading_size: section.settings.blog_post_card_heading_size, show_excerpt: section.settings.show_excerpt, show_date: section.settings.show_date, show_category: section.settings.show_category, sizes: sizes, position: forloop.index
+                    render 'blog-post-card', article: article, horizontal: show_horizontal_card, heading_size: section.settings.blog_post_card_heading_size, title_html_tag: section.settings.blog_post_title_html_tag, show_excerpt: section.settings.show_excerpt, show_date: section.settings.show_date, show_category: section.settings.show_category, sizes: sizes, position: forloop.index
                     
                     assign first_iteration = false
                   else
@@ -122,7 +123,7 @@
                       endunless
 
                       assign placeholder_image = 'blog-apparel-' | append: i
-                      render 'blog-post-card', placeholder_image: placeholder_image, horizontal: show_horizontal_card, heading_size: section.settings.blog_post_card_heading_size, show_excerpt: section.settings.show_excerpt, show_date: section.settings.show_date, show_category: section.settings.show_category, sizes: sizes
+                      render 'blog-post-card', placeholder_image: placeholder_image, horizontal: show_horizontal_card, heading_size: section.settings.blog_post_card_heading_size, title_html_tag: section.settings.blog_post_title_html_tag, show_excerpt: section.settings.show_excerpt, show_date: section.settings.show_date, show_category: section.settings.show_category, sizes: sizes
 
                       assign first_iteration = false
                     endfor
@@ -140,7 +141,7 @@
                       endif
                     endunless
 
-                    render 'blog-post-card', article: block.settings.article, horizontal: show_horizontal_card, heading_size: section.settings.blog_post_card_heading_size, show_excerpt: section.settings.show_excerpt, show_date: section.settings.show_date, show_category: section.settings.show_category, sizes: sizes, block: block, position: forloop.index
+                    render 'blog-post-card', article: block.settings.article, horizontal: show_horizontal_card, heading_size: section.settings.blog_post_card_heading_size, title_html_tag: section.settings.blog_post_title_html_tag, show_excerpt: section.settings.show_excerpt, show_date: section.settings.show_date, show_category: section.settings.show_category, sizes: sizes, block: block, position: forloop.index
 
                     assign first_iteration = false
                   endif
@@ -296,6 +297,21 @@
     },
     {
       "type": "select",
+      "id": "title_html_tag",
+      "label": "Etiqueta HTML del título de sección",
+      "options": [
+        { "value": "p", "label": "Párrafo" },
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "select",
       "id": "scrolling_title_separator",
       "label": "t:sections.blog_posts.scrolling_title_separator",
       "options": [
@@ -381,6 +397,22 @@
         }
       ],
       "default": "h5"
+    },
+    {
+      "type": "select",
+      "id": "blog_post_title_html_tag",
+      "label": "Etiqueta HTML del título de las entradas",
+      "options": [
+        { "value": "span", "label": "Sin encabezado (estilo actual)" },
+        { "value": "p", "label": "Párrafo" },
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" }
+      ],
+      "default": "span"
     },
     {
       "type": "select",
