@@ -11,9 +11,13 @@
             {{- section.settings.map_image | image_url: width: 1600 | image_tag: loading: 'lazy', sizes: '(min-width: 1000px) 50vw, 100vw', class: 'contact-map-section__image-media', alt: section.settings.map_image_alt | default: 'Mapa del centro' -}}
           </div>
         {%- else -%}
-          <div class="contact-map-section__placeholder">
-            <span>{{ section.settings.map_fallback_text | default: 'Mapa del centro' }}</span>
-          </div>
+          <div class="contact-map-section__map-viewport"
+               id="contact-map-{{ section.id }}"
+               data-lat="{{ section.settings.map_latitude | default: 40.4168 }}"
+               data-lng="{{ section.settings.map_longitude | default: -3.7038 }}"
+               data-zoom="{{ section.settings.map_zoom | default: 15 }}"
+               data-map-link="{{ section.settings.map_link | escape }}"
+               aria-label="{{ section.settings.map_fallback_text | default: 'Mapa del centro' }}"></div>
         {%- endif -%}
       </div>
 
@@ -83,7 +87,7 @@
   #shopify-section-{{ section.id }} .contact-map-section {
     display: grid;
     grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.3fr);
-    gap: 2rem;
+    gap: 7.5rem;
     align-items: stretch;
     margin-left: 0;
     margin-right: 0;
@@ -107,7 +111,8 @@
 
   #shopify-section-{{ section.id }} .contact-map-section__embed,
   #shopify-section-{{ section.id }} .contact-map-section__image,
-  #shopify-section-{{ section.id }} .contact-map-section__placeholder {
+  #shopify-section-{{ section.id }} .contact-map-section__placeholder,
+  #shopify-section-{{ section.id }} .contact-map-section__map-viewport {
     width: 100%;
     min-height: 430px;
     overflow: hidden;
@@ -120,13 +125,56 @@
   }
 
   #shopify-section-{{ section.id }} .contact-map-section__embed iframe,
-  #shopify-section-{{ section.id }} .contact-map-section__image-media {
+  #shopify-section-{{ section.id }} .contact-map-section__image-media,
+  #shopify-section-{{ section.id }} .contact-map-section__map-viewport .leaflet-container {
     width: 100%;
     height: 100%;
     min-height: 430px;
     display: block;
     border: 0;
     object-fit: cover;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__map-viewport .leaflet-container {
+    background: rgba(var(--color-background), 0.4);
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__map-viewport .leaflet-tile-pane {
+    filter: grayscale(1) contrast(1.08);
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__map-viewport .contact-map-leaflet-icon {
+    background: transparent;
+    border: 0;
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__map-viewport .contact-map-pin {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #1a1a1a;
+    border-radius: 50% 50% 50% 0;
+    background: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(-45deg);
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__map-viewport .contact-map-pin::after {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    content: '';
+  }
+
+  #shopify-section-{{ section.id }} .contact-map-section__map-viewport .leaflet-control-attribution,
+  #shopify-section-{{ section.id }} .contact-map-section__map-viewport .leaflet-control-zoom {
+    border: 0;
+    box-shadow: 0 10px 20px rgba(var(--color-foreground), 0.08);
   }
 
   #shopify-section-{{ section.id }} .contact-map-section__placeholder {
@@ -235,7 +283,8 @@
 
     #shopify-section-{{ section.id }} .contact-map-section__embed,
     #shopify-section-{{ section.id }} .contact-map-section__image,
-    #shopify-section-{{ section.id }} .contact-map-section__placeholder {
+    #shopify-section-{{ section.id }} .contact-map-section__placeholder,
+    #shopify-section-{{ section.id }} .contact-map-section__map-viewport {
       min-height: 280px;
       border-radius: 0;
       border-left: 0;
@@ -244,8 +293,70 @@
       border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
       box-shadow: none;
     }
+
+    #shopify-section-{{ section.id }} .contact-map-section__map-viewport .leaflet-container,
+    #shopify-section-{{ section.id }} .contact-map-section__embed iframe,
+    #shopify-section-{{ section.id }} .contact-map-section__image-media {
+      min-height: 280px;
+    }
   }
 </style>
+
+{% unless section.settings.map_iframe != blank or section.settings.map_image != blank %}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var mapElement = document.getElementById('contact-map-{{ section.id }}');
+      if (!mapElement || !window.L || mapElement.dataset.ready === 'true') return;
+
+      var lat = parseFloat(mapElement.dataset.lat || '40.4168');
+      var lng = parseFloat(mapElement.dataset.lng || '-3.7038');
+      var zoom = parseInt(mapElement.dataset.zoom || '15', 10);
+      var mapLink = mapElement.dataset.mapLink;
+
+      var map = L.map(mapElement, {
+        zoomControl: true,
+        scrollWheelZoom: false,
+        dragging: true,
+        attributionControl: true
+      }).setView([lat, lng], zoom);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+        subdomains: 'abc',
+        maxZoom: 20
+      }).addTo(map);
+
+      var pinIcon = L.divIcon({
+        className: 'contact-map-leaflet-icon',
+        html: '<span class="contact-map-pin" aria-hidden="true"></span>',
+        iconSize: [32, 42],
+        iconAnchor: [16, 40]
+      });
+
+      var marker = L.marker([lat, lng], {
+        icon: pinIcon,
+        keyboard: true,
+        title: mapLink ? 'Abrir ubicación en Google Maps' : 'Ubicación del centro'
+      }).addTo(map);
+
+      if (mapLink) {
+        marker.on('click', function () {
+          window.open(mapLink, '_blank', 'noopener,noreferrer');
+        });
+        marker.bindTooltip('Abrir ubicación en Google Maps');
+      } else {
+        marker.bindTooltip('Ubicación del centro');
+      }
+
+      mapElement.dataset.ready = 'true';
+      setTimeout(function () {
+        map.invalidateSize();
+      }, 200);
+    });
+  </script>
+{% endunless %}
 
 {% schema %}
 {
@@ -292,6 +403,39 @@
       "id": "map_image_alt",
       "label": "Texto alternativo de la imagen del mapa",
       "default": "Mapa del centro"
+    },
+    {
+      "type": "header",
+      "content": "Mapa sin Google"
+    },
+    {
+      "type": "url",
+      "id": "map_link",
+      "label": "Enlace al mapa externo",
+      "info": "Opcional. Al pulsar la chincheta, abrirá este enlace en una pestaña nueva."
+    },
+    {
+      "type": "text",
+      "id": "map_latitude",
+      "label": "Latitud",
+      "default": "40.4168",
+      "info": "Usado cuando no hay iframe ni imagen. Ajusta la ubicación exacta del centro."
+    },
+    {
+      "type": "text",
+      "id": "map_longitude",
+      "label": "Longitud",
+      "default": "-3.7038",
+      "info": "Usado cuando no hay iframe ni imagen. Ajusta la ubicación exacta del centro."
+    },
+    {
+      "type": "range",
+      "id": "map_zoom",
+      "label": "Zoom del mapa",
+      "min": 10,
+      "max": 25,
+      "step": 1,
+      "default": 15
     },
     {
       "type": "textarea",
