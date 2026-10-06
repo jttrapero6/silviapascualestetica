@@ -12,6 +12,7 @@ This component display a list of product that can be used in collection, search.
 @param {boolean} [show_placeholder] - set to true to display placeholder when no product set
 @param {boolean} [output_override_attributes] - only for collection page, we allow customers to switch the layout. To avoid CLS, we have to save the attribute in the cart and apply it to the product list. A better approach would be to use container query around cards, but unfortunately we are using subgrid, and currently in browsers, subgrid and container queries can't be used together, so we have to revert to this approach
 @param {object} [paginate] - an optional paginate object when product list is rendered in context of collection pages
+@param {string} [title_html_tag] - semantic HTML tag for product card titles
 @param {object} [section]
 {%- enddoc -%}
 
@@ -97,7 +98,7 @@ This component display a list of product that can be used in collection, search.
       </div>
     {%- endfor -%}
 
-    {%- render 'product-card', product: product, reveal: true, allow_highlight: allow_highlight, sizes: sizes, force_no_border: spotlight, section_color_scheme: section_color_scheme, prefix_id: prefix_id, position: forloop.index -%}
+    {%- render 'product-card', product: product, reveal: true, allow_highlight: allow_highlight, sizes: sizes, force_no_border: spotlight, section_color_scheme: section_color_scheme, prefix_id: prefix_id, position: forloop.index, title_html_tag: title_html_tag -%}
   {%- else -%}
     {%- if show_placeholder -%}
       {%- for i in (1..4) -%}

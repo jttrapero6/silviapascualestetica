@@ -68,7 +68,7 @@
           {%- else -%}
             <div class="collection__results">
               {%- render 'active-facets', source: collection, hash: "#collection" -%}
-              {%- render 'product-list', products: collection.products, allow_highlight: true, paginate: paginate, blocks: section.blocks, output_override_attributes: true -%}
+              {%- render 'product-list', products: collection.products, allow_highlight: true, paginate: paginate, blocks: section.blocks, output_override_attributes: true, title_html_tag: section.settings.product_title_html_tag -%}
             </div>
 
             {%- render 'pagination', paginate: paginate, facet: true, hash: '#collection' -%}
@@ -142,6 +142,22 @@ on desktop based on the settings
       "max": 50,
       "step": 1,
       "default": 36
+    },
+    {
+      "type": "select",
+      "id": "product_title_html_tag",
+      "label": "Etiqueta HTML del nombre del producto",
+      "options": [
+        { "value": "span", "label": "Sin encabezado (estilo actual)" },
+        { "value": "p", "label": "Párrafo" },
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" }
+      ],
+      "default": "span"
     },
     {
       "type": "range",
