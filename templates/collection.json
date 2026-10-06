@@ -18,6 +18,7 @@
         "show_description": true,
         "collection_title_size": "h2",
         "content_position": "place-self-center",
+        "mobile_content_position": "inherit",
         "background_color_scheme": "scheme-3",
         "image": "{{ collection.image }}",
         "image_size": "sm",
@@ -29,6 +30,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "products_per_page": 48,
+        "product_title_html_tag": "h2",
         "products_per_row_mobile": 2,
         "products_per_row_desktop": 4,
         "show_product_card_size_selector": true,
