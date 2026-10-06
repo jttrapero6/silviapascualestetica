@@ -146,11 +146,45 @@
       "block_order": [
         "heading_dnHtKm"
       ],
+      "disabled": true,
       "name": "t:sections.rich_text.name",
       "settings": {
         "color_scheme": "scheme-2",
         "content_width": "md",
         "text_alignment": "left"
+      }
+    },
+    "scrolling_content_rpNTLK": {
+      "type": "scrolling-content",
+      "blocks": {
+        "text_AVQMpC": {
+          "type": "text",
+          "settings": {
+            "text": "Nuestros valores",
+            "icon_position": "before_text",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_AVQMpC"
+      ],
+      "name": "t:sections.scrolling_content.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "scrolling_speed": 0.1,
+        "scroll_direction": "start-to-end",
+        "section_rotation": 0,
+        "pause_on_hover": true,
+        "text_font": "heading",
+        "text_font_size_mobile": 8,
+        "text_font_size_desktop": 5,
+        "section_vertical_spacing_mobile": 20,
+        "section_vertical_spacing_desktop": 24,
+        "item_horizontal_spacing_mobile": 100,
+        "item_horizontal_spacing_desktop": 130
       }
     },
     "timeline_9hLD9G": {
@@ -258,6 +292,7 @@
     "rich_text_fbmyKX",
     "reading_text_YGcLFJ",
     "rich_text_xJR8qW",
+    "scrolling_content_rpNTLK",
     "timeline_9hLD9G"
   ]
 }
