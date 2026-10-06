@@ -240,7 +240,8 @@
         "item_98pAMU"
       ],
       "custom_css": [
-        "@media screen and (min-width: 1000px) {.timeline--with-spacing .timeline__content-with-nav, .timeline--with-spacing .timeline__image-list {max-height: 350px; }}"
+        ".link-faded.link-reversed {font-size: 14px;}",
+        "@media screen and (min-width: 1000px) {.timeline--with-spacing .timeline__content-with-nav, .timeline--with-spacing .timeline__image-list {max-height: 350px; } .link-faded.link-reversed {font-size: 16px; }}"
       ],
       "name": "t:sections.timeline.name",
       "settings": {
