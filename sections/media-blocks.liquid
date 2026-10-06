@@ -208,8 +208,9 @@
 
                           {%- when 'heading' -%}
                             {%- if block.settings.title != blank -%}
+                              {%- assign heading_html_tag = block.settings.heading_html_tag | default: 'h2' -%}
                               {%- if block.settings.scrolling_title -%}
-                                <p class="{{ block.settings.heading_tag }} {% if block.settings.show_text_vertically %}h-full{% else %}column-bleed{% endif %}">
+                                <{{ heading_html_tag }} class="{{ block.settings.heading_tag }} {% if block.settings.show_text_vertically %}h-full{% else %}column-bleed{% endif %}">
                                   <marquee-text speed="0.3" direction="start-to-end" {% if block.settings.show_text_vertically %}vertical{% endif %} class="scrolling-content {% if block.settings.show_text_vertically %}scrolling-content--vertical h-full{% endif %}">
                                     <span class="scrolling-content__item" style="font-size: var(--text-{{ block.settings.heading_tag }})">
                                       <span class="scrolling-content__text">
@@ -221,9 +222,9 @@
                                       {%- endif -%}
                                     </span>
                                   </marquee-text>
-                                </p>
+                                </{{ heading_html_tag }}>
                               {%- else -%}
-                                {%- render 'heading', content: block.settings.title, style: block.settings.heading_tag, show_vertically: block.settings.show_text_vertically -%}
+                                {%- render 'heading', content: block.settings.title, style: block.settings.heading_tag, html_tag: heading_html_tag, show_vertically: block.settings.show_text_vertically -%}
                               {%- endif -%}
                             {%- endif -%}
 
@@ -1180,6 +1181,21 @@
         },
         {
           "type": "select",
+          "id": "heading_html_tag",
+          "label": "Etiqueta HTML del título",
+          "options": [
+            { "value": "p", "label": "Párrafo" },
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" },
+            { "value": "h5", "label": "H5" },
+            { "value": "h6", "label": "H6" }
+          ],
+          "default": "h2"
+        },
+        {
+          "type": "select",
           "id": "heading_position",
           "label": "t:global.position.alignment",
           "options": [
@@ -1977,6 +1993,21 @@
             }
           ],
           "default": "h4"
+        },
+        {
+          "type": "select",
+          "id": "heading_html_tag",
+          "label": "Etiqueta HTML del título",
+          "options": [
+            { "value": "p", "label": "Párrafo" },
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" },
+            { "value": "h5", "label": "H5" },
+            { "value": "h6", "label": "H6" }
+          ],
+          "default": "h2"
         },
         {
           "type": "select",
