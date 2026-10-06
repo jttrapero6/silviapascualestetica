@@ -159,7 +159,7 @@
         "item_fggz4T": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/01-transparencia-y-sinceridad.png",
+            "image": "shopify://shop_images/01-transparencia-y-sinceridad_1.png",
             "label": "01",
             "subheading": "",
             "icon": "none",
@@ -174,7 +174,7 @@
         "item_jztyfY": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/02-profesionalidad.png",
+            "image": "shopify://shop_images/02-profesionalidad_1.png",
             "label": "02",
             "subheading": "",
             "icon": "none",
@@ -189,7 +189,7 @@
         "item_TmmgJt": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/03-cercania-y-empatia.png",
+            "image": "shopify://shop_images/03-cercania-y-empatia_1.png",
             "label": "03",
             "subheading": "",
             "icon": "none",
@@ -204,7 +204,7 @@
         "item_yaVcYn": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/04-calidez-y-humanidad.png",
+            "image": "shopify://shop_images/04-calidez-y-humanidad_1.png",
             "label": "04",
             "subheading": "",
             "icon": "none",
@@ -219,7 +219,7 @@
         "item_98pAMU": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/05-responsabilidad.png",
+            "image": "shopify://shop_images/05-responsabilidad_1.png",
             "label": "05",
             "subheading": "",
             "icon": "none",
