@@ -15,6 +15,14 @@
         --product-list-column-count: {{ section.settings.products_per_row_desktop }};
       }
     }
+
+    #shopify-section-{{ section.id }} .featured-collections__collection-heading {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: start;
+      margin: 0;
+      font: inherit;
+    }
   </style>
 
   <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
@@ -38,6 +46,7 @@
             </template>
 
             {%- for block in section.blocks -%}
+              {%- assign collection_title_tag = section.settings.collection_title_html_tag | default: 'span' -%}
               {%- capture tab_title -%}
                 {%- if section.settings.tabs_icon == 'arrow' -%}
                   {%- render 'icon' with 'big-arrow-right', stroke_width: 3, direction_aware: true -%}
@@ -47,13 +56,17 @@
               {%- endcapture -%}
 
               {%- if section.blocks.size > 1-%}
-                <button class="{% if section.settings.tabs_icon != 'none' %}text-indent text-indent--{{ section.settings.tabs_icon }}{% endif %} h4 sm:h3" role="tab" slot="tab" aria-controls="collection-{{ block.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" {{ block.shopify_attributes }}>
-                  {{- tab_title -}}
-                </button>
+                <{{ collection_title_tag }} class="featured-collections__collection-heading" slot="tab">
+                  <button class="{% if section.settings.tabs_icon != 'none' %}text-indent text-indent--{{ section.settings.tabs_icon }}{% endif %} h4 sm:h3" role="tab" aria-controls="collection-{{ block.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" {{ block.shopify_attributes }}>
+                    {{- tab_title -}}
+                  </button>
+                </{{ collection_title_tag }}>
               {%- else -%}
-                <div class="{% if section.settings.tabs_icon != 'none' %}text-indent text-indent--{{ section.settings.tabs_icon }}{% endif %} h4 sm:h3" role="tab" slot="tab" aria-selected="true" {{ block.shopify_attributes }}>
-                  {{- tab_title -}}
-                </div>
+                <{{ collection_title_tag }} class="featured-collections__collection-heading" slot="tab">
+                  <div class="{% if section.settings.tabs_icon != 'none' %}text-indent text-indent--{{ section.settings.tabs_icon }}{% endif %} h4 sm:h3" role="tab" aria-selected="true" {{ block.shopify_attributes }}>
+                    {{- tab_title -}}
+                  </div>
+                </{{ collection_title_tag }}>
               {%- endif -%}
             {%- endfor -%}
           </featured-collections-tabs>
@@ -140,7 +153,7 @@
                     if block.settings.collection != blank
                       paginate block.settings.collection.products by block.settings.products_count
                         for product in block.settings.collection.products limit: block.settings.products_count
-                          render 'product-card', product: product, reveal: true, sizes: sizes, position: forloop.index, block: block
+                          render 'product-card', product: product, reveal: true, sizes: sizes, position: forloop.index, block: block, title_html_tag: section.settings.product_title_html_tag
                         endfor
                       endpaginate
                     else
@@ -198,6 +211,38 @@
       "id": "color_scheme",
       "label": "t:global.colors.scheme",
       "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "collection_title_html_tag",
+      "label": "Etiqueta HTML del nombre de la colección",
+      "options": [
+        { "value": "span", "label": "Sin encabezado (estilo actual)" },
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" },
+        { "value": "p", "label": "Párrafo" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "product_title_html_tag",
+      "label": "Etiqueta HTML del nombre del producto",
+      "options": [
+        { "value": "span", "label": "Sin encabezado (estilo actual)" },
+        { "value": "p", "label": "Párrafo" },
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" }
+      ],
+      "default": "span"
     },
     {
       "type": "checkbox",

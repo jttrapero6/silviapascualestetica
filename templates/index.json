@@ -484,6 +484,7 @@
       "name": "t:sections.featured_collections.name",
       "settings": {
         "color_scheme": "scheme-2",
+        "collection_title_html_tag": "h2",
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "2",
