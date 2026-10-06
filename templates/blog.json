@@ -15,7 +15,7 @@
         "color_scheme": "scheme-3",
         "allow_transparent_header": true,
         "image": "shopify://shop_images/Serenidad_de_spa_en_tonos_beige_1.png",
-        "title_tag": "h3",
+        "title_tag": "h2",
         "content": "{{ blog.metafields.custom.descripcion | metafield_tag }}"
       }
     },
