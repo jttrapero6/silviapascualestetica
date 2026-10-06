@@ -92,7 +92,7 @@ on desktop based on the settings
 
 {%- if show_filters -%}
   <facets-drawer class="drawer drawer--narrow drawer--facets color-scheme color-scheme--{{ settings.default_color_scheme.id }}" id="facets-drawer">
-    <h2 class="h7" slot="header">{{ 'collection.faceting.filters' | t }}</h2>
+    <span class="h7" slot="header">{{ 'collection.faceting.filters' | t }}</span>
 
     {%- render 'facets', 
       source: collection, 
