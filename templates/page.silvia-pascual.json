@@ -166,7 +166,7 @@
             "icon_width": 32,
             "mobile_icon_width": 24,
             "title": "Transparencia y sinceridad",
-            "heading_tag": "h2",
+            "heading_tag": "h3",
             "highlight_effect": "default",
             "content": "<p>Trabajamos desde la claridad absoluta, explicando cada recomendación y cada tratamiento para que nuestras clientas comprendan qué necesita su piel y qué resultados esperar. La sinceridad es la base de la confianza que construimos.</p>"
           }
@@ -240,7 +240,7 @@
         "item_98pAMU"
       ],
       "custom_css": [
-        "@media screen and (min-width: 1000px) {.timeline--with-spacing .timeline__content-with-nav, .timeline--with-spacing .timeline__image-list{max-height: 350px; }}"
+        "@media screen and (min-width: 1000px) {.timeline--with-spacing .timeline__content-with-nav, .timeline--with-spacing .timeline__image-list {max-height: 350px; }}"
       ],
       "name": "t:sections.timeline.name",
       "settings": {
