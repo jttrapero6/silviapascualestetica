@@ -249,7 +249,6 @@
         "overlay_opacity": 20,
         "add_media_spacing": true,
         "autoplay_video": true,
-        "primary_image": "shopify://shop_images/Gemini_Generated_Image_f8o9j1f8o9j1f8o9.jpg",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
         "show_secondary_media_on_mobile": true,
