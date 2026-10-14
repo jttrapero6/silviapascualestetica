@@ -33,10 +33,20 @@
             "highlight_text_color": ""
           },
           "blocks": {}
+        },
+        "rich_text_wLEFxz": {
+          "type": "rich-text",
+          "name": "t:blocks.rich_text.name",
+          "settings": {
+            "text": "{{ closest.page.content }}",
+            "content_width": "lg"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "heading_9eHJiY"
+        "heading_9eHJiY",
+        "rich_text_wLEFxz"
       ],
       "name": "t:sections.image_with_text_overlay.name",
       "settings": {
