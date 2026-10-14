@@ -330,6 +330,7 @@
         "allow_transparent_header": true,
         "autoplay": true,
         "show_controls": true,
+        "content_width": "xl",
         "video_size": "auto",
         "mobile_video_size": "md",
         "video": "{{ product.metafields.custom.video.value }}",
