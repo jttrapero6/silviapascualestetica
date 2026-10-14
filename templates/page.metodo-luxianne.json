@@ -272,7 +272,7 @@
       "type": "formulario-personalizado",
       "name": "Formulario custom",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "title": "Contáctanos",
         "heading_size": "h2",
         "content": "<p>Por favor completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>",
