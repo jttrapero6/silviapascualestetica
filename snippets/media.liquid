@@ -4,6 +4,7 @@ Renders a single media. This snippet can be used for product media, but also for
 @param {object} media - the media to render
 @param {object} [mobile_media] - an optional media to render on mobile
 @param {boolean} [preload] - if set to true, the image is preloaded and its fetch priority is higher. This will be ignored if the section being rendered is after the third section in the page (in which case lazyloading will be forced). For videos, preload will set the preload attribute to "metadata"
+@param {boolean} [prefer_high_quality] - if set to true, video sources are ordered from highest to lowest resolution
 @param {string} [class] - optional class applied on the item (in case a <picture> tag is generated, the class is still passed to the <img> tag)
 @param {string} [style] - optional inline styles applied on the item (if a mobile_media is passed, it is added on the picture element for images)
 @param {object} [block] - a block context
@@ -108,6 +109,12 @@ Renders a single media. This snippet can be used for product media, but also for
             assign preload_attribute = 'metadata'
           endif
 
+          assign video_sources = media.sources
+
+          if prefer_high_quality
+            assign video_sources = video_sources | sort: 'width' | reverse
+          endif
+
           assign playsinline = playsinline | default: autoplay, allow_false: true
           assign muted = muted | default: autoplay, allow_false: true
         -%}
@@ -119,14 +126,14 @@ Renders a single media. This snippet can be used for product media, but also for
 
         {%- assign custom_poster = poster | default: media.preview_image -%}
 
-        <video width="{{ media.sources.first.width }}" height="{{ media.sources.first.height }}" {% if playsinline %}playsinline{% endif %} {% if muted %}muted{% endif %} {% if loop %}loop{% endif %} {% if controls %}controls{% endif %} {% if autoplay %}poster="{{ custom_poster | image_url: width: 1200 }}"{% endif %} preload="{{ preload_attribute }}">
+        <video width="{{ video_sources.first.width }}" height="{{ video_sources.first.height }}" {% if playsinline %}playsinline{% endif %} {% if muted %}muted{% endif %} {% if loop %}loop{% endif %} {% if controls %}controls{% endif %} {% if autoplay %}poster="{{ custom_poster | image_url: width: 1200 }}"{% endif %} preload="{{ preload_attribute }}">
           {%- if mobile_media != blank -%}
             {%- for source in mobile_media.sources -%}
               <source media="(max-width: 999px)" src="{{ source.url }}" width="{{ source.width }}" height="{{ source.height }}" type="{{ source.mime_type }}">
             {%- endfor -%}
           {%- endif -%}
 
-          {%- for source in media.sources -%}
+          {%- for source in video_sources -%}
             <source {% if mobile_media != blank %}media="(min-width: 1000px)"{% endif %} src="{{ source.url }}" width="{{ source.width }}" height="{{ source.height }}" type="{{ source.mime_type }}">
           {%- endfor -%}
 
