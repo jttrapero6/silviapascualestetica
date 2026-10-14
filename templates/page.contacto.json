@@ -18,6 +18,50 @@
         "content_width": "md"
       }
     },
+    "image_with_text_overlay_EgTDxN": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_xFBWH3": {
+          "type": "heading",
+          "settings": {
+            "text": "Contacta con Silvia Pascual",
+            "heading_size": "h3",
+            "html_tag": "h1",
+            "indent": "none",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          },
+          "blocks": {}
+        },
+        "rich_text_iNifze": {
+          "type": "rich-text",
+          "name": "t:blocks.rich_text.name",
+          "settings": {
+            "text": "<p>¿Quieres ponerte en contacto con Silvia Pascual? Estamos aquí para ayudarte a encontrar los tratamientos y productos más adecuados para el cuidado de tu piel.</p><p>En nuestro centro de estética avanzada en Logroño te ofrecemos asesoramiento personalizado, atención profesional y soluciones adaptadas a las necesidades de cada piel. Puedes visitarnos, llamarnos o escribirnos para resolver tus dudas, solicitar información sobre nuestros tratamientos o recibir orientación sobre nuestra cosmética profesional.</p>",
+            "content_width": "lg"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_xFBWH3",
+        "rich_text_iNifze"
+      ],
+      "name": "t:sections.image_with_text_overlay.name",
+      "settings": {
+        "color_scheme": "",
+        "allow_transparent_header": true,
+        "image_size": "sm",
+        "image": "shopify://shop_images/IMG_0965.jpg",
+        "overlay_color": "#000000",
+        "overlay_opacity": 45,
+        "enable_sticky_content": false,
+        "content_width": "md",
+        "desktop_text_position": "sm:place-self-center",
+        "mobile_text_position": "place-self-center"
+      }
+    },
     "ubicacion_centro_QpjQm3": {
       "type": "ubicacion-centro",
       "blocks": {
@@ -140,6 +184,7 @@
   },
   "order": [
     "main",
+    "image_with_text_overlay_EgTDxN",
     "ubicacion_centro_QpjQm3",
     "custom_liquid_ANkfYq",
     "contact_Y3Nn9J"
