@@ -26,7 +26,7 @@
           "name": "t:sections.slideshow.blocks.video.name",
           "settings": {
             "color_scheme": "",
-            "video": "shopify://files/videos/video_sin_audio.mp4",
+            "video": "shopify://files/videos/Mi película 2.mp4",
             "slide_link": "",
             "content_max_width": 1400,
             "mobile_content_position": "place-self-end-start",
@@ -46,7 +46,7 @@
             "heading_rkGMgY": {
               "type": "heading",
               "settings": {
-                "text": "El cuidado de la piel entendido como un <em>ritual</em>",
+                "text": "El cuidado de la piel entendido como un&nbsp;<em>ritual</em>",
                 "heading_size": "h2",
                 "html_tag": "h1",
                 "indent": "none",
@@ -88,7 +88,7 @@
       "name": "t:sections.slideshow.name",
       "settings": {
         "allow_transparent_header": true,
-        "image_size": "lg",
+        "image_size": "md",
         "transition_type": "curtain",
         "autoplay": true,
         "pause_auto_rotate_on_hover": false,
