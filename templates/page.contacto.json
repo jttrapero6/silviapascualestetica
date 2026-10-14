@@ -112,6 +112,19 @@
     },
     "contact_Y3Nn9J": {
       "type": "contact",
+      "blocks": {
+        "text_Fy4gAY": {
+          "type": "text",
+          "settings": {
+            "title": "Teléfono",
+            "use_long_text": false,
+            "required": true
+          }
+        }
+      },
+      "block_order": [
+        "text_Fy4gAY"
+      ],
       "name": "t:sections.contact.name",
       "settings": {
         "color_scheme": "scheme-2",
