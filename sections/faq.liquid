@@ -1,4 +1,15 @@
-{%- if section.blocks.size > 0 -%}
+{%- liquid
+  assign has_faq = false
+
+  for block in section.blocks
+    if block.type == 'question' and block.settings.question != blank and block.settings.answer != blank
+      assign has_faq = true
+      break
+    endif
+  endfor
+-%}
+
+{%- if request.design_mode or has_faq -%}
   <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
     {%- capture section_header -%}
       {%- if section.settings.subheading != blank or section.settings.title != blank or section.settings.content != blank or section.settings.button_text != blank -%}
@@ -80,21 +91,24 @@
   {%- comment -%}We also output the content with JSON microdata for SEO{%- endcomment -%}
 
   <script type="application/ld+json">
-    {%- assign question_blocks = section.blocks | where: 'type', 'question' -%}
-
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {%- for block in question_blocks -%}
-          {
-            "@type": "Question",
-            "name": {{ block.settings.question | json }},
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": {{ block.settings.answer | json }}
+        {%- assign has_question = false -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'question' and block.settings.question != blank and block.settings.answer != blank -%}
+            {%- if has_question -%},{%- endif -%}
+            {
+              "@type": "Question",
+              "name": {{ block.settings.question | json }},
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": {{ block.settings.answer | json }}
+              }
             }
-          }{% unless forloop.last %},{% endunless %}
+            {%- assign has_question = true -%}
+          {%- endif -%}
         {%- endfor -%}
       ]
     }

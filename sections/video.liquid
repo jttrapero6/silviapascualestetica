@@ -1,6 +1,6 @@
-{%- if section.settings.video != blank or section.settings.external_video_url != blank -%}
+{%- if section.settings.video != blank or section.settings.external_video_url.id != blank -%}
 <div {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %} class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
-  <div class="content-box group min-h-{{ section.settings.mobile_video_size }} sm:min-h-{{ section.settings.video_size }}">
+  <div class="content-box group min-h-{{ section.settings.mobile_video_size }} sm:min-h-{{ section.settings.video_size }} max-w-{{ section.settings.content_width }} mx-auto">
     <div class="content-box__background-media">
       {%- assign video_id = 'video-' | append: section.id -%}
 
@@ -310,6 +310,38 @@
     "id": "show_controls",
     "label": "t:global.video.show_controls",
     "default": true
+  },
+  {
+    "type": "select",
+    "id": "content_width",
+    "label": "t:global.sizes.content_width",
+    "options": [
+      {
+        "value": "xs",
+        "label": "t:global.sizes.x_small"
+      },
+      {
+        "value": "sm",
+        "label": "t:global.sizes.small"
+      },
+      {
+        "value": "md",
+        "label": "t:global.sizes.medium"
+      },
+      {
+        "value": "lg",
+        "label": "t:global.sizes.large"
+      },
+      {
+        "value": "xl",
+        "label": "t:global.sizes.x_large"
+      },
+      {
+        "value": "full",
+        "label": "t:global.sizes.full_width"
+      }
+    ],
+    "default": "full"
   },
   {
     "type": "select",

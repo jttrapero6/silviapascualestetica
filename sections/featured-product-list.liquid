@@ -1,3 +1,4 @@
+{%- if request.design_mode or section.settings.product_list != blank -%}
 <style>
   #shopify-section-{{ section.id }} {
     --product-list-column-count: {{ section.settings.products_per_row_mobile | times: 1 }};
@@ -95,6 +96,7 @@
     </div>
   </div>
 </div>
+{%- endif -%}
 
 {% schema %}
 {

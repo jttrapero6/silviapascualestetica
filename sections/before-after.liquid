@@ -1,4 +1,17 @@
-{%- if request.design_mode or section.blocks.size > 0 -%}
+{%- liquid
+  assign has_before_image = false
+  assign has_after_image = false
+
+  for block in section.blocks
+    if block.type == 'before' and block.settings.image != blank
+      assign has_before_image = true
+    elsif block.type == 'after' and block.settings.image != blank
+      assign has_after_image = true
+    endif
+  endfor
+-%}
+
+{%- if request.design_mode or has_before_image and has_after_image -%}
   <style>
     #shopify-section-{{ section.id }} {
       --before-after-initial-cursor-position: {{ section.settings.cursor_initial_position }}%;

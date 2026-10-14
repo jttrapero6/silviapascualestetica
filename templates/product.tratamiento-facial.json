@@ -256,7 +256,7 @@
       "name": "t:sections.custom_liquid.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "liquid": "<p></p>",
+        "liquid": "",
         "text_alignment": "left",
         "add_vertical_spacing": true,
         "add_horizontal_spacing": true
@@ -333,7 +333,7 @@
         "video_size": "auto",
         "mobile_video_size": "md",
         "video": "{{ product.metafields.custom.video.value }}",
-        "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+        "external_video_url": ""
       }
     },
     "featured_product_list_WEnHGr": {
