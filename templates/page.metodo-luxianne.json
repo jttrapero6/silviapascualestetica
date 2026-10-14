@@ -267,6 +267,18 @@
         "overlay_color": "#000000",
         "overlay_opacity": 40
       }
+    },
+    "formulario_personalizado_kUwHaE": {
+      "type": "formulario-personalizado",
+      "name": "Formulario custom",
+      "settings": {
+        "color_scheme": "",
+        "title": "Contáctanos",
+        "heading_size": "h2",
+        "content": "<p>Por favor completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>",
+        "show_email_field": false,
+        "select_options": "Tratamientos corporales\nTratamientos faciales\nMasajes\nMaquillaje"
+      }
     }
   },
   "order": [
@@ -276,6 +288,7 @@
     "text_with_fixed_background_LiCUia",
     "text_with_fixed_background_BEcNKm",
     "text_with_fixed_background_rkUncU",
-    "text_with_fixed_background_Jkq4yA"
+    "text_with_fixed_background_Jkq4yA",
+    "formulario_personalizado_kUwHaE"
   ]
 }
