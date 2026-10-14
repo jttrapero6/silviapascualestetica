@@ -269,7 +269,7 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/home-before-desktop-02.webp",
+            "image": "{{ product.metafields.custom.foto_antes.value }}",
             "text": "Antes",
             "text_size": "h4",
             "text_position": "start"
@@ -279,7 +279,7 @@
           "type": "after",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/home-after-desktop-02.webp",
+            "image": "{{ product.metafields.custom.foto_despues.value }}",
             "text": "Después",
             "text_size": "h4",
             "text_position": "start"
