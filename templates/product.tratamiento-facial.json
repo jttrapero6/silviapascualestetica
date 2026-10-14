@@ -191,36 +191,36 @@
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Limpieza Profunda",
+            "title": "{{ product.metafields.custom.caracteristica_1_titulo.value }}",
             "heading_tag": "h5",
-            "content": "<p>Elimina impurezas, comedones y puntos negros</p>"
+            "content": "<p>{{ product.metafields.custom.caracteristica_1_texto.value }}</p>"
           }
         },
         "item_DgPg4H": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Oxigenación Intensa",
+            "title": "{{ product.metafields.custom.caracteristica_2_titulo.value }}",
             "heading_tag": "h5",
-            "content": "<p>Favorece una piel más sana y oxigenada</p>"
+            "content": "<p>{{ product.metafields.custom.caracteristica_2_texto.value }}</p>"
           }
         },
         "item_bE8j3a": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Equilibrio Sebáceo",
+            "title": "{{ product.metafields.custom.caracteristica_3_titulo.value }}",
             "heading_tag": "h5",
-            "content": "<p>Regula la producción de sebo naturalmente</p>"
+            "content": "<p>{{ product.metafields.custom.caracteristica_3_texto.value }}</p>"
           }
         },
         "item_PGDUqi": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Prevención",
+            "title": "{{ product.metafields.custom.caracteristica_4_titulo.value }}",
             "heading_tag": "h5",
-            "content": "<p>Reduce riesgo de infecciones por obstrucción</p>"
+            "content": "<p>{{ product.metafields.custom.caracteristica_4_texto.value }}</p>"
           }
         }
       },
