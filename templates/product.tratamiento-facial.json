@@ -328,9 +328,9 @@
       "settings": {
         "color_scheme": "",
         "allow_transparent_header": true,
-        "autoplay": false,
+        "autoplay": true,
         "show_controls": true,
-        "video_size": "md",
+        "video_size": "auto",
         "mobile_video_size": "md",
         "video": "{{ product.metafields.custom.video.value }}",
         "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
