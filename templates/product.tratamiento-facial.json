@@ -313,13 +313,7 @@
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "product_list": [
-          "biokiss",
-          "cible-pigm-400",
-          "cocktail-d-actifs-regenerants",
-          "creme-contour-yeux-et-levres-biofixine",
-          "creme-dermo-rl-corps"
-        ],
+        "product_list": "{{ product.metafields.custom.linea_de_productos.value }}",
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
