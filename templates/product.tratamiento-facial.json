@@ -334,8 +334,8 @@
         "question_7pCiFY": {
           "type": "question",
           "settings": {
-            "question": "¿A partir de qué edad puedo hacer Ritual Nova?",
-            "answer": "<p>Ritual Nova está recomendado hasta los 25 años, período en el que la piel joven es más propensa a exceso de grasa, comedones y puntos negros.</p><p>Sin embargo, la edad no es el único factor. Si tienes más de 25 años pero presentas pieles grasas y problemas similares (exceso de sebo, poros dilatados, imperfecciones), podemos valorar tu caso en una consulta personalizada.</p><p>Lo importante es realizar un diagnóstico previo profesional para determinar si tu piel se beneficiará de este protocolo específico. Nuestra especialista analizará tu tipo de piel y te recomendará el tratamiento más adecuado.</p>",
+            "question": "{{ product.metafields.custom.pregunta_1_titulo.value }}",
+            "answer": "{{ product.metafields.custom.pregunta_1_respuesta | metafield_tag }}",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
