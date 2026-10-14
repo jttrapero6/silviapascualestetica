@@ -55,7 +55,7 @@
         "image_size": "sm",
         "image": "shopify://shop_images/8990f34f-036f-4fab-ab06-e97c602cf539.jpg",
         "overlay_color": "#000000",
-        "overlay_opacity": 20,
+        "overlay_opacity": 40,
         "enable_sticky_content": false,
         "content_width": "lg",
         "desktop_text_position": "sm:place-self-center",
