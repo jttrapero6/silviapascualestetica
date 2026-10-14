@@ -88,7 +88,7 @@
       "name": "t:sections.slideshow.name",
       "settings": {
         "allow_transparent_header": true,
-        "image_size": "md",
+        "image_size": "sm",
         "transition_type": "curtain",
         "autoplay": true,
         "pause_auto_rotate_on_hover": false,
