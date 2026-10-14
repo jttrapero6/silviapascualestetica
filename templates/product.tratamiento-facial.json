@@ -332,6 +332,7 @@
         "show_controls": true,
         "video_size": "md",
         "mobile_video_size": "md",
+        "video": "{{ product.metafields.custom.video.value }}",
         "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
       }
     },
