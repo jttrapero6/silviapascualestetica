@@ -147,7 +147,7 @@
           "settings": {
             "text": "{{ closest.product.title }}",
             "heading_size": "h3",
-            "html_tag": "p",
+            "html_tag": "h1",
             "indent": "none",
             "highlight_effect": "default",
             "highlight_accent_color": "",
