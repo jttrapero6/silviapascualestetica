@@ -277,7 +277,7 @@
         "heading_size": "h2",
         "content": "<p>Por favor completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>",
         "show_email_field": false,
-        "select_options": "Tratamientos corporales\nTratamientos faciales\nMasajes\nMaquillaje"
+        "select_options": "Tratamientos corporales\nTratamientos faciales\nMasajes\nMaquillaje\nOtros"
       }
     }
   },
