@@ -1,0 +1,540 @@
+{% if section.blocks.size > 0 %}
+  <section class="nuestros-valores color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
+    <div class="container">
+      <header class="nuestros-valores__header">
+        {% if section.settings.eyebrow != blank %}
+          <p class="nuestros-valores__eyebrow">{{ section.settings.eyebrow }}</p>
+        {% endif %}
+
+        {% if section.settings.title != blank %}
+          <h2 class="nuestros-valores__title">{{ section.settings.title }}</h2>
+        {% endif %}
+
+        {% if section.settings.subtitle != blank %}
+          <p class="nuestros-valores__subtitle">{{ section.settings.subtitle }}</p>
+        {% endif %}
+      </header>
+
+      <div class="nuestros-valores__slider" data-values-slider>
+        <button class="nuestros-valores__arrow nuestros-valores__arrow--prev" type="button" data-values-prev aria-label="Anterior valor">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="nuestros-valores__viewport">
+          {% for block in section.blocks %}
+            <article
+              class="nuestros-valores__item {% if block.settings.image != blank %}has-image{% endif %} {% if forloop.first %}is-active{% endif %}"
+              data-values-slide
+              data-index="{{ forloop.index0 }}"
+              {{ block.shopify_attributes }}
+            >
+              {% if block.settings.image != blank %}
+                <div class="nuestros-valores__image">
+                  {{ block.settings.image | image_url: width: 1800 | image_tag: loading: 'lazy', sizes: '(max-width: 999px) 100vw, 50vw', widths: '600,800,1000,1200,1600,1800', class: 'nuestros-valores__img', draggable: false }}
+                </div>
+              {% endif %}
+
+              <div class="nuestros-valores__content">
+                {% assign slide_number = block.settings.number | default: forloop.index %}
+                <span class="nuestros-valores__number">{{ slide_number }}</span>
+
+                {% if block.settings.title != blank %}
+                  <h3 class="nuestros-valores__headline">{{ block.settings.title }}</h3>
+                {% endif %}
+
+                {% if block.settings.content != blank %}
+                  <div class="nuestros-valores__text prose">{{ block.settings.content }}</div>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+
+        <button class="nuestros-valores__arrow nuestros-valores__arrow--next" type="button" data-values-next aria-label="Siguiente valor">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <div class="nuestros-valores__nav" aria-label="Valores">
+        {% for block in section.blocks %}
+          <button
+            class="nuestros-valores__nav-item {% if forloop.first %}is-active{% endif %}"
+            type="button"
+            data-values-nav
+            data-index="{{ forloop.index0 }}"
+            aria-label="Mostrar valor {{ block.settings.title }}"
+            aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+          >
+            <span>{{ block.settings.number | default: forloop.index }}</span>
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function initializeValuesSliders() {
+      const sliders = document.querySelectorAll('[data-values-slider]');
+
+      sliders.forEach(function (slider) {
+        if (slider.dataset.valuesInitialized === 'true') return;
+        slider.dataset.valuesInitialized = 'true';
+
+        const slides = Array.from(slider.querySelectorAll('[data-values-slide]'));
+        const navButtons = Array.from(slider.parentElement.querySelectorAll('[data-values-nav]'));
+        const prevButton = slider.querySelector('[data-values-prev]');
+        const nextButton = slider.querySelector('[data-values-next]');
+        let currentIndex = 0;
+
+        function updateSlider(index) {
+          currentIndex = (index + slides.length) % slides.length;
+
+          slides.forEach(function (slide, slideIndex) {
+            slide.classList.toggle('is-active', slideIndex === currentIndex);
+          });
+
+          navButtons.forEach(function (button, buttonIndex) {
+            const isActive = buttonIndex === currentIndex;
+            button.classList.toggle('is-active', isActive);
+            button.setAttribute('aria-current', isActive ? 'true' : 'false');
+          });
+        }
+
+        if (prevButton) {
+          prevButton.addEventListener('click', function () {
+            updateSlider(currentIndex - 1);
+          });
+        }
+
+        if (nextButton) {
+          nextButton.addEventListener('click', function () {
+            updateSlider(currentIndex + 1);
+          });
+        }
+
+        navButtons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            updateSlider(Number(button.dataset.index));
+          });
+        });
+
+        updateSlider(0);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeValuesSliders, { once: true });
+    } else {
+      initializeValuesSliders();
+    }
+
+    document.addEventListener('shopify:section:load', initializeValuesSliders);
+  </script>
+
+  <style>
+    .nuestros-valores {
+      --value-muted: rgb(var(--text-color) / 0.72);
+      padding-block: clamp(3.25rem, 6vw, 6rem);
+    }
+
+    .nuestros-valores__header {
+      margin: 0 auto clamp(2rem, 3.5vw, 3rem);
+      text-align: center;
+    }
+
+    .nuestros-valores__eyebrow {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.9rem;
+      margin: 0 0 1.25rem;
+      color: var(--value-muted);
+      font: var(--subheading-font-style) var(--subheading-font-weight) 0.72rem / 1.2 var(--subheading-font-family);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+
+    .nuestros-valores__eyebrow::after {
+      width: 3.5rem;
+      height: 1px;
+      background: rgb(var(--text-color) / 0.3);
+      content: "";
+    }
+
+    .nuestros-valores__title {
+      margin: 0;
+      color: rgb(var(--text-color));
+      font: var(--heading-font-style) var(--heading-font-weight) clamp(2.8rem, 5vw, 4.5rem) / 1 var(--heading-font-family);
+      letter-spacing: var(--heading-letter-spacing);
+      text-transform: none;
+    }
+
+    .nuestros-valores__subtitle {
+      margin: 0.75rem auto 0;
+      color: var(--value-muted);
+      font: var(--text-font-style) var(--text-font-weight) clamp(1rem, 1.6vw, 1.25rem) / 1.5 var(--text-font-family);
+    }
+
+    .nuestros-valores__slider {
+      position: relative;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .nuestros-valores__viewport {
+      overflow: hidden;
+      background: rgb(var(--text-color) / 0.035);
+    }
+
+    .nuestros-valores__item {
+      display: none;
+      grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+      gap: clamp(2rem, 5.2vw, 5rem);
+      align-items: center;
+      min-height: 470px;
+      margin: clamp(1.25rem, 2.2vw, 2rem) clamp(2rem, 5vw, 4.75rem);
+    }
+
+    .nuestros-valores__item.is-active {
+      display: grid;
+      animation: nuestros-valores-in 450ms ease both;
+    }
+
+    .nuestros-valores__image {
+      height: clamp(300px, 30vw, 430px);
+      overflow: hidden;
+      background: rgb(var(--text-color) / 0.05);
+    }
+
+    .nuestros-valores__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 700ms cubic-bezier(0.2, 0.65, 0.3, 1);
+    }
+
+    .nuestros-valores__item.is-active .nuestros-valores__img {
+      animation: nuestros-valores-image-in 700ms cubic-bezier(0.2, 0.65, 0.3, 1) both;
+    }
+
+    .nuestros-valores__content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 360px;
+      padding: 2rem clamp(1rem, 2vw, 2rem) 2rem 0;
+      isolation: isolate;
+    }
+
+    .nuestros-valores__number {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      color: rgb(var(--text-color) / 0.085);
+      font: var(--heading-font-style) var(--heading-font-weight) clamp(8rem, 15vw, 13rem) / 0.8 var(--heading-font-family);
+      letter-spacing: -0.08em;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .nuestros-valores__headline {
+      position: relative;
+      margin: 0;
+      color: rgb(var(--text-color));
+      font: var(--heading-font-style) var(--heading-font-weight) clamp(2.5rem, 3.5vw, 3.75rem) / 1.02 var(--heading-font-family);
+      letter-spacing: var(--heading-letter-spacing);
+      max-width: 11ch;
+    }
+
+    .nuestros-valores__text {
+      position: relative;
+      margin-top: 1.25rem;
+      max-width: 31rem;
+      color: var(--value-muted);
+      font: var(--text-font-style) var(--text-font-weight) clamp(0.98rem, 1.3vw, 1.1rem) / 1.65 var(--text-font-family);
+    }
+
+    .nuestros-valores__text p {
+      margin: 0;
+    }
+
+    .nuestros-valores__arrow {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      display: grid;
+      place-items: center;
+      width: 3.25rem;
+      height: 3.25rem;
+      padding: 0;
+      transform: translateY(-50%);
+      border: 1px solid rgb(var(--text-color) / 0.24);
+      border-radius: 50%;
+      background: rgb(var(--background));
+      color: rgb(var(--text-color));
+      cursor: pointer;
+      transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .nuestros-valores__arrow svg {
+      width: 1.15rem;
+      height: 1.15rem;
+    }
+
+    .nuestros-valores__arrow:hover {
+      transform: translateY(-50%) scale(1.05);
+      border-color: rgb(var(--text-color) / 0.5);
+      background: rgb(var(--text-color) / 0.04);
+    }
+
+    .nuestros-valores__arrow--prev {
+      left: -1.6rem;
+    }
+
+    .nuestros-valores__arrow--next {
+      right: -1.6rem;
+    }
+
+    .nuestros-valores__nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1.2rem auto 0;
+    }
+
+    .nuestros-valores__nav-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      border: 0;
+      background: transparent;
+      color: rgb(var(--text-color) / 0.48);
+      font: var(--text-font-style) var(--text-font-weight) 0.82rem / 1 var(--text-font-family);
+      cursor: pointer;
+      padding: 0.55rem 0.65rem;
+      transition: color 180ms ease;
+    }
+
+    .nuestros-valores__nav-item::after {
+      display: block;
+      width: clamp(1.5rem, 3vw, 2.8rem);
+      height: 1px;
+      background: rgb(var(--text-color) / 0.18);
+      content: "";
+      transition: background-color 180ms ease;
+    }
+
+    .nuestros-valores__nav-item:last-child::after {
+      display: none;
+    }
+
+    .nuestros-valores__nav-item.is-active,
+    .nuestros-valores__nav-item[aria-current="true"] {
+      color: rgb(var(--text-color));
+      font-weight: 600;
+    }
+
+    .nuestros-valores__nav-item.is-active::after {
+      background: rgb(var(--text-color) / 0.55);
+    }
+
+    @keyframes nuestros-valores-in {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes nuestros-valores-image-in {
+      from { transform: scale(1.035); }
+      to { transform: scale(1); }
+    }
+
+    @media screen and (max-width: 999px) {
+      .nuestros-valores {
+        padding-block: 3rem;
+      }
+
+      .nuestros-valores__item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        margin: 1rem;
+      }
+
+      .nuestros-valores__image {
+        height: clamp(240px, 52vw, 380px);
+      }
+
+      .nuestros-valores__content {
+        min-height: 255px;
+        padding: 2rem 1rem;
+      }
+
+      .nuestros-valores__number {
+        top: 0.25rem;
+        right: 0.5rem;
+        font-size: clamp(7rem, 23vw, 10rem);
+      }
+
+      .nuestros-valores__headline {
+        max-width: 100%;
+        font-size: clamp(2.25rem, 8vw, 3.2rem);
+      }
+
+      .nuestros-valores__arrow {
+        top: calc(0.5rem + clamp(120px, 26vw, 190px));
+        width: 2.75rem;
+        height: 2.75rem;
+      }
+
+      .nuestros-valores__arrow--prev {
+        left: 0.5rem;
+      }
+
+      .nuestros-valores__arrow--next {
+        right: 0.5rem;
+      }
+
+      .nuestros-valores__nav-item {
+        gap: 0.5rem;
+        padding-inline: 0.3rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .nuestros-valores__nav-item::after {
+        width: 0.85rem;
+      }
+
+      .nuestros-valores__nav-item {
+        font-size: 0.75rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .nuestros-valores__item.is-active,
+      .nuestros-valores__item.is-active .nuestros-valores__img {
+        animation: none;
+      }
+
+      .nuestros-valores__img,
+      .nuestros-valores__arrow,
+      .nuestros-valores__nav-item,
+      .nuestros-valores__nav-item::after {
+        transition: none;
+      }
+    }
+  </style>
+{% endif %}
+{% schema %}
+{
+  "name": "Nuestros valores",
+  "tag": "section",
+  "class": "shopify-section--nuestros-valores",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-2"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Texto pequeño",
+      "default": "NUESTRO CENTRO"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "Nuestros valores"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtítulo",
+      "default": "La esencia de todo lo que hacemos."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Valor",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Número",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título",
+          "default": "Cuidado personalizado"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Texto",
+          "default": "<p>Cada piel es única. Por eso escuchamos, analizamos y diseñamos tratamientos adaptados a las necesidades de cada persona.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nuestros valores",
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "number": "01",
+            "title": "Cuidado personalizado",
+            "content": "<p>Cada piel es única. Por eso escuchamos, analizamos y diseñamos tratamientos adaptados a las necesidades de cada persona.</p>"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "number": "02",
+            "title": "Tecnología avanzada",
+            "content": "<p>Trabajamos con aparatología y protocolos modernos para conseguir resultados eficaces, seguros y visibles.</p>"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "number": "03",
+            "title": "Resultados reales",
+            "content": "<p>Buscamos mejorar la piel con un criterio responsable, siempre cuidando la salud y el bienestar de cada persona.</p>"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "number": "04",
+            "title": "Calidez humana",
+            "content": "<p>La atención cercana, el trato amable y un ambiente de confort hacen que cada visita sea una experiencia especial.</p>"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "number": "05",
+            "title": "Responsabilidad",
+            "content": "<p>Te orientamos con honestidad, claridad y rigor para que tomes decisiones acordes con tu piel y tus objetivos.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
