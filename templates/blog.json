@@ -27,7 +27,7 @@
         "posts_per_page": 12,
         "highlight_blog_post_position": 5,
         "blog_post_card_heading_size": "h5",
-        "show_category": true,
+        "show_category": false,
         "show_date": true,
         "show_reading_time": false,
         "show_excerpt": false
