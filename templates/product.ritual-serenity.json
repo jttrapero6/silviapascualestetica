@@ -293,6 +293,7 @@
       "name": "t:sections.before_after.name",
       "settings": {
         "color_scheme": "scheme-2",
+        "show_when_empty": true,
         "layout": "stacked",
         "add_comparison_spacing": false,
         "subheading": "",
@@ -327,6 +328,7 @@
       "name": "t:sections.video.name",
       "settings": {
         "color_scheme": "",
+        "show_when_empty": true,
         "allow_transparent_header": true,
         "autoplay": true,
         "show_controls": false,
@@ -342,6 +344,7 @@
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "color_scheme": "scheme-2",
+        "show_when_empty": true,
         "product_list": "{{ product.metafields.custom.linea_de_productos.value }}",
         "stack_products_mobile": false,
         "stack_products_desktop": false,

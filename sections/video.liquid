@@ -1,10 +1,15 @@
-{%- if section.settings.video != blank or section.settings.external_video_url.id != blank -%}
+{%- if section.settings.video != blank or section.settings.external_video_url.id != blank or section.settings.show_when_empty -%}
 <div {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %} class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
   <div class="content-box group min-h-{{ section.settings.mobile_video_size }} sm:min-h-{{ section.settings.video_size }} max-w-{{ section.settings.content_width }} mx-auto">
     <div class="content-box__background-media">
       {%- assign video_id = 'video-' | append: section.id -%}
+      {%- assign video_media = section.settings.video -%}
 
-      {%- if section.settings.video -%}
+      {%- if video_media == blank and product != blank -%}
+        {%- assign video_media = product.media | where: 'media_type', 'video' | first -%}
+      {%- endif -%}
+
+      {%- if video_media != blank -%}
         {%- liquid
           assign play_button_block = section.blocks | where: 'type', 'play_button' | first
           assign preload = true
@@ -19,9 +24,9 @@
             assign preload = false
           endif
 
-          render 'media' with section.settings.video, mobile_media: section.settings.mobile_video, id: video_id, poster: section.settings.poster, preload: preload, autoplay: section.settings.autoplay, controls: section.settings.show_controls, playsinline: section.settings.autoplay, loop: section.settings.autoplay, show_play_button: show_play_button, show_play_cursor: play_button_block.settings.show_play_cursor
+          render 'media' with video_media, mobile_media: section.settings.mobile_video, id: video_id, poster: section.settings.poster, preload: preload, autoplay: section.settings.autoplay, controls: section.settings.show_controls, playsinline: section.settings.autoplay, loop: section.settings.autoplay, show_play_button: show_play_button, show_play_cursor: play_button_block.settings.show_play_cursor
         -%}
-      {%- else -%}
+      {%- elsif section.settings.external_video_url.id != blank -%}
         {%- comment -%}For external video we cannot take advantage of the media snippet as the setting is "external_video_url"{% endcomment %}
         <video-media id="{{ video_id }}" host="{{ section.settings.external_video_url.type }}" {% if section.settings.autoplay %}autoplay class="pointer-events-none"{% endif %}>
           {%- unless section.settings.autoplay -%}
@@ -40,6 +45,8 @@
             {%- endif -%}
           </template>
         </video-media>
+      {%- else -%}
+        {{- 'hero-apparel-1' | placeholder_svg_tag: 'size-full' -}}
       {%- endif -%}
     </div>
 
@@ -281,6 +288,12 @@
   "groups": ["header", "custom.overlay"]
 },
 "settings": [
+  {
+    "type": "checkbox",
+    "id": "show_when_empty",
+    "label": "Mostrar sección aunque no haya vídeo",
+    "default": false
+  },
   {
     "type": "paragraph",
     "content": "t:sections.video.info"

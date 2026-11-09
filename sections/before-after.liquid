@@ -11,7 +11,7 @@
   endfor
 -%}
 
-{%- if request.design_mode or has_before_image and has_after_image -%}
+{%- if request.design_mode or section.settings.show_when_empty or has_before_image and has_after_image -%}
   <style>
     #shopify-section-{{ section.id }} {
       --before-after-initial-cursor-position: {{ section.settings.cursor_initial_position }}%;
@@ -192,6 +192,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_when_empty",
+      "label": "Mostrar sección aunque falten imágenes",
+      "default": false
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",

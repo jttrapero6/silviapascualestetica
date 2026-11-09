@@ -1,4 +1,4 @@
-{%- if request.design_mode or section.settings.product_list != blank -%}
+{%- if request.design_mode or section.settings.show_when_empty or section.settings.product_list != blank -%}
 <style>
   #shopify-section-{{ section.id }} {
     --product-list-column-count: {{ section.settings.products_per_row_mobile | times: 1 }};
@@ -108,6 +108,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_when_empty",
+      "label": "Mostrar sección aunque no haya productos",
+      "default": false
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",
