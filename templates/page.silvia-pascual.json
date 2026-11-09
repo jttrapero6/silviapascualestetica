@@ -18,48 +18,73 @@
         "content_width": "md"
       }
     },
-    "image_with_text_overlay_it9LhF": {
-      "type": "image-with-text-overlay",
+    "slideshow_NFCzjw": {
+      "type": "slideshow",
       "blocks": {
-        "heading_9eHJiY": {
-          "type": "heading",
+        "slideshow_video_slide_YYbjNb": {
+          "type": "_slideshow-video-slide",
+          "name": "t:sections.slideshow.blocks.video.name",
           "settings": {
-            "text": "Centro de Estética Avanzada Silvia Pascual",
-            "heading_size": "h2",
-            "html_tag": "h1",
-            "indent": "none",
-            "highlight_effect": "default",
-            "highlight_accent_color": "",
-            "highlight_text_color": ""
+            "color_scheme": "scheme-3",
+            "video": "shopify://files/videos/IMG_0889.MOV",
+            "slide_link": "",
+            "content_max_width": 1000,
+            "mobile_content_position": "place-self-center",
+            "desktop_content_position": "sm:place-self-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 40
           },
-          "blocks": {}
+          "blocks": {
+            "heading_KQp8rN": {
+              "type": "heading",
+              "settings": {
+                "text": "Centro de Estética Avanzada Silvia Pascual",
+                "heading_size": "h2",
+                "html_tag": "p",
+                "indent": "none",
+                "highlight_effect": "default",
+                "highlight_accent_color": "",
+                "highlight_text_color": ""
+              },
+              "blocks": {}
+            },
+            "rich_text_Ljfr74": {
+              "type": "rich-text",
+              "name": "t:blocks.rich_text.name",
+              "settings": {
+                "text": "{{ closest.page.content }}",
+                "content_width": "lg"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_KQp8rN",
+            "rich_text_Ljfr74"
+          ]
         },
-        "rich_text_wLEFxz": {
-          "type": "rich-text",
-          "name": "t:blocks.rich_text.name",
+        "slideshow-controls": {
+          "type": "_slideshow-controls",
+          "static": true,
           "settings": {
-            "text": "{{ closest.page.content }}",
-            "content_width": "lg"
+            "controls_style": "line",
+            "controls_color": "#ffffff"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "heading_9eHJiY",
-        "rich_text_wLEFxz"
+        "slideshow_video_slide_YYbjNb"
       ],
-      "name": "t:sections.image_with_text_overlay.name",
+      "name": "t:sections.slideshow.name",
       "settings": {
-        "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
-        "image": "shopify://shop_images/8990f34f-036f-4fab-ab06-e97c602cf539.jpg",
-        "overlay_color": "#000000",
-        "overlay_opacity": 40,
-        "enable_sticky_content": false,
-        "content_width": "lg",
-        "desktop_text_position": "sm:place-self-center",
-        "mobile_text_position": "place-self-center"
+        "transition_type": "curtain",
+        "autoplay": true,
+        "pause_auto_rotate_on_hover": false,
+        "cycle_speed": 6,
+        "background": "#000000"
       }
     },
     "rich_text_fbmyKX": {
@@ -68,10 +93,10 @@
         "image_UGmaqK": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/silvia-pascual-profile.jpg",
+            "image": "shopify://shop_images/IMG_9527.heic",
             "width_mode": "custom",
-            "max_width": 150,
-            "mobile_max_width": 130
+            "max_width": 250,
+            "mobile_max_width": 200
           }
         },
         "subheading_8dRJgw": {
@@ -106,7 +131,7 @@
         "richtext_YkR33n"
       ],
       "custom_css": [
-        "img {border-radius: 500px; margin: auto;}",
+        "img {margin: auto;}",
         ".subheading {margin-left: auto; margin-right: auto;}"
       ],
       "name": "t:sections.rich_text.name",
@@ -204,7 +229,7 @@
   },
   "order": [
     "main",
-    "image_with_text_overlay_it9LhF",
+    "slideshow_NFCzjw",
     "rich_text_fbmyKX",
     "reading_text_YGcLFJ",
     "nuestros_valores_7JwGQx"
