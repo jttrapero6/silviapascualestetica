@@ -37,7 +37,7 @@
         "rich_text_KNGVbE": {
           "type": "rich-text",
           "settings": {
-            "text": "<p>Viajes sensoriales diseñados para transformar tu piel, relajar tu cuerpo y transportar tus sentidos. Cada ritual combina ingredientes naturales premium con técnicas de masaje especializado.</p>",
+            "text": "<p>Experiencias para regalarte tiempo, bienestar y belleza. Hay tratamientos que cuidan la piel.<br/>Y hay experiencias que despiertan los sentidos, aquietan la mente y consiguen que, durante un rato, todo lo demás desaparezca.<br/>Nuestros Rituales nacen para invitarte a parar, respirar profundamente y entregarte al placer de sentirte cuidada.<br/>Cada uno posee una personalidad propia, inspirada en aromas, paisajes y sensaciones capaces de transportarte a otro lugar.</p>",
             "content_width": "lg"
           },
           "blocks": {}
@@ -54,7 +54,7 @@
         "image_size": "sm",
         "image": "shopify://shop_images/rhythmuswege-wellness-285589_1280.jpg",
         "overlay_color": "#000000",
-        "overlay_opacity": 30,
+        "overlay_opacity": 40,
         "enable_sticky_content": false,
         "content_width": "md",
         "desktop_text_position": "sm:place-self-center",
