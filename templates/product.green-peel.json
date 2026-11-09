@@ -74,7 +74,7 @@
           "type": "accordion",
           "settings": {
             "title": "Qué hace",
-            "content": "{{ product.metafields.custom.que_hace | metafield_tag }}",
+            "content": "<p>Green Peel actúa de forma suave pero eficaz para renovar la piel, estimular la microcirculación y dejarla más uniforme, luminosa y revitalizada.</p>",
             "uppercase_title": true,
             "icon": "none",
             "page": ""
@@ -84,7 +84,7 @@
           "type": "accordion",
           "settings": {
             "title": "Cómo funciona",
-            "content": "{{ product.metafields.custom.como_funciona | metafield_tag }}",
+            "content": "<p>El tratamiento exfolia con ingredientes botánicos y activos naturales que favorecen la renovación de la capa superficial. Esto ayuda a mejorar la textura, la apariencia y la sensación general de la piel.</p>",
             "uppercase_title": true,
             "icon": "none",
             "page": ""
@@ -94,7 +94,7 @@
           "type": "accordion",
           "settings": {
             "title": "Cómo debo utilizarlo",
-            "content": "{{ product.metafields.custom.como_debo_utilizarlo | metafield_tag }}",
+            "content": "<p>Se aplica en sesiones profesionales y se recomienda mantener una rutina hidratante y protectora tras cada tratamiento para prolongar sus beneficios.</p>",
             "uppercase_title": true,
             "icon": "none",
             "page": ""
@@ -138,7 +138,7 @@
         "subheading_pmgH74": {
           "type": "subheading",
           "settings": {
-            "text": "{{ closest.product.metafields.custom.texto_anterior_al_titulo.value }}"
+            "text": "Peeling natural"
           },
           "blocks": {}
         },
@@ -175,7 +175,7 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
-        "image": "{{ product.metafields.custom.imagen_cabecera.value }}",
+        "image": "",
         "overlay_color": "#000000",
         "overlay_opacity": 20,
         "enable_sticky_content": false,
@@ -191,36 +191,36 @@
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "{{ product.metafields.custom.caracteristica_1_titulo.value }}",
+            "title": "Renovación celular",
             "heading_tag": "h5",
-            "content": "<p>{{ product.metafields.custom.caracteristica_1_texto.value }}</p>"
+            "content": "<p>Favorece el recambio cutáneo y mejora la textura general de la piel.</p>"
           }
         },
         "item_DgPg4H": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "{{ product.metafields.custom.caracteristica_2_titulo.value }}",
+            "title": "Efecto antioxidante",
             "heading_tag": "h5",
-            "content": "<p>{{ product.metafields.custom.caracteristica_2_texto.value }}</p>"
+            "content": "<p>Aporta nutrientes y ayuda a combatir el estrés oxidativo del día a día.</p>"
           }
         },
         "item_bE8j3a": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "{{ product.metafields.custom.caracteristica_3_titulo.value }}",
+            "title": "Piel más clara",
             "heading_tag": "h5",
-            "content": "<p>{{ product.metafields.custom.caracteristica_3_texto.value }}</p>"
+            "content": "<p>Ayuda a unificar el tono y a aportar un aspecto más homogéneo y luminoso.</p>"
           }
         },
         "item_PGDUqi": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "{{ product.metafields.custom.caracteristica_4_titulo.value }}",
+            "title": "Vitalidad inmediata",
             "heading_tag": "h5",
-            "content": "<p>{{ product.metafields.custom.caracteristica_4_texto.value }}</p>"
+            "content": "<p>Deja la epidermis con un aspecto más fresco, hidratado y revitalizado.</p>"
           }
         }
       },
@@ -269,7 +269,7 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "{{ product.metafields.custom.foto_antes.value }}",
+            "image": "",
             "text": "Antes",
             "text_size": "h4",
             "text_position": "start"
@@ -279,7 +279,7 @@
           "type": "after",
           "settings": {
             "color_scheme": "",
-            "image": "{{ product.metafields.custom.foto_despues.value }}",
+            "image": "",
             "text": "Después",
             "text_size": "h4",
             "text_position": "start"
@@ -333,7 +333,7 @@
         "content_width": "xl",
         "video_size": "auto",
         "mobile_video_size": "md",
-        "video": "{{ product.metafields.custom.video.value }}",
+        "video": "",
         "external_video_url": ""
       }
     },
@@ -342,7 +342,7 @@
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "product_list": "{{ product.metafields.custom.linea_de_productos.value }}",
+        "product_list": "",
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
@@ -363,8 +363,8 @@
         "question_7pCiFY": {
           "type": "question",
           "settings": {
-            "question": "{{ product.metafields.custom.pregunta_1_titulo.value }}",
-            "answer": "{{ product.metafields.custom.pregunta_1_respuesta | metafield_tag }}",
+            "question": "¿Es recomendable para pieles apagadas?",
+            "answer": "<p>Sí, es muy indicado para pieles apagadas o con textura irregular que buscan recuperar luminosidad.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -373,8 +373,8 @@
         "question_cVR879": {
           "type": "question",
           "settings": {
-            "question": "{{ product.metafields.custom.pregunta_2_titulo.value }}",
-            "answer": "{{ product.metafields.custom.pregunta_2_respuesta | metafield_tag }}",
+            "question": "¿Cuánto dura la recuperación?",
+            "answer": "<p>La recuperación es generalmente ligera y depende del protocolo y la sensibilidad de cada piel.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -383,8 +383,8 @@
         "question_Hffkgp": {
           "type": "question",
           "settings": {
-            "question": "{{ product.metafields.custom.pregunta_3_titulo.value }}",
-            "answer": "{{ product.metafields.custom.pregunta_3_respuesta | metafield_tag }}",
+            "question": "¿Se puede usar en casa?",
+            "answer": "<p>Se recomienda bajo supervisión profesional, ya que está pensado como tratamiento específico y personalizado.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -393,8 +393,8 @@
         "question_9jLicq": {
           "type": "question",
           "settings": {
-            "question": "{{ product.metafields.custom.pregunta_4_titulo.value }}",
-            "answer": "{{ product.metafields.custom.pregunta_4_respuesta | metafield_tag }}",
+            "question": "¿Qué cuidados necesito después?",
+            "answer": "<p>Hidratación, protección solar y seguir las recomendaciones del profesional para optimizar resultados.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20

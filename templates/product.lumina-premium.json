@@ -74,7 +74,7 @@
           "type": "accordion",
           "settings": {
             "title": "Qué hace",
-            "content": "{{ product.metafields.custom.que_hace | metafield_tag }}",
+            "content": "<p>Lumina Premium combina tecnología y activos premium para estimular la luminosidad, reforzar la hidratación y mejorar la textura con un acabado más refinado.</p>",
             "uppercase_title": true,
             "icon": "none",
             "page": ""
@@ -84,7 +84,7 @@
           "type": "accordion",
           "settings": {
             "title": "Cómo funciona",
-            "content": "{{ product.metafields.custom.como_funciona | metafield_tag }}",
+            "content": "<p>El tratamiento trabaja sobre la renovación cutánea y la mejora del tono para aportar un resultado más uniforme, radiante y cuidado.</p>",
             "uppercase_title": true,
             "icon": "none",
             "page": ""
@@ -94,7 +94,7 @@
           "type": "accordion",
           "settings": {
             "title": "Cómo debo utilizarlo",
-            "content": "{{ product.metafields.custom.como_debo_utilizarlo | metafield_tag }}",
+            "content": "<p>Se recomienda en sesiones específicas según la necesidad de tu piel, acompañadas de una rutina diaria que mantenga la hidratación y la protección.</p>",
             "uppercase_title": true,
             "icon": "none",
             "page": ""
@@ -138,7 +138,7 @@
         "subheading_pmgH74": {
           "type": "subheading",
           "settings": {
-            "text": "{{ closest.product.metafields.custom.texto_anterior_al_titulo.value }}"
+            "text": "Tratamiento premium"
           },
           "blocks": {}
         },
@@ -175,7 +175,7 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
-        "image": "{{ product.metafields.custom.imagen_cabecera.value }}",
+        "image": "",
         "overlay_color": "#000000",
         "overlay_opacity": 20,
         "enable_sticky_content": false,
@@ -191,36 +191,36 @@
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "{{ product.metafields.custom.caracteristica_1_titulo.value }}",
+            "title": "Luminosidad intensa",
             "heading_tag": "h5",
-            "content": "<p>{{ product.metafields.custom.caracteristica_1_texto.value }}</p>"
+            "content": "<p>Eleva el brillo natural para que la piel luzca más vital y sana.</p>"
           }
         },
         "item_DgPg4H": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "{{ product.metafields.custom.caracteristica_2_titulo.value }}",
+            "title": "Hydration premium",
             "heading_tag": "h5",
-            "content": "<p>{{ product.metafields.custom.caracteristica_2_texto.value }}</p>"
+            "content": "<p>Aporta confort y ayuda a mejorar la sensación de hidratación prolongada.</p>"
           }
         },
         "item_bE8j3a": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "{{ product.metafields.custom.caracteristica_3_titulo.value }}",
+            "title": "Textura refinada",
             "heading_tag": "h5",
-            "content": "<p>{{ product.metafields.custom.caracteristica_3_texto.value }}</p>"
+            "content": "<p>Suaviza imperfecciones y deja la superficie más homogénea.</p>"
           }
         },
         "item_PGDUqi": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "{{ product.metafields.custom.caracteristica_4_titulo.value }}",
+            "title": "Resultado sofisticado",
             "heading_tag": "h5",
-            "content": "<p>{{ product.metafields.custom.caracteristica_4_texto.value }}</p>"
+            "content": "<p>Un acabado más pulido, uniforme y con efecto glow.</p>"
           }
         }
       },
@@ -269,7 +269,7 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "{{ product.metafields.custom.foto_antes.value }}",
+            "image": "",
             "text": "Antes",
             "text_size": "h4",
             "text_position": "start"
@@ -279,7 +279,7 @@
           "type": "after",
           "settings": {
             "color_scheme": "",
-            "image": "{{ product.metafields.custom.foto_despues.value }}",
+            "image": "",
             "text": "Después",
             "text_size": "h4",
             "text_position": "start"
@@ -333,7 +333,7 @@
         "content_width": "xl",
         "video_size": "auto",
         "mobile_video_size": "md",
-        "video": "{{ product.metafields.custom.video.value }}",
+        "video": "",
         "external_video_url": ""
       }
     },
@@ -342,7 +342,7 @@
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "product_list": "{{ product.metafields.custom.linea_de_productos.value }}",
+        "product_list": "",
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
@@ -363,8 +363,8 @@
         "question_7pCiFY": {
           "type": "question",
           "settings": {
-            "question": "{{ product.metafields.custom.pregunta_1_titulo.value }}",
-            "answer": "{{ product.metafields.custom.pregunta_1_respuesta | metafield_tag }}",
+            "question": "¿Es un tratamiento para un evento?",
+            "answer": "<p>Puede ser ideal antes de un evento por su efecto luminoso y de mejora inmediata.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -373,8 +373,8 @@
         "question_cVR879": {
           "type": "question",
           "settings": {
-            "question": "{{ product.metafields.custom.pregunta_2_titulo.value }}",
-            "answer": "{{ product.metafields.custom.pregunta_2_respuesta | metafield_tag }}",
+            "question": "¿Se puede mantener a largo plazo?",
+            "answer": "<p>Sí, con sesiones periódicas y un cuidado diario adecuado se mantiene el efecto.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -383,8 +383,8 @@
         "question_Hffkgp": {
           "type": "question",
           "settings": {
-            "question": "{{ product.metafields.custom.pregunta_3_titulo.value }}",
-            "answer": "{{ product.metafields.custom.pregunta_3_respuesta | metafield_tag }}",
+            "question": "¿Funciona bien en pieles mixtas?",
+            "answer": "<p>Sí, se adapta muy bien a pieles mixtas buscando luminosidad y equilibrio.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -393,8 +393,8 @@
         "question_9jLicq": {
           "type": "question",
           "settings": {
-            "question": "{{ product.metafields.custom.pregunta_4_titulo.value }}",
-            "answer": "{{ product.metafields.custom.pregunta_4_respuesta | metafield_tag }}",
+            "question": "¿Qué tipo de piel lo recomienda?",
+            "answer": "<p>Se suele aconsejar para pieles normales a mixtas con deseo de mejorar brillo y textura.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
