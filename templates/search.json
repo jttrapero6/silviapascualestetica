@@ -13,9 +13,9 @@
       "type": "main-search",
       "settings": {
         "color_scheme": "scheme-2",
-        "show_sort_by": true,
+        "show_sort_by": false,
         "products_per_page": 24,
-        "show_filters": true,
+        "show_filters": false,
         "show_filter_group_name": false,
         "show_filter_values_count": true,
         "hidden_filter_values": "",
