@@ -60,10 +60,43 @@
         "desktop_text_position": "sm:place-self-center",
         "mobile_text_position": "place-self-center"
       }
+    },
+    "featured_collections_AqGbD8": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_RkzkgJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "masajes",
+            "products_count": 8,
+            "title": "Nuestros tratamientos",
+            "content": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_RkzkgJ"
+      ],
+      "name": "t:sections.featured_collections.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "collection_title_html_tag": "h2",
+        "product_title_html_tag": "span",
+        "stack_products_mobile": true,
+        "stack_products_desktop": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "tabs_alignment": "start",
+        "tabs_icon": "arrow",
+        "show_view_all_button": false,
+        "show_scrolling_bar": true
+      }
     }
   },
   "order": [
     "main",
-    "image_with_text_overlay_e4GMcc"
+    "image_with_text_overlay_e4GMcc",
+    "featured_collections_AqGbD8"
   ]
 }
