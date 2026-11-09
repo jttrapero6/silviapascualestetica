@@ -114,6 +114,7 @@
         "accordion_HRyqNK",
         "accordion_tjigXG"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "allow_transparent_header": false,
@@ -156,7 +157,7 @@
         },
         "rich_text_7ztVAM": {
           "type": "rich-text",
-              "settings": {
+          "settings": {
             "text": "<p>Limpieza profunda y equilibrio que respeta tu piel. Previene alteraciones futuras manteniendo el bienestar de tu rostro.</p>",
             "content_width": "sm"
           },
