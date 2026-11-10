@@ -174,7 +174,6 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
-        "image": "{{ product.metafields.custom.imagen_cabecera.value }}",
         "overlay_color": "#000000",
         "overlay_opacity": 20,
         "enable_sticky_content": false,
@@ -268,7 +267,6 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "{{ product.metafields.custom.foto_antes.value }}",
             "text": "Antes",
             "text_size": "h4",
             "text_position": "start"
@@ -278,7 +276,6 @@
           "type": "after",
           "settings": {
             "color_scheme": "",
-            "image": "{{ product.metafields.custom.foto_despues.value }}",
             "text": "Después",
             "text_size": "h4",
             "text_position": "start"
@@ -291,8 +288,8 @@
       ],
       "name": "t:sections.before_after.name",
       "settings": {
-        "color_scheme": "scheme-2",
         "show_when_empty": true,
+        "color_scheme": "scheme-2",
         "layout": "stacked",
         "add_comparison_spacing": false,
         "subheading": "",
@@ -326,15 +323,14 @@
       ],
       "name": "t:sections.video.name",
       "settings": {
-        "color_scheme": "",
         "show_when_empty": true,
+        "color_scheme": "",
         "allow_transparent_header": true,
         "autoplay": true,
         "show_controls": false,
         "content_width": "xl",
         "video_size": "auto",
         "mobile_video_size": "md",
-        "video": "{{ product.metafields.custom.video.value }}",
         "external_video_url": ""
       }
     },
@@ -342,9 +338,9 @@
       "type": "featured-product-list",
       "name": "t:sections.featured_product_list.name",
       "settings": {
-        "color_scheme": "scheme-2",
         "show_when_empty": true,
-        "product_list": "{{ product.metafields.custom.linea_de_productos.value }}",
+        "color_scheme": "scheme-2",
+        "product_list": [],
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
