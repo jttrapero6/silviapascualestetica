@@ -1,0 +1,327 @@
+{%- liquid
+  assign section_has_content = false
+
+  if section.settings.image != blank or section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.text != blank
+    assign section_has_content = true
+  endif
+
+  if section.settings.button_text != blank and section.settings.button_link != blank
+    assign section_has_content = true
+  endif
+-%}
+
+{%- if section_has_content -%}
+  <style>
+    #shopify-section-{{ section.id }} .image-text-side-by-side {
+      display: flex;
+      flex-direction: column;
+      gap: {{ section.settings.gap_mobile }}px;
+    }
+
+    #shopify-section-{{ section.id }} .image-text-side-by-side__image {
+      aspect-ratio: {{ section.settings.image_ratio_mobile }};
+      overflow: hidden;
+    }
+
+    #shopify-section-{{ section.id }} .image-text-side-by-side__image img,
+    #shopify-section-{{ section.id }} .image-text-side-by-side__image svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #shopify-section-{{ section.id }} .image-text-side-by-side__image {
+      order: {% if section.settings.mobile_order == 'image_first' %}1{% else %}2{% endif %};
+    }
+
+    #shopify-section-{{ section.id }} .image-text-side-by-side__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      order: {% if section.settings.mobile_order == 'image_first' %}2{% else %}1{% endif %};
+    }
+
+    @media screen and (min-width: 1000px) {
+      #shopify-section-{{ section.id }} .image-text-side-by-side {
+        display: grid;
+        grid-template-columns: {% if section.settings.image_position == 'left' %}{{ section.settings.image_width }}% minmax(0, 1fr){% else %}minmax(0, 1fr) {{ section.settings.image_width }}%{% endif %};
+        align-items: center;
+        gap: {{ section.settings.gap_desktop }}px;
+      }
+
+      #shopify-section-{{ section.id }} .image-text-side-by-side__image {
+        aspect-ratio: {{ section.settings.image_ratio_desktop }};
+      }
+
+      #shopify-section-{{ section.id }} .image-text-side-by-side__image,
+      #shopify-section-{{ section.id }} .image-text-side-by-side__content {
+        order: initial;
+      }
+
+      {% if section.settings.image_position == 'right' %}
+        #shopify-section-{{ section.id }} .image-text-side-by-side__image {
+          grid-column: 2;
+        }
+
+        #shopify-section-{{ section.id }} .image-text-side-by-side__content {
+          grid-column: 1;
+          grid-row: 1;
+        }
+      {% endif %}
+    }
+  </style>
+
+  <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
+    <div class="container section-spacing">
+      <div class="image-text-side-by-side">
+        <div class="image-text-side-by-side__image">
+          {%- if section.settings.image != blank -%}
+            {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: widths: '400,600,800,1000,1200,1600,2000', sizes: '(max-width: 699px) 100vw, 50vw' -}}
+          {%- else -%}
+            {{- 'image' | placeholder_svg_tag -}}
+          {%- endif -%}
+        </div>
+
+        <div class="image-text-side-by-side__content prose">
+          {%- render 'subheading', content: section.settings.eyebrow -%}
+          {%- if section.settings.heading != blank -%}
+            {%- render 'heading', content: section.settings.heading, style: section.settings.heading_size, html_tag: section.settings.heading_tag, balance_text: true -%}
+          {%- endif -%}
+          {%- if section.settings.text != blank -%}
+            <div>{{- section.settings.text -}}</div>
+          {%- endif -%}
+          {%- if section.settings.button_text != blank and section.settings.button_link != blank -%}
+            {%- render 'button', content: section.settings.button_text, href: section.settings.button_link, style: section.settings.button_style -%}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Imagen y texto adaptable",
+  "class": "shopify-section--image-text-side-by-side",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Posición de la imagen en escritorio",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "mobile_order",
+      "label": "Orden en móvil",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "Imagen primero"
+        },
+        {
+          "value": "content_first",
+          "label": "Contenido primero"
+        }
+      ],
+      "default": "image_first"
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "label": "Espacio entre imagen y contenido en móvil",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "gap_desktop",
+      "label": "Espacio entre imagen y contenido en escritorio",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "select",
+      "id": "image_width",
+      "label": "Ancho de la imagen en escritorio",
+      "options": [
+        {
+          "value": "40",
+          "label": "40 %"
+        },
+        {
+          "value": "50",
+          "label": "50 %"
+        },
+        {
+          "value": "60",
+          "label": "60 %"
+        }
+      ],
+      "default": "50"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio_mobile",
+      "label": "Proporción de la imagen",
+      "options": [
+        {
+          "value": "1 / 1",
+          "label": "Cuadrada"
+        },
+        {
+          "value": "4 / 3",
+          "label": "Horizontal"
+        },
+        {
+          "value": "3 / 4",
+          "label": "Vertical"
+        }
+      ],
+      "default": "4 / 3"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio_desktop",
+      "label": "Proporción de la imagen en escritorio",
+      "options": [
+        {
+          "value": "1 / 1",
+          "label": "Cuadrada"
+        },
+        {
+          "value": "4 / 3",
+          "label": "Horizontal"
+        },
+        {
+          "value": "3 / 4",
+          "label": "Vertical"
+        }
+      ],
+      "default": "4 / 3"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "eyebrow",
+      "label": "Texto superior"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Encabezado"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Tamaño del encabezado",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Grande"
+        },
+        {
+          "value": "h3",
+          "label": "Mediano"
+        },
+        {
+          "value": "h4",
+          "label": "Pequeño"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Etiqueta del encabezado",
+      "options": [
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texto"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto del botón"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Estilo del botón",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Sólido"
+        },
+        {
+          "value": "outline",
+          "label": "Contorno"
+        },
+        {
+          "value": "link",
+          "label": "Enlace"
+        }
+      ],
+      "default": "solid"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Imagen y texto adaptable"
+    }
+  ]
+}
+{% endschema %}
