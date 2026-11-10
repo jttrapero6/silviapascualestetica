@@ -183,6 +183,30 @@
         "mobile_text_position": "place-self-center"
       }
     },
+    "image_text_side_by_side_R4zVPk": {
+      "type": "image-text-side-by-side",
+      "name": "Imagen y texto adaptable",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "image": "shopify://shop_images/IMG_9993_2.jpg",
+        "image_position": "left",
+        "mobile_order": "content_first",
+        "gap_mobile": 36,
+        "gap_desktop": 56,
+        "image_width": "40",
+        "content_width": "full",
+        "image_ratio_mobile": "1 / 1",
+        "image_ratio_desktop": "1 / 1",
+        "eyebrow": "",
+        "heading": "¿Qué es <em>{{ product.title }}</em>?",
+        "heading_size": "h3",
+        "heading_tag": "h2",
+        "text": "{{ product.description }}",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "solid"
+      }
+    },
     "text_with_icons_rMJqmB": {
       "type": "text-with-icons",
       "blocks": {
@@ -237,8 +261,8 @@
       "settings": {
         "color_scheme": "scheme-2",
         "subheading": "",
-        "title": "¿Qué es <em>{{ product.title }}</em>?",
-        "content": "{{ product.description }}",
+        "title": "",
+        "content": "",
         "heading_tag": "h3",
         "text_alignment": "center",
         "items_per_row_desktop": 4,
@@ -252,7 +276,6 @@
     },
     "custom_liquid_bc4MNi": {
       "type": "custom-liquid",
-      "disabled": true,
       "name": "t:sections.custom_liquid.name",
       "settings": {
         "color_scheme": "scheme-2",
@@ -324,7 +347,6 @@
       "block_order": [
         "play_button_QpWzea"
       ],
-      "disabled": true,
       "name": "t:sections.video.name",
       "settings": {
         "show_when_empty": true,
@@ -332,9 +354,10 @@
         "allow_transparent_header": true,
         "autoplay": true,
         "show_controls": false,
-        "content_width": "xl",
+        "content_width": "full",
         "video_size": "auto",
         "mobile_video_size": "md",
+        "video": "shopify://files/videos/IMG_7670.MOV",
         "external_video_url": ""
       }
     },
@@ -437,6 +460,7 @@
   "order": [
     "main",
     "image_with_text_overlay_yexDeB",
+    "image_text_side_by_side_R4zVPk",
     "text_with_icons_rMJqmB",
     "custom_liquid_bc4MNi",
     "before_after_qTCtcr",
