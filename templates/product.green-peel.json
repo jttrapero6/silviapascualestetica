@@ -174,8 +174,9 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
+        "image": "shopify://shop_images/Tratamiento_facial_con_mascarilla_herbal.png",
         "overlay_color": "#000000",
-        "overlay_opacity": 20,
+        "overlay_opacity": 30,
         "enable_sticky_content": false,
         "content_width": "md",
         "desktop_text_position": "sm:place-self-center",
@@ -251,6 +252,7 @@
     },
     "custom_liquid_bc4MNi": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom_liquid.name",
       "settings": {
         "color_scheme": "scheme-2",
@@ -286,6 +288,7 @@
         "before_fefz8j",
         "after_arHAQL"
       ],
+      "disabled": true,
       "name": "t:sections.before_after.name",
       "settings": {
         "show_when_empty": true,
@@ -321,6 +324,7 @@
       "block_order": [
         "play_button_QpWzea"
       ],
+      "disabled": true,
       "name": "t:sections.video.name",
       "settings": {
         "show_when_empty": true,
@@ -336,6 +340,7 @@
     },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
+      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
@@ -405,15 +410,13 @@
         "question_Hffkgp",
         "question_9jLicq"
       ],
-      "custom_css": [
-        ".section-stack {margin-top: 4rem; margin-bottom: 4rem;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.faq.name",
       "settings": {
         "color_scheme": "scheme-2",
         "layout": "stacked",
         "accordion_style": "border",
-        "question_style": "text",
+        "question_style": "subheading",
         "subheading": "",
         "title": "Preguntas frecuentes",
         "title_tag": "h3",
