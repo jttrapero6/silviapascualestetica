@@ -87,6 +87,29 @@
         "background": "#000000"
       }
     },
+    "image_text_side_by_side_hWGaY3": {
+      "type": "image-text-side-by-side",
+      "name": "Imagen y texto adaptable",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "image": "shopify://shop_images/IMG_9527.heic",
+        "image_position": "left",
+        "mobile_order": "image_first",
+        "gap_mobile": 36,
+        "gap_desktop": 52,
+        "image_width": "40",
+        "image_ratio_mobile": "1 / 1",
+        "image_ratio_desktop": "3 / 4",
+        "eyebrow": "",
+        "heading": "Biografía",
+        "heading_size": "h3",
+        "heading_tag": "h2",
+        "text": "<p>Desde muy joven crecí rodeada de personas trabajadoras, cercanas y con grandes valores humanos. En mi entorno familiar aprendí, casi sin darme cuenta,&nbsp;<strong>la importancia del respeto, del esfuerzo diario y del trato sincero con los demás</strong>. Ese aprendizaje temprano me enseñó que atender bien no es solo hacer las cosas correctamente, sino hacerlo desde la honestidad, la dedicación y el compromiso, valores que hoy siguen guiando mi forma de trabajar.</p><p>Mi trayectoria profesional comenzó en 1998, cuando la estética básica era el eje principal de los centros de estética. Durante esos primeros años, trabajé con constancia y dedicación,&nbsp;<strong>invirtiendo de forma progresiva en la tecnología disponible en aquel momento</strong>. Nunca tuve prisa por terminar la jornada: entendía el trabajo como una responsabilidad con cada clienta, dedicando el tiempo necesario a cada tratamiento.</p><p>Con la llegada de mis hijas, mis prioridades cambiaron de forma natural. Ellas pasaron a ocupar el primer lugar, y esa etapa estuvo marcada por una dedicación especial a su crianza. Me siento profundamente agradecida a la vida por haber podido hacerlo,&nbsp;<strong>una experiencia que me aportó equilibrio, madurez y una visión más consciente de mi profesión y de la vida.</strong></p><p>A lo largo de todos estos años, la formación continua y la evolución profesional han sido una constante en mi trayectoria.&nbsp;<strong>He seguido invirtiendo en aprendizaje, en nuevas técnicas y en tecnología a medida que la estética avanzaba, incorporando siempre aquello que realmente aportaba valor.</strong></p><p>En 2011 dimos un paso importante con el cambio de ubicación a un centro más amplio y exclusivo, cuidadosamente&nbsp;<strong>diseñado para transmitir calma, elegancia y bienestar.</strong></p><p><strong>Hoy, 27 años después, somos un equipo de cuatro personas altamente preparadas, unidas por la misma visión: trabajar con rigor, honestidad y sensibilidad, ofreciendo tratamientos personalizados, resultados visibles y un trato cercano y humano.</strong></p>",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "solid"
+      }
+    },
     "rich_text_fbmyKX": {
       "type": "rich-text",
       "blocks": {
@@ -130,6 +153,7 @@
         "heading_8dem4Y",
         "richtext_YkR33n"
       ],
+      "disabled": true,
       "custom_css": [
         "img {margin: auto;}",
         ".subheading {margin-left: auto; margin-right: auto;}"
@@ -230,6 +254,7 @@
   "order": [
     "main",
     "slideshow_NFCzjw",
+    "image_text_side_by_side_hWGaY3",
     "rich_text_fbmyKX",
     "reading_text_YGcLFJ",
     "nuestros_valores_7JwGQx"
