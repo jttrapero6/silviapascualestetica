@@ -313,6 +313,7 @@
         "before_fefz8j",
         "after_arHAQL"
       ],
+      "disabled": true,
       "name": "t:sections.before_after.name",
       "settings": {
         "show_when_empty": true,
@@ -348,6 +349,7 @@
       "block_order": [
         "play_button_QpWzea"
       ],
+      "disabled": true,
       "name": "t:sections.video.name",
       "settings": {
         "show_when_empty": true,
@@ -363,6 +365,7 @@
     },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
+      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
@@ -432,9 +435,7 @@
         "question_Hffkgp",
         "question_9jLicq"
       ],
-      "custom_css": [
-        ".section-stack {margin-top: 4rem; margin-bottom: 4rem;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.faq.name",
       "settings": {
         "color_scheme": "scheme-2",
