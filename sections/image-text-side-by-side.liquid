@@ -29,6 +29,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: {{ section.settings.image_object_position_horizontal_mobile }} {{ section.settings.image_object_position_vertical_mobile }};
     }
 
     #shopify-section-{{ section.id }} .image-text-side-by-side__image {
@@ -52,6 +53,11 @@
 
       #shopify-section-{{ section.id }} .image-text-side-by-side__image {
         aspect-ratio: {{ section.settings.image_ratio_desktop }};
+      }
+
+      #shopify-section-{{ section.id }} .image-text-side-by-side__image img,
+      #shopify-section-{{ section.id }} .image-text-side-by-side__image svg {
+        object-position: {{ section.settings.image_object_position_horizontal_desktop }} {{ section.settings.image_object_position_vertical_desktop }};
       }
 
       #shopify-section-{{ section.id }} .image-text-side-by-side__image,
@@ -255,6 +261,94 @@
         }
       ],
       "default": "4 / 3"
+    },
+    {
+      "type": "header",
+      "content": "Encuadre de la imagen en móvil"
+    },
+    {
+      "type": "select",
+      "id": "image_object_position_horizontal_mobile",
+      "label": "Posición horizontal en móvil",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "image_object_position_vertical_mobile",
+      "label": "Posición vertical en móvil",
+      "options": [
+        {
+          "value": "top",
+          "label": "Arriba"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "bottom",
+          "label": "Abajo"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Encuadre de la imagen en escritorio"
+    },
+    {
+      "type": "select",
+      "id": "image_object_position_horizontal_desktop",
+      "label": "Posición horizontal en escritorio",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "image_object_position_vertical_desktop",
+      "label": "Posición vertical en escritorio",
+      "options": [
+        {
+          "value": "top",
+          "label": "Arriba"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "bottom",
+          "label": "Abajo"
+        }
+      ],
+      "default": "center"
     },
     {
       "type": "inline_richtext",
