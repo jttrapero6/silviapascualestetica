@@ -174,6 +174,7 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
+        "image": "shopify://shop_images/Dispositivo_facial_de_extraccion_iluminado_en_azul.png",
         "overlay_color": "#000000",
         "overlay_opacity": 20,
         "enable_sticky_content": false,
