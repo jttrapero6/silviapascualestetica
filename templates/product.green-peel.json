@@ -193,7 +193,7 @@
         "mobile_order": "content_first",
         "gap_mobile": 36,
         "gap_desktop": 56,
-        "image_width": "40",
+        "image_width": "50",
         "content_width": "full",
         "image_ratio_mobile": "1 / 1",
         "image_ratio_desktop": "1 / 1",
