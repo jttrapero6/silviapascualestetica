@@ -196,7 +196,7 @@
         "image_width": "50",
         "content_width": "full",
         "image_ratio_mobile": "3 / 4",
-        "image_ratio_desktop": "1 / 1",
+        "image_ratio_desktop": "4 / 3",
         "image_object_position_horizontal_mobile": "center",
         "image_object_position_vertical_mobile": "center",
         "image_object_position_horizontal_desktop": "center",
