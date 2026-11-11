@@ -1,7 +1,7 @@
 {%- liquid
   assign section_has_content = false
 
-  if section.settings.image != blank or section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.text != blank
+  if section.settings.video != blank or section.settings.image != blank or section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.text != blank
     assign section_has_content = true
   endif
 
@@ -24,12 +24,19 @@
     }
 
     #shopify-section-{{ section.id }} .image-text-side-by-side__image img,
-    #shopify-section-{{ section.id }} .image-text-side-by-side__image svg {
+    #shopify-section-{{ section.id }} .image-text-side-by-side__image svg,
+    #shopify-section-{{ section.id }} .image-text-side-by-side__image video {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: {{ section.settings.image_object_position_horizontal_mobile }} {{ section.settings.image_object_position_vertical_mobile }};
+    }
+
+    #shopify-section-{{ section.id }} .image-text-side-by-side__image video-media {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
     #shopify-section-{{ section.id }} .image-text-side-by-side__image {
@@ -56,7 +63,8 @@
       }
 
       #shopify-section-{{ section.id }} .image-text-side-by-side__image img,
-      #shopify-section-{{ section.id }} .image-text-side-by-side__image svg {
+      #shopify-section-{{ section.id }} .image-text-side-by-side__image svg,
+      #shopify-section-{{ section.id }} .image-text-side-by-side__image video {
         object-position: {{ section.settings.image_object_position_horizontal_desktop }} {{ section.settings.image_object_position_vertical_desktop }};
       }
 
@@ -82,7 +90,9 @@
     <div class="container section-spacing">
       <div class="image-text-side-by-side max-w-{{ section.settings.content_width }} mx-auto">
         <div class="image-text-side-by-side__image">
-          {%- if section.settings.image != blank -%}
+          {%- if section.settings.video != blank -%}
+            {%- render 'media', media: section.settings.video, controls: true -%}
+          {%- elsif section.settings.image != blank -%}
             {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: widths: '400,600,800,1000,1200,1600,2000', sizes: '(max-width: 699px) 100vw, 50vw' -}}
           {%- else -%}
             {{- 'image' | placeholder_svg_tag -}}
@@ -125,6 +135,12 @@
       "type": "image_picker",
       "id": "image",
       "label": "Imagen"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Vídeo",
+      "info": "Si seleccionas un vídeo, se mostrará en lugar de la imagen."
     },
     {
       "type": "select",
