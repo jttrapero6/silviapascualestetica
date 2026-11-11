@@ -174,13 +174,41 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
-        "image": "{{ product.metafields.custom.imagen_cabecera.value }}",
+        "image": "shopify://shop_images/Masaje_facial_relajante_en_spa.png",
         "overlay_color": "#000000",
         "overlay_opacity": 20,
         "enable_sticky_content": false,
         "content_width": "md",
         "desktop_text_position": "sm:place-self-center",
         "mobile_text_position": "place-self-center"
+      }
+    },
+    "image_text_side_by_side_BPxihC": {
+      "type": "image-text-side-by-side",
+      "name": "Imagen y texto adaptable",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "video": "shopify://files/videos/IMG_8947_3dc4639e-ffe1-4786-800e-a399c806ddac.MOV",
+        "image_position": "left",
+        "mobile_order": "content_first",
+        "gap_mobile": 20,
+        "gap_desktop": 40,
+        "image_width": "50",
+        "content_width": "lg",
+        "image_ratio_mobile": "3 / 4",
+        "image_ratio_desktop": "3 / 4",
+        "image_object_position_horizontal_mobile": "center",
+        "image_object_position_vertical_mobile": "center",
+        "image_object_position_horizontal_desktop": "center",
+        "image_object_position_vertical_desktop": "center",
+        "eyebrow": "",
+        "heading": "¿Qué es <em>{{ product.title }}</em>?",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "text": "<p>{{ product.description }}</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_style": "solid"
       }
     },
     "text_with_icons_rMJqmB": {
@@ -237,8 +265,8 @@
       "settings": {
         "color_scheme": "scheme-2",
         "subheading": "",
-        "title": "¿Qué es <em>{{ product.title }}</em>?",
-        "content": "{{ product.description }}",
+        "title": "",
+        "content": "",
         "heading_tag": "h3",
         "text_alignment": "center",
         "items_per_row_desktop": 4,
@@ -252,6 +280,7 @@
     },
     "custom_liquid_bc4MNi": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom_liquid.name",
       "settings": {
         "color_scheme": "scheme-2",
@@ -268,7 +297,6 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "{{ product.metafields.custom.foto_antes.value }}",
             "text": "Antes",
             "text_size": "h4",
             "text_position": "start"
@@ -278,7 +306,6 @@
           "type": "after",
           "settings": {
             "color_scheme": "",
-            "image": "{{ product.metafields.custom.foto_despues.value }}",
             "text": "Después",
             "text_size": "h4",
             "text_position": "start"
@@ -289,10 +316,11 @@
         "before_fefz8j",
         "after_arHAQL"
       ],
+      "disabled": true,
       "name": "t:sections.before_after.name",
       "settings": {
-        "color_scheme": "scheme-2",
         "show_when_empty": true,
+        "color_scheme": "scheme-2",
         "layout": "stacked",
         "add_comparison_spacing": false,
         "subheading": "",
@@ -324,27 +352,28 @@
       "block_order": [
         "play_button_QpWzea"
       ],
+      "disabled": true,
       "name": "t:sections.video.name",
       "settings": {
-        "color_scheme": "",
         "show_when_empty": true,
+        "color_scheme": "",
         "allow_transparent_header": true,
         "autoplay": true,
         "show_controls": false,
         "content_width": "xl",
         "video_size": "auto",
         "mobile_video_size": "md",
-        "video": "{{ product.metafields.custom.video.value }}",
         "external_video_url": ""
       }
     },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
+      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
-        "color_scheme": "scheme-2",
         "show_when_empty": true,
-        "product_list": "{{ product.metafields.custom.linea_de_productos.value }}",
+        "color_scheme": "scheme-2",
+        "product_list": [],
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
@@ -409,9 +438,7 @@
         "question_Hffkgp",
         "question_9jLicq"
       ],
-      "custom_css": [
-        ".section-stack {margin-top: 4rem; margin-bottom: 4rem;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.faq.name",
       "settings": {
         "color_scheme": "scheme-2",
@@ -438,6 +465,7 @@
   "order": [
     "main",
     "image_with_text_overlay_yexDeB",
+    "image_text_side_by_side_BPxihC",
     "text_with_icons_rMJqmB",
     "custom_liquid_bc4MNi",
     "before_after_qTCtcr",
