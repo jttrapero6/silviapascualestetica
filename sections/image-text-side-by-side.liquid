@@ -91,7 +91,7 @@
       <div class="image-text-side-by-side max-w-{{ section.settings.content_width }} mx-auto">
         <div class="image-text-side-by-side__image">
           {%- if section.settings.video != blank -%}
-            {%- render 'media', media: section.settings.video, controls: true -%}
+            {%- render 'media', media: section.settings.video, autoplay: true, loop: true, muted: true, controls: false -%}
           {%- elsif section.settings.image != blank -%}
             {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: widths: '400,600,800,1000,1200,1600,2000', sizes: '(max-width: 699px) 100vw, 50vw' -}}
           {%- else -%}
