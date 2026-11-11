@@ -288,6 +288,17 @@
         "add_horizontal_spacing": true
       }
     },
+    "custom_liquid_WehWRY": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "liquid": "",
+        "text_alignment": "left",
+        "add_vertical_spacing": true,
+        "add_horizontal_spacing": true
+      }
+    },
     "before_after_qTCtcr": {
       "type": "before-after",
       "blocks": {
@@ -464,6 +475,7 @@
     "main",
     "image_with_text_overlay_yexDeB",
     "image_text_side_by_side_MBeMVD",
+    "custom_liquid_WehWRY",
     "text_with_icons_rMJqmB",
     "custom_liquid_bc4MNi",
     "before_after_qTCtcr",
