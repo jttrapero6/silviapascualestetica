@@ -138,6 +138,7 @@
           "settings": {
             "title": "Celulitis edematosa",
             "image": "shopify://shop_images/Sin_nombre.png",
+            "video": "shopify://files/videos/IMG_0816.MOV",
             "question": "¿Notas la piel de muslos o glúteos más irregular, con hinchazón y sensación de piernas pesadas o cansadas?",
             "content": "<p>La celulitis es una alteración multifactorial y <strong>no es simplemente “grasa”</strong>: intervienen el tejido adiposo, la microcirculación, el drenaje, el tejido conjuntivo, las hormonas y la firmeza de la piel. Y no existe una única celulitis.</p><p>La edematosa suele acompañarse de retención de líquidos. La piel puede verse acolchada y la congestión se hace más evidente al final del día.</p>",
             "detail_1_title": "Cómo se percibe",
@@ -146,7 +147,9 @@
             "detail_2_text": "Mejorar el drenaje y favorecer una mayor sensación de ligereza.",
             "detail_3_title": "Objetivo",
             "detail_3_text": "Piernas más ligeras y una piel que mejora progresivamente su aspecto y calidad.",
-            "highlight": "Primero devolvemos ligereza al tejido; después, la piel empieza a responder."
+            "highlight": "Primero devolvemos ligereza al tejido; después, la piel empieza a responder.",
+            "button_text": "",
+            "button_link": ""
           }
         },
         "need_celulitis_blanda": {
@@ -154,6 +157,7 @@
           "settings": {
             "title": "Celulitis blanda",
             "image": "shopify://shop_images/Sin_nombre.png",
+            "video": "shopify://files/videos/IMG_1030 (1).MOV",
             "question": "¿Se hace más evidente cuando estás de pie y notas que la piel ha perdido tono?",
             "content": "<p>Suele aparecer en tejidos con menor tono y firmeza, y es frecuente que vaya acompañada de cierta flacidez.</p><p>Es habitual encontrarla después de cambios de peso, con el paso de los años o en personas con poca actividad física.</p>",
             "detail_1_title": "Cómo se percibe",
@@ -162,14 +166,16 @@
             "detail_2_text": "Mejorar progresivamente la firmeza y la calidad del tejido.",
             "detail_3_title": "Objetivo",
             "detail_3_text": "Una piel más uniforme, lisa y cuidada.",
-            "highlight": "Cuando el tejido recupera firmeza, la superficie de la piel se ve más uniforme."
+            "highlight": "Cuando el tejido recupera firmeza, la superficie de la piel se ve más uniforme.",
+            "button_text": "",
+            "button_link": ""
           }
         },
         "need_celulitis_fibrosa": {
           "type": "need",
           "settings": {
             "title": "Celulitis compacta o fibrosa",
-            "image": "shopify://shop_images/Sin_nombre.png",
+            "image": "shopify://shop_images/IMG_1024.jpg",
             "question": "¿Notas el tejido duro, denso y poco móvil, incluso con cierta sensibilidad en algunas zonas?",
             "content": "<p>El tejido se percibe más denso, firme y menos móvil, y las irregularidades de la piel pueden estar más marcadas. En algunas personas incluso puede existir sensibilidad en determinadas zonas.</p><p>Es una celulitis que suele requerir mayor constancia y paciencia.</p>",
             "detail_1_title": "Cómo se percibe",
@@ -178,14 +184,16 @@
             "detail_2_text": "Mejorar progresivamente la calidad y la movilidad del tejido.",
             "detail_3_title": "Objetivo",
             "detail_3_text": "Suavizar la apariencia irregular de la piel con constancia.",
-            "highlight": "Sea cual sea el tipo de celulitis, nuestro objetivo no es prometer que desaparecerá de la noche a la mañana, sino que la piel se vea progresivamente más uniforme, firme y bonita."
+            "highlight": "Sea cual sea el tipo de celulitis, nuestro objetivo no es prometer que desaparecerá de la noche a la mañana, sino que la piel se vea progresivamente más uniforme, firme y bonita.",
+            "button_text": "",
+            "button_link": ""
           }
         },
         "need_flacidez": {
           "type": "need",
           "settings": {
             "title": "Flacidez corporal",
-            "image": "shopify://shop_images/16748.jpg",
+            "image": "shopify://shop_images/12A516D3-A79E-438B-81BB-4557C9AAA16E.png",
             "question": "¿Brazos, abdomen, muslos o glúteos menos tersos aunque tu peso apenas haya cambiado?",
             "content": "<p>La flacidez aparece cuando los tejidos pierden parte de su capacidad de sostén. El paso del tiempo, los cambios hormonales, los embarazos, las variaciones de peso y la disminución de colágeno y elastina la hacen cada vez más visible.</p><p>No siempre hay un exceso de piel: muchas veces es la propia calidad del tejido la que ha cambiado.</p>",
             "detail_1_title": "",
@@ -194,7 +202,9 @@
             "detail_2_text": "",
             "detail_3_title": "",
             "detail_3_text": "",
-            "highlight": "Buscamos una piel más tersa, firme y tonificada, respetando los tiempos que necesita el cuerpo."
+            "highlight": "Buscamos una piel más tersa, firme y tonificada, respetando los tiempos que necesita el cuerpo.",
+            "button_text": "",
+            "button_link": ""
           }
         },
         "need_grasa": {
@@ -202,6 +212,7 @@
           "settings": {
             "title": "Grasa localizada",
             "image": "shopify://shop_images/Tratamientos_spa_de_bienestar_y_cuidado_piel-1.png",
+            "video": "shopify://files/videos/IMG_0818.MOV",
             "question": "¿Has perdido peso pero sigues teniendo ese pequeño volumen en abdomen, flancos, cartucheras o brazos?",
             "content": "<p>Es una acumulación de tejido adiposo que puede mantenerse incluso con un peso dentro de la normalidad. Su distribución depende de la genética, las hormonas, la edad y el estilo de vida, por eso no responde igual que una pérdida de peso general.</p><p>Trabajamos su volumen y contorno con los recursos más adecuados para cada caso, siempre dentro de unas expectativas reales.</p>",
             "detail_1_title": "",
@@ -210,7 +221,9 @@
             "detail_2_text": "",
             "detail_3_title": "",
             "detail_3_text": "",
-            "highlight": "El tratamiento no sustituye al movimiento ni a unos hábitos saludables: cuando van en la misma dirección, el resultado es mayor y más fácil de mantener."
+            "highlight": "El tratamiento no sustituye al movimiento ni a unos hábitos saludables: cuando van en la misma dirección, el resultado es mayor y más fácil de mantener.",
+            "button_text": "",
+            "button_link": ""
           }
         },
         "need_silueta": {
@@ -218,6 +231,7 @@
           "settings": {
             "title": "Remodelación de la silueta",
             "image": "shopify://shop_images/Tratamientos_spa_de_bienestar_y_cuidado_piel-2.png",
+            "video": "shopify://files/videos/IMG_0814.MOV",
             "question": "¿Sientes que la cintura se ha desdibujado o que tu cuerpo ha perdido la forma que tenía?",
             "content": "<p>A veces no hay un único problema. No buscamos simplemente “quitar grasa”, sino <strong>recuperar visualmente la armonía de la silueta</strong>: observamos cómo se distribuye el volumen, qué zonas han perdido definición y cómo están los tejidos, y trabajamos varias áreas de forma coordinada.</p>",
             "detail_1_title": "",
@@ -226,7 +240,9 @@
             "detail_2_text": "",
             "detail_3_title": "",
             "detail_3_text": "",
-            "highlight": "Remodelar no significa necesariamente pesar menos. A veces significa volver a reconocer la forma de tu cuerpo."
+            "highlight": "Remodelar no significa necesariamente pesar menos. A veces significa volver a reconocer la forma de tu cuerpo.",
+            "button_text": "",
+            "button_link": ""
           }
         },
         "need_brazos": {
@@ -242,7 +258,9 @@
             "detail_2_text": "",
             "detail_3_title": "",
             "detail_3_text": "",
-            "highlight": "Hay zonas que no necesitan esconderse: necesitan que volvamos a cuidarlas."
+            "highlight": "Hay zonas que no necesitan esconderse: necesitan que volvamos a cuidarlas.",
+            "button_text": "",
+            "button_link": ""
           }
         },
         "need_drenaje": {
@@ -250,6 +268,7 @@
           "settings": {
             "title": "Circulación y drenaje",
             "image": "shopify://shop_images/inner-masaje.png",
+            "video": "shopify://files/videos/e79207e6-0912-41d3-9fda-c2e16c51ca19.mp4",
             "question": "¿Llegas al final del día con las piernas cansadas, los tobillos hinchados o sensación de pesadez?",
             "content": "<p>Hay momentos en los que el cuerpo no pide perder centímetros: <strong>pide ligereza</strong>. El sedentarismo, muchas horas de pie o sentada, el calor o los cambios hormonales favorecen la congestión. Aquí el trabajo manual tiene un papel protagonista, acompañado de otros recursos cuando procede.</p>",
             "detail_1_title": "",
@@ -258,14 +277,16 @@
             "detail_2_text": "",
             "detail_3_title": "",
             "detail_3_text": "",
-            "highlight": "Esa sensación de levantarte de la camilla y sentir que tu cuerpo pesa menos."
+            "highlight": "Esa sensación de levantarte de la camilla y sentir que tu cuerpo pesa menos.",
+            "button_text": "",
+            "button_link": ""
           }
         },
         "need_bienestar": {
           "type": "need",
           "settings": {
             "title": "Bienestar y relajación",
-            "image": "shopify://shop_images/297988D6-4419-4FB2-A7AA-D289435A6DB3.png",
+            "image": "shopify://shop_images/Sin_nombre.png",
             "question": "Y hay veces en las que no necesitas corregir nada. Simplemente necesitas parar.",
             "content": "<p>El estrés y el ritmo de vida se acumulan en el cuerpo: espalda cargada, hombros tensos, piernas cansadas. Estos tratamientos regalan al cuerpo un espacio para soltar, respirar y descansar, donde el masaje, el contacto y el ambiente son los protagonistas.</p>",
             "detail_1_title": "",
@@ -274,7 +295,9 @@
             "detail_2_text": "",
             "detail_3_title": "",
             "detail_3_text": "",
-            "highlight": "Porque el bienestar también forma parte de la belleza. Y a veces, cuidarse no significa hacer más. Significa parar."
+            "highlight": "Porque el bienestar también forma parte de la belleza. Y a veces, cuidarse no significa hacer más. Significa parar.",
+            "button_text": "",
+            "button_link": ""
           }
         }
       },
