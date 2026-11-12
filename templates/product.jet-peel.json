@@ -348,7 +348,7 @@
       "type": "spacing",
       "name": "Spacing",
       "settings": {
-        "desktop_spacing": 50,
+        "desktop_spacing": 0,
         "mobile_spacing": 0
       }
     },
