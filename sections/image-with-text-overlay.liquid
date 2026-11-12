@@ -1,4 +1,32 @@
-<div {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %} class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
+{%- liquid
+  assign iwto_ratio = section.settings.aspect_ratio | default: 'original'
+  assign iwto_mobile_ratio = section.settings.mobile_aspect_ratio | default: 'inherit'
+  if iwto_mobile_ratio == 'inherit'
+    assign iwto_mobile_ratio = iwto_ratio
+  endif
+
+  assign iwto_classes = 'iwto'
+  assign iwto_style = ''
+
+  if iwto_ratio != 'original'
+    assign iwto_classes = iwto_classes | append: ' iwto--ratio'
+    assign iwto_style = iwto_style | append: '--iwto-ratio: ' | append: iwto_ratio | append: ';'
+  endif
+
+  if iwto_mobile_ratio != 'original'
+    assign iwto_classes = iwto_classes | append: ' iwto--ratio-mobile'
+    assign iwto_style = iwto_style | append: '--iwto-ratio-mobile: ' | append: iwto_mobile_ratio | append: ';'
+  endif
+
+  case section.settings.mobile_layout
+    when 'stack_top'
+      assign iwto_classes = iwto_classes | append: ' iwto--stack iwto--stack-top'
+    when 'stack_bottom'
+      assign iwto_classes = iwto_classes | append: ' iwto--stack iwto--stack-bottom'
+  endcase
+-%}
+
+<div {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %} class="{{ iwto_classes }} color-scheme color-scheme--{{ section.settings.color_scheme.id }}" {% if iwto_style != blank %}style="{{ iwto_style }}"{% endif %}>
   <div class="content-box min-h-{{ section.settings.image_size }}">
     <div class="content-box__background-media with-overlay" style="--overlay: {{ section.settings.overlay_color.rgb }} / {{ section.settings.overlay_opacity | divided_by: 100.0 }}">
       {%- liquid
@@ -34,6 +62,68 @@
     {%- endif -%}
   </div>
 </div>
+
+{% stylesheet %}
+  /* Aspect ratio (overlay mode) */
+  @media screen and (min-width: 700px) {
+    .iwto--ratio .content-box {
+      aspect-ratio: var(--iwto-ratio);
+      min-height: auto;
+    }
+
+    .iwto--ratio .content-box .content-box__background-media {
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  @media screen and (max-width: 699px) {
+    .iwto--ratio-mobile:not(.iwto--stack) .content-box {
+      aspect-ratio: var(--iwto-ratio-mobile);
+      min-height: auto;
+    }
+
+    .iwto--ratio-mobile:not(.iwto--stack) .content-box .content-box__background-media {
+      position: absolute;
+      inset: 0;
+    }
+
+    /* Stacked layout: media and text one above the other */
+    .iwto.iwto--stack .content-box {
+      grid-template-rows: auto auto;
+      min-height: 0;
+      aspect-ratio: auto;
+    }
+
+    .iwto.iwto--stack .content-box > .content-box__background-media.with-overlay {
+      grid-column: full-start / full-end;
+      grid-row: 1;
+      position: relative;
+      inset: auto;
+      height: auto;
+      aspect-ratio: var(--iwto-ratio-mobile, auto);
+    }
+
+    .iwto.iwto--stack .content-box > .content-box__background-media.with-overlay::after {
+      display: none;
+    }
+
+    .iwto.iwto--stack .content-box > :not(.content-box__background-media) {
+      grid-column: inner-start / inner-end;
+      grid-row: 2;
+      padding-block: var(--content-box-spacing);
+    }
+
+    .iwto.iwto--stack-top .content-box > .content-box__background-media.with-overlay {
+      grid-row: 2;
+    }
+
+    .iwto.iwto--stack-top .content-box > :not(.content-box__background-media) {
+      grid-row: 1;
+      padding-block-start: calc(var(--content-box-spacing) + var(--content-box-enable-transparent-header-compensation) * var(--header-height, 0px));
+    }
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -94,6 +184,107 @@
       ],
       "info": "t:global.image.ratio_avoid_cropping_info",
       "default": "auto"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Proporción del media",
+      "info": "Si eliges una proporción, se ignora el tamaño de imagen.",
+      "options": [
+        {
+          "value": "original",
+          "label": "Según tamaño de imagen"
+        },
+        {
+          "value": "1/1",
+          "label": "1:1 (cuadrado)"
+        },
+        {
+          "value": "4/5",
+          "label": "4:5 (vertical)"
+        },
+        {
+          "value": "3/4",
+          "label": "3:4 (vertical)"
+        },
+        {
+          "value": "2/3",
+          "label": "2:3 (vertical)"
+        },
+        {
+          "value": "9/16",
+          "label": "9:16 (vertical)"
+        },
+        {
+          "value": "4/3",
+          "label": "4:3"
+        },
+        {
+          "value": "3/2",
+          "label": "3:2"
+        },
+        {
+          "value": "16/9",
+          "label": "16:9"
+        },
+        {
+          "value": "21/9",
+          "label": "21:9 (panorámico)"
+        }
+      ],
+      "default": "original"
+    },
+    {
+      "type": "select",
+      "id": "mobile_aspect_ratio",
+      "label": "Proporción del media en móvil",
+      "options": [
+        {
+          "value": "inherit",
+          "label": "Igual que en escritorio"
+        },
+        {
+          "value": "1/1",
+          "label": "1:1 (cuadrado)"
+        },
+        {
+          "value": "4/5",
+          "label": "4:5 (vertical)"
+        },
+        {
+          "value": "3/4",
+          "label": "3:4 (vertical)"
+        },
+        {
+          "value": "2/3",
+          "label": "2:3 (vertical)"
+        },
+        {
+          "value": "9/16",
+          "label": "9:16 (vertical)"
+        },
+        {
+          "value": "4/3",
+          "label": "4:3"
+        },
+        {
+          "value": "3/2",
+          "label": "3:2"
+        },
+        {
+          "value": "16/9",
+          "label": "16:9"
+        },
+        {
+          "value": "21/9",
+          "label": "21:9 (panorámico)"
+        },
+        {
+          "value": "original",
+          "label": "Según tamaño de imagen"
+        }
+      ],
+      "default": "inherit"
     },
     {
       "type": "image_picker",
@@ -157,6 +348,26 @@
         }
       ],
       "default": "md"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Disposición en móvil",
+      "options": [
+        {
+          "value": "overlay",
+          "label": "Texto sobre la imagen"
+        },
+        {
+          "value": "stack_top",
+          "label": "Texto arriba, imagen abajo"
+        },
+        {
+          "value": "stack_bottom",
+          "label": "Imagen arriba, texto abajo"
+        }
+      ],
+      "default": "overlay"
     },
     {
       "type": "select",
