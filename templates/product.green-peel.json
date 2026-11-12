@@ -208,7 +208,7 @@
         "richtext_DCiQz6": {
           "type": "richtext",
           "settings": {
-            "text": "<p>{{ product.description }}</p>",
+            "text": "{{ product.description }}",
             "position": "middle_left"
           }
         }
@@ -430,14 +430,6 @@
         "mobile_spacing": 35
       }
     },
-    "spacing_VQMDBe": {
-      "type": "spacing",
-      "name": "Spacing",
-      "settings": {
-        "desktop_spacing": 50,
-        "mobile_spacing": 35
-      }
-    },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
       "disabled": true,
@@ -524,6 +516,14 @@
         "button_text": "",
         "button_url": "",
         "button_style": "solid"
+      }
+    },
+    "spacing_VQMDBe": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 35
       }
     },
     "floating_atc_button_L3bDtJ": {
