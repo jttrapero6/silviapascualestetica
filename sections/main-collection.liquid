@@ -68,7 +68,20 @@
           {%- else -%}
             <div class="collection__results">
               {%- render 'active-facets', source: collection, hash: "#collection" -%}
-              {%- render 'product-list', products: collection.products, allow_highlight: true, paginate: paginate, blocks: section.blocks, output_override_attributes: true, title_html_tag: section.settings.product_title_html_tag -%}
+              {%- liquid
+                # "Hide collections": one collection per line (title or handle, case-insensitive)
+                assign hidden_collections_raw = section.settings.hidden_collections | newline_to_br | split: '<br />'
+                capture hidden_collections_joined
+                  for hidden_collection in hidden_collections_raw
+                    assign hidden_collection_clean = hidden_collection | strip | downcase
+                    if hidden_collection_clean != blank
+                      echo hidden_collection_clean | append: '||'
+                    endif
+                  endfor
+                endcapture
+                assign hidden_collections = hidden_collections_joined | split: '||'
+              -%}
+              {%- render 'product-list', products: collection.products, allow_highlight: true, paginate: paginate, blocks: section.blocks, output_override_attributes: true, title_html_tag: section.settings.product_title_html_tag, hidden_collections: hidden_collections -%}
             </div>
 
             {%- render 'pagination', paginate: paginate, facet: true, hash: '#collection' -%}
@@ -246,6 +259,13 @@ on desktop based on the settings
       "label": "t:global.faceting.hidden_filter_values",
       "info": "t:global.faceting.hidden_filter_values_info",
       "placeholder": "Silvia Pascual Estética\nTratamientos faciales"
+    },
+    {
+      "type": "textarea",
+      "id": "hidden_collections",
+      "label": "t:global.faceting.hidden_collections",
+      "info": "t:global.faceting.hidden_collections_info",
+      "placeholder": "Masajes"
     },
     {
       "type": "checkbox",

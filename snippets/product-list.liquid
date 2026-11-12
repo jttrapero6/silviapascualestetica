@@ -13,6 +13,7 @@ This component display a list of product that can be used in collection, search.
 @param {boolean} [output_override_attributes] - only for collection page, we allow customers to switch the layout. To avoid CLS, we have to save the attribute in the cart and apply it to the product list. A better approach would be to use container query around cards, but unfortunately we are using subgrid, and currently in browsers, subgrid and container queries can't be used together, so we have to revert to this approach
 @param {object} [paginate] - an optional paginate object when product list is rendered in context of collection pages
 @param {string} [title_html_tag] - semantic HTML tag for product card titles
+@param {array} [hidden_collections] - lowercase collection titles/handles; products belonging to any of them are not rendered
 @param {object} [section]
 {%- enddoc -%}
 
@@ -44,6 +45,20 @@ This component display a list of product that can be used in collection, search.
   {%- endcapture -%}
 
   {%- for product in products -%}
+    {%- if hidden_collections.size > 0 -%}
+      {%- liquid
+        assign is_hidden_product = false
+        for product_collection in product.collections
+          assign product_collection_title = product_collection.title | strip | downcase
+          if hidden_collections contains product_collection_title or hidden_collections contains product_collection.handle
+            assign is_hidden_product = true
+            break
+          endif
+        endfor
+      -%}
+      {%- if is_hidden_product -%}{%- continue -%}{%- endif -%}
+    {%- endif -%}
+
     {%- for block in blocks -%}
       {%- if has_active_filters or paginate.current_page > 1 or forloop.parentloop.index != block.settings.position -%}
         {%- continue -%}
