@@ -35,6 +35,7 @@
     },
     "custom_liquid_AKABnt": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom_liquid.name",
       "settings": {
         "color_scheme": "scheme-2",
@@ -46,6 +47,7 @@
     },
     "blog-post-prev-next": {
       "type": "blog-post-prev-next",
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "heading_size": "h3",
