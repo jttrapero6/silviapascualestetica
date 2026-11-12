@@ -41,6 +41,7 @@
         "show_filter_group_name": false,
         "show_filter_values_count": true,
         "hidden_filter_values": "Silvia Pascual Estética\nCentro de Estética Avanzada Silvia Pascual\nTratamientos Faciales\nTarjeta Regalo\nMasaje\nMasajes",
+        "hidden_collections": "Masajes",
         "open_filters_by_default": false,
         "swatch_selector_size": "lg"
       }
