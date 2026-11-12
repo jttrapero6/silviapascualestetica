@@ -229,7 +229,7 @@
         "overlay_opacity": 20,
         "mobile_order": "text_first",
         "media_aspect_ratio": "4/3",
-        "mobile_media_aspect_ratio": "inherit",
+        "mobile_media_aspect_ratio": "1/1",
         "add_media_spacing": false,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/Tratamiento_facial_relajante_con_mascarilla_verde.png",
