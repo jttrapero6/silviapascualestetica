@@ -1,4 +1,4 @@
-<div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
+<div {% if section.settings.anchor_id != blank %}id="{{ section.settings.anchor_id | handleize }}" style="scroll-margin-top: var(--sticky-area-height, 0px);" {% endif %}class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
   <div class="container section-spacing">
     <div class="section-stack max-w-lg mx-auto text-center">
       {%- if section.settings.title != blank -%}
@@ -58,6 +58,12 @@ Maquillaje' | newline_to_br | split: '<br />' -%}
       "id": "color_scheme",
       "label": "t:global.colors.scheme",
       "default": "scheme-1"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "ID de ancla",
+      "info": "Opcional. Permite enlazar al formulario con #id (por ejemplo #diagnostico)."
     },
     {
       "type": "inline_richtext",

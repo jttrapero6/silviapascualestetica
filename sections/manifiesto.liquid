@@ -1,0 +1,204 @@
+{%- comment -%}
+  Manifiesto: titular editorial a dos columnas + pilares numerados.
+{%- endcomment -%}
+<section class="manifiesto color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
+  <div class="container">
+    <div class="manifiesto__intro">
+      <div class="manifiesto__heading-wrap">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="manifiesto__eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <{{ section.settings.heading_tag }} class="manifiesto__title">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
+        {%- endif -%}
+      </div>
+
+      <div class="manifiesto__body">
+        {%- if section.settings.lead != blank -%}
+          <p class="manifiesto__lead">{{ section.settings.lead }}</p>
+        {%- endif -%}
+        {%- if section.settings.text != blank -%}
+          <div class="manifiesto__text prose">{{ section.settings.text }}</div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <ol class="manifiesto__pillars" role="list">
+        {%- for block in section.blocks -%}
+          <li class="manifiesto__pillar" {{ block.shopify_attributes }}>
+            <span class="manifiesto__pillar-number">{{ block.settings.number | default: forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            {%- if block.settings.title != blank -%}
+              <h3 class="manifiesto__pillar-title">{{ block.settings.title }}</h3>
+            {%- endif -%}
+            {%- if block.settings.content != blank -%}
+              <div class="manifiesto__pillar-text">{{ block.settings.content }}</div>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ol>
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+  .manifiesto {
+    --manifiesto-muted: rgb(var(--text-color) / 0.72);
+    --manifiesto-line: rgb(var(--text-color) / 0.16);
+    padding-block: clamp(4rem, 9vw, 8.5rem);
+  }
+
+  .manifiesto__intro {
+    display: grid;
+    gap: clamp(2rem, 5vw, 6rem);
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .manifiesto__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0 1.5rem;
+    color: var(--manifiesto-muted);
+    font: var(--subheading-font-style) var(--subheading-font-weight) 0.72rem / 1.2 var(--subheading-font-family);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  .manifiesto__eyebrow::before {
+    width: 2.5rem;
+    height: 1px;
+    background: rgb(var(--text-color) / 0.35);
+    content: "";
+  }
+
+  .manifiesto__title {
+    margin: 0;
+    color: rgb(var(--text-color));
+    font: var(--heading-font-style) var(--heading-font-weight) clamp(2.6rem, 5.4vw, 5rem) / 1.02 var(--heading-font-family);
+    letter-spacing: var(--heading-letter-spacing);
+    text-wrap: balance;
+  }
+
+  .manifiesto__lead {
+    margin: 0 0 1.5rem;
+    color: rgb(var(--text-color));
+    font: var(--heading-font-style) var(--heading-font-weight) clamp(1.35rem, 2vw, 1.75rem) / 1.35 var(--heading-font-family);
+    text-wrap: pretty;
+  }
+
+  .manifiesto__text {
+    color: var(--manifiesto-muted);
+    font-size: clamp(0.98rem, 1.2vw, 1.075rem);
+    line-height: 1.75;
+  }
+
+  .manifiesto__pillars {
+    display: grid;
+    gap: 0;
+    max-width: 1280px;
+    margin: clamp(3.5rem, 7vw, 6.5rem) auto 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--manifiesto-line);
+  }
+
+  .manifiesto__pillar {
+    position: relative;
+    padding: clamp(1.75rem, 3vw, 2.75rem) 0;
+    border-bottom: 1px solid var(--manifiesto-line);
+  }
+
+  .manifiesto__pillar-number {
+    display: block;
+    margin-bottom: 1.25rem;
+    color: rgb(var(--text-color) / 0.45);
+    font: var(--heading-font-style) var(--heading-font-weight) 0.95rem / 1 var(--heading-font-family);
+    letter-spacing: 0.12em;
+  }
+
+  .manifiesto__pillar-title {
+    margin: 0 0 0.85rem;
+    color: rgb(var(--text-color));
+    font: var(--heading-font-style) var(--heading-font-weight) clamp(1.5rem, 2.1vw, 1.9rem) / 1.15 var(--heading-font-family);
+    letter-spacing: var(--heading-letter-spacing);
+  }
+
+  .manifiesto__pillar-text {
+    color: var(--manifiesto-muted);
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .manifiesto__pillar-text p { margin: 0; }
+  .manifiesto__pillar-text p + p { margin-top: 0.75rem; }
+
+  @media screen and (min-width: 1000px) {
+    .manifiesto__intro {
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      align-items: end;
+    }
+
+    .manifiesto__pillars {
+      grid-template-columns: repeat({{ section.blocks.size | at_most: 4 | at_least: 1 }}, minmax(0, 1fr));
+      border-bottom: 1px solid var(--manifiesto-line);
+    }
+
+    .manifiesto__pillar {
+      padding-inline: clamp(1.5rem, 2.5vw, 2.75rem);
+      border-bottom: 0;
+    }
+
+    .manifiesto__pillar:first-child { padding-left: 0; }
+    .manifiesto__pillar:last-child { padding-right: 0; }
+
+    .manifiesto__pillar + .manifiesto__pillar {
+      border-left: 1px solid var(--manifiesto-line);
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Manifiesto",
+  "tag": "div",
+  "class": "shopify-section--manifiesto",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" },
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Nuestra forma de trabajar" },
+    { "type": "inline_richtext", "id": "title", "label": "Título", "default": "Trabajar el cuerpo con <em>método</em>" },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Etiqueta HTML del título",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" }
+      ],
+      "default": "h2"
+    },
+    { "type": "text", "id": "lead", "label": "Entradilla destacada" },
+    { "type": "richtext", "id": "text", "label": "Texto" }
+  ],
+  "blocks": [
+    {
+      "type": "pillar",
+      "name": "Pilar",
+      "settings": [
+        { "type": "text", "id": "number", "label": "Número", "info": "Si se deja vacío se numera automáticamente." },
+        { "type": "text", "id": "title", "label": "Título", "default": "Título del pilar" },
+        { "type": "richtext", "id": "content", "label": "Texto", "default": "<p>Describe aquí este pilar.</p>" }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Manifiesto",
+      "blocks": [{ "type": "pillar" }, { "type": "pillar" }, { "type": "pillar" }]
+    }
+  ]
+}
+{% endschema %}

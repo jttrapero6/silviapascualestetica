@@ -1,0 +1,521 @@
+{%- comment -%}
+  Selector de necesidades: índice numerado + panel con imagen/vídeo y contenido.
+  Pensado para presentar muchos temas sin alargar la página.
+{%- endcomment -%}
+{%- if section.blocks.size > 0 -%}
+<section class="necesidades color-scheme color-scheme--{{ section.settings.color_scheme.id }}" data-necesidades>
+  <div class="container">
+    <header class="necesidades__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="necesidades__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="necesidades__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subtitle != blank -%}
+        <div class="necesidades__subtitle">{{ section.settings.subtitle }}</div>
+      {%- endif -%}
+    </header>
+
+    <div class="necesidades__layout">
+      <div class="necesidades__nav" role="tablist" aria-label="{{ section.settings.title | strip_html | escape }}">
+        {%- for block in section.blocks -%}
+          <button
+            class="necesidades__tab{% if forloop.first %} is-active{% endif %}"
+            type="button"
+            role="tab"
+            id="NecesidadTab-{{ block.id }}"
+            aria-controls="NecesidadPanel-{{ block.id }}"
+            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+            tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+            data-necesidades-tab
+          >
+            <span class="necesidades__tab-number">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            <span class="necesidades__tab-label">{{ block.settings.title }}</span>
+          </button>
+        {%- endfor -%}
+      </div>
+
+      <div class="necesidades__panels">
+        {%- for block in section.blocks -%}
+          <article
+            class="necesidades__panel{% if forloop.first %} is-active{% endif %}"
+            role="tabpanel"
+            id="NecesidadPanel-{{ block.id }}"
+            aria-labelledby="NecesidadTab-{{ block.id }}"
+            {% unless forloop.first %}hidden{% endunless %}
+            data-necesidades-panel
+            {{ block.shopify_attributes }}
+          >
+            <div class="necesidades__media">
+              {%- if block.settings.video != blank -%}
+                {%- render 'media', media: block.settings.video, autoplay: true, loop: true, muted: true, controls: false, class: 'necesidades__media-item' -%}
+              {%- elsif block.settings.image != blank -%}
+                {{- block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(max-width: 999px) 100vw, 35vw', widths: '500,700,900,1100,1400', class: 'necesidades__media-item' -}}
+              {%- else -%}
+                {{- 'lifestyle-1' | placeholder_svg_tag: 'necesidades__media-item' -}}
+              {%- endif -%}
+              <span class="necesidades__media-number" aria-hidden="true">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            </div>
+
+            <div class="necesidades__content">
+              <h3 class="necesidades__panel-title">{{ block.settings.title }}</h3>
+
+              {%- if block.settings.question != blank -%}
+                <p class="necesidades__question">{{ block.settings.question }}</p>
+              {%- endif -%}
+
+              {%- if block.settings.content != blank -%}
+                <div class="necesidades__text prose">{{ block.settings.content }}</div>
+              {%- endif -%}
+
+              {%- liquid
+                assign has_details = false
+                if block.settings.detail_1_title != blank or block.settings.detail_2_title != blank or block.settings.detail_3_title != blank
+                  assign has_details = true
+                endif
+              -%}
+              {%- if has_details -%}
+                <ul class="necesidades__details" role="list">
+                  {%- for i in (1..3) -%}
+                    {%- assign d_title_key = 'detail_' | append: i | append: '_title' -%}
+                    {%- assign d_text_key = 'detail_' | append: i | append: '_text' -%}
+                    {%- if block.settings[d_title_key] != blank -%}
+                      <li class="necesidades__detail">
+                        <span class="necesidades__detail-title">{{ block.settings[d_title_key] }}</span>
+                        {%- if block.settings[d_text_key] != blank -%}
+                          <span class="necesidades__detail-text">{{ block.settings[d_text_key] }}</span>
+                        {%- endif -%}
+                      </li>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+
+              {%- if block.settings.highlight != blank -%}
+                <p class="necesidades__highlight">{{ block.settings.highlight }}</p>
+              {%- endif -%}
+            </div>
+          </article>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    function initNecesidades(root) {
+      (root || document).querySelectorAll('[data-necesidades]').forEach(function (section) {
+        if (section.dataset.necesidadesReady === 'true') return;
+        section.dataset.necesidadesReady = 'true';
+
+        var tabs = Array.from(section.querySelectorAll('[data-necesidades-tab]'));
+        var panels = Array.from(section.querySelectorAll('[data-necesidades-panel]'));
+
+        function select(index, focus) {
+          tabs.forEach(function (tab, i) {
+            var active = i === index;
+            tab.classList.toggle('is-active', active);
+            tab.setAttribute('aria-selected', active ? 'true' : 'false');
+            tab.tabIndex = active ? 0 : -1;
+            if (active) {
+              if (focus) tab.focus();
+              var nav = tab.parentElement;
+              if (nav.scrollWidth > nav.clientWidth) {
+                nav.scrollTo({ left: tab.offsetLeft - nav.clientWidth / 2 + tab.clientWidth / 2, behavior: 'smooth' });
+              }
+            }
+          });
+          panels.forEach(function (panel, i) {
+            var active = i === index;
+            panel.classList.toggle('is-active', active);
+            panel.hidden = !active;
+            panel.querySelectorAll('video').forEach(function (video) {
+              if (active) { video.play && video.play().catch(function () {}); } else { video.pause && video.pause(); }
+            });
+          });
+        }
+
+        tabs.forEach(function (tab, i) {
+          tab.addEventListener('click', function () { select(i, false); });
+          tab.addEventListener('keydown', function (event) {
+            var next = null;
+            if (event.key === 'ArrowDown' || event.key === 'ArrowRight') next = (i + 1) % tabs.length;
+            if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+            if (event.key === 'Home') next = 0;
+            if (event.key === 'End') next = tabs.length - 1;
+            if (next !== null) { event.preventDefault(); select(next, true); }
+          });
+        });
+
+        section.addEventListener('shopify:block:select', function (event) {
+          var index = panels.findIndex(function (panel) { return panel.contains(event.target); });
+          if (index > -1) select(index, false);
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () { initNecesidades(); }, { once: true });
+    } else {
+      initNecesidades();
+    }
+    document.addEventListener('shopify:section:load', function (event) { initNecesidades(event.target); });
+  })();
+</script>
+
+<style>
+  .necesidades {
+    --nec-muted: rgb(var(--text-color) / 0.7);
+    --nec-line: rgb(var(--text-color) / 0.14);
+    padding-block: clamp(4rem, 8vw, 7.5rem);
+  }
+
+  .necesidades__header {
+    max-width: 46rem;
+    margin: 0 auto clamp(2.75rem, 5vw, 4.5rem);
+    text-align: center;
+  }
+
+  .necesidades__eyebrow {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    margin: 0 0 1.25rem;
+    color: var(--nec-muted);
+    font: var(--subheading-font-style) var(--subheading-font-weight) 0.72rem / 1.2 var(--subheading-font-family);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  .necesidades__eyebrow::after {
+    width: 3.5rem;
+    height: 1px;
+    background: rgb(var(--text-color) / 0.3);
+    content: "";
+  }
+
+  .necesidades__title {
+    margin: 0;
+    color: rgb(var(--text-color));
+    font: var(--heading-font-style) var(--heading-font-weight) clamp(2.5rem, 5vw, 4.5rem) / 1.02 var(--heading-font-family);
+    letter-spacing: var(--heading-letter-spacing);
+    text-wrap: balance;
+  }
+
+  .necesidades__subtitle {
+    margin-top: 1.25rem;
+    color: var(--nec-muted);
+    font-size: clamp(1rem, 1.3vw, 1.1rem);
+    line-height: 1.7;
+  }
+
+  .necesidades__subtitle p { margin: 0; }
+  .necesidades__subtitle p + p { margin-top: 0.75rem; }
+
+  .necesidades__layout {
+    display: grid;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Navegación */
+  .necesidades__nav {
+    display: flex;
+    gap: 0.5rem;
+    margin-inline: calc(-1 * var(--container-gutter, 1.25rem));
+    padding: 0 var(--container-gutter, 1.25rem) 0.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .necesidades__nav::-webkit-scrollbar { display: none; }
+
+  .necesidades__tab {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.75rem 1.15rem;
+    border: 1px solid var(--nec-line);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--nec-muted);
+    font: var(--text-font-style) var(--text-font-weight) 0.9rem / 1.2 var(--text-font-family);
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+    scroll-snap-align: center;
+    transition: color 220ms ease, border-color 220ms ease, background-color 220ms ease;
+  }
+
+  .necesidades__tab-number {
+    font: var(--heading-font-style) var(--heading-font-weight) 0.8rem / 1 var(--heading-font-family);
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+  }
+
+  .necesidades__tab:hover { color: rgb(var(--text-color)); }
+
+  .necesidades__tab.is-active {
+    border-color: rgb(var(--text-color));
+    background: rgb(var(--text-color));
+    color: rgb(var(--background));
+  }
+
+  .necesidades__tab:focus-visible {
+    outline: 1px solid rgb(var(--text-color));
+    outline-offset: 3px;
+  }
+
+  /* Panel */
+  .necesidades__panel.is-active {
+    display: grid;
+    gap: clamp(1.75rem, 4vw, 4rem);
+    animation: necesidades-in 520ms cubic-bezier(0.2, 0.65, 0.3, 1) both;
+  }
+
+  .necesidades__panel[hidden] { display: none; }
+
+  .necesidades__media {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: rgb(var(--text-color) / 0.05);
+  }
+
+  .necesidades__media img,
+  .necesidades__media video,
+  .necesidades__media svg,
+  .necesidades__media .necesidades__media-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .necesidades__media video-media { display: block; width: 100%; height: 100%; }
+
+  .necesidades__panel.is-active .necesidades__media img,
+  .necesidades__panel.is-active .necesidades__media video {
+    animation: necesidades-zoom 1200ms cubic-bezier(0.2, 0.65, 0.3, 1) both;
+  }
+
+  .necesidades__media-number {
+    position: absolute;
+    left: clamp(1rem, 2vw, 1.75rem);
+    bottom: clamp(0.5rem, 1.5vw, 1.25rem);
+    color: rgb(255 255 255 / 0.9);
+    font: var(--heading-font-style) var(--heading-font-weight) clamp(4rem, 8vw, 7rem) / 0.85 var(--heading-font-family);
+    letter-spacing: -0.04em;
+    text-shadow: 0 2px 30px rgb(0 0 0 / 0.25);
+    pointer-events: none;
+  }
+
+  .necesidades__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .necesidades__panel-title {
+    margin: 0;
+    color: rgb(var(--text-color));
+    font: var(--heading-font-style) var(--heading-font-weight) clamp(2.1rem, 3.6vw, 3.4rem) / 1.05 var(--heading-font-family);
+    letter-spacing: var(--heading-letter-spacing);
+    text-wrap: balance;
+  }
+
+  .necesidades__question {
+    margin: 1.25rem 0 0;
+    padding-left: 1.1rem;
+    border-left: 1px solid rgb(var(--text-color) / 0.35);
+    color: rgb(var(--text-color));
+    font: italic var(--heading-font-weight) clamp(1.1rem, 1.6vw, 1.35rem) / 1.45 var(--heading-font-family);
+  }
+
+  .necesidades__text {
+    margin-top: 1.5rem;
+    color: var(--nec-muted);
+    font-size: clamp(0.98rem, 1.2vw, 1.05rem);
+    line-height: 1.75;
+  }
+
+  .necesidades__details {
+    display: grid;
+    gap: 0;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--nec-line);
+  }
+
+  .necesidades__detail {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--nec-line);
+  }
+
+  .necesidades__detail-title {
+    color: rgb(var(--text-color));
+    font: var(--heading-font-style) var(--heading-font-weight) 1.15rem / 1.25 var(--heading-font-family);
+  }
+
+  .necesidades__detail-text {
+    color: var(--nec-muted);
+    font-size: 0.93rem;
+    line-height: 1.6;
+  }
+
+  .necesidades__highlight {
+    margin: 1.75rem 0 0;
+    color: rgb(var(--text-color));
+    font: var(--heading-font-style) var(--heading-font-weight) clamp(1.15rem, 1.6vw, 1.4rem) / 1.4 var(--heading-font-family);
+    text-wrap: pretty;
+  }
+
+  .necesidades__highlight::before {
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    margin-bottom: 1rem;
+    background: rgb(var(--text-color) / 0.45);
+    content: "";
+  }
+
+  @media screen and (min-width: 700px) {
+    .necesidades__media { aspect-ratio: 16 / 11; }
+    .necesidades__details { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; border-top: 0; }
+    .necesidades__detail { padding: 1rem 0 0; border-top: 1px solid var(--nec-line); border-bottom: 0; }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .necesidades__layout {
+      grid-template-columns: minmax(200px, 0.28fr) minmax(0, 1fr);
+      gap: clamp(2.5rem, 5vw, 5rem);
+      align-items: start;
+    }
+
+    .necesidades__nav {
+      position: sticky;
+      top: calc(var(--sticky-area-height, 0px) + 2rem);
+      flex-direction: column;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      overflow: visible;
+      border-top: 1px solid var(--nec-line);
+    }
+
+    .necesidades__tab {
+      position: relative;
+      width: 100%;
+      padding: 1.15rem 0;
+      border: 0;
+      border-bottom: 1px solid var(--nec-line);
+      border-radius: 0;
+      white-space: normal;
+      font-size: 1rem;
+    }
+
+    .necesidades__tab::after {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 1px;
+      background: rgb(var(--text-color));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 450ms cubic-bezier(0.2, 0.65, 0.3, 1);
+      content: "";
+    }
+
+    .necesidades__tab.is-active {
+      background: transparent;
+      color: rgb(var(--text-color));
+    }
+
+    .necesidades__tab.is-active::after { transform: scaleX(1); }
+
+    .necesidades__tab-label {
+      font: var(--heading-font-style) var(--heading-font-weight) 1.2rem / 1.25 var(--heading-font-family);
+      transition: transform 300ms ease;
+    }
+
+    .necesidades__tab.is-active .necesidades__tab-label { transform: translateX(0.35rem); }
+
+    .necesidades__panel.is-active {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      align-items: center;
+    }
+
+    .necesidades__media { aspect-ratio: 4 / 5; }
+    .necesidades__details { grid-template-columns: minmax(0, 1fr); gap: 0; border-top: 1px solid var(--nec-line); }
+    .necesidades__detail { padding: 0.9rem 0; border-top: 0; border-bottom: 1px solid var(--nec-line); }
+  }
+
+  @keyframes necesidades-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes necesidades-zoom {
+    from { transform: scale(1.06); }
+    to { transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .necesidades__panel.is-active,
+    .necesidades__panel.is-active .necesidades__media img,
+    .necesidades__panel.is-active .necesidades__media video { animation: none; }
+  }
+</style>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Selector de necesidades",
+  "tag": "div",
+  "class": "shopify-section--necesidades-selector",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-2" },
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Qué podemos tratar" },
+    { "type": "inline_richtext", "id": "title", "label": "Título", "default": "Necesidades que podemos <em>trabajar</em>" },
+    { "type": "richtext", "id": "subtitle", "label": "Subtítulo" }
+  ],
+  "blocks": [
+    {
+      "type": "need",
+      "name": "Necesidad",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Título", "default": "Necesidad" },
+        { "type": "image_picker", "id": "image", "label": "Imagen" },
+        { "type": "video", "id": "video", "label": "Vídeo", "info": "Si se añade, sustituye a la imagen. Se reproduce en bucle y sin sonido." },
+        { "type": "textarea", "id": "question", "label": "Pregunta / gancho", "info": "Se muestra en cursiva bajo el título." },
+        { "type": "richtext", "id": "content", "label": "Texto" },
+        { "type": "header", "content": "Detalles (opcional)" },
+        { "type": "text", "id": "detail_1_title", "label": "Detalle 1 · título" },
+        { "type": "textarea", "id": "detail_1_text", "label": "Detalle 1 · texto" },
+        { "type": "text", "id": "detail_2_title", "label": "Detalle 2 · título" },
+        { "type": "textarea", "id": "detail_2_text", "label": "Detalle 2 · texto" },
+        { "type": "text", "id": "detail_3_title", "label": "Detalle 3 · título" },
+        { "type": "textarea", "id": "detail_3_text", "label": "Detalle 3 · texto" },
+        { "type": "header", "content": "Cierre" },
+        { "type": "textarea", "id": "highlight", "label": "Frase destacada" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Selector de necesidades",
+      "blocks": [{ "type": "need" }, { "type": "need" }, { "type": "need" }]
+    }
+  ]
+}
+{% endschema %}
