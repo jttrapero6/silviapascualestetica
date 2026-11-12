@@ -244,7 +244,6 @@
     },
     "image_text_side_by_side_R4zVPk": {
       "type": "image-text-side-by-side",
-      "disabled": true,
       "name": "Imagen y texto adaptable",
       "settings": {
         "color_scheme": "scheme-2",
@@ -372,7 +371,6 @@
         "before_fefz8j",
         "after_arHAQL"
       ],
-      "disabled": true,
       "name": "t:sections.before_after.name",
       "settings": {
         "show_when_empty": true,
@@ -432,7 +430,6 @@
     },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
-      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
