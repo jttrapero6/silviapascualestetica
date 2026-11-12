@@ -29,20 +29,12 @@
             "video": "shopify://files/videos/Mi película 2.mp4",
             "slide_link": "",
             "content_max_width": 1400,
-            "mobile_content_position": "place-self-end-start",
-            "desktop_content_position": "sm:place-self-end-start",
+            "mobile_content_position": "place-self-center",
+            "desktop_content_position": "sm:place-self-center",
             "overlay_color": "#000000",
             "overlay_opacity": 40
           },
           "blocks": {
-            "subheading_rJJHJE": {
-              "type": "subheading",
-              "name": "t:blocks.subheading.name",
-              "settings": {
-                "text": "Tratamientos"
-              },
-              "blocks": {}
-            },
             "heading_rkGMgY": {
               "type": "heading",
               "settings": {
@@ -67,7 +59,6 @@
             }
           },
           "block_order": [
-            "subheading_rJJHJE",
             "heading_rkGMgY",
             "rich_text_d8Hdx9"
           ]
@@ -189,6 +180,9 @@
         "content_percentage_width": 60,
         "overlay_color": "#000000",
         "overlay_opacity": 20,
+        "mobile_order": "media_first",
+        "media_aspect_ratio": "original",
+        "mobile_media_aspect_ratio": "inherit",
         "add_media_spacing": true,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/Sin_nombre.png",
@@ -247,6 +241,9 @@
         "content_percentage_width": 60,
         "overlay_color": "#000000",
         "overlay_opacity": 20,
+        "mobile_order": "media_first",
+        "media_aspect_ratio": "original",
+        "mobile_media_aspect_ratio": "inherit",
         "add_media_spacing": true,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/tratamientos-faciales.png",
@@ -305,6 +302,9 @@
         "content_percentage_width": 60,
         "overlay_color": "#000000",
         "overlay_opacity": 20,
+        "mobile_order": "media_first",
+        "media_aspect_ratio": "original",
+        "mobile_media_aspect_ratio": "inherit",
         "add_media_spacing": true,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/inner-masaje.png",
@@ -351,6 +351,9 @@
         "content_percentage_width": 60,
         "overlay_color": "#000000",
         "overlay_opacity": 20,
+        "mobile_order": "media_first",
+        "media_aspect_ratio": "original",
+        "mobile_media_aspect_ratio": "inherit",
         "add_media_spacing": true,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/Aplicacion_de_maquillaje_en_un_spa_calido.png",
@@ -377,6 +380,7 @@
       "name": "Formulario custom",
       "settings": {
         "color_scheme": "scheme-2",
+        "anchor_id": "",
         "title": "Empezamos por&nbsp;<em>tu diagnóstico</em>",
         "heading_size": "h2",
         "content": "",

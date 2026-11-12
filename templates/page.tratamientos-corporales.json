@@ -18,50 +18,73 @@
         "content_width": "md"
       }
     },
-    "image_with_text_overlay_e4GMcc": {
-      "type": "image-with-text-overlay",
+    "slideshow_47qLfk": {
+      "type": "slideshow",
       "blocks": {
-        "heading_VnPgjn": {
-          "type": "heading",
+        "slideshow_video_slide_EQnXiU": {
+          "type": "_slideshow-video-slide",
+          "name": "t:sections.slideshow.blocks.video.name",
           "settings": {
-            "text": "Tratamientos corporales",
-            "heading_size": "h2",
-            "html_tag": "h1",
-            "indent": "none",
-            "highlight_effect": "default",
-            "highlight_accent_color": "",
-            "highlight_text_color": ""
+            "color_scheme": "",
+            "video": "shopify://files/videos/IMG_0717.MOV",
+            "slide_link": "",
+            "content_max_width": 1000,
+            "mobile_content_position": "place-self-center",
+            "desktop_content_position": "sm:place-self-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 40
           },
-          "blocks": {}
+          "blocks": {
+            "heading_TqyREA": {
+              "type": "heading",
+              "settings": {
+                "text": "Tratamientos corporales",
+                "heading_size": "h2",
+                "html_tag": "h1",
+                "indent": "none",
+                "highlight_effect": "default",
+                "highlight_accent_color": "",
+                "highlight_text_color": ""
+              },
+              "blocks": {}
+            },
+            "rich_text_HKBtjJ": {
+              "type": "rich-text",
+              "name": "t:blocks.rich_text.name",
+              "settings": {
+                "text": "<p>Cuidamos de tu cuerpo, el único lugar donde tienes que vivir.</p>",
+                "content_width": "md"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_TqyREA",
+            "rich_text_HKBtjJ"
+          ]
         },
-        "rich_text_KNGVbE": {
-          "type": "rich-text",
+        "slideshow-controls": {
+          "type": "_slideshow-controls",
+          "static": true,
           "settings": {
-            "text": "<p>Cuidamos de tu cuerpo, el único lugar donde tienes que vivir.</p>",
-            "content_width": "md"
+            "controls_style": "line",
+            "controls_color": "#ffffff"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "heading_VnPgjn",
-        "rich_text_KNGVbE"
+        "slideshow_video_slide_EQnXiU"
       ],
-      "name": "t:sections.image_with_text_overlay.name",
+      "name": "t:sections.slideshow.name",
       "settings": {
-        "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
-        "aspect_ratio": "original",
-        "mobile_aspect_ratio": "inherit",
-        "image": "shopify://shop_images/mariolh-woman-567021_1280.jpg",
-        "overlay_color": "#000000",
-        "overlay_opacity": 35,
-        "enable_sticky_content": false,
-        "content_width": "md",
-        "mobile_layout": "overlay",
-        "desktop_text_position": "sm:place-self-center",
-        "mobile_text_position": "place-self-center"
+        "transition_type": "curtain",
+        "autoplay": true,
+        "pause_auto_rotate_on_hover": false,
+        "cycle_speed": 6,
+        "background": "#000000"
       }
     },
     "manifiesto_corp": {
@@ -337,7 +360,7 @@
   },
   "order": [
     "main",
-    "image_with_text_overlay_e4GMcc",
+    "slideshow_47qLfk",
     "manifiesto_corp",
     "necesidades_corp",
     "reading_text_corp",
