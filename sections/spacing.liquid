@@ -1,0 +1,40 @@
+<div
+  class="spacer"
+  style="--spacer-desktop: {{ section.settings.desktop_spacing }}px; --spacer-mobile: {{ section.settings.mobile_spacing }}px"
+  aria-hidden="true"
+></div>
+
+{% schema %}
+{
+  "name": "Spacing",
+  "tag": "section",
+  "class": "shopify-section--spacing",
+  "settings": [
+    {
+      "type": "range",
+      "id": "desktop_spacing",
+      "label": "Espacio en escritorio",
+      "min": 0,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "mobile_spacing",
+      "label": "Espacio en móvil",
+      "min": 0,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Spacing"
+    }
+  ]
+}
+{% endschema %}
