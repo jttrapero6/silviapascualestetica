@@ -284,36 +284,36 @@
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Heading",
+            "title": "Calma profunda",
             "heading_tag": "h5",
-            "content": "<p>Short content about your store</p>"
+            "content": "<p>Ayuda a liberar la tensión del rostro y aporta una sensación inmediata de relajación.</p>"
           }
         },
         "item_DgPg4H": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Heading",
+            "title": "Piel en equilibrio",
             "heading_tag": "h5",
-            "content": "<p>Short content about your store</p>"
+            "content": "<p>Calma la piel y favorece un tono más uniforme y confortable.</p>"
           }
         },
         "item_bE8j3a": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Heading",
+            "title": "Luminosidad natural",
             "heading_tag": "h5",
-            "content": "<p>Short content about your store</p>"
+            "content": "<p>Devuelve a la piel un aspecto más descansado, fresco y luminoso.</p>"
           }
         },
         "item_PGDUqi": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Heading",
+            "title": "Bienestar",
             "heading_tag": "h5",
-            "content": "<p>Short content about your store</p>"
+            "content": "<p>Un momento de desconexión que cuida la piel y también la mente.</p>"
           }
         }
       },
@@ -453,8 +453,8 @@
         "question_7pCiFY": {
           "type": "question",
           "settings": {
-            "question": "Question",
-            "answer": "<p>Write a clear and concise answer to guide your customers.</p>",
+            "question": "¿Es adecuado para pieles sensibles?",
+            "answer": "<p>Sí, es un ritual suave que se adapta a la sensibilidad de cada piel tras una valoración profesional.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -463,8 +463,8 @@
         "question_cVR879": {
           "type": "question",
           "settings": {
-            "question": "Question",
-            "answer": "<p>Write a clear and concise answer to guide your customers.</p>",
+            "question": "¿Cuánto dura la sesión?",
+            "answer": "<p>La duración depende del protocolo, pero está pensado para disfrutarlo con calma, sin prisas.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -473,8 +473,8 @@
         "question_Hffkgp": {
           "type": "question",
           "settings": {
-            "question": "Question",
-            "answer": "<p>Write a clear and concise answer to guide your customers.</p>",
+            "question": "¿Cada cuánto se recomienda?",
+            "answer": "<p>Puede realizarse de forma puntual o como parte de una rutina regular para mantener la piel cuidada y relajada.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -483,8 +483,8 @@
         "question_9jLicq": {
           "type": "question",
           "settings": {
-            "question": "Question",
-            "answer": "<p>Write a clear and concise answer to guide your customers.</p>",
+            "question": "¿Qué sensación deja?",
+            "answer": "<p>La piel queda suave, calmada y con un aspecto descansado, junto a una agradable sensación de bienestar.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
