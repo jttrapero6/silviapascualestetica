@@ -21,18 +21,11 @@
     "image_with_text_overlay_e4GMcc": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "subheading_hero": {
-          "type": "subheading",
-          "settings": {
-            "text": "Método Luxianne · Corporal"
-          },
-          "blocks": {}
-        },
         "heading_VnPgjn": {
           "type": "heading",
           "settings": {
-            "text": "Tratamientos <em>corporales</em>",
-            "heading_size": "h1",
+            "text": "Tratamientos corporales",
+            "heading_size": "h2",
             "html_tag": "h1",
             "indent": "none",
             "highlight_effect": "default",
@@ -51,7 +44,6 @@
         }
       },
       "block_order": [
-        "subheading_hero",
         "heading_VnPgjn",
         "rich_text_KNGVbE"
       ],
@@ -59,12 +51,15 @@
       "settings": {
         "color_scheme": "",
         "allow_transparent_header": true,
-        "image_size": "lg",
+        "image_size": "sm",
+        "aspect_ratio": "original",
+        "mobile_aspect_ratio": "inherit",
         "image": "shopify://shop_images/mariolh-woman-567021_1280.jpg",
         "overlay_color": "#000000",
         "overlay_opacity": 35,
         "enable_sticky_content": false,
         "content_width": "md",
+        "mobile_layout": "overlay",
         "desktop_text_position": "sm:place-self-center",
         "mobile_text_position": "place-self-center"
       }
@@ -75,7 +70,7 @@
         "pillar_tiempo": {
           "type": "pillar",
           "settings": {
-            "number": "",
+            "number": "1",
             "title": "Los resultados necesitan tiempo",
             "content": "<p>Un cuerpo no cambia de forma significativa en unas pocas sesiones. Por eso no prometemos una transformación con un bono de 10 sesiones: los tejidos necesitan tiempo, constancia y continuidad para responder.</p>"
           }
@@ -104,7 +99,7 @@
       ],
       "name": "Manifiesto",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "eyebrow": "Nuestra forma de trabajar",
         "title": "Trabajar el cuerpo con <em>método</em>",
         "heading_tag": "h2",
@@ -122,13 +117,13 @@
             "image": "shopify://shop_images/Sin_nombre.png",
             "question": "¿Notas la piel de tus muslos o glúteos más irregular que hace unos años? ¿Aparecen pequeños hoyuelos incluso de pie?",
             "content": "<p>La celulitis es una alteración multifactorial y <strong>no es simplemente “grasa”</strong>: intervienen el tejido adiposo, la microcirculación, el drenaje, el tejido conjuntivo, las hormonas y la firmeza de la piel. Y no existe una única celulitis.</p>",
-            "highlight": "Nuestro objetivo no es prometer que desaparecerá de la noche a la mañana, sino que la piel se vea progresivamente más uniforme, firme y bonita.",
             "detail_1_title": "Edematosa",
             "detail_1_text": "Con retención de líquidos, hinchazón y piernas pesadas. Priorizamos el drenaje y la sensación de ligereza.",
             "detail_2_title": "Blanda",
             "detail_2_text": "En tejidos con menor tono, a menudo con flacidez. Trabajamos la firmeza y la calidad del tejido.",
             "detail_3_title": "Compacta o fibrosa",
-            "detail_3_text": "Tejido más denso y menos móvil. Requiere constancia para suavizar su apariencia irregular."
+            "detail_3_text": "Tejido más denso y menos móvil. Requiere constancia para suavizar su apariencia irregular.",
+            "highlight": "Nuestro objetivo no es prometer que desaparecerá de la noche a la mañana, sino que la piel se vea progresivamente más uniforme, firme y bonita."
           }
         },
         "need_flacidez": {
@@ -138,13 +133,13 @@
             "image": "shopify://shop_images/16748.jpg",
             "question": "¿Brazos, abdomen, muslos o glúteos menos tersos aunque tu peso apenas haya cambiado?",
             "content": "<p>La flacidez aparece cuando los tejidos pierden parte de su capacidad de sostén. El paso del tiempo, los cambios hormonales, los embarazos, las variaciones de peso y la disminución de colágeno y elastina la hacen cada vez más visible.</p><p>No siempre hay un exceso de piel: muchas veces es la propia calidad del tejido la que ha cambiado.</p>",
-            "highlight": "Buscamos una piel más tersa, firme y tonificada, respetando los tiempos que necesita el cuerpo.",
             "detail_1_title": "",
             "detail_1_text": "",
             "detail_2_title": "",
             "detail_2_text": "",
             "detail_3_title": "",
-            "detail_3_text": ""
+            "detail_3_text": "",
+            "highlight": "Buscamos una piel más tersa, firme y tonificada, respetando los tiempos que necesita el cuerpo."
           }
         },
         "need_grasa": {
@@ -154,13 +149,13 @@
             "image": "shopify://shop_images/Tratamientos_spa_de_bienestar_y_cuidado_piel-1.png",
             "question": "¿Has perdido peso pero sigues teniendo ese pequeño volumen en abdomen, flancos, cartucheras o brazos?",
             "content": "<p>Es una acumulación de tejido adiposo que puede mantenerse incluso con un peso dentro de la normalidad. Su distribución depende de la genética, las hormonas, la edad y el estilo de vida, por eso no responde igual que una pérdida de peso general.</p><p>Trabajamos su volumen y contorno con los recursos más adecuados para cada caso, siempre dentro de unas expectativas reales.</p>",
-            "highlight": "El tratamiento no sustituye al movimiento ni a unos hábitos saludables: cuando van en la misma dirección, el resultado es mayor y más fácil de mantener.",
             "detail_1_title": "",
             "detail_1_text": "",
             "detail_2_title": "",
             "detail_2_text": "",
             "detail_3_title": "",
-            "detail_3_text": ""
+            "detail_3_text": "",
+            "highlight": "El tratamiento no sustituye al movimiento ni a unos hábitos saludables: cuando van en la misma dirección, el resultado es mayor y más fácil de mantener."
           }
         },
         "need_silueta": {
@@ -170,13 +165,13 @@
             "image": "shopify://shop_images/Tratamientos_spa_de_bienestar_y_cuidado_piel-2.png",
             "question": "¿Sientes que la cintura se ha desdibujado o que tu cuerpo ha perdido la forma que tenía?",
             "content": "<p>A veces no hay un único problema. No buscamos simplemente “quitar grasa”, sino <strong>recuperar visualmente la armonía de la silueta</strong>: observamos cómo se distribuye el volumen, qué zonas han perdido definición y cómo están los tejidos, y trabajamos varias áreas de forma coordinada.</p>",
-            "highlight": "Remodelar no significa necesariamente pesar menos. A veces significa volver a reconocer la forma de tu cuerpo.",
             "detail_1_title": "",
             "detail_1_text": "",
             "detail_2_title": "",
             "detail_2_text": "",
             "detail_3_title": "",
-            "detail_3_text": ""
+            "detail_3_text": "",
+            "highlight": "Remodelar no significa necesariamente pesar menos. A veces significa volver a reconocer la forma de tu cuerpo."
           }
         },
         "need_brazos": {
@@ -186,13 +181,13 @@
             "image": "shopify://shop_images/Serenidad_de_spa_en_tonos_beige_1.png",
             "question": "¿Piel más fina y menos firme, menos definición o una pequeña acumulación de grasa en la zona interna?",
             "content": "<p>Los brazos son especialmente sensibles a la flacidez, y en ellos suelen coexistir grasa localizada, pérdida de tono y pérdida de firmeza. Por eso no hay un único tratamiento: mejoramos la calidad de la piel y, cuando es necesario, actuamos también sobre el volumen.</p>",
-            "highlight": "Hay zonas que no necesitan esconderse: necesitan que volvamos a cuidarlas.",
             "detail_1_title": "",
             "detail_1_text": "",
             "detail_2_title": "",
             "detail_2_text": "",
             "detail_3_title": "",
-            "detail_3_text": ""
+            "detail_3_text": "",
+            "highlight": "Hay zonas que no necesitan esconderse: necesitan que volvamos a cuidarlas."
           }
         },
         "need_drenaje": {
@@ -202,13 +197,13 @@
             "image": "shopify://shop_images/inner-masaje.png",
             "question": "¿Llegas al final del día con las piernas cansadas, los tobillos hinchados o sensación de pesadez?",
             "content": "<p>Hay momentos en los que el cuerpo no pide perder centímetros: <strong>pide ligereza</strong>. El sedentarismo, muchas horas de pie o sentada, el calor o los cambios hormonales favorecen la congestión. Aquí el trabajo manual tiene un papel protagonista, acompañado de otros recursos cuando procede.</p>",
-            "highlight": "Esa sensación de levantarte de la camilla y sentir que tu cuerpo pesa menos.",
             "detail_1_title": "",
             "detail_1_text": "",
             "detail_2_title": "",
             "detail_2_text": "",
             "detail_3_title": "",
-            "detail_3_text": ""
+            "detail_3_text": "",
+            "highlight": "Esa sensación de levantarte de la camilla y sentir que tu cuerpo pesa menos."
           }
         },
         "need_bienestar": {
@@ -218,13 +213,13 @@
             "image": "shopify://shop_images/297988D6-4419-4FB2-A7AA-D289435A6DB3.png",
             "question": "Y hay veces en las que no necesitas corregir nada. Simplemente necesitas parar.",
             "content": "<p>El estrés y el ritmo de vida se acumulan en el cuerpo: espalda cargada, hombros tensos, piernas cansadas. Estos tratamientos regalan al cuerpo un espacio para soltar, respirar y descansar, donde el masaje, el contacto y el ambiente son los protagonistas.</p>",
-            "highlight": "Porque el bienestar también forma parte de la belleza. Y a veces, cuidarse no significa hacer más. Significa parar.",
             "detail_1_title": "",
             "detail_1_text": "",
             "detail_2_title": "",
             "detail_2_text": "",
             "detail_3_title": "",
-            "detail_3_text": ""
+            "detail_3_text": "",
+            "highlight": "Porque el bienestar también forma parte de la belleza. Y a veces, cuidarse no significa hacer más. Significa parar."
           }
         }
       },
@@ -249,7 +244,7 @@
       "type": "reading-text",
       "name": "t:sections.reading_text.name",
       "settings": {
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-7",
         "subheading": "Nuestro compromiso",
         "content": "Un buen resultado no es prometerte lo imposible. Es decirte honestamente qué podemos conseguir juntos y ayudarte a conseguirlo.",
         "button_text": "",
@@ -304,9 +299,10 @@
         "feature_reafirmante",
         "feature_reductor"
       ],
+      "disabled": true,
       "name": "Tratamiento destacado",
       "settings": {
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-2",
         "image": "shopify://shop_images/Tratamientos_spa_de_bienestar_y_cuidado_piel-2.png",
         "media_position": "left",
         "badge": "Tratamiento estrella",
