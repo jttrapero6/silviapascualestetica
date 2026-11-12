@@ -183,6 +183,14 @@
         "mobile_text_position": "place-self-center"
       }
     },
+    "spacing_cwreBH": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 35
+      }
+    },
     "text_with_media_NPEWmG": {
       "type": "text-with-media",
       "blocks": {
@@ -200,7 +208,7 @@
         "richtext_DCiQz6": {
           "type": "richtext",
           "settings": {
-            "text": "{{ product.description }}",
+            "text": "<p>{{ product.description }}</p>",
             "position": "middle_left"
           }
         }
@@ -224,6 +232,14 @@
         "show_secondary_media_on_mobile": true,
         "secondary_media_alignment": "place-self-center",
         "secondary_media_shape": "none"
+      }
+    },
+    "spacing_ceqpyA": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 35
       }
     },
     "image_text_side_by_side_R4zVPk": {
@@ -322,6 +338,14 @@
         "item_text_alignment": "center"
       }
     },
+    "spacing_UzpjPF": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 35
+      }
+    },
     "before_after_qTCtcr": {
       "type": "before-after",
       "blocks": {
@@ -396,6 +420,22 @@
         "mobile_video_size": "md",
         "video": "shopify://files/videos/IMG_7670.MOV",
         "external_video_url": ""
+      }
+    },
+    "spacing_JyijtP": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 35
+      }
+    },
+    "spacing_VQMDBe": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 35
       }
     },
     "featured_product_list_WEnHGr": {
@@ -497,13 +537,18 @@
   "order": [
     "main",
     "image_with_text_overlay_yexDeB",
+    "spacing_cwreBH",
     "text_with_media_NPEWmG",
+    "spacing_ceqpyA",
     "image_text_side_by_side_R4zVPk",
     "text_with_icons_rMJqmB",
+    "spacing_UzpjPF",
     "before_after_qTCtcr",
     "video_8k3inC",
+    "spacing_JyijtP",
     "featured_product_list_WEnHGr",
     "faq_BzxK8R",
+    "spacing_VQMDBe",
     "floating_atc_button_L3bDtJ"
   ]
 }
