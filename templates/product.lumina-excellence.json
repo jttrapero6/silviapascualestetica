@@ -174,10 +174,14 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
+        "aspect_ratio": "original",
+        "mobile_aspect_ratio": "inherit",
+        "image": "shopify://shop_images/Primer_plano_de_pestanas_naturales_y_piel_suave.png",
         "overlay_color": "#000000",
         "overlay_opacity": 30,
         "enable_sticky_content": false,
         "content_width": "md",
+        "mobile_layout": "overlay",
         "desktop_text_position": "sm:place-self-center",
         "mobile_text_position": "place-self-center"
       }
@@ -187,7 +191,7 @@
       "name": "Spacing",
       "settings": {
         "desktop_spacing": 50,
-        "mobile_spacing": 35
+        "mobile_spacing": 0
       }
     },
     "text_with_media_NPEWmG": {
@@ -223,27 +227,31 @@
         "content_percentage_width": 50,
         "overlay_color": "#000000",
         "overlay_opacity": 20,
+        "mobile_order": "text_first",
+        "media_aspect_ratio": "16/9",
+        "mobile_media_aspect_ratio": "1/1",
         "add_media_spacing": false,
         "autoplay_video": true,
+        "primary_video": "shopify://files/videos/IMG_9281.mov",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
         "show_secondary_media_on_mobile": true,
         "secondary_media_alignment": "place-self-center",
         "secondary_media_shape": "none"
-      },
-      "disabled": true
+      }
     },
     "spacing_ceqpyA": {
       "type": "spacing",
+      "disabled": true,
       "name": "Spacing",
       "settings": {
         "desktop_spacing": 50,
-        "mobile_spacing": 35
-      },
-      "disabled": true
+        "mobile_spacing": 0
+      }
     },
     "image_text_side_by_side_R4zVPk": {
       "type": "image-text-side-by-side",
+      "disabled": true,
       "name": "Imagen y texto adaptable",
       "settings": {
         "color_scheme": "scheme-2",
@@ -267,8 +275,7 @@
         "button_text": "",
         "button_link": "",
         "button_style": "solid"
-      },
-      "disabled": true
+      }
     },
     "text_with_icons_rMJqmB": {
       "type": "text-with-icons",
@@ -324,8 +331,8 @@
       "settings": {
         "color_scheme": "scheme-2",
         "subheading": "",
-        "title": "¿Qué es <em>{{ product.title }}</em>?",
-        "content": "{{ product.description }}",
+        "title": "",
+        "content": "",
         "heading_tag": "h3",
         "text_alignment": "center",
         "items_per_row_desktop": 4,
@@ -341,8 +348,8 @@
       "type": "spacing",
       "name": "Spacing",
       "settings": {
-        "desktop_spacing": 50,
-        "mobile_spacing": 35
+        "desktop_spacing": 0,
+        "mobile_spacing": 0
       }
     },
     "before_after_qTCtcr": {
@@ -371,6 +378,7 @@
         "before_fefz8j",
         "after_arHAQL"
       ],
+      "disabled": true,
       "name": "t:sections.before_after.name",
       "settings": {
         "show_when_empty": true,
@@ -388,8 +396,7 @@
         "cursor_initial_position": 50,
         "cursor_background": "#ffffff",
         "cursor_arrows_color": "#000000"
-      },
-      "disabled": true
+      }
     },
     "video_8k3inC": {
       "type": "video",
@@ -407,6 +414,7 @@
       "block_order": [
         "play_button_QpWzea"
       ],
+      "disabled": true,
       "name": "t:sections.video.name",
       "settings": {
         "show_when_empty": true,
@@ -418,24 +426,25 @@
         "video_size": "auto",
         "mobile_video_size": "md",
         "external_video_url": ""
-      },
-      "disabled": true
+      }
     },
     "spacing_JyijtP": {
       "type": "spacing",
+      "disabled": true,
       "name": "Spacing",
       "settings": {
         "desktop_spacing": 50,
         "mobile_spacing": 35
-      },
-      "disabled": true
+      }
     },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
+      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
         "color_scheme": "scheme-2",
+        "product_list": [],
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
@@ -448,8 +457,7 @@
         "intro_button_text": "",
         "intro_button_link": "",
         "intro_button_style": "outline"
-      },
-      "disabled": true
+      }
     },
     "faq_BzxK8R": {
       "type": "faq",
