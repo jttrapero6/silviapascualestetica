@@ -17,12 +17,52 @@
 </style>
 
 <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
-  <div class="section-split {% if section.settings.content_position == 'end' %}section-split--reverse{% endif %}">
+    {%- liquid
+      assign twm_ratio = section.settings.media_aspect_ratio | default: 'original'
+      assign twm_mobile_ratio = section.settings.mobile_media_aspect_ratio | default: 'inherit'
+      if twm_mobile_ratio == 'inherit'
+        assign twm_mobile_ratio = twm_ratio
+      endif
+
+      assign twm_media_classes = ''
+      assign twm_media_style = ''
+
+      if twm_ratio != 'original'
+        assign twm_media_classes = twm_media_classes | append: ' twm-ratio'
+        assign twm_media_style = twm_media_style | append: '--twm-ratio: ' | append: twm_ratio | append: ';'
+      endif
+
+      if twm_mobile_ratio != 'original'
+        assign twm_media_classes = twm_media_classes | append: ' twm-ratio-mobile'
+        assign twm_media_style = twm_media_style | append: '--twm-ratio-mobile: ' | append: twm_mobile_ratio | append: ';'
+      endif
+
+      # On mobile the columns stack in DOM order. To show the text first we swap the DOM order
+      # and invert the "reverse" class so the desktop layout stays exactly the same.
+      assign twm_text_first = false
+      if section.settings.mobile_order == 'text_first' and section.blocks.size > 0
+        assign twm_text_first = true
+      endif
+
+      assign twm_reverse = false
+      if section.settings.content_position == 'end'
+        assign twm_reverse = true
+      endif
+      if twm_text_first
+        if twm_reverse
+          assign twm_reverse = false
+        else
+          assign twm_reverse = true
+        endif
+      endif
+    -%}
+  <div class="section-split {% if twm_reverse %}section-split--reverse{% endif %}">
+    {%- capture twm_media_column -%}
     {%- comment -%}
     IMAGE PART
     {%- endcomment -%}
 
-    <div class="section-split__column section-split__column--image {% unless section.settings.add_media_spacing %}section-split__column--flushed{% endunless %}">
+    <div class="section-split__column section-split__column--image {{ twm_media_classes }} {% unless section.settings.add_media_spacing %}section-split__column--flushed{% endunless %}"{% if twm_media_style != blank %} style="{{ twm_media_style }}"{% endif %}>
       <div class="content-box h-full">
         <div class="content-box__background-media">
           {%- liquid
@@ -54,6 +94,9 @@
         {%- endif -%}
       </div>
     </div>
+    {%- endcapture -%}
+
+    {%- capture twm_content_column -%}
     
     {%- comment -%}
     CONTENT PART
@@ -205,8 +248,49 @@
         </div>
       </div>
     {%- endif -%}
+    {%- endcapture -%}
+
+    {%- if twm_text_first -%}
+      {{- twm_content_column -}}
+      {{- twm_media_column -}}
+    {%- else -%}
+      {{- twm_media_column -}}
+      {{- twm_content_column -}}
+    {%- endif -%}
   </div>
 </div>
+
+{% stylesheet %}
+  /* Media aspect ratio (desktop) */
+  @media screen and (min-width: 1000px) {
+    .section-split__column--image.twm-ratio {
+      align-self: center;
+    }
+
+    .section-split__column--image.twm-ratio > .content-box {
+      height: auto;
+      aspect-ratio: var(--twm-ratio);
+    }
+
+    .section-split__column--image.twm-ratio > .content-box > .content-box__background-media {
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  /* Media aspect ratio (mobile) */
+  @media screen and (max-width: 999px) {
+    .section-split__column--image.twm-ratio-mobile > .content-box {
+      height: auto;
+      aspect-ratio: var(--twm-ratio-mobile);
+    }
+
+    .section-split__column--image.twm-ratio-mobile > .content-box > .content-box__background-media {
+      position: absolute;
+      inset: 0;
+    }
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -279,6 +363,123 @@
       "type": "header",
       "content": "t:sections.text_with_media.media_category",
       "info": "t:sections.text_with_media.media_category_info"
+    },
+    {
+      "type": "select",
+      "id": "mobile_order",
+      "label": "Orden en móvil",
+      "options": [
+        {
+          "value": "media_first",
+          "label": "Media arriba, texto abajo"
+        },
+        {
+          "value": "text_first",
+          "label": "Texto arriba, media abajo"
+        }
+      ],
+      "default": "media_first"
+    },
+    {
+      "type": "select",
+      "id": "media_aspect_ratio",
+      "label": "Proporción del media",
+      "info": "Con 'Original' la imagen se adapta a la altura del texto, como hasta ahora.",
+      "options": [
+        {
+          "value": "original",
+          "label": "Original"
+        },
+        {
+          "value": "1/1",
+          "label": "1:1 (cuadrado)"
+        },
+        {
+          "value": "4/5",
+          "label": "4:5 (vertical)"
+        },
+        {
+          "value": "3/4",
+          "label": "3:4 (vertical)"
+        },
+        {
+          "value": "2/3",
+          "label": "2:3 (vertical)"
+        },
+        {
+          "value": "9/16",
+          "label": "9:16 (vertical)"
+        },
+        {
+          "value": "4/3",
+          "label": "4:3"
+        },
+        {
+          "value": "3/2",
+          "label": "3:2"
+        },
+        {
+          "value": "16/9",
+          "label": "16:9"
+        },
+        {
+          "value": "21/9",
+          "label": "21:9 (panorámico)"
+        }
+      ],
+      "default": "original"
+    },
+    {
+      "type": "select",
+      "id": "mobile_media_aspect_ratio",
+      "label": "Proporción del media en móvil",
+      "options": [
+        {
+          "value": "inherit",
+          "label": "Igual que en escritorio"
+        },
+        {
+          "value": "original",
+          "label": "Original"
+        },
+        {
+          "value": "1/1",
+          "label": "1:1 (cuadrado)"
+        },
+        {
+          "value": "4/5",
+          "label": "4:5 (vertical)"
+        },
+        {
+          "value": "3/4",
+          "label": "3:4 (vertical)"
+        },
+        {
+          "value": "2/3",
+          "label": "2:3 (vertical)"
+        },
+        {
+          "value": "9/16",
+          "label": "9:16 (vertical)"
+        },
+        {
+          "value": "4/3",
+          "label": "4:3"
+        },
+        {
+          "value": "3/2",
+          "label": "3:2"
+        },
+        {
+          "value": "16/9",
+          "label": "16:9"
+        },
+        {
+          "value": "21/9",
+          "label": "21:9 (panorámico)"
+        }
+      ],
+      "default": "inherit"
     },
     {
       "type": "checkbox",
