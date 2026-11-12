@@ -1,3 +1,10 @@
+/* Páginas legales (/policies/...): mismo ancho que el .container del footer */
+body .shopify-policy__container {
+    max-width: none;
+    margin-inline: max(var(--container-gutter), 50% - var(--container-max-width) / 2);
+    padding-inline: 0;
+}
+
 #predictive-search .link-reversed {
     font: var(--subheading-font-style) var(--subheading-font-weight) var(--subheading-font-size) / normal var(--subheading-font-family);
     letter-spacing: var(--subheading-letter-spacing);
