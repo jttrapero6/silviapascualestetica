@@ -1,103 +1,112 @@
 {%- comment -%}
-  Selector de necesidades: índice numerado + panel con imagen/vídeo y contenido.
-  Pensado para presentar muchos temas sin alargar la página.
+  Selector de necesidades: lista editorial de títulos grandes + escenario visual.
+  · Escritorio: al pasar el ratón por un título cambia la imagen/vídeo del escenario (fijo a la derecha);
+    al hacer clic se despliega su texto bajo el título.
+  · Móvil: acordeón; la necesidad abierta muestra su imagen/vídeo y el texto.
 {%- endcomment -%}
 {%- if section.blocks.size > 0 -%}
-<section class="necesidades color-scheme color-scheme--{{ section.settings.color_scheme.id }}" data-necesidades>
+<section class="nec color-scheme color-scheme--{{ section.settings.color_scheme.id }}" data-nec>
   <div class="container">
-    <header class="necesidades__header">
-      {%- if section.settings.eyebrow != blank -%}
-        <p class="necesidades__eyebrow">{{ section.settings.eyebrow }}</p>
-      {%- endif -%}
-      {%- if section.settings.title != blank -%}
-        <h2 class="necesidades__title">{{ section.settings.title }}</h2>
-      {%- endif -%}
-      {%- if section.settings.subtitle != blank -%}
-        <div class="necesidades__subtitle">{{ section.settings.subtitle }}</div>
-      {%- endif -%}
-    </header>
+    <div class="nec__layout">
+      <div class="nec__main">
+        <header class="nec__header">
+          {%- if section.settings.eyebrow != blank -%}
+            <p class="nec__eyebrow">{{ section.settings.eyebrow }}</p>
+          {%- endif -%}
+          {%- if section.settings.title != blank -%}
+            <h2 class="nec__title">{{ section.settings.title }}</h2>
+          {%- endif -%}
+          {%- if section.settings.subtitle != blank -%}
+            <div class="nec__subtitle">{{ section.settings.subtitle }}</div>
+          {%- endif -%}
+        </header>
 
-    <div class="necesidades__layout">
-      <div class="necesidades__nav" role="tablist" aria-label="{{ section.settings.title | strip_html | escape }}">
-        {%- for block in section.blocks -%}
-          <button
-            class="necesidades__tab{% if forloop.first %} is-active{% endif %}"
-            type="button"
-            role="tab"
-            id="NecesidadTab-{{ block.id }}"
-            aria-controls="NecesidadPanel-{{ block.id }}"
-            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-            tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
-            data-necesidades-tab
-          >
-            <span class="necesidades__tab-number">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
-            <span class="necesidades__tab-label">{{ block.settings.title }}</span>
-          </button>
-        {%- endfor -%}
+        <ol class="nec__list" role="list">
+          {%- for block in section.blocks -%}
+            {%- assign number = forloop.index | prepend: '0' | slice: -2, 2 -%}
+
+            <li
+              class="nec__item{% if forloop.first %} is-active{% endif %}"
+              data-nec-item
+              {{ block.shopify_attributes }}
+            >
+              <h3 class="nec__item-heading">
+                <button
+                  class="nec__trigger"
+                  type="button"
+                  id="NecTrigger-{{ block.id }}"
+                  aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}"
+                  aria-controls="NecBody-{{ block.id }}"
+                  data-nec-trigger
+                >
+                  <span class="nec__number">{{ number }}</span>
+                  <span class="nec__label">{{ block.settings.title }}</span>
+                  <span class="nec__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+
+              <div class="nec__body" id="NecBody-{{ block.id }}" role="region" aria-labelledby="NecTrigger-{{ block.id }}">
+                <div class="nec__body-inner">
+                  <div class="nec__inline-media">
+                    {%- render 'necesidades-media', block: block, sizes: '100vw' -%}
+                  </div>
+
+                  {%- if block.settings.question != blank -%}
+                    <p class="nec__question">{{ block.settings.question }}</p>
+                  {%- endif -%}
+
+                  {%- if block.settings.content != blank -%}
+                    <div class="nec__text prose">{{ block.settings.content }}</div>
+                  {%- endif -%}
+
+                  {%- if block.settings.detail_1_title != blank or block.settings.detail_2_title != blank or block.settings.detail_3_title != blank -%}
+                    <dl class="nec__details">
+                      {%- for i in (1..3) -%}
+                        {%- assign d_title_key = 'detail_' | append: i | append: '_title' -%}
+                        {%- assign d_text_key = 'detail_' | append: i | append: '_text' -%}
+                        {%- if block.settings[d_title_key] != blank -%}
+                          <div class="nec__detail">
+                            <dt>{{ block.settings[d_title_key] }}</dt>
+                            {%- if block.settings[d_text_key] != blank -%}
+                              <dd>{{ block.settings[d_text_key] }}</dd>
+                            {%- endif -%}
+                          </div>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </dl>
+                  {%- endif -%}
+
+                  {%- if block.settings.highlight != blank -%}
+                    <p class="nec__highlight">{{ block.settings.highlight }}</p>
+                  {%- endif -%}
+
+                  {%- if block.settings.button_text != blank and block.settings.button_link != blank -%}
+                    <a class="nec__link" href="{{ block.settings.button_link }}">
+                      {{- block.settings.button_text -}}
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  {%- endif -%}
+                </div>
+              </div>
+            </li>
+          {%- endfor -%}
+        </ol>
       </div>
 
-      <div class="necesidades__panels">
-        {%- for block in section.blocks -%}
-          <article
-            class="necesidades__panel{% if forloop.first %} is-active{% endif %}"
-            role="tabpanel"
-            id="NecesidadPanel-{{ block.id }}"
-            aria-labelledby="NecesidadTab-{{ block.id }}"
-            {% unless forloop.first %}hidden{% endunless %}
-            data-necesidades-panel
-            {{ block.shopify_attributes }}
-          >
-            <div class="necesidades__media">
-              {%- if block.settings.video != blank -%}
-                {%- render 'media', media: block.settings.video, autoplay: true, loop: true, muted: true, controls: false, class: 'necesidades__media-item' -%}
-              {%- elsif block.settings.image != blank -%}
-                {{- block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(max-width: 999px) 100vw, 35vw', widths: '500,700,900,1100,1400', class: 'necesidades__media-item' -}}
-              {%- else -%}
-                {{- 'lifestyle-1' | placeholder_svg_tag: 'necesidades__media-item' -}}
-              {%- endif -%}
-              <span class="necesidades__media-number" aria-hidden="true">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
-            </div>
-
-            <div class="necesidades__content">
-              <h3 class="necesidades__panel-title">{{ block.settings.title }}</h3>
-
-              {%- if block.settings.question != blank -%}
-                <p class="necesidades__question">{{ block.settings.question }}</p>
-              {%- endif -%}
-
-              {%- if block.settings.content != blank -%}
-                <div class="necesidades__text prose">{{ block.settings.content }}</div>
-              {%- endif -%}
-
-              {%- liquid
-                assign has_details = false
-                if block.settings.detail_1_title != blank or block.settings.detail_2_title != blank or block.settings.detail_3_title != blank
-                  assign has_details = true
-                endif
-              -%}
-              {%- if has_details -%}
-                <ul class="necesidades__details" role="list">
-                  {%- for i in (1..3) -%}
-                    {%- assign d_title_key = 'detail_' | append: i | append: '_title' -%}
-                    {%- assign d_text_key = 'detail_' | append: i | append: '_text' -%}
-                    {%- if block.settings[d_title_key] != blank -%}
-                      <li class="necesidades__detail">
-                        <span class="necesidades__detail-title">{{ block.settings[d_title_key] }}</span>
-                        {%- if block.settings[d_text_key] != blank -%}
-                          <span class="necesidades__detail-text">{{ block.settings[d_text_key] }}</span>
-                        {%- endif -%}
-                      </li>
-                    {%- endif -%}
-                  {%- endfor -%}
-                </ul>
-              {%- endif -%}
-
-              {%- if block.settings.highlight != blank -%}
-                <p class="necesidades__highlight">{{ block.settings.highlight }}</p>
-              {%- endif -%}
-            </div>
-          </article>
-        {%- endfor -%}
+      <div class="nec__stage" aria-hidden="true">
+        <div class="nec__stage-frame">
+          {%- for block in section.blocks -%}
+            <figure class="nec__slide{% if forloop.first %} is-shown{% endif %}" data-nec-slide>
+              {%- render 'necesidades-media', block: block, sizes: '(max-width: 999px) 100vw, 55vw' -%}
+              <figcaption class="nec__caption">
+                <span class="nec__caption-number">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+                <span class="nec__caption-text">
+                  <span class="nec__caption-title">{{ block.settings.title }}</span>
+                </span>
+              </figcaption>
+            </figure>
+          {%- endfor -%}
+        </div>
       </div>
     </div>
   </div>
@@ -105,84 +114,148 @@
 
 <script>
   (function () {
-    function initNecesidades(root) {
-      (root || document).querySelectorAll('[data-necesidades]').forEach(function (section) {
-        if (section.dataset.necesidadesReady === 'true') return;
-        section.dataset.necesidadesReady = 'true';
+    var desktop = window.matchMedia('(min-width: 1000px)');
+    var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 
-        var tabs = Array.from(section.querySelectorAll('[data-necesidades-tab]'));
-        var panels = Array.from(section.querySelectorAll('[data-necesidades-panel]'));
+    function initNec(root) {
+      (root || document).querySelectorAll('[data-nec]').forEach(function (section) {
+        if (section.dataset.necReady === 'true') return;
+        section.dataset.necReady = 'true';
 
-        function select(index, focus) {
-          tabs.forEach(function (tab, i) {
-            var active = i === index;
-            tab.classList.toggle('is-active', active);
-            tab.setAttribute('aria-selected', active ? 'true' : 'false');
-            tab.tabIndex = active ? 0 : -1;
-            if (active) {
-              if (focus) tab.focus();
-              var nav = tab.parentElement;
-              if (nav.scrollWidth > nav.clientWidth) {
-                nav.scrollTo({ left: tab.offsetLeft - nav.clientWidth / 2 + tab.clientWidth / 2, behavior: 'smooth' });
-              }
+        var items = Array.from(section.querySelectorAll('[data-nec-item]'));
+        var triggers = items.map(function (item) { return item.querySelector('[data-nec-trigger]'); });
+        var slides = Array.from(section.querySelectorAll('[data-nec-slide]'));
+        var active = 0;
+        var shown = 0;
+        var inView = false;
+        var hoverTimer = null;
+
+        function syncVideos() {
+          section.querySelectorAll('video').forEach(function (video) {
+            var slide = video.closest('[data-nec-slide]');
+            var item = video.closest('[data-nec-item]');
+            var visible = video.offsetParent !== null &&
+              ((slide && slide.classList.contains('is-shown')) || (item && item.classList.contains('is-active')));
+
+            if (inView && visible) {
+              if (video.preload === 'none') video.preload = 'auto';
+              var p = video.play();
+              if (p && p.catch) p.catch(function () {});
+            } else if (!video.paused) {
+              video.pause();
             }
-          });
-          panels.forEach(function (panel, i) {
-            var active = i === index;
-            panel.classList.toggle('is-active', active);
-            panel.hidden = !active;
-            panel.querySelectorAll('video').forEach(function (video) {
-              if (active) { video.play && video.play().catch(function () {}); } else { video.pause && video.pause(); }
-            });
           });
         }
 
-        tabs.forEach(function (tab, i) {
-          tab.addEventListener('click', function () { select(i, false); });
-          tab.addEventListener('keydown', function (event) {
+        function show(index) {
+          shown = index;
+          slides.forEach(function (slide, i) { slide.classList.toggle('is-shown', i === index); });
+          syncVideos();
+        }
+
+        function select(index, scroll) {
+          active = index;
+          items.forEach(function (item, i) {
+            var isActive = i === index;
+            item.classList.toggle('is-active', isActive);
+            triggers[i].setAttribute('aria-expanded', isActive ? 'true' : 'false');
+          });
+          show(index);
+
+          if (scroll && !desktop.matches) {
+            setTimeout(function () {
+              var top = items[index].getBoundingClientRect().top;
+              if (top < 0 || top > window.innerHeight * 0.4) {
+                items[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }, 380);
+          }
+        }
+
+        triggers.forEach(function (trigger, i) {
+          trigger.addEventListener('click', function () { select(i, true); });
+
+          trigger.addEventListener('mouseenter', function () {
+            if (!desktop.matches || !finePointer.matches) return;
+            clearTimeout(hoverTimer);
+            hoverTimer = setTimeout(function () { show(i); }, 90);
+          });
+
+          trigger.addEventListener('focus', function () {
+            if (desktop.matches) show(i);
+          });
+
+          trigger.addEventListener('keydown', function (event) {
             var next = null;
-            if (event.key === 'ArrowDown' || event.key === 'ArrowRight') next = (i + 1) % tabs.length;
-            if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+            if (event.key === 'ArrowDown') next = Math.min(i + 1, triggers.length - 1);
+            if (event.key === 'ArrowUp') next = Math.max(i - 1, 0);
             if (event.key === 'Home') next = 0;
-            if (event.key === 'End') next = tabs.length - 1;
-            if (next !== null) { event.preventDefault(); select(next, true); }
+            if (event.key === 'End') next = triggers.length - 1;
+            if (next !== null) { event.preventDefault(); triggers[next].focus(); }
           });
         });
 
+        var list = section.querySelector('.nec__list');
+        list.addEventListener('mouseleave', function () {
+          clearTimeout(hoverTimer);
+          if (shown !== active) show(active);
+        });
+        list.addEventListener('focusout', function (event) {
+          if (!list.contains(event.relatedTarget) && shown !== active) show(active);
+        });
+
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver(function (entries) {
+            inView = entries[0].isIntersecting;
+            syncVideos();
+          }, { rootMargin: '100px 0px' }).observe(section);
+        } else {
+          inView = true;
+          syncVideos();
+        }
+
+        var onChange = function () { syncVideos(); };
+        desktop.addEventListener ? desktop.addEventListener('change', onChange) : desktop.addListener(onChange);
+
         section.addEventListener('shopify:block:select', function (event) {
-          var index = panels.findIndex(function (panel) { return panel.contains(event.target); });
-          if (index > -1) select(index, false);
+          var index = items.findIndex(function (item) { return item.contains(event.target) || item === event.target; });
+          if (index > -1) select(index, true);
         });
       });
     }
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function () { initNecesidades(); }, { once: true });
+      document.addEventListener('DOMContentLoaded', function () { initNec(); }, { once: true });
     } else {
-      initNecesidades();
+      initNec();
     }
-    document.addEventListener('shopify:section:load', function (event) { initNecesidades(event.target); });
+    document.addEventListener('shopify:section:load', function (event) { initNec(event.target); });
   })();
 </script>
 
 <style>
-  .necesidades {
-    --nec-muted: rgb(var(--text-color) / 0.7);
+  .nec {
+    --nec-muted: rgb(var(--text-color) / 0.68);
+    --nec-faint: rgb(var(--text-color) / 0.38);
     --nec-line: rgb(var(--text-color) / 0.14);
-    padding-block-end: clamp(4rem, 8vw, 7.5rem);
+    --nec-ease: cubic-bezier(0.2, 0.65, 0.3, 1);
+    padding-block: clamp(4rem, 8vw, 7.5rem);
   }
 
-  .necesidades__header {
-    max-width: 46rem;
-    margin: 0 auto clamp(2.75rem, 5vw, 4.5rem);
-    text-align: center;
+  .nec__layout {
+    display: grid;
+    gap: 2.5rem;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
-  .necesidades__eyebrow {
-    display: inline-flex;
-    flex-direction: column;
+  /* Cabecera */
+  .nec__header { margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+
+  .nec__eyebrow {
+    display: flex;
     align-items: center;
-    gap: 0.9rem;
+    gap: 1rem;
     margin: 0 0 1.25rem;
     color: var(--nec-muted);
     font: var(--subheading-font-style) var(--subheading-font-weight) 0.72rem / 1.2 var(--subheading-font-family);
@@ -190,289 +263,294 @@
     text-transform: uppercase;
   }
 
-  .necesidades__eyebrow::after {
-    width: 3.5rem;
+  .nec__eyebrow::before {
+    width: 2.5rem;
     height: 1px;
-    background: rgb(var(--text-color) / 0.3);
+    background: rgb(var(--text-color) / 0.35);
     content: "";
   }
 
-  .necesidades__title {
+  .nec__title {
     margin: 0;
     color: rgb(var(--text-color));
-    font: var(--heading-font-style) var(--heading-font-weight) clamp(2.5rem, 5vw, 4.5rem) / 1.02 var(--heading-font-family);
+    font: var(--heading-font-style) var(--heading-font-weight) clamp(2.4rem, 4.6vw, 4.25rem) / 1.02 var(--heading-font-family);
     letter-spacing: var(--heading-letter-spacing);
     text-wrap: balance;
   }
 
-  .necesidades__subtitle {
+  .nec__subtitle {
+    max-width: 34rem;
     margin-top: 1.25rem;
     color: var(--nec-muted);
-    font-size: clamp(1rem, 1.3vw, 1.1rem);
+    font-size: clamp(0.98rem, 1.2vw, 1.08rem);
     line-height: 1.7;
   }
 
-  .necesidades__subtitle p { margin: 0; }
-  .necesidades__subtitle p + p { margin-top: 0.75rem; }
+  .nec__subtitle p { margin: 0; }
+  .nec__subtitle p + p { margin-top: 0.75rem; }
 
-  .necesidades__layout {
+  /* Lista */
+  .nec__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--nec-line);
+  }
+
+
+  .nec__item {
+    border-bottom: 1px solid var(--nec-line);
+    scroll-margin-top: calc(var(--sticky-area-height, 0px) + 1rem);
+  }
+
+  .nec__item-heading { margin: 0; font: inherit; }
+
+  .nec__trigger {
     display: grid;
-    gap: 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  /* Navegación */
-  .necesidades__nav {
-    display: flex;
-    gap: 0.5rem;
-    margin-inline: calc(-1 * var(--container-gutter, 1.25rem));
-    padding: 0 var(--container-gutter, 1.25rem) 0.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
-  }
-
-  .necesidades__nav::-webkit-scrollbar { display: none; }
-
-  .necesidades__tab {
-    display: inline-flex;
-    flex-shrink: 0;
+    grid-template-columns: 2.25rem minmax(0, 1fr) auto;
     align-items: baseline;
-    gap: 0.6rem;
-    padding: 0.75rem 1.15rem;
-    border: 1px solid var(--nec-line);
-    background: transparent;
-    color: var(--nec-muted);
-    font: var(--text-font-style) var(--text-font-weight) 0.9rem / 1.2 var(--text-font-family);
+    width: 100%;
+    padding: 1.1rem 0;
+    border: 0;
+    background: none;
+    color: var(--nec-faint);
     text-align: left;
-    white-space: nowrap;
     cursor: pointer;
-    scroll-snap-align: center;
-    transition: color 220ms ease, border-color 220ms ease, background-color 220ms ease;
+    transition: color 260ms ease;
   }
 
-  .necesidades__tab-number {
+
+  .nec__trigger:hover,
+  .nec__trigger:focus-visible,
+  .nec__item.is-active .nec__trigger { color: rgb(var(--text-color)); }
+
+  .nec__trigger:focus-visible { outline: 1px solid rgb(var(--text-color)); outline-offset: 4px; }
+
+  .nec__number {
     font: var(--heading-font-style) var(--heading-font-weight) 0.8rem / 1 var(--heading-font-family);
     letter-spacing: 0.08em;
-    opacity: 0.6;
   }
 
-  .necesidades__tab:hover { color: rgb(var(--text-color)); }
-
-  .necesidades__tab.is-active {
-    border-color: rgb(var(--text-color));
-    background: rgb(var(--text-color));
-    color: rgb(var(--background));
+  .nec__label {
+    font: var(--heading-font-style) var(--heading-font-weight) clamp(1.55rem, 2.5vw, 2.35rem) / 1.12 var(--heading-font-family);
+    letter-spacing: var(--heading-letter-spacing);
+    transition: transform 380ms var(--nec-ease);
   }
 
-  .necesidades__tab:focus-visible {
-    outline: 1px solid rgb(var(--text-color));
-    outline-offset: 3px;
+
+  .nec__icon {
+    position: relative;
+    width: 0.85rem;
+    height: 0.85rem;
+    align-self: center;
   }
 
-  /* Panel */
-  .necesidades__panel.is-active {
+  .nec__icon::before,
+  .nec__icon::after {
+    position: absolute;
+    inset: 50% 0 auto;
+    height: 1px;
+    background: currentColor;
+    transition: transform 380ms var(--nec-ease);
+    content: "";
+  }
+
+  .nec__icon::after { transform: rotate(90deg); }
+  .nec__item.is-active .nec__icon::after { transform: rotate(0deg); }
+
+  /* Cuerpo desplegable */
+  .nec__body {
     display: grid;
-    gap: clamp(1.75rem, 4vw, 4rem);
-    animation: necesidades-in 520ms cubic-bezier(0.2, 0.65, 0.3, 1) both;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition: grid-template-rows 420ms var(--nec-ease), visibility 0s linear 420ms;
   }
 
-  .necesidades__panel[hidden] { display: none; }
+  .nec__item.is-active .nec__body {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition: grid-template-rows 420ms var(--nec-ease), visibility 0s;
+  }
 
-  .necesidades__media {
+  .nec__body-inner {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .nec__body-inner > :last-child { margin-bottom: 1.75rem; }
+
+  .nec__inline-media {
     position: relative;
     aspect-ratio: 4 / 5;
+    max-height: 72vh;
+    margin-bottom: 1.5rem;
     overflow: hidden;
-    background: rgb(var(--text-color) / 0.05);
+    background: rgb(var(--text-color) / 0.06);
   }
 
-  .necesidades__media img,
-  .necesidades__media video,
-  .necesidades__media svg,
-  .necesidades__media .necesidades__media-item {
+  .nec__question {
+    margin: 0;
+    color: rgb(var(--text-color));
+    font: italic var(--heading-font-weight) clamp(1.1rem, 1.5vw, 1.3rem) / 1.45 var(--heading-font-family);
+  }
+
+  .nec__text {
+    margin-top: 1rem;
+    color: var(--nec-muted);
+    font-size: clamp(0.96rem, 1.1vw, 1.03rem);
+    line-height: 1.75;
+  }
+
+  .nec__details {
+    display: grid;
+    gap: 0.85rem;
+    margin: 1.5rem 0 0;
+    padding: 1.25rem 0 0;
+    border-top: 1px solid var(--nec-line);
+  }
+
+  .nec__detail { display: grid; gap: 0.2rem; }
+
+  .nec__detail dt {
+    color: rgb(var(--text-color));
+    font: var(--subheading-font-style) var(--subheading-font-weight) 0.7rem / 1.3 var(--subheading-font-family);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .nec__detail dd {
+    margin: 0;
+    color: var(--nec-muted);
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
+  .nec__highlight {
+    margin: 1.5rem 0 0;
+    padding-left: 1.1rem;
+    border-left: 1px solid rgb(var(--text-color) / 0.45);
+    color: rgb(var(--text-color));
+    font: var(--heading-font-style) var(--heading-font-weight) clamp(1.1rem, 1.5vw, 1.3rem) / 1.45 var(--heading-font-family);
+    text-wrap: pretty;
+  }
+
+  .nec__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid rgb(var(--text-color) / 0.45);
+    color: rgb(var(--text-color));
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: gap 220ms ease, border-color 220ms ease;
+  }
+
+  .nec__link:hover { gap: 0.9rem; border-color: rgb(var(--text-color)); }
+
+  /* Media */
+  .nec-media {
+    position: absolute;
+    inset: 0;
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .necesidades__media video-media { display: block; width: 100%; height: 100%; }
-
-  .necesidades__panel.is-active .necesidades__media img,
-  .necesidades__panel.is-active .necesidades__media video {
-    animation: necesidades-zoom 1200ms cubic-bezier(0.2, 0.65, 0.3, 1) both;
-  }
-
-  .necesidades__media-number {
-    position: absolute;
-    left: clamp(1rem, 2vw, 1.75rem);
-    bottom: clamp(0.5rem, 1.5vw, 1.25rem);
-    color: rgb(255 255 255 / 0.9);
-    font: var(--heading-font-style) var(--heading-font-weight) clamp(4rem, 8vw, 7rem) / 0.85 var(--heading-font-family);
-    letter-spacing: -0.04em;
-    text-shadow: 0 2px 30px rgb(0 0 0 / 0.25);
-    pointer-events: none;
-  }
-
-  .necesidades__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .necesidades__panel-title {
-    margin: 0;
-    color: rgb(var(--text-color));
-    font: var(--heading-font-style) var(--heading-font-weight) clamp(2.1rem, 3.6vw, 3.4rem) / 1.05 var(--heading-font-family);
-    letter-spacing: var(--heading-letter-spacing);
-    text-wrap: balance;
-  }
-
-  .necesidades__question {
-    margin: 1.25rem 0 0;
-    padding-left: 1.1rem;
-    border-left: 1px solid rgb(var(--text-color) / 0.35);
-    color: rgb(var(--text-color));
-    font: italic var(--heading-font-weight) clamp(1.1rem, 1.6vw, 1.35rem) / 1.45 var(--heading-font-family);
-  }
-
-  .necesidades__text {
-    margin-top: 1.5rem;
-    color: var(--nec-muted);
-    font-size: clamp(0.98rem, 1.2vw, 1.05rem);
-    line-height: 1.75;
-  }
-
-  .necesidades__details {
-    display: grid;
-    gap: 0;
-    margin: 1.75rem 0 0;
-    padding: 0;
-    list-style: none;
-    border-top: 1px solid var(--nec-line);
-  }
-
-  .necesidades__detail {
-    display: grid;
-    gap: 0.35rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--nec-line);
-  }
-
-  .necesidades__detail-title {
-    color: rgb(var(--text-color));
-    font: var(--heading-font-style) var(--heading-font-weight) 1.15rem / 1.25 var(--heading-font-family);
-  }
-
-  .necesidades__detail-text {
-    color: var(--nec-muted);
-    font-size: 0.93rem;
-    line-height: 1.6;
-  }
-
-  .necesidades__highlight {
-    margin: 1.75rem 0 0;
-    color: rgb(var(--text-color));
-    font: var(--heading-font-style) var(--heading-font-weight) clamp(1.15rem, 1.6vw, 1.4rem) / 1.4 var(--heading-font-family);
-    text-wrap: pretty;
-  }
-
-  .necesidades__highlight::before {
-    display: block;
-    width: 2.5rem;
-    height: 1px;
-    margin-bottom: 1rem;
-    background: rgb(var(--text-color) / 0.45);
-    content: "";
-  }
-
-  @media screen and (min-width: 700px) {
-    .necesidades__media { aspect-ratio: 16 / 11; }
-    .necesidades__details { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; border-top: 0; }
-    .necesidades__detail { padding: 1rem 0 0; border-top: 1px solid var(--nec-line); border-bottom: 0; }
-  }
+  /* Escenario (solo escritorio) */
+  .nec__stage { display: none; }
 
   @media screen and (min-width: 1000px) {
-    .necesidades__layout {
-      grid-template-columns: minmax(200px, 0.28fr) minmax(0, 1fr);
-      gap: clamp(2.5rem, 5vw, 5rem);
+    .nec__layout {
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+      gap: clamp(3rem, 6vw, 6.5rem);
       align-items: start;
     }
 
-    .necesidades__nav {
+    .nec__inline-media { display: none; }
+
+    .nec__trigger { padding: 1.3rem 0; }
+    .nec__trigger:hover .nec__label,
+    .nec__item.is-active .nec__label { transform: translateX(0.4rem); }
+
+    .nec__body-inner { padding-left: 2.25rem; }
+
+    .nec__stage {
+      display: block;
       position: sticky;
       top: calc(var(--sticky-area-height, 0px) + 2rem);
-      flex-direction: column;
-      gap: 0;
-      margin: 0;
-      padding: 0;
-      overflow: visible;
-      border-top: 1px solid var(--nec-line);
     }
 
-    .necesidades__tab {
+    .nec__stage-frame {
       position: relative;
-      width: 100%;
-      padding: 1.15rem 0;
-      border: 0;
-      border-bottom: 1px solid var(--nec-line);
-      border-radius: 0;
-      white-space: normal;
-      font-size: 1rem;
+      height: min(calc(100vh - var(--sticky-area-height, 0px) - 4rem), 880px);
+      min-height: 540px;
+      overflow: hidden;
+      background: rgb(var(--text-color) / 0.06);
     }
 
-    .necesidades__tab::after {
+    .nec__slide {
       position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 100%;
-      height: 1px;
-      background: rgb(var(--text-color));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 450ms cubic-bezier(0.2, 0.65, 0.3, 1);
-      content: "";
+      inset: 0;
+      margin: 0;
+      opacity: 0;
+      transition: opacity 700ms var(--nec-ease);
     }
 
-    .necesidades__tab.is-active {
-      background: transparent;
-      color: rgb(var(--text-color));
+    .nec__slide.is-shown { opacity: 1; z-index: 1; }
+
+    .nec__slide .nec-media {
+      transform: scale(1.06);
+      transition: transform 1600ms var(--nec-ease);
     }
 
-    .necesidades__tab.is-active::after { transform: scaleX(1); }
+    .nec__slide.is-shown .nec-media { transform: scale(1); }
 
-    .necesidades__tab-label {
-      font: var(--heading-font-style) var(--heading-font-weight) 1.2rem / 1.25 var(--heading-font-family);
-      transition: transform 300ms ease;
+    .nec__caption {
+      position: absolute;
+      inset: auto 0 0;
+      display: flex;
+      align-items: flex-end;
+      gap: 1.25rem;
+      padding: 6rem clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 2.25rem);
+      background: linear-gradient(to top, rgb(0 0 0 / 0.55), rgb(0 0 0 / 0));
+      color: #fff;
     }
 
-    .necesidades__tab.is-active .necesidades__tab-label { transform: translateX(0.35rem); }
-
-    .necesidades__panel.is-active {
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      align-items: center;
+    .nec__caption-number {
+      font: var(--heading-font-style) var(--heading-font-weight) clamp(4.5rem, 8vw, 7.5rem) / 0.8 var(--heading-font-family);
+      letter-spacing: -0.04em;
+      opacity: 0.92;
     }
 
-    .necesidades__media { aspect-ratio: 4 / 5; }
-    .necesidades__details { grid-template-columns: minmax(0, 1fr); gap: 0; border-top: 1px solid var(--nec-line); }
-    .necesidades__detail { padding: 0.9rem 0; border-top: 0; border-bottom: 1px solid var(--nec-line); }
-  }
+    .nec__caption-text {
+      display: grid;
+      gap: 0.4rem;
+      padding-bottom: 0.35rem;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 600ms var(--nec-ease) 150ms, transform 600ms var(--nec-ease) 150ms;
+    }
 
-  @keyframes necesidades-in {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+    .nec__slide.is-shown .nec__caption-text { opacity: 1; transform: none; }
 
-  @keyframes necesidades-zoom {
-    from { transform: scale(1.06); }
-    to { transform: scale(1); }
+
+    .nec__caption-title {
+      font: var(--heading-font-style) var(--heading-font-weight) clamp(1.5rem, 2.2vw, 2.1rem) / 1.1 var(--heading-font-family);
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .necesidades__panel.is-active,
-    .necesidades__panel.is-active .necesidades__media img,
-    .necesidades__panel.is-active .necesidades__media video { animation: none; }
+    .nec__body,
+    .nec__item.is-active .nec__body,
+    .nec__slide,
+    .nec__slide .nec-media,
+    .nec__caption-text,
+    .nec__label { transition: none; }
   }
 </style>
 {%- endif -%}
@@ -494,9 +572,9 @@
       "name": "Necesidad",
       "settings": [
         { "type": "text", "id": "title", "label": "Título", "default": "Necesidad" },
-        { "type": "image_picker", "id": "image", "label": "Imagen" },
-        { "type": "video", "id": "video", "label": "Vídeo", "info": "Si se añade, sustituye a la imagen. Se reproduce en bucle y sin sonido." },
-        { "type": "textarea", "id": "question", "label": "Pregunta / gancho", "info": "Se muestra en cursiva bajo el título." },
+        { "type": "image_picker", "id": "image", "label": "Imagen", "info": "Mejor en vertical. Si añades vídeo, la imagen se usa como portada mientras carga." },
+        { "type": "video", "id": "video", "label": "Vídeo", "info": "Se reproduce en bucle y sin sonido. Mejor vertical y de 8–20 s." },
+        { "type": "textarea", "id": "question", "label": "Pregunta / gancho" },
         { "type": "richtext", "id": "content", "label": "Texto" },
         { "type": "header", "content": "Detalles (opcional)" },
         { "type": "text", "id": "detail_1_title", "label": "Detalle 1 · título" },
@@ -506,7 +584,9 @@
         { "type": "text", "id": "detail_3_title", "label": "Detalle 3 · título" },
         { "type": "textarea", "id": "detail_3_text", "label": "Detalle 3 · texto" },
         { "type": "header", "content": "Cierre" },
-        { "type": "textarea", "id": "highlight", "label": "Frase destacada" }
+        { "type": "textarea", "id": "highlight", "label": "Frase destacada" },
+        { "type": "text", "id": "button_text", "label": "Enlace · texto", "info": "Ej.: Ver tratamiento drenante" },
+        { "type": "url", "id": "button_link", "label": "Enlace · URL" }
       ]
     }
   ],

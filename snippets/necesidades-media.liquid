@@ -1,0 +1,43 @@
+{%- doc -%}
+  Media de una necesidad (sección necesidades-selector). El vídeo no se autoreproduce:
+  lo controla el JS de la sección, que solo reproduce el que está visible.
+
+  @param {object} block - bloque "need"
+  @param {string} [sizes] - atributo sizes de la imagen
+{%- enddoc -%}
+{%- if block.settings.video != blank -%}
+  {%- liquid
+    if block.settings.image != blank
+      assign poster = block.settings.image | image_url: width: 1200
+    else
+      assign poster = block.settings.video.preview_image | image_url: width: 1200
+    endif
+  -%}
+  {%- liquid
+    # Elegimos el MP4 más grande que no pase de 1280 px de alto (suficiente y ligero)
+    assign best_url = ''
+    assign best_height = 0
+    assign fallback_url = ''
+    for source in block.settings.video.sources
+      if source.mime_type == 'video/mp4'
+        if fallback_url == blank
+          assign fallback_url = source.url
+        endif
+        if source.height <= 1280 and source.height > best_height
+          assign best_height = source.height
+          assign best_url = source.url
+        endif
+      endif
+    endfor
+    if best_url == blank
+      assign best_url = fallback_url
+    endif
+  -%}
+  <video class="nec-media" muted loop playsinline preload="none" poster="{{ poster }}">
+    <source src="{{ best_url }}" type="video/mp4">
+  </video>
+{%- elsif block.settings.image != blank -%}
+  {{- block.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', sizes: sizes, widths: '500,700,900,1100,1400,1600', class: 'nec-media' -}}
+{%- else -%}
+  {{- 'lifestyle-1' | placeholder_svg_tag: 'nec-media' -}}
+{%- endif -%}
