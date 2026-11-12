@@ -74,6 +74,7 @@
           "type": "accordion",
           "settings": {
             "title": "Qué hace",
+            "content": "<p>Share some content to your customers about your products.</p>",
             "uppercase_title": true,
             "icon": "none",
             "page": ""
@@ -83,6 +84,7 @@
           "type": "accordion",
           "settings": {
             "title": "Cómo funciona",
+            "content": "<p>Share some content to your customers about your products.</p>",
             "uppercase_title": true,
             "icon": "none",
             "page": ""
@@ -92,6 +94,7 @@
           "type": "accordion",
           "settings": {
             "title": "Cómo debo utilizarlo",
+            "content": "<p>Share some content to your customers about your products.</p>",
             "uppercase_title": true,
             "icon": "none",
             "page": ""
@@ -134,7 +137,9 @@
       "blocks": {
         "subheading_pmgH74": {
           "type": "subheading",
-          "settings": {},
+          "settings": {
+            "text": "Subheading"
+          },
           "blocks": {}
         },
         "heading_87DHRL": {
@@ -169,10 +174,14 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
+        "aspect_ratio": "original",
+        "mobile_aspect_ratio": "inherit",
+        "image": "shopify://shop_images/ritual-serenity-1600x900.jpg",
         "overlay_color": "#000000",
         "overlay_opacity": 30,
         "enable_sticky_content": false,
         "content_width": "md",
+        "mobile_layout": "overlay",
         "desktop_text_position": "sm:place-self-center",
         "mobile_text_position": "place-self-center"
       }
@@ -182,7 +191,7 @@
       "name": "Spacing",
       "settings": {
         "desktop_spacing": 50,
-        "mobile_spacing": 35
+        "mobile_spacing": 0
       }
     },
     "text_with_media_NPEWmG": {
@@ -218,27 +227,31 @@
         "content_percentage_width": 50,
         "overlay_color": "#000000",
         "overlay_opacity": 20,
+        "mobile_order": "text_first",
+        "media_aspect_ratio": "4/3",
+        "mobile_media_aspect_ratio": "1/1",
         "add_media_spacing": false,
         "autoplay_video": true,
+        "primary_image": "shopify://shop_images/Retrato_natural_de_belleza_en_spa.png",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
         "show_secondary_media_on_mobile": true,
         "secondary_media_alignment": "place-self-center",
         "secondary_media_shape": "none"
-      },
-      "disabled": true
+      }
     },
     "spacing_ceqpyA": {
       "type": "spacing",
+      "disabled": true,
       "name": "Spacing",
       "settings": {
         "desktop_spacing": 50,
         "mobile_spacing": 35
-      },
-      "disabled": true
+      }
     },
     "image_text_side_by_side_R4zVPk": {
       "type": "image-text-side-by-side",
+      "disabled": true,
       "name": "Imagen y texto adaptable",
       "settings": {
         "color_scheme": "scheme-2",
@@ -262,8 +275,7 @@
         "button_text": "",
         "button_link": "",
         "button_style": "solid"
-      },
-      "disabled": true
+      }
     },
     "text_with_icons_rMJqmB": {
       "type": "text-with-icons",
@@ -272,28 +284,36 @@
           "type": "item",
           "settings": {
             "icon": "none",
-            "heading_tag": "h5"
+            "title": "Heading",
+            "heading_tag": "h5",
+            "content": "<p>Short content about your store</p>"
           }
         },
         "item_DgPg4H": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "heading_tag": "h5"
+            "title": "Heading",
+            "heading_tag": "h5",
+            "content": "<p>Short content about your store</p>"
           }
         },
         "item_bE8j3a": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "heading_tag": "h5"
+            "title": "Heading",
+            "heading_tag": "h5",
+            "content": "<p>Short content about your store</p>"
           }
         },
         "item_PGDUqi": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "heading_tag": "h5"
+            "title": "Heading",
+            "heading_tag": "h5",
+            "content": "<p>Short content about your store</p>"
           }
         }
       },
@@ -303,16 +323,13 @@
         "item_bE8j3a",
         "item_PGDUqi"
       ],
-      "custom_css": [
-        ".text-subdued {color: #000;}",
-        "@media screen and (min-width: 700px) {.section-stack {row-gap: 4rem; }}"
-      ],
+      "custom_css": [],
       "name": "t:sections.text_with_icons.name",
       "settings": {
         "color_scheme": "scheme-2",
         "subheading": "",
-        "title": "¿Qué es <em>{{ product.title }}</em>?",
-        "content": "{{ product.description }}",
+        "title": "",
+        "content": "",
         "heading_tag": "h3",
         "text_alignment": "center",
         "items_per_row_desktop": 4,
@@ -328,8 +345,8 @@
       "type": "spacing",
       "name": "Spacing",
       "settings": {
-        "desktop_spacing": 50,
-        "mobile_spacing": 35
+        "desktop_spacing": 0,
+        "mobile_spacing": 0
       }
     },
     "before_after_qTCtcr": {
@@ -358,6 +375,7 @@
         "before_fefz8j",
         "after_arHAQL"
       ],
+      "disabled": true,
       "name": "t:sections.before_after.name",
       "settings": {
         "show_when_empty": true,
@@ -375,8 +393,7 @@
         "cursor_initial_position": 50,
         "cursor_background": "#ffffff",
         "cursor_arrows_color": "#000000"
-      },
-      "disabled": true
+      }
     },
     "video_8k3inC": {
       "type": "video",
@@ -394,6 +411,7 @@
       "block_order": [
         "play_button_QpWzea"
       ],
+      "disabled": true,
       "name": "t:sections.video.name",
       "settings": {
         "show_when_empty": true,
@@ -405,24 +423,16 @@
         "video_size": "auto",
         "mobile_video_size": "md",
         "external_video_url": ""
-      },
-      "disabled": true
-    },
-    "spacing_JyijtP": {
-      "type": "spacing",
-      "name": "Spacing",
-      "settings": {
-        "desktop_spacing": 50,
-        "mobile_spacing": 35
-      },
-      "disabled": true
+      }
     },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
+      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
         "color_scheme": "scheme-2",
+        "product_list": [],
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
@@ -435,8 +445,7 @@
         "intro_button_text": "",
         "intro_button_link": "",
         "intro_button_style": "outline"
-      },
-      "disabled": true
+      }
     },
     "faq_BzxK8R": {
       "type": "faq",
@@ -444,6 +453,8 @@
         "question_7pCiFY": {
           "type": "question",
           "settings": {
+            "question": "Question",
+            "answer": "<p>Write a clear and concise answer to guide your customers.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -452,6 +463,8 @@
         "question_cVR879": {
           "type": "question",
           "settings": {
+            "question": "Question",
+            "answer": "<p>Write a clear and concise answer to guide your customers.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -460,6 +473,8 @@
         "question_Hffkgp": {
           "type": "question",
           "settings": {
+            "question": "Question",
+            "answer": "<p>Write a clear and concise answer to guide your customers.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -468,6 +483,8 @@
         "question_9jLicq": {
           "type": "question",
           "settings": {
+            "question": "Question",
+            "answer": "<p>Write a clear and concise answer to guide your customers.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -523,7 +540,6 @@
     "spacing_UzpjPF",
     "before_after_qTCtcr",
     "video_8k3inC",
-    "spacing_JyijtP",
     "featured_product_list_WEnHGr",
     "faq_BzxK8R",
     "spacing_VQMDBe",
