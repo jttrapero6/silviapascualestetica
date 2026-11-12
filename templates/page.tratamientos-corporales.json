@@ -137,7 +137,6 @@
           "type": "need",
           "settings": {
             "title": "Celulitis edematosa",
-            "image": "shopify://shop_images/Sin_nombre.png",
             "video": "shopify://files/videos/IMG_0816.MOV",
             "question": "¿Notas la piel de muslos o glúteos más irregular, con hinchazón y sensación de piernas pesadas o cansadas?",
             "content": "<p>La celulitis es una alteración multifactorial y <strong>no es simplemente “grasa”</strong>: intervienen el tejido adiposo, la microcirculación, el drenaje, el tejido conjuntivo, las hormonas y la firmeza de la piel. Y no existe una única celulitis.</p><p>La edematosa suele acompañarse de retención de líquidos. La piel puede verse acolchada y la congestión se hace más evidente al final del día.</p>",
@@ -156,7 +155,6 @@
           "type": "need",
           "settings": {
             "title": "Celulitis blanda",
-            "image": "shopify://shop_images/Sin_nombre.png",
             "video": "shopify://files/videos/IMG_1030 (1).MOV",
             "question": "¿Se hace más evidente cuando estás de pie y notas que la piel ha perdido tono?",
             "content": "<p>Suele aparecer en tejidos con menor tono y firmeza, y es frecuente que vaya acompañada de cierta flacidez.</p><p>Es habitual encontrarla después de cambios de peso, con el paso de los años o en personas con poca actividad física.</p>",
@@ -211,7 +209,6 @@
           "type": "need",
           "settings": {
             "title": "Grasa localizada",
-            "image": "shopify://shop_images/Tratamientos_spa_de_bienestar_y_cuidado_piel-1.png",
             "video": "shopify://files/videos/IMG_0818.MOV",
             "question": "¿Has perdido peso pero sigues teniendo ese pequeño volumen en abdomen, flancos, cartucheras o brazos?",
             "content": "<p>Es una acumulación de tejido adiposo que puede mantenerse incluso con un peso dentro de la normalidad. Su distribución depende de la genética, las hormonas, la edad y el estilo de vida, por eso no responde igual que una pérdida de peso general.</p><p>Trabajamos su volumen y contorno con los recursos más adecuados para cada caso, siempre dentro de unas expectativas reales.</p>",
@@ -230,7 +227,6 @@
           "type": "need",
           "settings": {
             "title": "Remodelación de la silueta",
-            "image": "shopify://shop_images/Tratamientos_spa_de_bienestar_y_cuidado_piel-2.png",
             "video": "shopify://files/videos/IMG_0814.MOV",
             "question": "¿Sientes que la cintura se ha desdibujado o que tu cuerpo ha perdido la forma que tenía?",
             "content": "<p>A veces no hay un único problema. No buscamos simplemente “quitar grasa”, sino <strong>recuperar visualmente la armonía de la silueta</strong>: observamos cómo se distribuye el volumen, qué zonas han perdido definición y cómo están los tejidos, y trabajamos varias áreas de forma coordinada.</p>",
@@ -249,7 +245,7 @@
           "type": "need",
           "settings": {
             "title": "Brazos",
-            "image": "shopify://shop_images/Serenidad_de_spa_en_tonos_beige_1.png",
+            "image": "shopify://shop_images/Sin_nombre.png",
             "question": "¿Piel más fina y menos firme, menos definición o una pequeña acumulación de grasa en la zona interna?",
             "content": "<p>Los brazos son especialmente sensibles a la flacidez, y en ellos suelen coexistir grasa localizada, pérdida de tono y pérdida de firmeza. Por eso no hay un único tratamiento: mejoramos la calidad de la piel y, cuando es necesario, actuamos también sobre el volumen.</p>",
             "detail_1_title": "",
@@ -267,7 +263,6 @@
           "type": "need",
           "settings": {
             "title": "Circulación y drenaje",
-            "image": "shopify://shop_images/inner-masaje.png",
             "video": "shopify://files/videos/e79207e6-0912-41d3-9fda-c2e16c51ca19.mp4",
             "question": "¿Llegas al final del día con las piernas cansadas, los tobillos hinchados o sensación de pesadez?",
             "content": "<p>Hay momentos en los que el cuerpo no pide perder centímetros: <strong>pide ligereza</strong>. El sedentarismo, muchas horas de pie o sentada, el calor o los cambios hormonales favorecen la congestión. Aquí el trabajo manual tiene un papel protagonista, acompañado de otros recursos cuando procede.</p>",
@@ -286,7 +281,7 @@
           "type": "need",
           "settings": {
             "title": "Bienestar y relajación",
-            "image": "shopify://shop_images/Sin_nombre.png",
+            "image": "shopify://shop_images/03C843BA-76F0-4AF8-A636-010458D0DF05_1.png",
             "question": "Y hay veces en las que no necesitas corregir nada. Simplemente necesitas parar.",
             "content": "<p>El estrés y el ritmo de vida se acumulan en el cuerpo: espalda cargada, hombros tensos, piernas cansadas. Estos tratamientos regalan al cuerpo un espacio para soltar, respirar y descansar, donde el masaje, el contacto y el ambiente son los protagonistas.</p>",
             "detail_1_title": "",
