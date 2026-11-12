@@ -43,7 +43,7 @@
         "links": {
           "type": "links",
           "settings": {
-            "menu": "footer",
+            "menu": "legal",
             "collapse_on_mobile": true,
             "show_menu_title": true,
             "menu_title": ""
