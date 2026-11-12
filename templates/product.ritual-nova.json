@@ -174,11 +174,14 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
+        "aspect_ratio": "original",
+        "mobile_aspect_ratio": "inherit",
         "image": "shopify://shop_images/Masaje_facial_relajante_en_spa.png",
         "overlay_color": "#000000",
         "overlay_opacity": 30,
         "enable_sticky_content": false,
         "content_width": "md",
+        "mobile_layout": "overlay",
         "desktop_text_position": "sm:place-self-center",
         "mobile_text_position": "place-self-center"
       }
@@ -188,7 +191,7 @@
       "name": "Spacing",
       "settings": {
         "desktop_spacing": 50,
-        "mobile_spacing": 35
+        "mobile_spacing": 0
       }
     },
     "text_with_media_NPEWmG": {
@@ -224,14 +227,17 @@
         "content_percentage_width": 50,
         "overlay_color": "#000000",
         "overlay_opacity": 20,
+        "mobile_order": "text_first",
+        "media_aspect_ratio": "4/3",
+        "mobile_media_aspect_ratio": "1/1",
         "add_media_spacing": false,
         "autoplay_video": true,
+        "primary_video": "shopify://files/videos/IMG_8947_3dc4639e-ffe1-4786-800e-a399c806ddac.MOV",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
         "show_secondary_media_on_mobile": true,
         "secondary_media_alignment": "place-self-center",
-        "secondary_media_shape": "none",
-        "primary_video": "shopify://files/videos/IMG_8947_3dc4639e-ffe1-4786-800e-a399c806ddac.MOV"
+        "secondary_media_shape": "none"
       }
     },
     "spacing_ceqpyA": {
@@ -239,14 +245,16 @@
       "name": "Spacing",
       "settings": {
         "desktop_spacing": 50,
-        "mobile_spacing": 35
+        "mobile_spacing": 0
       }
     },
     "image_text_side_by_side_R4zVPk": {
       "type": "image-text-side-by-side",
+      "disabled": true,
       "name": "Imagen y texto adaptable",
       "settings": {
         "color_scheme": "scheme-2",
+        "video": "shopify://files/videos/IMG_8947_3dc4639e-ffe1-4786-800e-a399c806ddac.MOV",
         "image_position": "left",
         "mobile_order": "content_first",
         "gap_mobile": 36,
@@ -266,10 +274,8 @@
         "text": "{{ product.description }}",
         "button_text": "",
         "button_link": "",
-        "button_style": "solid",
-        "video": "shopify://files/videos/IMG_8947_3dc4639e-ffe1-4786-800e-a399c806ddac.MOV"
-      },
-      "disabled": true
+        "button_style": "solid"
+      }
     },
     "text_with_icons_rMJqmB": {
       "type": "text-with-icons",
@@ -342,8 +348,8 @@
       "type": "spacing",
       "name": "Spacing",
       "settings": {
-        "desktop_spacing": 50,
-        "mobile_spacing": 35
+        "desktop_spacing": 0,
+        "mobile_spacing": 0
       }
     },
     "before_after_qTCtcr": {
@@ -372,6 +378,7 @@
         "before_fefz8j",
         "after_arHAQL"
       ],
+      "disabled": true,
       "name": "t:sections.before_after.name",
       "settings": {
         "show_when_empty": true,
@@ -389,8 +396,7 @@
         "cursor_initial_position": 50,
         "cursor_background": "#ffffff",
         "cursor_arrows_color": "#000000"
-      },
-      "disabled": true
+      }
     },
     "video_8k3inC": {
       "type": "video",
@@ -408,6 +414,7 @@
       "block_order": [
         "play_button_QpWzea"
       ],
+      "disabled": true,
       "name": "t:sections.video.name",
       "settings": {
         "show_when_empty": true,
@@ -419,20 +426,20 @@
         "video_size": "auto",
         "mobile_video_size": "md",
         "external_video_url": ""
-      },
-      "disabled": true
+      }
     },
     "spacing_JyijtP": {
       "type": "spacing",
+      "disabled": true,
       "name": "Spacing",
       "settings": {
         "desktop_spacing": 50,
         "mobile_spacing": 35
-      },
-      "disabled": true
+      }
     },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
+      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
@@ -450,8 +457,7 @@
         "intro_button_text": "",
         "intro_button_link": "",
         "intro_button_style": "outline"
-      },
-      "disabled": true
+      }
     },
     "faq_BzxK8R": {
       "type": "faq",
