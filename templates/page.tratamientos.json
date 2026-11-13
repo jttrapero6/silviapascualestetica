@@ -279,7 +279,7 @@
           "type": "button",
           "settings": {
             "text": "Ver masajes",
-            "url": "shopify://pages/masajes",
+            "url": "shopify://pages/rituales",
             "position": "middle_left",
             "style": "solid",
             "background": "",
