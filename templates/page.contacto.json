@@ -53,11 +53,14 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
+        "aspect_ratio": "original",
+        "mobile_aspect_ratio": "inherit",
         "image": "shopify://shop_images/IMG_0965.jpg",
         "overlay_color": "#000000",
         "overlay_opacity": 45,
         "enable_sticky_content": false,
         "content_width": "md",
+        "mobile_layout": "overlay",
         "desktop_text_position": "sm:place-self-center",
         "mobile_text_position": "place-self-center"
       }
@@ -103,8 +106,8 @@
           "settings": {
             "type": "email",
             "label": "Email",
-            "value": "info@silviapascualestetica.com",
-            "url": "mailto:mailto.info@silviapascualestetica.com",
+            "value": "tienda@silviapascualestetica.com",
+            "url": "mailto:tienda@silviapascualestetica.com",
             "open_new_tab": false,
             "icon": "picto-email"
           }
