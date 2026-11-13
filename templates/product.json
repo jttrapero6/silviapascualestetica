@@ -15,8 +15,6 @@
       "settings": {
         "color_scheme": "scheme-2",
         "show_home": true,
-        "show_current_page": true,
-        "hide_collection": false,
         "home_label": "Inicio",
         "separator": "/"
       }
@@ -264,7 +262,7 @@
         "product_list": [
           "tarjeta-regalo-120",
           "tarjeta-regalo-85",
-          "tarjeta-regalo-50"
+          "tarjeta-regalo-60"
         ],
         "stack_products_mobile": false,
         "stack_products_desktop": false,
