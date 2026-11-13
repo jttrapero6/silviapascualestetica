@@ -15,6 +15,8 @@
       "settings": {
         "color_scheme": "scheme-2",
         "show_home": true,
+        "show_vendor": true,
+        "show_product_name": true,
         "home_label": "Inicio",
         "separator": "/"
       }
@@ -258,8 +260,10 @@
       ],
       "name": "t:sections.featured_product_list.name",
       "settings": {
+        "show_when_empty": false,
         "color_scheme": "scheme-2",
         "product_list": [
+          "tarjeta-regalo-150",
           "tarjeta-regalo-120",
           "tarjeta-regalo-85",
           "tarjeta-regalo-60"
