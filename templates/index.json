@@ -420,50 +420,6 @@
     "featured_collections_UPHgtK": {
       "type": "featured-collections",
       "blocks": {
-        "collection_zXLTqr": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "babor",
-            "products_count": 8,
-            "title": "{{ block.settings.collection.title }}",
-            "content": "",
-            "link": "{{ block.settings.collection.url }}"
-          }
-        },
-        "collection_9P67KN": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "doctor-babor",
-            "products_count": 8,
-            "title": "{{ block.settings.collection.title }}",
-            "content": "",
-            "link": "{{ block.settings.collection.url }}"
-          }
-        },
-        "collection_hUNh9U": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "biologique-recherche",
-            "products_count": 8,
-            "title": "{{ block.settings.collection.title }}",
-            "content": "",
-            "link": "{{ block.settings.collection.url }}"
-          }
-        },
-        "collection_E9LFEV": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "endor-technologies",
-            "products_count": 8,
-            "title": "{{ block.settings.collection.title }}",
-            "content": "",
-            "link": "{{ block.settings.collection.url }}"
-          }
-        },
         "collection_9mmUGd": {
           "type": "collection",
           "settings": {
@@ -476,10 +432,6 @@
         }
       },
       "block_order": [
-        "collection_zXLTqr",
-        "collection_9P67KN",
-        "collection_hUNh9U",
-        "collection_E9LFEV",
         "collection_9mmUGd"
       ],
       "custom_css": [
