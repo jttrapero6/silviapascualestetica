@@ -218,7 +218,7 @@
             "dynamic-grid-heading-1": {
               "type": "_dynamic-grid-heading",
               "settings": {
-                "text": "Método <em>Luxianne</em>",
+                "text": "Metodología <em>Luxianne</em>",
                 "show_text_vertically": false,
                 "font_size_desktop": 4,
                 "font_size_mobile": 9,
@@ -349,7 +349,7 @@
             "icon_position": "middle_center",
             "subheading": "",
             "subheading_position": "middle_center",
-            "title": "Masajes",
+            "title": "Rituales",
             "heading_tag": "h2",
             "heading_html_tag": "h2",
             "heading_position": "top_left",
