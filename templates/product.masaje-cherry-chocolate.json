@@ -138,7 +138,7 @@
         "subheading_pmgH74": {
           "type": "subheading",
           "settings": {
-            "text": "Peeling natural"
+            "text": "Ritual"
           },
           "blocks": {}
         },
@@ -158,7 +158,7 @@
         "rich_text_7ztVAM": {
           "type": "rich-text",
           "settings": {
-            "text": "<p>Limpieza profunda y equilibrio que respeta tu piel. Previene alteraciones futuras manteniendo el bienestar de tu rostro.</p>",
+            "text": "<p>Una experiencia cálida y envolvente de cereza y cacao que nutre la piel y proporciona una agradable sensación de bienesta</p>",
             "content_width": "sm"
           },
           "blocks": {}
@@ -174,11 +174,14 @@
         "color_scheme": "",
         "allow_transparent_header": true,
         "image_size": "sm",
+        "aspect_ratio": "original",
+        "mobile_aspect_ratio": "inherit",
         "image": "shopify://shop_images/Tratamiento_facial_con_mascarilla_herbal.png",
         "overlay_color": "#000000",
         "overlay_opacity": 30,
         "enable_sticky_content": false,
         "content_width": "md",
+        "mobile_layout": "overlay",
         "desktop_text_position": "sm:place-self-center",
         "mobile_text_position": "place-self-center"
       }
@@ -224,6 +227,9 @@
         "content_percentage_width": 50,
         "overlay_color": "#000000",
         "overlay_opacity": 20,
+        "mobile_order": "media_first",
+        "media_aspect_ratio": "original",
+        "mobile_media_aspect_ratio": "inherit",
         "add_media_spacing": false,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/Tratamiento_facial_relajante_con_mascarilla_verde.png",
