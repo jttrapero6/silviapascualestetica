@@ -176,7 +176,7 @@
         "image_size": "sm",
         "aspect_ratio": "original",
         "mobile_aspect_ratio": "inherit",
-        "image": "shopify://shop_images/Tratamiento_facial_con_mascarilla_herbal.png",
+        "image": "shopify://shop_images/banner2_1920x600_c0737f73-3f65-4b8f-a476-193d5431ff4f.png",
         "overlay_color": "#000000",
         "overlay_opacity": 30,
         "enable_sticky_content": false,
@@ -191,7 +191,7 @@
       "name": "Spacing",
       "settings": {
         "desktop_spacing": 50,
-        "mobile_spacing": 35
+        "mobile_spacing": 0
       }
     },
     "text_with_media_NPEWmG": {
@@ -227,12 +227,12 @@
         "content_percentage_width": 50,
         "overlay_color": "#000000",
         "overlay_opacity": 20,
-        "mobile_order": "media_first",
-        "media_aspect_ratio": "original",
-        "mobile_media_aspect_ratio": "inherit",
+        "mobile_order": "text_first",
+        "media_aspect_ratio": "16/9",
+        "mobile_media_aspect_ratio": "1/1",
         "add_media_spacing": false,
         "autoplay_video": true,
-        "primary_image": "shopify://shop_images/Tratamiento_facial_relajante_con_mascarilla_verde.png",
+        "primary_image": "shopify://shop_images/Masajedepiernaenunspamoderno.png",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
         "show_secondary_media_on_mobile": true,
@@ -244,12 +244,13 @@
       "type": "spacing",
       "name": "Spacing",
       "settings": {
-        "desktop_spacing": 50,
-        "mobile_spacing": 35
+        "desktop_spacing": 0,
+        "mobile_spacing": 0
       }
     },
     "image_text_side_by_side_R4zVPk": {
       "type": "image-text-side-by-side",
+      "disabled": true,
       "name": "Imagen y texto adaptable",
       "settings": {
         "color_scheme": "scheme-2",
@@ -335,7 +336,7 @@
         "heading_tag": "h3",
         "text_alignment": "center",
         "items_per_row_desktop": 4,
-        "stack_on_mobile": true,
+        "stack_on_mobile": false,
         "separator_style": "vertical",
         "icon_position": "stacked",
         "icon_width": 36,
@@ -345,6 +346,7 @@
     },
     "spacing_UzpjPF": {
       "type": "spacing",
+      "disabled": true,
       "name": "Spacing",
       "settings": {
         "desktop_spacing": 50,
@@ -377,6 +379,7 @@
         "before_fefz8j",
         "after_arHAQL"
       ],
+      "disabled": true,
       "name": "t:sections.before_after.name",
       "settings": {
         "show_when_empty": true,
@@ -412,6 +415,7 @@
       "block_order": [
         "play_button_QpWzea"
       ],
+      "disabled": true,
       "name": "t:sections.video.name",
       "settings": {
         "show_when_empty": true,
@@ -430,12 +434,13 @@
       "type": "spacing",
       "name": "Spacing",
       "settings": {
-        "desktop_spacing": 50,
-        "mobile_spacing": 35
+        "desktop_spacing": 0,
+        "mobile_spacing": 0
       }
     },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
+      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
