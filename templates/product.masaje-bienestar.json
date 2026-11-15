@@ -229,7 +229,7 @@
         "overlay_opacity": 20,
         "mobile_order": "text_first",
         "media_aspect_ratio": "16/9",
-        "mobile_media_aspect_ratio": "inherit",
+        "mobile_media_aspect_ratio": "1/1",
         "add_media_spacing": false,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/IMG_4923.jpg",
