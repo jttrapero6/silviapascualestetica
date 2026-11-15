@@ -284,36 +284,36 @@
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Renovación celular",
+            "title": "Tiempo para ti",
             "heading_tag": "h5",
-            "content": "<p>Favorece el recambio cutáneo y mejora la textura general de la piel.</p>"
+            "content": "<p>El regalo más valioso: el tiempo que eliges dedicarte.</p>"
           }
         },
         "item_DgPg4H": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Efecto antioxidante",
+            "title": "Calma profunda",
             "heading_tag": "h5",
-            "content": "<p>Aporta nutrientes y ayuda a combatir el estrés oxidativo del día a día.</p>"
+            "content": "<p>Una sensación de calma, suavidad y bienestar que abraza cuerpo y mente.</p>"
           }
         },
         "item_bE8j3a": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Piel más clara",
+            "title": "Reconecta contigo",
             "heading_tag": "h5",
-            "content": "<p>Ayuda a unificar el tono y a aportar un aspecto más homogéneo y luminoso.</p>"
+            "content": "<p>Una invitación a detenerte, escucharte y volver a conectar contigo.</p>"
           }
         },
         "item_PGDUqi": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Vitalidad inmediata",
+            "title": "Cuidarte es amor",
             "heading_tag": "h5",
-            "content": "<p>Deja la epidermis con un aspecto más fresco, hidratado y revitalizado.</p>"
+            "content": "<p>Porque cuidarte no es un lujo: es una forma de amor.</p>"
           }
         }
       },
@@ -466,8 +466,8 @@
         "question_7pCiFY": {
           "type": "question",
           "settings": {
-            "question": "¿Es recomendable para pieles apagadas?",
-            "answer": "<p>Sí, es muy indicado para pieles apagadas o con textura irregular que buscan recuperar luminosidad.</p>",
+            "question": "¿Qué es Love & Relax?",
+            "answer": "<p>Una experiencia creada para abrazar cuerpo y mente con una sensación profunda de calma, suavidad y bienestar.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -476,8 +476,8 @@
         "question_cVR879": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánto dura la recuperación?",
-            "answer": "<p>La recuperación es generalmente ligera y depende del protocolo y la sensibilidad de cada piel.</p>",
+            "question": "¿Para quién está pensado?",
+            "answer": "<p>Para quien necesita detenerse, escucharse y dedicarse tiempo. Hoy, el plan eres tú.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -486,8 +486,8 @@
         "question_Hffkgp": {
           "type": "question",
           "settings": {
-            "question": "¿Se puede usar en casa?",
-            "answer": "<p>Se recomienda bajo supervisión profesional, ya que está pensado como tratamiento específico y personalizado.</p>",
+            "question": "¿Es un buen regalo?",
+            "answer": "<p>Sí. A veces el regalo más valioso no se envuelve: es tiempo para cuidarse y volver a conectar con uno mismo.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -496,8 +496,8 @@
         "question_9jLicq": {
           "type": "question",
           "settings": {
-            "question": "¿Qué cuidados necesito después?",
-            "answer": "<p>Hidratación, protección solar y seguir las recomendaciones del profesional para optimizar resultados.</p>",
+            "question": "¿Qué sensación deja?",
+            "answer": "<p>Calma, suavidad y la sensación de haberte regalado un momento solo para ti.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20

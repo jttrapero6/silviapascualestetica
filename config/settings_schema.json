@@ -1130,6 +1130,48 @@
       },
       {
         "type": "header",
+        "content": "Descuentos de la sección Descuentos"
+      },
+      {
+        "type": "paragraph",
+        "content": "El tema no puede leer los descuentos creados en Descuentos. Indica aquí la colección a la que se aplica cada uno para mostrar su etiqueta. Si un producto tiene precio de comparación, se usa ese. Recuerda vaciarlo cuando termine el descuento."
+      },
+      {
+        "type": "collection",
+        "id": "store_discount_1_collection",
+        "label": "Descuento 1 · colección"
+      },
+      {
+        "type": "number",
+        "id": "store_discount_1_percentage",
+        "label": "Descuento 1 · porcentaje",
+        "info": "Ej.: 20. Si lo dejas vacío, se muestra «Oferta».",
+        "visible_if": "{{ settings.store_discount_1_collection != blank }}"
+      },
+      {
+        "type": "collection",
+        "id": "store_discount_2_collection",
+        "label": "Descuento 2 · colección"
+      },
+      {
+        "type": "number",
+        "id": "store_discount_2_percentage",
+        "label": "Descuento 2 · porcentaje",
+        "visible_if": "{{ settings.store_discount_2_collection != blank }}"
+      },
+      {
+        "type": "collection",
+        "id": "store_discount_3_collection",
+        "label": "Descuento 3 · colección"
+      },
+      {
+        "type": "number",
+        "id": "store_discount_3_percentage",
+        "label": "Descuento 3 · porcentaje",
+        "visible_if": "{{ settings.store_discount_3_collection != blank }}"
+      },
+      {
+        "type": "header",
         "content": "t:theme_settings.product_card.quick_buy_category"
       },
       {

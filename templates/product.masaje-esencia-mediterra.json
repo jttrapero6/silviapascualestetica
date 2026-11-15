@@ -284,36 +284,36 @@
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Renovación celular",
+            "title": "Sensación de vacaciones",
             "heading_tag": "h5",
-            "content": "<p>Favorece el recambio cutáneo y mejora la textura general de la piel.</p>"
+            "content": "<p>El placer de sentir que estás de vacaciones, aunque sea por un rato.</p>"
           }
         },
         "item_DgPg4H": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Efecto antioxidante",
+            "title": "Luz y frescura",
             "heading_tag": "h5",
-            "content": "<p>Aporta nutrientes y ayuda a combatir el estrés oxidativo del día a día.</p>"
+            "content": "<p>Una experiencia luminosa y fresca inspirada en la orilla del mar.</p>"
           }
         },
         "item_bE8j3a": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Piel más clara",
+            "title": "Adiós preocupaciones",
             "heading_tag": "h5",
-            "content": "<p>Ayuda a unificar el tono y a aportar un aspecto más homogéneo y luminoso.</p>"
+            "content": "<p>Un paréntesis para respirar más despacio y soltar lo que pesa.</p>"
           }
         },
         "item_PGDUqi": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Vitalidad inmediata",
+            "title": "Vuelve a ti",
             "heading_tag": "h5",
-            "content": "<p>Deja la epidermis con un aspecto más fresco, hidratado y revitalizado.</p>"
+            "content": "<p>Inspirada en los momentos sencillos que de verdad nos hacen bien.</p>"
           }
         }
       },
@@ -466,8 +466,8 @@
         "question_7pCiFY": {
           "type": "question",
           "settings": {
-            "question": "¿Es recomendable para pieles apagadas?",
-            "answer": "<p>Sí, es muy indicado para pieles apagadas o con textura irregular que buscan recuperar luminosidad.</p>",
+            "question": "¿En qué se inspira Esencia Mediterránea?",
+            "answer": "<p>En el Mediterráneo: luz sobre la piel, brisa suave, calma y esa sensación de verano que permanece en el cuerpo.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -476,8 +476,8 @@
         "question_cVR879": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánto dura la recuperación?",
-            "answer": "<p>La recuperación es generalmente ligera y depende del protocolo y la sensibilidad de cada piel.</p>",
+            "question": "¿Cómo es la experiencia?",
+            "answer": "<p>Luminosa, fresca y relajante, inspirada en la sencillez de los momentos que verdaderamente nos hacen bien.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -486,8 +486,8 @@
         "question_Hffkgp": {
           "type": "question",
           "settings": {
-            "question": "¿Se puede usar en casa?",
-            "answer": "<p>Se recomienda bajo supervisión profesional, ya que está pensado como tratamiento específico y personalizado.</p>",
+            "question": "¿Para quién está pensado?",
+            "answer": "<p>Para quien necesita un paréntesis de bienestar, respirar más despacio y volver a sentirse bien.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -496,8 +496,8 @@
         "question_9jLicq": {
           "type": "question",
           "settings": {
-            "question": "¿Qué cuidados necesito después?",
-            "answer": "<p>Hidratación, protección solar y seguir las recomendaciones del profesional para optimizar resultados.</p>",
+            "question": "¿Qué sensación deja?",
+            "answer": "<p>La de haber estado a la orilla del mar: calma, ligereza y esa sensación de verano que te acompaña después.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20

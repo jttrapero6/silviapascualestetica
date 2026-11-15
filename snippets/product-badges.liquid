@@ -44,7 +44,44 @@ This component is used in product listing and product page to render the badges 
       endif
     -%}
 
-    {%- if product.compare_at_price > product.price -%}
+    {%- comment -%}
+      Descuentos de la sección "Descuentos" de Shopify: el tema no puede leerlos, así que se configuran en
+      Ajustes del tema → Tarjeta de producto (colección + porcentaje). Solo se usan si no hay precio de comparación.
+    {%- endcomment -%}
+    {%- liquid
+      assign has_compare_discount = false
+      if product.compare_at_price > product.price
+        assign has_compare_discount = true
+      endif
+
+      assign store_discount = ''
+      unless has_compare_discount
+        capture store_discount
+          render 'store-discount', product: product
+        endcapture
+        assign store_discount = store_discount | strip
+      endunless
+    -%}
+
+    {%- if store_discount != blank -%}
+      <on-sale-badge class="badge badge--on-sale {% if vertical_text %}vertical-text{% endif %}">
+        {%- liquid
+          if store_discount != 'sale'
+            assign store_discount_percentage = store_discount | times: 1
+            if settings.product_card_discount_mode == 'percentage'
+              assign savings = store_discount_percentage | append: '%'
+            else
+              assign savings = variant.price | times: store_discount_percentage | divided_by: 100.0 | round | money
+            endif
+            echo 'product.general.discount_badge_html' | t: savings: savings
+          else
+            echo 'product.general.on_sale_badge' | t
+          endif
+        -%}
+      </on-sale-badge>
+    {%- endif -%}
+
+    {%- if has_compare_discount -%}
       {%- if settings.product_card_discount_mode == 'percentage' -%}
         {%- assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%' -%}
       {%- else -%}
