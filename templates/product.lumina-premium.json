@@ -178,7 +178,7 @@
         "mobile_aspect_ratio": "inherit",
         "image": "shopify://shop_images/banner7_1920x600_c195ccc5-c0c6-44b8-840e-a4df1d24d5a7.png",
         "overlay_color": "#000000",
-        "overlay_opacity": 30,
+        "overlay_opacity": 40,
         "enable_sticky_content": false,
         "content_width": "md",
         "mobile_layout": "overlay",
