@@ -21,6 +21,20 @@ This component is used in product listing and product page to render the badges 
     {%- for custom_badge in product.metafields.custom.badges.value -%}
       <span class="badge badge--custom badge--{{ custom_badge | handle }} {% if vertical_text %}vertical-text{% endif %}">{{ custom_badge }}</span>
     {%- endfor -%}
+
+    {%- comment -%}Etiquetas personalizadas solo para el grid de productos (tarjetas){%- endcomment -%}
+    {%- if context == 'card' -%}
+      {%- assign grid_label_1 = product.metafields.custom.etiqueta_1_grid_productos.value | strip -%}
+      {%- assign grid_label_2 = product.metafields.custom.etiqueta_2_grid_productos.value | strip -%}
+
+      {%- if grid_label_1 != blank -%}
+        <span class="badge badge--custom badge--grid-label badge--{{ grid_label_1 | handle }} {% if vertical_text %}vertical-text{% endif %}">{{ grid_label_1 | escape }}</span>
+      {%- endif -%}
+
+      {%- if grid_label_2 != blank -%}
+        <span class="badge badge--custom badge--grid-label badge--{{ grid_label_2 | handle }} {% if vertical_text %}vertical-text{% endif %}">{{ grid_label_2 | escape }}</span>
+      {%- endif -%}
+    {%- endif -%}
   {%- endif -%}
 
   {%- if show_sold_out_badge and variant.available == false -%}
