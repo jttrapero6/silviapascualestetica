@@ -26,7 +26,7 @@
           "name": "t:sections.slideshow.blocks.video.name",
           "settings": {
             "color_scheme": "",
-            "video": "shopify://files/videos/Mi película 2.mp4",
+            "video": "shopify://files/videos/Corporal .mov",
             "slide_link": "",
             "content_max_width": 1400,
             "mobile_content_position": "place-self-center",
@@ -381,6 +381,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "anchor_id": "",
+        "form_origin": "",
         "title": "Empezamos por&nbsp;<em>tu diagnóstico</em>",
         "heading_size": "h2",
         "content": "",
