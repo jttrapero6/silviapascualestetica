@@ -384,7 +384,7 @@
           "settings": {
             "icon": "none",
             "title": "<strong>Cuatro sesiones o más</strong>",
-            "content": "<p><strong>15 % de descuento sobre el importe total</strong></p>"
+            "content": "<p><strong>-15 % de descuento sobre el importe total</strong></p>"
           }
         }
       },
