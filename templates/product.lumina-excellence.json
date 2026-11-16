@@ -586,7 +586,7 @@
           "type": "question",
           "settings": {
             "question": "¿Necesito protector solar?",
-            "answer": "<p>Sí, la protección solar es esencial para mantener los resultados y cuidar la piel.</p>",
+            "answer": "<p>Sí, es imprescindible para proteger la piel frente a la radiación solar y prevenir el fotoenvejecimiento.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
