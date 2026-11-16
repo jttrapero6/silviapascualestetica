@@ -186,11 +186,44 @@
         "mobile_text_position": "place-self-center"
       }
     },
+    "scrolling_content_pRCy6y": {
+      "type": "scrolling-content",
+      "blocks": {
+        "text_xP3dci": {
+          "type": "text",
+          "settings": {
+            "text": "Programa de continuidad. 15% de ventaja al adquirir 4 o más sesiones",
+            "icon_position": "before_text",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_xP3dci"
+      ],
+      "name": "t:sections.scrolling_content.name",
+      "settings": {
+        "color_scheme": "scheme-7",
+        "scrolling_speed": 0.1,
+        "scroll_direction": "end-to-start",
+        "section_rotation": 0,
+        "pause_on_hover": false,
+        "text_font": "heading",
+        "text_font_size_mobile": 5,
+        "text_font_size_desktop": 1.5,
+        "section_vertical_spacing_mobile": 20,
+        "section_vertical_spacing_desktop": 24,
+        "item_horizontal_spacing_mobile": 40,
+        "item_horizontal_spacing_desktop": 80
+      }
+    },
     "spacing_cwreBH": {
       "type": "spacing",
       "name": "Spacing",
       "settings": {
-        "desktop_spacing": 50,
+        "desktop_spacing": 30,
         "mobile_spacing": 0
       }
     },
@@ -349,6 +382,63 @@
       "settings": {
         "desktop_spacing": 0,
         "mobile_spacing": 0
+      }
+    },
+    "specifications_FaBJmy": {
+      "type": "specifications",
+      "blocks": {
+        "attribute_EEMiRQ": {
+          "type": "attribute",
+          "settings": {
+            "icon": "none",
+            "title": "Una sesión",
+            "content": "<p>120€</p>"
+          }
+        },
+        "attribute_GAged8": {
+          "type": "attribute",
+          "settings": {
+            "icon": "none",
+            "title": "Dos sesiones",
+            "content": "<p>240€</p>"
+          }
+        },
+        "attribute_mhCNKP": {
+          "type": "attribute",
+          "settings": {
+            "icon": "none",
+            "title": "Tres sesiones",
+            "content": "<p>360€</p>"
+          }
+        },
+        "attribute_ePErRR": {
+          "type": "attribute",
+          "settings": {
+            "icon": "none",
+            "title": "<strong>Cuatro sesiones o más</strong>",
+            "content": "<p><strong>-15 % de descuento sobre el importe total</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "attribute_EEMiRQ",
+        "attribute_GAged8",
+        "attribute_mhCNKP",
+        "attribute_ePErRR"
+      ],
+      "name": "t:sections.specifications.name",
+      "settings": {
+        "color_scheme": "scheme-339b9ec5-06d0-4411-b4ab-b6309ff04864",
+        "layout": "split",
+        "add_image_spacing": false,
+        "image_position": "start",
+        "subheading": "",
+        "title": "Precios",
+        "heading_size": "h3",
+        "content": "<p>Descubre el placer de cuidarte. Al añadir 4 o más sesiones a tu selección, disfrutarás de un 15 % de descuento en todas ellas.<br/><br/><strong>Centro de Estética Avanzada Silvia Pascual</strong></p>",
+        "collapse_attributes": false,
+        "show_attribute_icon_on_top": false,
+        "uppercase_attribute_title": false
       }
     },
     "before_after_qTCtcr": {
@@ -543,12 +633,14 @@
   "order": [
     "main",
     "image_with_text_overlay_yexDeB",
+    "scrolling_content_pRCy6y",
     "spacing_cwreBH",
     "text_with_media_NPEWmG",
     "spacing_ceqpyA",
     "image_text_side_by_side_R4zVPk",
     "text_with_icons_rMJqmB",
     "spacing_UzpjPF",
+    "specifications_FaBJmy",
     "before_after_qTCtcr",
     "video_8k3inC",
     "spacing_JyijtP",
