@@ -1,0 +1,33 @@
+{%- doc -%}
+Shows the same loading animation used by "Add to cart" (aria-busy on the submit button) when a contact
+or newsletter form is submitted. These forms do a full page POST, so the loader stays until the page reloads.
+{%- enddoc -%}
+
+<script>
+  (() => {
+    const FORM_SELECTOR = 'form[action*="/contact"]';
+
+    document.addEventListener('submit', (event) => {
+      const form = event.target;
+      if (!(form instanceof HTMLFormElement) || !form.matches(FORM_SELECTOR)) return;
+      if (event.defaultPrevented) return;
+
+      const submitter = event.submitter || form.querySelector('[type="submit"]');
+      if (!submitter) return;
+
+      // Prevent double submissions while the loader is visible
+      if (submitter.getAttribute('aria-busy') === 'true') {
+        event.preventDefault();
+        return;
+      }
+
+      submitter.setAttribute('aria-busy', 'true');
+    });
+
+    // When coming back with the browser "back" button, the page may be restored from cache with the loader still on
+    window.addEventListener('pageshow', (event) => {
+      if (!event.persisted) return;
+      document.querySelectorAll(`${FORM_SELECTOR} [aria-busy="true"]`).forEach((button) => button.removeAttribute('aria-busy'));
+    });
+  })();
+</script>
