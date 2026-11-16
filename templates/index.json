@@ -505,7 +505,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-3",
-        "background_image": "shopify://shop_images/d957abcd-0d7e-456d-9bea-f97a3348b286-new.jpg",
+        "background_image": "shopify://shop_images/El_centro.png",
         "title": "¿Qué dicen de Silvia Pascual Centro de Estética?",
         "use_arrows_navigation": false,
         "show_quotation_mark": true,
@@ -514,7 +514,7 @@
         "autoplay": true,
         "cycle_speed": 6,
         "overlay_color": "#000000",
-        "overlay_opacity": 50
+        "overlay_opacity": 55
       }
     },
     "blog-posts": {
