@@ -359,7 +359,7 @@
           "type": "attribute",
           "settings": {
             "icon": "none",
-            "title": "1 Tratamiento",
+            "title": "Un tratamiento",
             "content": "<p>135€</p>"
           }
         },
@@ -367,7 +367,7 @@
           "type": "attribute",
           "settings": {
             "icon": "none",
-            "title": "2 Tratamientos",
+            "title": "Dos tratamientos",
             "content": "<p>270€</p>"
           }
         },
@@ -375,7 +375,7 @@
           "type": "attribute",
           "settings": {
             "icon": "none",
-            "title": "3 Tratamientos",
+            "title": "Tres tratamientos",
             "content": "<p>405€</p>"
           }
         },
@@ -383,8 +383,8 @@
           "type": "attribute",
           "settings": {
             "icon": "none",
-            "title": "<strong>4 Tratamientos o más</strong>",
-            "content": "<p><strong>-15% de descuento en el total</strong></p>"
+            "title": "<strong>Cuatro tratamientos o más</strong>",
+            "content": "<p><strong>15 % de descuento sobre el importe total</strong></p>"
           }
         }
       },
