@@ -284,36 +284,36 @@
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Renovación celular",
+            "title": "Desconexión total",
             "heading_tag": "h5",
-            "content": "<p>Favorece el recambio cutáneo y mejora la textura general de la piel.</p>"
+            "content": "<p>Un paréntesis para detener el tiempo y desconectar del exterior.</p>"
           }
         },
         "item_DgPg4H": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Efecto antioxidante",
+            "title": "Libera tensiones",
             "heading_tag": "h5",
-            "content": "<p>Aporta nutrientes y ayuda a combatir el estrés oxidativo del día a día.</p>"
+            "content": "<p>La armonía del masaje ayuda a soltar la carga física y emocional acumulada.</p>"
           }
         },
         "item_bE8j3a": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Piel más clara",
+            "title": "Equilibrio y luminosidad",
             "heading_tag": "h5",
-            "content": "<p>Ayuda a unificar el tono y a aportar un aspecto más homogéneo y luminoso.</p>"
+            "content": "<p>Devuelve al cuerpo y al rostro su armonía natural y un aspecto luminoso.</p>"
           }
         },
         "item_PGDUqi": {
           "type": "item",
           "settings": {
             "icon": "none",
-            "title": "Vitalidad inmediata",
+            "title": "Despierta los sentidos",
             "heading_tag": "h5",
-            "content": "<p>Deja la epidermis con un aspecto más fresco, hidratado y revitalizado.</p>"
+            "content": "<p>Pequeños detalles sensoriales que convierten el cuidado en una experiencia.</p>"
           }
         }
       },
@@ -466,8 +466,8 @@
         "question_7pCiFY": {
           "type": "question",
           "settings": {
-            "question": "¿Es recomendable para pieles apagadas?",
-            "answer": "<p>Sí, es muy indicado para pieles apagadas o con textura irregular que buscan recuperar luminosidad.</p>",
+            "question": "¿Qué es el ritual ORIGEN?",
+            "answer": "<p>Es una experiencia de cuidado integral que une masaje, gestos delicados y detalles sensoriales para ayudarte a reconectar contigo y volver a lo esencial: sentirte bien.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -476,8 +476,8 @@
         "question_cVR879": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánto dura la recuperación?",
-            "answer": "<p>La recuperación es generalmente ligera y depende del protocolo y la sensibilidad de cada piel.</p>",
+            "question": "¿Se trabaja el cuerpo y el rostro?",
+            "answer": "<p>Sí. ORIGEN es un recorrido de principio a fin que cuida el cuerpo y el rostro para devolverles su equilibrio y luminosidad.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -486,8 +486,8 @@
         "question_Hffkgp": {
           "type": "question",
           "settings": {
-            "question": "¿Se puede usar en casa?",
-            "answer": "<p>Se recomienda bajo supervisión profesional, ya que está pensado como tratamiento específico y personalizado.</p>",
+            "question": "¿Para quién está indicado?",
+            "answer": "<p>Para cualquier persona que necesite parar, liberar tensiones y regalarse un momento de calma. También es un regalo perfecto.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
@@ -496,8 +496,8 @@
         "question_9jLicq": {
           "type": "question",
           "settings": {
-            "question": "¿Qué cuidados necesito después?",
-            "answer": "<p>Hidratación, protección solar y seguir las recomendaciones del profesional para optimizar resultados.</p>",
+            "question": "¿Qué recomendaciones hay para después?",
+            "answer": "<p>Te aconsejamos tomarte el resto del día con calma, beber agua y prolongar esa sensación de bienestar sin prisas.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
