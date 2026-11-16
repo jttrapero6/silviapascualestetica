@@ -192,17 +192,7 @@
         "text_gjxd3r": {
           "type": "text",
           "settings": {
-            "text": "Welcome to our shop",
-            "icon_position": "before_text",
-            "highlight_effect": "default",
-            "highlight_accent_color": "",
-            "highlight_text_color": ""
-          }
-        },
-        "text_TNRYAA": {
-          "type": "text",
-          "settings": {
-            "text": "Discover our products",
+            "text": "Programa de continuidad. 15% de ventaja al adquirir 4 o más sesiones",
             "icon_position": "before_text",
             "highlight_effect": "default",
             "highlight_accent_color": "",
@@ -211,21 +201,20 @@
         }
       },
       "block_order": [
-        "text_gjxd3r",
-        "text_TNRYAA"
+        "text_gjxd3r"
       ],
       "name": "t:sections.scrolling_content.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-7",
         "scrolling_speed": 0.1,
-        "scroll_direction": "start-to-end",
+        "scroll_direction": "end-to-start",
         "section_rotation": 0,
         "pause_on_hover": false,
         "text_font": "heading",
-        "text_font_size_mobile": 10,
-        "text_font_size_desktop": 3,
-        "section_vertical_spacing_mobile": 24,
-        "section_vertical_spacing_desktop": 60,
+        "text_font_size_mobile": 5,
+        "text_font_size_desktop": 1.5,
+        "section_vertical_spacing_mobile": 20,
+        "section_vertical_spacing_desktop": 24,
         "item_horizontal_spacing_mobile": 40,
         "item_horizontal_spacing_desktop": 80
       }
@@ -234,7 +223,7 @@
       "type": "spacing",
       "name": "Spacing",
       "settings": {
-        "desktop_spacing": 50,
+        "desktop_spacing": 30,
         "mobile_spacing": 0
       }
     },
