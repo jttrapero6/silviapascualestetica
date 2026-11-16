@@ -352,6 +352,63 @@
         "mobile_spacing": 0
       }
     },
+    "specifications_bazgkp": {
+      "type": "specifications",
+      "blocks": {
+        "attribute_9TAKEE": {
+          "type": "attribute",
+          "settings": {
+            "icon": "none",
+            "title": "1 Tratamiento",
+            "content": "<p>135€</p>"
+          }
+        },
+        "attribute_RVtDPk": {
+          "type": "attribute",
+          "settings": {
+            "icon": "none",
+            "title": "2 Tratamientos",
+            "content": "<p>270€</p>"
+          }
+        },
+        "attribute_4n34J6": {
+          "type": "attribute",
+          "settings": {
+            "icon": "none",
+            "title": "3 Tratamientos",
+            "content": "<p>405€</p>"
+          }
+        },
+        "attribute_6ihR7X": {
+          "type": "attribute",
+          "settings": {
+            "icon": "none",
+            "title": "<strong>4 Tratamientos o más</strong>",
+            "content": "<p><strong>-15% de descuento en el total</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "attribute_9TAKEE",
+        "attribute_RVtDPk",
+        "attribute_4n34J6",
+        "attribute_6ihR7X"
+      ],
+      "name": "t:sections.specifications.name",
+      "settings": {
+        "color_scheme": "scheme-339b9ec5-06d0-4411-b4ab-b6309ff04864",
+        "layout": "split",
+        "add_image_spacing": false,
+        "image_position": "start",
+        "subheading": "",
+        "title": "Precios",
+        "heading_size": "h2",
+        "content": "<p>Descubre el placer de cuidarte. Al añadir 4 o más productos a tu selección, disfrutarás de un 15 % de descuento en todos ellos.&nbsp;<br/><br/><strong>Centro de Estética Avanzada Silvia Pascual</strong></p>",
+        "collapse_attributes": false,
+        "show_attribute_icon_on_top": false,
+        "uppercase_attribute_title": false
+      }
+    },
     "before_after_qTCtcr": {
       "type": "before-after",
       "blocks": {
@@ -550,6 +607,7 @@
     "image_text_side_by_side_R4zVPk",
     "text_with_icons_rMJqmB",
     "spacing_UzpjPF",
+    "specifications_bazgkp",
     "before_after_qTCtcr",
     "video_8k3inC",
     "spacing_JyijtP",
