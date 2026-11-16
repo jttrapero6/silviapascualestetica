@@ -19,6 +19,15 @@
           {%- render 'banner', status: 'error', content: error_message, text_alignment: 'center' -%}
         {%- endif -%}
 
+        {%- liquid
+          assign form_origin = section.settings.form_origin | strip
+          if form_origin == blank
+            assign form_origin = page.title | default: product.title | default: collection.title | default: page_title
+          endif
+        -%}
+        <input type="hidden" name="contact[origen]" value="{{ form_origin | escape }}">
+        <input type="hidden" name="contact[pagina]" value="{{ request.origin }}{{ request.path }}">
+
         <div class="fieldset">
           <div class="fieldset-row">
             {%- render 'input', type: 'text', name: 'contact[name]', label: 'Nombre', required: true, autocomplete: 'name' -%}
@@ -66,6 +75,12 @@ Maquillaje' | newline_to_br | split: '<br />' -%}
       "info": "Opcional. Permite enlazar al formulario con #id (por ejemplo #diagnostico)."
     },
     {
+      "type": "text",
+      "id": "form_origin",
+      "label": "Origen del mensaje",
+      "info": "Se incluye en el email que recibes para saber desde dónde se envió el formulario (por ejemplo \"Método Luxianne\"). Si lo dejas vacío, se usa el título de la página."
+    },
+    {
       "type": "inline_richtext",
       "id": "title",
       "label": "Título",
@@ -98,7 +113,8 @@ Maquillaje' | newline_to_br | split: '<br />' -%}
       "type": "checkbox",
       "id": "show_email_field",
       "label": "Mostrar campo de email",
-      "default": false
+      "info": "Si está desactivado, el email que recibes tendrá como remitente el email de la tienda y no podrás responder directamente al cliente.",
+      "default": true
     },
     {
       "type": "textarea",
