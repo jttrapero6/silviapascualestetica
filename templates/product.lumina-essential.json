@@ -575,7 +575,7 @@
           "type": "question",
           "settings": {
             "question": "¿Hace falta protección solar?",
-            "answer": "<p>Sí, es imprescindible para cuidar la piel y prolongar el efecto del tratamiento.</p>",
+            "answer": "<p>Sí, es imprescindible para proteger la piel y prevenir el fotoenvejecimiento.</p>",
             "icon": "none",
             "icon_width": 24,
             "mobile_icon_width": 20
