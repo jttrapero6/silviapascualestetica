@@ -186,6 +186,50 @@
         "mobile_text_position": "place-self-center"
       }
     },
+    "scrolling_content_cxgDpF": {
+      "type": "scrolling-content",
+      "blocks": {
+        "text_gjxd3r": {
+          "type": "text",
+          "settings": {
+            "text": "Welcome to our shop",
+            "icon_position": "before_text",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        },
+        "text_TNRYAA": {
+          "type": "text",
+          "settings": {
+            "text": "Discover our products",
+            "icon_position": "before_text",
+            "highlight_effect": "default",
+            "highlight_accent_color": "",
+            "highlight_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_gjxd3r",
+        "text_TNRYAA"
+      ],
+      "name": "t:sections.scrolling_content.name",
+      "settings": {
+        "color_scheme": "",
+        "scrolling_speed": 0.1,
+        "scroll_direction": "start-to-end",
+        "section_rotation": 0,
+        "pause_on_hover": false,
+        "text_font": "heading",
+        "text_font_size_mobile": 10,
+        "text_font_size_desktop": 3,
+        "section_vertical_spacing_mobile": 24,
+        "section_vertical_spacing_desktop": 60,
+        "item_horizontal_spacing_mobile": 40,
+        "item_horizontal_spacing_desktop": 80
+      }
+    },
     "spacing_cwreBH": {
       "type": "spacing",
       "name": "Spacing",
@@ -601,6 +645,7 @@
   "order": [
     "main",
     "image_with_text_overlay_yexDeB",
+    "scrolling_content_cxgDpF",
     "spacing_cwreBH",
     "text_with_media_NPEWmG",
     "spacing_ceqpyA",
