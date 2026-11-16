@@ -11,6 +11,12 @@
     assign button_label = 'product.general.add_to_cart_button' | t
     assign disabled = false
   endif
+
+  assign mobile_button_label = button_label
+  if disabled == false
+    assign formatted_price = product.selected_or_first_available_variant.price | money
+    assign mobile_button_label = button_label | append: ' · ' | append: formatted_price
+  endif
 -%}
 
 <style>
@@ -80,7 +86,7 @@
 
       <buy-buttons class="buy-buttons" form="{{ form_id }}">
         {%- render 'button', type: 'submit', form: form_id, content: button_label, disabled: disabled, style: 'outline', class: 'sm-max:hidden' -%}
-        {%- render 'button', type: 'submit', form: form_id, content: button_label, disabled: disabled, style: 'solid', class: 'sm:hidden' -%}
+        {%- render 'button', type: 'submit', form: form_id, content: mobile_button_label, disabled: disabled, style: 'solid', class: 'sm:hidden floating-atc-button__mobile' -%}
       </buy-buttons>
     {%- endform -%}
   </product-form>
@@ -93,6 +99,31 @@
     const addLabel = {{ 'product.general.add_to_cart_button' | t | json }};
     const soldOutLabel = {{ 'product.general.sold_out_button' | t | json }};
     const unavailableLabel = {{ 'product.general.unavailable_button' | t | json }};
+    const moneyFormat = {{ shop.money_format | json }};
+
+    const formatMoney = (cents) => {
+      if (typeof cents === 'string') cents = cents.replace('.', '');
+
+      const format = (number, precision, thousands = ',', decimal = '.') => {
+        number = (Number(number) / 100).toFixed(precision);
+        const [whole, fraction] = number.split('.');
+        const wholeFormatted = whole.replace(/(\d)(?=(\d{3})+(?!\d))/g, `$1${thousands}`);
+        return fraction ? wholeFormatted + decimal + fraction : wholeFormatted;
+      };
+
+      return moneyFormat.replace(/\{\{\s*(\w+)\s*\}\}/, (match, placeholder) => {
+        switch (placeholder) {
+          case 'amount': return format(cents, 2);
+          case 'amount_no_decimals': return format(cents, 0);
+          case 'amount_with_comma_separator': return format(cents, 2, '.', ',');
+          case 'amount_no_decimals_with_comma_separator': return format(cents, 0, '.', ',');
+          case 'amount_with_space_separator': return format(cents, 2, ' ', ',');
+          case 'amount_no_decimals_with_space_separator': return format(cents, 0, ' ', ',');
+          case 'amount_with_apostrophe_separator': return format(cents, 2, "'", '.');
+          default: return format(cents, 2);
+        }
+      });
+    };
 
     customElements.define('floating-atc-button', class extends HTMLElement {
       connectedCallback() {
@@ -130,11 +161,16 @@
         buttons.forEach((button) => {
           button.disabled = isDisabled;
 
+          let buttonLabel = label;
+          if (!isDisabled && button.classList.contains('floating-atc-button__mobile')) {
+            buttonLabel = `${label} · ${formatMoney(variant.price)}`;
+          }
+
           const buttonContent = button.querySelector('button-content');
           if (buttonContent) {
-            buttonContent.textContent = label;
-            if (buttonContent.hasAttribute('rotated-text')) buttonContent.setAttribute('rotated-text', label);
-            if (buttonContent.hasAttribute('up-text')) buttonContent.setAttribute('up-text', label);
+            buttonContent.textContent = buttonLabel;
+            if (buttonContent.hasAttribute('rotated-text')) buttonContent.setAttribute('rotated-text', buttonLabel);
+            if (buttonContent.hasAttribute('up-text')) buttonContent.setAttribute('up-text', buttonLabel);
           }
         });
       }
