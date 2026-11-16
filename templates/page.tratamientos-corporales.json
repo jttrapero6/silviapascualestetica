@@ -307,6 +307,9 @@
         "need_drenaje",
         "need_bienestar"
       ],
+      "custom_css": [
+        ".nec__slide:nth-child(8) > .nec-media {object-position: top;}"
+      ],
       "name": "Selector de necesidades",
       "settings": {
         "color_scheme": "scheme-2",
