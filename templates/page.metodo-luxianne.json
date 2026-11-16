@@ -205,7 +205,7 @@
             "color_scheme": "scheme-2",
             "content_position": "md:place-self-end",
             "title": "",
-            "content": "<p>El trabajo manual es una parte esencial del método Luxianne. Cada tratamiento incorpora un masaje estudiado, diseñado para estimular el tejido, activar la circulación y potenciar los resultados.</p><p>Contamos con formación en técnicas de masaje de autor, como el método creado por Silvia Oliete en Barcelona, un masaje desarrollado por Consuelo Silveira en Vitoria para la marca María D'uol, así como en drenaje linfático y masaje fisioactivo.</p><p>Fruto de toda esta trayectoria, nace Luxianne, un masaje exclusivo que combina técnica, sensibilidad y experiencia para ofrecer resultados visibles y una experiencia profundamente cuidada.</p>",
+            "content": "<p>El trabajo manual es una parte esencial del método Luxianne. Cada tratamiento incorpora un masaje estudiado, diseñado para estimular el tejido, activar la circulación y potenciar los resultados.</p><p>Fruto de toda esta trayectoria, nace Luxianne, un masaje exclusivo que combina técnica, sensibilidad y experiencia para ofrecer resultados visibles y una experiencia profundamente cuidada.</p>",
             "indent_heading": false
           }
         }
@@ -273,6 +273,7 @@
       "name": "Formulario custom",
       "settings": {
         "color_scheme": "scheme-2",
+        "anchor_id": "",
         "title": "Contáctanos",
         "heading_size": "h2",
         "content": "<p>Por favor completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>",
