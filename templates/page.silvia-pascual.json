@@ -90,7 +90,7 @@
     "image_text_side_by_side_hWGaY3": {
       "type": "image-text-side-by-side",
       "custom_css": [
-        "@media screen and (min-width: 1200px) {.image-text-side-by-side {align-items: start;}.image-text-side-by-side__image {position: sticky; top: 0;}}"
+        "@media screen and (min-width: 800px) {.image-text-side-by-side {align-items: start; } .image-text-side-by-side__image {position: sticky; top: 0; }}"
       ],
       "name": "Imagen y texto adaptable",
       "settings": {
