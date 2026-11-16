@@ -359,7 +359,7 @@
           "type": "attribute",
           "settings": {
             "icon": "none",
-            "title": "Un tratamiento",
+            "title": "Una sesión",
             "content": "<p>135€</p>"
           }
         },
@@ -367,7 +367,7 @@
           "type": "attribute",
           "settings": {
             "icon": "none",
-            "title": "Dos tratamientos",
+            "title": "Dos sesiones",
             "content": "<p>270€</p>"
           }
         },
@@ -375,7 +375,7 @@
           "type": "attribute",
           "settings": {
             "icon": "none",
-            "title": "Tres tratamientos",
+            "title": "Tres sesiones",
             "content": "<p>405€</p>"
           }
         },
@@ -383,7 +383,7 @@
           "type": "attribute",
           "settings": {
             "icon": "none",
-            "title": "<strong>Cuatro tratamientos o más</strong>",
+            "title": "<strong>Cuatro sesiones o más</strong>",
             "content": "<p><strong>15 % de descuento sobre el importe total</strong></p>"
           }
         }
@@ -403,7 +403,7 @@
         "subheading": "",
         "title": "Precios",
         "heading_size": "h2",
-        "content": "<p>Descubre el placer de cuidarte. Al añadir 4 o más productos a tu selección, disfrutarás de un 15 % de descuento en todos ellos.&nbsp;<br/><br/><strong>Centro de Estética Avanzada Silvia Pascual</strong></p>",
+        "content": "<p>Descubre el placer de cuidarte. Al añadir 4 o más sesiones a tu selección, disfrutarás de un 15 % de descuento en todas ellas.<br/><br/><strong>Centro de Estética Avanzada Silvia Pascual</strong></p>",
         "collapse_attributes": false,
         "show_attribute_icon_on_top": false,
         "uppercase_attribute_title": false
