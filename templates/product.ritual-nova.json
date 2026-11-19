@@ -248,35 +248,6 @@
         "mobile_spacing": 0
       }
     },
-    "image_text_side_by_side_R4zVPk": {
-      "type": "image-text-side-by-side",
-      "disabled": true,
-      "name": "Imagen y texto adaptable",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "video": "shopify://files/videos/IMG_8947_3dc4639e-ffe1-4786-800e-a399c806ddac.MOV",
-        "image_position": "left",
-        "mobile_order": "content_first",
-        "gap_mobile": 36,
-        "gap_desktop": 56,
-        "image_width": "50",
-        "content_width": "full",
-        "image_ratio_mobile": "4 / 3",
-        "image_ratio_desktop": "4 / 3",
-        "image_object_position_horizontal_mobile": "center",
-        "image_object_position_vertical_mobile": "top",
-        "image_object_position_horizontal_desktop": "center",
-        "image_object_position_vertical_desktop": "top",
-        "eyebrow": "",
-        "heading": "¿Qué es <em>{{ product.title }}</em>?",
-        "heading_size": "h3",
-        "heading_tag": "h2",
-        "text": "{{ product.description }}",
-        "button_text": "",
-        "button_link": "",
-        "button_style": "solid"
-      }
-    },
     "text_with_icons_rMJqmB": {
       "type": "text-with-icons",
       "blocks": {
@@ -352,99 +323,20 @@
         "mobile_spacing": 0
       }
     },
-    "before_after_qTCtcr": {
-      "type": "before-after",
-      "blocks": {
-        "before_fefz8j": {
-          "type": "before",
-          "settings": {
-            "color_scheme": "",
-            "text": "Antes",
-            "text_size": "h4",
-            "text_position": "start"
-          }
-        },
-        "after_arHAQL": {
-          "type": "after",
-          "settings": {
-            "color_scheme": "",
-            "text": "Después",
-            "text_size": "h4",
-            "text_position": "start"
-          }
-        }
-      },
-      "block_order": [
-        "before_fefz8j",
-        "after_arHAQL"
-      ],
-      "disabled": true,
-      "name": "t:sections.before_after.name",
-      "settings": {
-        "show_when_empty": true,
-        "color_scheme": "scheme-2",
-        "layout": "stacked",
-        "add_comparison_spacing": false,
-        "subheading": "",
-        "title": "",
-        "title_tag": "h3",
-        "content": "",
-        "button_text": "",
-        "button_url": "",
-        "button_style": "solid",
-        "cursor_direction": "horizontal",
-        "cursor_initial_position": 50,
-        "cursor_background": "#ffffff",
-        "cursor_arrows_color": "#000000"
-      }
-    },
-    "video_8k3inC": {
-      "type": "video",
-      "blocks": {
-        "play_button_QpWzea": {
-          "type": "play_button",
-          "settings": {
-            "position": "middle_center",
-            "inherit_alignment_on_mobile": true,
-            "mobile_position": "middle_center",
-            "show_play_cursor": false
-          }
-        }
-      },
-      "block_order": [
-        "play_button_QpWzea"
-      ],
-      "disabled": true,
-      "name": "t:sections.video.name",
-      "settings": {
-        "show_when_empty": true,
-        "color_scheme": "",
-        "allow_transparent_header": true,
-        "autoplay": true,
-        "show_controls": false,
-        "content_width": "full",
-        "video_size": "auto",
-        "mobile_video_size": "md",
-        "external_video_url": ""
-      }
-    },
-    "spacing_JyijtP": {
-      "type": "spacing",
-      "disabled": true,
-      "name": "Spacing",
-      "settings": {
-        "desktop_spacing": 50,
-        "mobile_spacing": 35
-      }
-    },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
-      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
         "color_scheme": "scheme-2",
-        "product_list": [],
+        "product_list": [
+          "herbal-balancing-toner-t-onico-equilibrante-a-base-de-hierbas",
+          "stress-defense-mushroom-crema-calmante-antiestr-es",
+          "awakening-eye-cream-crema-para-ojos",
+          "moisture-glow-serum-serum-hidratante",
+          "clay-multi-cleanser-limpiador-y-mascarilla-de-caolin",
+          "crema-bb-fps-20-01-ligera"
+        ],
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
@@ -457,6 +349,14 @@
         "intro_button_text": "",
         "intro_button_link": "",
         "intro_button_style": "outline"
+      }
+    },
+    "spacing_JyijtP": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 0,
+        "mobile_spacing": 0
       }
     },
     "faq_BzxK8R": {
@@ -547,13 +447,10 @@
     "spacing_cwreBH",
     "text_with_media_NPEWmG",
     "spacing_ceqpyA",
-    "image_text_side_by_side_R4zVPk",
     "text_with_icons_rMJqmB",
     "spacing_UzpjPF",
-    "before_after_qTCtcr",
-    "video_8k3inC",
-    "spacing_JyijtP",
     "featured_product_list_WEnHGr",
+    "spacing_JyijtP",
     "faq_BzxK8R",
     "spacing_VQMDBe",
     "floating_atc_button_L3bDtJ"
