@@ -438,12 +438,18 @@
     },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
-      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
         "color_scheme": "scheme-2",
-        "product_list": [],
+        "product_list": [
+          "super-soft-cleanser",
+          "herbal-care-lotion",
+          "blemish-balm-light-40-ml",
+          "special-care-cream",
+          "energy-plus-ampoules",
+          "age-refine-ampoule"
+        ],
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
@@ -456,6 +462,14 @@
         "intro_button_text": "",
         "intro_button_link": "",
         "intro_button_style": "outline"
+      }
+    },
+    "spacing_AB3CHn": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 0,
+        "mobile_spacing": 0
       }
     },
     "faq_BzxK8R": {
@@ -553,6 +567,7 @@
     "video_8k3inC",
     "spacing_JyijtP",
     "featured_product_list_WEnHGr",
+    "spacing_AB3CHn",
     "faq_BzxK8R",
     "spacing_VQMDBe",
     "floating_atc_button_L3bDtJ"
