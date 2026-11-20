@@ -201,6 +201,14 @@
         "secondary_media_shape": "none"
       }
     },
+    "spacing_BRQH7a": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 0
+      }
+    },
     "text_with_media_FczW3a": {
       "type": "text-with-media",
       "blocks": {
@@ -262,6 +270,22 @@
         "secondary_media_shape": "none"
       }
     },
+    "spacing_4myYeJ": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 0
+      }
+    },
+    "spacing_RXprh4": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 0
+      }
+    },
     "text_with_media_3CzNUT": {
       "type": "text-with-media",
       "blocks": {
@@ -321,6 +345,14 @@
         "show_secondary_media_on_mobile": true,
         "secondary_media_alignment": "place-self-center",
         "secondary_media_shape": "none"
+      }
+    },
+    "spacing_kNfHLH": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 0
       }
     },
     "text_with_media_4bA7ga": {
@@ -404,9 +436,13 @@
     "trust_icons_r9wc7t",
     "spacing_edKAQJ",
     "text_with_media_DryftK",
+    "spacing_BRQH7a",
     "text_with_media_FczW3a",
+    "spacing_4myYeJ",
     "text_with_media_3CzNUT",
+    "spacing_kNfHLH",
     "text_with_media_4bA7ga",
+    "spacing_RXprh4",
     "custom_liquid_JwDNUG",
     "formulario_personalizado_jPpyWL"
   ]
