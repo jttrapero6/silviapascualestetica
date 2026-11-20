@@ -213,6 +213,9 @@
         "text_font": "heading",
         "text_font_size_mobile": 5,
         "text_font_size_desktop": 1.5,
+        "use_px_font_size": false,
+        "text_font_size_mobile_px": 16,
+        "text_font_size_desktop_px": 20,
         "section_vertical_spacing_mobile": 20,
         "section_vertical_spacing_desktop": 24,
         "item_horizontal_spacing_mobile": 40,
@@ -519,21 +522,27 @@
     },
     "spacing_JyijtP": {
       "type": "spacing",
-      "disabled": true,
       "name": "Spacing",
       "settings": {
-        "desktop_spacing": 50,
-        "mobile_spacing": 35
+        "desktop_spacing": 0,
+        "mobile_spacing": 0
       }
     },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
-      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
         "color_scheme": "scheme-2",
-        "product_list": [],
+        "product_list": [
+          "lifting-collagen-peptide-booster-cream-crema-facial-con-peptidos-de-colageno-doctor-babor",
+          "doctor-babor-lifting-instant-lift-effect-cream",
+          "doctor-babor-lifting-rejuvenation-ampoule-serum-concentrate",
+          "doctor-babor-lifting-derma-filler-serum",
+          "doctor-babor-lifting-dual-eye-solution",
+          "hsr-lifting-eye-cream-crema-para-contorno-de-ojos-antiarrugas-reafirmante",
+          "pure-3"
+        ],
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
@@ -546,6 +555,14 @@
         "intro_button_text": "",
         "intro_button_link": "",
         "intro_button_style": "outline"
+      }
+    },
+    "spacing_nW3wgU": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 0,
+        "mobile_spacing": 0
       }
     },
     "faq_BzxK8R": {
@@ -645,6 +662,7 @@
     "video_8k3inC",
     "spacing_JyijtP",
     "featured_product_list_WEnHGr",
+    "spacing_nW3wgU",
     "faq_BzxK8R",
     "spacing_VQMDBe",
     "floating_atc_button_L3bDtJ"
