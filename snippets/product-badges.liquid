@@ -23,17 +23,47 @@ This component is used in product listing and product page to render the badges 
     {%- endfor -%}
 
     {%- comment -%}Etiquetas personalizadas solo para el grid de productos (tarjetas){%- endcomment -%}
+    {%- comment -%}
+      Cada etiqueta puede tener fecha de inicio y/o fin (metacampos *_fecha_inicio / *_fecha_fin, tipo fecha y hora).
+      - Si la fecha de fin ya ha pasado al renderizar, no se pinta.
+      - Si tiene fechas, se pinta como <scheduled-badge> y el JS (silviapascualestetica.js) la muestra/oculta
+        en tiempo real según la hora del visitante (necesario porque Shopify cachea el HTML).
+    {%- endcomment -%}
     {%- if context == 'card' -%}
-      {%- assign grid_label_1 = product.metafields.custom.etiqueta_1_grid_productos.value | strip -%}
-      {%- assign grid_label_2 = product.metafields.custom.etiqueta_2_grid_productos.value | strip -%}
+      {%- assign now_ts = 'now' | date: '%s' | plus: 0 -%}
 
-      {%- if grid_label_1 != blank -%}
-        <span class="badge badge--custom badge--grid-label badge--grid-label-1 badge--{{ grid_label_1 | handle }} {% if vertical_text %}vertical-text{% endif %}">{{ grid_label_1 | escape }}</span>
-      {%- endif -%}
+      {%- for i in (1..2) -%}
+        {%- assign label_key = 'etiqueta_' | append: i | append: '_grid_productos' -%}
+        {%- assign start_key = label_key | append: '_fecha_inicio' -%}
+        {%- assign end_key = label_key | append: '_fecha_fin' -%}
 
-      {%- if grid_label_2 != blank -%}
-        <span class="badge badge--custom badge--grid-label badge--grid-label-2 badge--{{ grid_label_2 | handle }} {% if vertical_text %}vertical-text{% endif %}">{{ grid_label_2 | escape }}</span>
-      {%- endif -%}
+        {%- assign grid_label = product.metafields.custom[label_key].value | strip -%}
+        {%- if grid_label == blank -%}{%- continue -%}{%- endif -%}
+
+        {%- assign start_value = product.metafields.custom[start_key].value -%}
+        {%- assign end_value = product.metafields.custom[end_key].value -%}
+        {%- assign start_ts = '' -%}
+        {%- assign end_ts = '' -%}
+
+        {%- if start_value != blank -%}
+          {%- assign start_ts = start_value | date: '%s' | plus: 0 -%}
+        {%- endif -%}
+
+        {%- if end_value != blank -%}
+          {%- assign end_ts = end_value | date: '%s' | plus: 0 -%}
+          {%- if end_ts <= now_ts -%}{%- continue -%}{%- endif -%}
+        {%- endif -%}
+
+        {%- capture badge_class -%}badge badge--custom badge--grid-label badge--grid-label-{{ i }} badge--{{ grid_label | handle }} {% if vertical_text %}vertical-text{% endif %}{%- endcapture -%}
+
+        {%- if start_ts != '' or end_ts != '' -%}
+          <scheduled-badge class="{{ badge_class }}" {% if start_ts != '' %}data-start="{{ start_ts }}"{% endif %} {% if end_ts != '' %}data-end="{{ end_ts }}"{% endif %} {% if start_ts != '' and start_ts > now_ts %}hidden{% endif %}>
+            {{- grid_label | escape -}}
+          </scheduled-badge>
+        {%- else -%}
+          <span class="{{ badge_class }}">{{ grid_label | escape }}</span>
+        {%- endif -%}
+      {%- endfor -%}
     {%- endif -%}
   {%- endif -%}
 

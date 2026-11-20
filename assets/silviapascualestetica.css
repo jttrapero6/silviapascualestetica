@@ -46,3 +46,13 @@ html .badge {
     background: rgb(var(--grid-label-2-background));
     color: rgb(var(--grid-label-2-text));
 }
+
+/* Etiquetas programadas por fecha: ocultas fuera de su rango */
+scheduled-badge[hidden] {
+    display: none !important;
+}
+
+/* Si todas las etiquetas de la lista están ocultas, no dejar el contenedor vacío ocupando espacio */
+badge-list:not(:has(> :not([hidden]))) {
+    display: none;
+}
