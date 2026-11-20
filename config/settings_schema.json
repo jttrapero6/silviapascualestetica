@@ -264,6 +264,30 @@
         "default": "#1e316a"
       },
       {
+        "type": "color",
+        "id": "product_grid_label_1_background",
+        "label": "Etiqueta 1 grid productos: fondo",
+        "info": "Metacampo custom.etiqueta_1_grid_productos. Si se deja vacío, usa el color de la insignia personalizada."
+      },
+      {
+        "type": "color",
+        "id": "product_grid_label_1_text",
+        "label": "Etiqueta 1 grid productos: texto",
+        "info": "Si se deja vacío, se elige blanco o negro automáticamente según el fondo."
+      },
+      {
+        "type": "color",
+        "id": "product_grid_label_2_background",
+        "label": "Etiqueta 2 grid productos: fondo",
+        "info": "Metacampo custom.etiqueta_2_grid_productos. Si se deja vacío, usa el color de la insignia personalizada."
+      },
+      {
+        "type": "color",
+        "id": "product_grid_label_2_text",
+        "label": "Etiqueta 2 grid productos: texto",
+        "info": "Si se deja vacío, se elige blanco o negro automáticamente según el fondo."
+      },
+      {
         "type": "header",
         "content": "t:theme_settings.colors.notification_category"
       },

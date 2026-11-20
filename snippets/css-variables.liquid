@@ -267,6 +267,17 @@ note that this may have impact on different places.
     --sold-out-badge-text: {% if product_sold_out_badge_brightness < 150 %}255 255 255{% else %}0 0 0{% endif %};
     --custom-badge-background: {{ settings.product_custom_badge_background.rgb }};
     --custom-badge-text: {% if product_custom_badge_brightness < 150 %}255 255 255{% else %}0 0 0{% endif %};
+
+    {%- comment -%}Colores de las etiquetas del grid de productos (metacampos etiqueta_1/2_grid_productos){%- endcomment -%}
+    {%- for i in (1..2) -%}
+      {%- assign label_bg_key = 'product_grid_label_' | append: i | append: '_background' -%}
+      {%- assign label_text_key = 'product_grid_label_' | append: i | append: '_text' -%}
+      {%- assign label_bg = settings[label_bg_key] | default: settings.product_custom_badge_background -%}
+      {%- assign label_text = settings[label_text_key] -%}
+      {%- assign label_bg_brightness = label_bg | color_brightness %}
+    --grid-label-{{ i }}-background: {{ label_bg.rgb }};
+    --grid-label-{{ i }}-text: {% if label_text != blank %}{{ label_text.rgb }}{% elsif label_bg_brightness < 150 %}255 255 255{% else %}0 0 0{% endif %};
+    {%- endfor %}
     --star-color: {{ settings.product_rating_color.rgb }};
 
     /* Default scheme */

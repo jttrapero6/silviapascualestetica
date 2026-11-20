@@ -35,3 +35,14 @@ body .shopify-policy__container {
 html .badge {
     font-family: var(--subheading-font-family);
 }
+
+/* Etiquetas del grid de productos (colores en Ajustes del tema → Colores) */
+.badge--grid-label-1 {
+    background: rgb(var(--grid-label-1-background));
+    color: rgb(var(--grid-label-1-text));
+}
+
+.badge--grid-label-2 {
+    background: rgb(var(--grid-label-2-background));
+    color: rgb(var(--grid-label-2-text));
+}

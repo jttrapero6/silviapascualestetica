@@ -28,11 +28,11 @@ This component is used in product listing and product page to render the badges 
       {%- assign grid_label_2 = product.metafields.custom.etiqueta_2_grid_productos.value | strip -%}
 
       {%- if grid_label_1 != blank -%}
-        <span class="badge badge--custom badge--grid-label badge--{{ grid_label_1 | handle }} {% if vertical_text %}vertical-text{% endif %}">{{ grid_label_1 | escape }}</span>
+        <span class="badge badge--custom badge--grid-label badge--grid-label-1 badge--{{ grid_label_1 | handle }} {% if vertical_text %}vertical-text{% endif %}">{{ grid_label_1 | escape }}</span>
       {%- endif -%}
 
       {%- if grid_label_2 != blank -%}
-        <span class="badge badge--custom badge--grid-label badge--{{ grid_label_2 | handle }} {% if vertical_text %}vertical-text{% endif %}">{{ grid_label_2 | escape }}</span>
+        <span class="badge badge--custom badge--grid-label badge--grid-label-2 badge--{{ grid_label_2 | handle }} {% if vertical_text %}vertical-text{% endif %}">{{ grid_label_2 | escape }}</span>
       {%- endif -%}
     {%- endif -%}
   {%- endif -%}
