@@ -427,12 +427,18 @@
     },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
-      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
         "color_scheme": "scheme-2",
-        "product_list": [],
+        "product_list": [
+          "doctor-babor-sensitive-anti-redness-serum",
+          "doctor-babor-sensitive-instant-soothing-ampoule-serum-concentrate",
+          "crema-calmante-rica-doctor-babor-soothing-cream-rich",
+          "doctor-babor-sensitive-anti-redness-cream",
+          "doctor-babor-sensitive-soothing-cream-cleanser",
+          "hy-ol-cleanser-phyto-hy-ol-booster-balancing-set"
+        ],
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
@@ -445,6 +451,14 @@
         "intro_button_text": "",
         "intro_button_link": "",
         "intro_button_style": "outline"
+      }
+    },
+    "spacing_JPpX74": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 0,
+        "mobile_spacing": 0
       }
     },
     "faq_BzxK8R": {
@@ -541,6 +555,7 @@
     "before_after_qTCtcr",
     "video_8k3inC",
     "featured_product_list_WEnHGr",
+    "spacing_JPpX74",
     "faq_BzxK8R",
     "spacing_VQMDBe",
     "floating_atc_button_L3bDtJ"
