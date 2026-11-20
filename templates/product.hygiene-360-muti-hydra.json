@@ -428,18 +428,8 @@
         "external_video_url": ""
       }
     },
-    "spacing_JyijtP": {
-      "type": "spacing",
-      "disabled": true,
-      "name": "Spacing",
-      "settings": {
-        "desktop_spacing": 50,
-        "mobile_spacing": 35
-      }
-    },
     "featured_product_list_WEnHGr": {
       "type": "featured-product-list",
-      "disabled": true,
       "name": "t:sections.featured_product_list.name",
       "settings": {
         "show_when_empty": true,
@@ -457,6 +447,14 @@
         "intro_button_text": "",
         "intro_button_link": "",
         "intro_button_style": "outline"
+      }
+    },
+    "spacing_JyijtP": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 0,
+        "mobile_spacing": 0
       }
     },
     "faq_BzxK8R": {
@@ -552,8 +550,8 @@
     "spacing_UzpjPF",
     "before_after_qTCtcr",
     "video_8k3inC",
-    "spacing_JyijtP",
     "featured_product_list_WEnHGr",
+    "spacing_JyijtP",
     "faq_BzxK8R",
     "spacing_VQMDBe",
     "floating_atc_button_L3bDtJ"
