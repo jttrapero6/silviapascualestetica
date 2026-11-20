@@ -132,6 +132,14 @@
         "item_heading_style": "subheading"
       }
     },
+    "spacing_edKAQJ": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 0
+      }
+    },
     "text_with_media_DryftK": {
       "type": "text-with-media",
       "blocks": {
@@ -181,9 +189,9 @@
         "overlay_color": "#000000",
         "overlay_opacity": 20,
         "mobile_order": "media_first",
-        "media_aspect_ratio": "original",
+        "media_aspect_ratio": "4/3",
         "mobile_media_aspect_ratio": "inherit",
-        "add_media_spacing": true,
+        "add_media_spacing": false,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/Sin_nombre.png",
         "secondary_media_width": 60,
@@ -242,9 +250,9 @@
         "overlay_color": "#000000",
         "overlay_opacity": 20,
         "mobile_order": "media_first",
-        "media_aspect_ratio": "original",
+        "media_aspect_ratio": "4/3",
         "mobile_media_aspect_ratio": "inherit",
-        "add_media_spacing": true,
+        "add_media_spacing": false,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/tratamientos-faciales.png",
         "secondary_media_width": 60,
@@ -303,9 +311,9 @@
         "overlay_color": "#000000",
         "overlay_opacity": 20,
         "mobile_order": "media_first",
-        "media_aspect_ratio": "original",
+        "media_aspect_ratio": "4/3",
         "mobile_media_aspect_ratio": "inherit",
-        "add_media_spacing": true,
+        "add_media_spacing": false,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/inner-masaje.png",
         "secondary_media_width": 60,
@@ -352,9 +360,9 @@
         "overlay_color": "#000000",
         "overlay_opacity": 20,
         "mobile_order": "media_first",
-        "media_aspect_ratio": "original",
+        "media_aspect_ratio": "4/3",
         "mobile_media_aspect_ratio": "inherit",
-        "add_media_spacing": true,
+        "add_media_spacing": false,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/Aplicacion_de_maquillaje_en_un_spa_calido.png",
         "secondary_media_width": 60,
@@ -394,6 +402,7 @@
     "main",
     "slideshow_mPDKHL",
     "trust_icons_r9wc7t",
+    "spacing_edKAQJ",
     "text_with_media_DryftK",
     "text_with_media_FczW3a",
     "text_with_media_3CzNUT",
