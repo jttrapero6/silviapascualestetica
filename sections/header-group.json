@@ -39,7 +39,10 @@
         "text_font": "body",
         "text_font_size_mobile": 3,
         "text_font_size_desktop": 1,
-        "section_vertical_spacing_mobile": 10,
+        "use_px_font_size": true,
+        "text_font_size_mobile_px": 12,
+        "text_font_size_desktop_px": 12,
+        "section_vertical_spacing_mobile": 12,
         "section_vertical_spacing_desktop": 12,
         "item_horizontal_spacing_mobile": 40,
         "item_horizontal_spacing_desktop": 80
