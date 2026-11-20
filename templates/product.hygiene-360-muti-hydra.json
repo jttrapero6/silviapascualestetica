@@ -434,7 +434,16 @@
       "settings": {
         "show_when_empty": true,
         "color_scheme": "scheme-2",
-        "product_list": [],
+        "product_list": [
+          "gel-limpiador-y-t-onico-facial-pieles-grasas-mixtas-y-acn-e-gel-tonic-cleanser",
+          "soothing-rose-toner",
+          "refining-enzyme-vitamin-c-cleanser",
+          "skinovage-balancing-cream-crema-facial-hidratante-pieles-mixtas",
+          "balancing-serum",
+          "moisturizing-serum",
+          "moisturizing-cream",
+          "vitalizing-eye-cream"
+        ],
         "stack_products_mobile": false,
         "stack_products_desktop": false,
         "products_per_row_mobile": "1",
