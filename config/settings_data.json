@@ -16,6 +16,8 @@
     "default_color_scheme": "scheme-2",
     "product_sold_out_badge_background": "#321e1e",
     "product_custom_badge_background": "#ffffff",
+    "product_grid_label_1_background": "#000000",
+    "product_grid_label_1_text": "#FFFFFF",
     "text_font": "instrument_sans_n4",
     "text_font_size_mobile": 14,
     "text_font_size_desktop": 15,
@@ -199,7 +201,7 @@
       "scheme-339b9ec5-06d0-4411-b4ab-b6309ff04864": {
         "settings": {
           "text_color": "#000000",
-          "background": "#F5F4F4",
+          "background": "#f5f4f4",
           "background_gradient": "",
           "secondary_background": "#ffffff",
           "primary_button_background": "#321e1e",
