@@ -283,6 +283,7 @@
         "image_with_text-1": {
           "type": "image_with_text",
           "settings": {
+            "zoom_on_hover": true,
             "change_color_scheme_on_hover": false,
             "color_scheme": "scheme-3",
             "color_scheme_hover": "scheme-3",
@@ -311,6 +312,7 @@
         "image_with_text-2": {
           "type": "image_with_text",
           "settings": {
+            "zoom_on_hover": true,
             "change_color_scheme_on_hover": false,
             "color_scheme": "scheme-3",
             "color_scheme_hover": "",
@@ -339,6 +341,7 @@
         "image_with_text-3": {
           "type": "image_with_text",
           "settings": {
+            "zoom_on_hover": true,
             "change_color_scheme_on_hover": false,
             "color_scheme": "scheme-3",
             "color_scheme_hover": "",
@@ -367,6 +370,7 @@
         "image_with_text_k84EKG": {
           "type": "image_with_text",
           "settings": {
+            "zoom_on_hover": true,
             "change_color_scheme_on_hover": false,
             "color_scheme": "scheme-3",
             "color_scheme_hover": "",
