@@ -156,18 +156,27 @@
                     {%- capture sizes_attribute -%}(max-width: 699px) 100vw, (max-width: 999px) 50vw, {{ 100.0 | divided_by: section.settings.items_per_row | round }}vw{%- endcapture -%}
 
                     {%- if block.settings.image != blank or block.settings.video != blank -%}
-                      <div class="content-box__background-media">
+                      <div class="content-box__background-media {% if block.settings.zoom_on_hover %}overflow-hidden{% endif %}">
                         {%- liquid
                           assign loading_attribute = nil
+                          assign media_class = 'size-full'
+
+                          if block.settings.zoom_on_hover
+                            assign media_class = 'size-full zoom-image group-hover:zoom'
+                          endif
 
                           if section.index > 1 or forloop.index > 3
                             assign loading_attribute = 'lazy'
                           endif
 
                           if block.type == 'image_with_text' and block.settings.image != blank
-                            echo block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading_attribute, sizes: sizes_attribute, widths: '300,400,500,600,800,1000,1200,1400,1600,1800', class: 'size-full'
+                            echo block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading_attribute, sizes: sizes_attribute, widths: '300,400,500,600,800,1000,1200,1400,1600,1800', class: media_class
                           elsif block.type == 'video_with_text' and block.settings.video != blank
-                            render 'media', media: block.settings.video, autoplay: true, loop: true, controls: false, sizes: sizes_attribute
+                            if block.settings.zoom_on_hover
+                              render 'media', media: block.settings.video, autoplay: true, loop: true, controls: false, sizes: sizes_attribute, class: 'zoom-image group-hover:zoom'
+                            else
+                              render 'media', media: block.settings.video, autoplay: true, loop: true, controls: false, sizes: sizes_attribute
+                            endif
                           endif
                         -%}
                       </div>
@@ -358,11 +367,11 @@
 
                 <media-block class="h-full">
                   {%- if can_make_block_clickable and block.settings.link_url != blank -%}
-                    <a href="{{ block.settings.link_url }}" id="block-{{ block.id }}" class="media-blocks__item {% if section.settings.add_border %}media-blocks__item--bordered{% endif %} @container/content-box color-scheme color-scheme--{{ color_scheme.id }}" {{ block.shopify_attributes }}>
+                    <a href="{{ block.settings.link_url }}" id="block-{{ block.id }}" class="media-blocks__item {% if block.settings.zoom_on_hover %}group{% endif %} {% if section.settings.add_border %}media-blocks__item--bordered{% endif %} @container/content-box color-scheme color-scheme--{{ color_scheme.id }}" {{ block.shopify_attributes }}>
                       {{- block_content -}}
                     </a>
                   {%- else -%}
-                    <div id="block-{{ block.id }}" class="media-blocks__item {% if section.settings.add_border %}media-blocks__item--bordered{% endif %} @container/content-box color-scheme color-scheme--{{ color_scheme.id }}" {{ block.shopify_attributes }}>
+                    <div id="block-{{ block.id }}" class="media-blocks__item {% if block.settings.zoom_on_hover %}group{% endif %} {% if section.settings.add_border %}media-blocks__item--bordered{% endif %} @container/content-box color-scheme color-scheme--{{ color_scheme.id }}" {{ block.shopify_attributes }}>
                       {{- block_content -}}
                     </div>
                   {%- endif -%}
@@ -594,6 +603,13 @@
       "type": "image_with_text",
       "name": "t:sections.media_blocks.blocks.image_with_text.name",
       "settings": [
+        {
+          "type": "checkbox",
+          "id": "zoom_on_hover",
+          "label": "Zoom al pasar el cursor",
+          "info": "Usa la misma animación que las imágenes de los posts del blog.",
+          "default": false
+        },
         {
           "type": "checkbox",
           "id": "change_color_scheme_on_hover",
@@ -1411,6 +1427,13 @@
       "type": "video_with_text",
       "name": "t:sections.media_blocks.blocks.video_with_text.name",
       "settings": [
+        {
+          "type": "checkbox",
+          "id": "zoom_on_hover",
+          "label": "Zoom al pasar el cursor",
+          "info": "Usa la misma animación que las imágenes de los posts del blog.",
+          "default": false
+        },
         {
           "type": "checkbox",
           "id": "change_color_scheme_on_hover",
