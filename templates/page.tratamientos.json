@@ -194,6 +194,7 @@
         "add_media_spacing": false,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/Sin_nombre.png",
+        "media_link": "shopify://pages/tratamientos-corporales",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
         "show_secondary_media_on_mobile": true,
@@ -263,6 +264,7 @@
         "add_media_spacing": false,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/tratamientos-faciales.png",
+        "media_link": "shopify://pages/tratamientos-faciales",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
         "show_secondary_media_on_mobile": true,
@@ -278,21 +280,13 @@
         "mobile_spacing": 0
       }
     },
-    "spacing_RXprh4": {
-      "type": "spacing",
-      "name": "Spacing",
-      "settings": {
-        "desktop_spacing": 50,
-        "mobile_spacing": 0
-      }
-    },
     "text_with_media_3CzNUT": {
       "type": "text-with-media",
       "blocks": {
         "heading_m6P9E4": {
           "type": "heading",
           "settings": {
-            "text": "Masajes",
+            "text": "Rituales",
             "heading_tag": "h3",
             "position": "middle_left",
             "highlight_effect": "none",
@@ -340,6 +334,7 @@
         "add_media_spacing": false,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/inner-masaje.png",
+        "media_link": "shopify://pages/rituales",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
         "show_secondary_media_on_mobile": true,
@@ -397,11 +392,20 @@
         "add_media_spacing": false,
         "autoplay_video": true,
         "primary_image": "shopify://shop_images/Aplicacion_de_maquillaje_en_un_spa_calido.png",
+        "media_link": "",
         "secondary_media_width": 60,
         "secondary_media_mobile_width": 60,
         "show_secondary_media_on_mobile": true,
         "secondary_media_alignment": "place-self-center",
         "secondary_media_shape": "none"
+      }
+    },
+    "spacing_RXprh4": {
+      "type": "spacing",
+      "name": "Spacing",
+      "settings": {
+        "desktop_spacing": 50,
+        "mobile_spacing": 0
       }
     },
     "custom_liquid_JwDNUG": {
