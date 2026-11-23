@@ -203,6 +203,7 @@
       "block_order": [
         "text_j3mTzD"
       ],
+      "disabled": true,
       "name": "t:sections.scrolling_content.name",
       "settings": {
         "color_scheme": "scheme-7",
