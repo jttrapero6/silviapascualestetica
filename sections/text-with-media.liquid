@@ -92,6 +92,24 @@
             {{- section.settings.secondary_image | image_url: width: section.settings.secondary_image.width | image_tag: sizes: '(max-width: 699px) 275px, 400px', widths: '200,300,400,500,600,800,1000,1200', class: media_class, style: media_style -}}
           {%- endif -%}
         {%- endif -%}
+
+        {%- comment -%}Con vídeo con controles no se añade el enlace, porque taparía el reproductor.{%- endcomment -%}
+        {%- if section.settings.media_link != blank -%}
+          {%- if section.settings.primary_video == blank or section.settings.autoplay_video -%}
+            {%- liquid
+              assign twm_link_label = section.settings.primary_image.alt
+              if twm_link_label == blank
+                for block in section.blocks
+                  if block.type == 'heading' and block.settings.text != blank
+                    assign twm_link_label = block.settings.text | strip_html
+                    break
+                  endif
+                endfor
+              endif
+            -%}
+            <a href="{{ section.settings.media_link }}" class="twm-media-link" aria-label="{{ twm_link_label | default: section.settings.media_link | escape }}"></a>
+          {%- endif -%}
+        {%- endif -%}
       </div>
     </div>
     {%- endcapture -%}
@@ -261,6 +279,14 @@
 </div>
 
 {% stylesheet %}
+  /* Enlace que cubre toda la imagen */
+  .content-box > .twm-media-link {
+    grid-area: full-start / full-start / full-end / full-end;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
   /* Media aspect ratio (desktop) */
   @media screen and (min-width: 1000px) {
     .section-split__column--image.twm-ratio {
@@ -499,6 +525,12 @@
       "id": "primary_image",
       "label": "t:sections.text_with_media.primary_image",
       "info": "t:sections.text_with_media.primary_image_size_recommendations"
+    },
+    {
+      "type": "url",
+      "id": "media_link",
+      "label": "Enlace de la imagen",
+      "info": "Al hacer clic en la imagen se abre este enlace. No se aplica a vídeos con controles."
     },
     {
       "type": "video",
