@@ -241,3 +241,23 @@ if (!window.customElements.get('scheduled-badge')) {
     if (mutations.some((mutation) => mutation.addedNodes.length)) schedule();
   }).observe(document.documentElement, { childList: true, subtree: true });
 })();
+
+/**
+ * Coloca la capa oscura del mega menú justo debajo de la cabecera. Su posición cambia con el scroll porque
+ * la barra de anuncios no siempre está visible; sin esto la capa oscurece parte de la cabecera al abrirse.
+ */
+(() => {
+  const syncOverlay = (menu) => {
+    menu.style.setProperty('--mega-menu-overlay-top', `${Math.max(0, menu.getBoundingClientRect().top)}px`);
+  };
+
+  new MutationObserver((mutations) => {
+    mutations.forEach(({ target }) => {
+      if (target.matches('header-mega-menu[open]')) syncOverlay(target);
+    });
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ['open'], subtree: true });
+
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('header-mega-menu[open]').forEach(syncOverlay);
+  }, { passive: true });
+})();

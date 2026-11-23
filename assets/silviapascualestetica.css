@@ -67,3 +67,8 @@ on-sale-badge[hidden] {
     opacity: 0.7;
     font-weight: normal;
 }
+
+/* La capa oscura del mega menú empieza justo debajo de la cabecera (valor calculado en silviapascualestetica.js) */
+.mega-menu:after {
+    inset-block-start: var(--mega-menu-overlay-top, calc(var(--announcement-bar-height, 0px) + var(--header-height, 0px) + var(--countdown-condensed-height, 0px)));
+}
