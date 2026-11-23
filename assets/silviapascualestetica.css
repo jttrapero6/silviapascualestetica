@@ -56,3 +56,14 @@ scheduled-badge[hidden] {
 badge-list:not(:has(> :not([hidden]))) {
     display: none;
 }
+
+/* Etiqueta de descuento automático: oculta hasta que Shopify confirma el descuento */
+on-sale-badge[hidden] {
+    display: none !important;
+}
+
+/* Precio tachado dentro del botón de la barra flotante en móvil */
+.floating-atc-button__compare {
+    opacity: 0.7;
+    font-weight: normal;
+}

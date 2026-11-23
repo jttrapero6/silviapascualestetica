@@ -45,25 +45,44 @@ Render a list of price for a product, variant or line item.
       assign unit_price_classes = 'subheading text-subdued'
   endcase
 
-  # Descuento de la sección "Descuentos" configurado en el tema (ver snippet store-discount).
-  # Si el precio no tiene ya precio de comparación, se muestra el precio rebajado y el original tachado.
-  # No se aplica a line items: en el carrito Shopify ya calcula el descuento real.
-  assign store_discount_percentage = 0
-  if line_item == blank
-    assign discount_product = product | default: variant.product
-    if discount_product != blank
-      capture store_discount
-        render 'store-discount', product: discount_product
-      endcapture
-      assign store_discount = store_discount | strip
-      if store_discount != blank and store_discount != 'sale'
-        assign store_discount_percentage = store_discount | times: 1
-      endif
+  # Descuentos automáticos de Shopify: Liquid no puede leerlos, así que se exponen estos datos y
+  # assets/silviapascualestetica.js pinta el precio rebajado (<auto-discount>). No aplica a line items.
+  assign price_variant = variant
+  if price_variant == blank and line_item == blank and product != blank
+    if product.price_varies and settings.product_card_price_strategy != 'from_price'
+      assign price_variant = product.variants | sort: 'price' | last | default: product.selected_or_first_available_variant
+    else
+      assign price_variant = product.variants | sort: 'price' | first | default: product.selected_or_first_available_variant
     endif
+  endif
+
+  assign discount_lookup_variant = price_variant
+  unless discount_lookup_variant.available
+    assign discount_lookup_variant = price_variant.product.selected_or_first_available_variant
+  endunless
+
+  if settings.currency_code_enabled
+    assign auto_discount_money_format = shop.money_with_currency_format
+  else
+    assign auto_discount_money_format = shop.money_format
   endif
 -%}
 
-<price-list class="price-list {% if alignment %}justify-{{ alignment }}{% endif %}">
+<price-list
+  class="price-list {% if alignment %}justify-{{ alignment }}{% endif %}"
+  {%- if line_item == blank and discount_lookup_variant.available %}
+    data-auto-discount-variant="{{ discount_lookup_variant.id }}"
+    data-price="{{ price_variant.price }}"
+    data-compare-at="{{ price_variant.compare_at_price | default: 0 }}"
+    data-money-format="{{ auto_discount_money_format | escape }}"
+    data-on-sale-class="{{ on_sale_price_classes }}"
+    data-compare-class="{{ compare_at_price_classes }}"
+    data-regular-label="{{ 'product.price.regular_price' | t | escape }}"
+    {%- if variant == blank and product.price_varies and settings.product_card_price_strategy == 'from_price' %}
+      data-from-template="{{ 'product.price.from_price_html' | t: price_min: '__PRICE__' | escape }}"
+    {%- endif -%}
+  {%- endif -%}
+>
   {%- if variant != blank -%}
     {%- comment -%}
     --------------------------------------------------------------------------------------------------------------------
@@ -74,11 +93,6 @@ Render a list of price for a product, variant or line item.
       assign display_price = variant.price
       assign display_compare_at_price = variant.compare_at_price | default: 0
 
-      if display_compare_at_price <= display_price and store_discount_percentage > 0
-        assign display_compare_at_price = variant.price
-        assign display_price = variant.price | times: store_discount_percentage | divided_by: 100.0 | round
-        assign display_price = variant.price | minus: display_price
-      endif
     -%}
 
     <sale-price class="{% if display_compare_at_price > display_price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
@@ -145,12 +159,6 @@ Render a list of price for a product, variant or line item.
 
       assign display_price = variant.price
       assign display_compare_at_price = variant.compare_at_price | default: 0
-
-      if display_compare_at_price <= display_price and store_discount_percentage > 0
-        assign display_compare_at_price = variant.price
-        assign display_price = variant.price | times: store_discount_percentage | divided_by: 100.0 | round
-        assign display_price = variant.price | minus: display_price
-      endif
 
       if settings.currency_code_enabled
         assign variant_price = display_price | money_with_currency

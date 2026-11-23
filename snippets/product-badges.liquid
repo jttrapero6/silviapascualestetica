@@ -89,51 +89,46 @@ This component is used in product listing and product page to render the badges 
     -%}
 
     {%- comment -%}
-      Descuentos de la sección "Descuentos" de Shopify: el tema no puede leerlos, así que se configuran en
-      Ajustes del tema → Tarjeta de producto (colección + porcentaje). Solo se usan si no hay precio de comparación.
+      Descuentos automáticos de Shopify: la etiqueta se renderiza oculta y assets/silviapascualestetica.js
+      la rellena y la muestra si Shopify aplica un descuento a esta variante.
     {%- endcomment -%}
     {%- liquid
-      assign has_compare_discount = false
-      if product.compare_at_price > product.price
-        assign has_compare_discount = true
+      assign discount_lookup_variant = variant
+      unless discount_lookup_variant.available
+        assign discount_lookup_variant = product.selected_or_first_available_variant
+      endunless
+
+      if show_on_sale_badge
+        if settings.product_card_discount_mode == 'percentage'
+          assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%'
+        else
+          capture savings
+            echo variant.compare_at_price | minus: variant.price | money
+          endcapture
+        endif
       endif
 
-      assign store_discount = ''
-      unless has_compare_discount
-        capture store_discount
-          render 'store-discount', product: product
-        endcapture
-        assign store_discount = store_discount | strip
-      endunless
+      if context == 'card' and product.price_varies and settings.product_card_discount_mode != 'percentage'
+        assign auto_discount_template = 'product.general.on_sale_badge' | t
+      else
+        assign auto_discount_template = 'product.general.discount_badge_html' | t: savings: '__SAVINGS__'
+      endif
     -%}
 
-    {%- if store_discount != blank -%}
-      <on-sale-badge class="badge badge--on-sale {% if vertical_text %}vertical-text{% endif %}">
-        {%- liquid
-          if store_discount != 'sale'
-            assign store_discount_percentage = store_discount | times: 1
-            if settings.product_card_discount_mode == 'percentage'
-              assign savings = store_discount_percentage | append: '%'
-            else
-              assign savings = variant.price | times: store_discount_percentage | divided_by: 100.0 | round | money
-            endif
-            echo 'product.general.discount_badge_html' | t: savings: savings
-          else
-            echo 'product.general.on_sale_badge' | t
-          endif
-        -%}
-      </on-sale-badge>
-    {%- endif -%}
-
-    {%- if has_compare_discount -%}
-      {%- if settings.product_card_discount_mode == 'percentage' -%}
-        {%- assign savings = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | append: '%' -%}
-      {%- else -%}
-        {%- capture savings -%}{{ variant.compare_at_price | minus: variant.price | money }}{%- endcapture -%}
-      {%- endif -%}
-
-      {%- if show_on_sale_badge -%}
-        <on-sale-badge class="badge badge--on-sale {% if vertical_text %}vertical-text{% endif %}">
+    {%- if show_on_sale_badge or discount_lookup_variant.available -%}
+      <on-sale-badge
+        class="badge badge--on-sale {% if vertical_text %}vertical-text{% endif %}"
+        {% unless show_on_sale_badge %}hidden{% endunless %}
+        {%- if discount_lookup_variant.available %}
+          data-auto-discount-variant="{{ discount_lookup_variant.id }}"
+          data-price="{{ variant.price }}"
+          data-compare-at="{{ variant.compare_at_price | default: 0 }}"
+          data-money-format="{{ shop.money_format | escape }}"
+          data-discount-mode="{{ settings.product_card_discount_mode }}"
+          data-badge-template="{{ auto_discount_template | escape }}"
+        {%- endif -%}
+      >
+        {%- if show_on_sale_badge -%}
           {%- liquid
             if context == 'product'
               echo 'product.general.discount_badge_html' | t: savings: savings
@@ -145,8 +140,8 @@ This component is used in product listing and product page to render the badges 
               endif
             endif
           -%}
-        </on-sale-badge>
-      {%- endif -%}
+        {%- endif -%}
+      </on-sale-badge>
     {%- endif -%}
   {%- endif -%}
 {%- endcapture -%}
