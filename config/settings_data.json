@@ -14,6 +14,7 @@
     "input_border_radius": 0,
     "dialog_backdrop_blur": 12,
     "default_color_scheme": "scheme-2",
+    "product_on_sale_accent": "#000000",
     "product_sold_out_badge_background": "#321e1e",
     "product_custom_badge_background": "#ffffff",
     "product_grid_label_1_background": "#000000",
